@@ -1,5 +1,5 @@
 
-/* Global */
+/****** Global ******/
 
 body {
 	margin: 0;
@@ -8,6 +8,15 @@ body {
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 	text-align: center;
 }
+
+.clear {	clear: both;}
+
+a:hover {
+	opacity: 0.5;
+	transition-duration: 500ms;
+}
+
+/****** Header ******/
 
 .header {
 	position: fixed;
@@ -44,6 +53,8 @@ body {
 	transition-duration: 500ms;
 }
 
+/****** Footer ******/
+
 footer {
 	margin:0;
 	position: fixed;
@@ -57,20 +68,9 @@ footer {
 	opacity: 0.3;
 }
 
-.clear {
-	clear: both;
-}
+/****** Main Page ******/
 
-.inline {
-	display: inline;
-}
-
-a:hover {
-	opacity: 0.5;
-	transition-duration: 500ms;
-}
-
-/* Main (Random Pedals) Page */
+/* Three Pedals */
 
 #pedalTable {
 	width: 90vw;
@@ -94,6 +94,8 @@ a:hover {
 	max-width: 300px;;
 }
 
+/* Shuffle Button */
+
 #randomDiv {
 	margin: 60px auto;
 	height: 80px;
@@ -105,34 +107,19 @@ a:hover {
 }
 
 @keyframes colorShuffler {
-	0% {background-color: #ef569f;}
-	6% {background-color: #ef569f;}
-	7% {background-color: #dfc669;}
-	13% {background-color: #dfc669;}
-	14% {background-color: #a3a3a5;}
-	15% {background-color: #a3a3a5;}
-	21% {background-color: #08c792;}
-	27% {background-color: #08c792;}
-	28% {background-color: #3f3f3f;}
-	34% {background-color: #3f3f3f;}
-	35% {background-color: #036c9b;}
-	36% {background-color: #036c9b;}
-	42% {background-color: #b21f25;}
-	49% {background-color: #b21f25;}
-	50% {background-color: #9c8035;}
-	57% {background-color: #9c8035;}
-	58% {background-color: #55af2f;}
-	65% {background-color: #55af2f;}
-	66% {background-color: #838080;}
-	73% {background-color: #838080;}
-	74% {background-color: #2394a0;}
-	81% {background-color: #2394a0;}
-	82% {background-color: #d1d0d5;}
-	90% {background-color: #d1d0d5;}
-	91% {background-color: #e87e57;}
-	99% {background-color: #e87e57;}
-	100% {background-color: #ef569f;}
-
+	0%, 6% {background-color: #ef569f;}
+	7%, 13% {background-color: #dfc669;}
+	14%, 20% {background-color: #a3a3a5;}
+	21%, 27% {background-color: #08c792;}
+	28%, 34% {background-color: #3f3f3f;}
+	35%, 41% {background-color: #036c9b;}
+	42%, 49% {background-color: #b21f25;}
+	50%, 57% {background-color: #9c8035;}
+	58%, 65% {background-color: #55af2f;}
+	66%, 73% {background-color: #838080;}
+	74%, 81% {background-color: #2394a0;}
+	82%, 90% {background-color: #d1d0d5;}
+	91%, 100% {background-color: #e87e57;}
 }
 
 #randomDiv:hover {
@@ -144,7 +131,8 @@ a:hover {
 	height: 40px;
 	margin-top: 20px;
 }
-/* Individual Pedal Page */
+
+/****** Individual Pedal Page ******/
 
 .pedal {
 	margin: 0;
