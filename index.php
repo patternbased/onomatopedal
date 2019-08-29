@@ -3,25 +3,8 @@
 
 <head>
 
-  <title>EarthQuaker Devices Randomizer and Samplepacks by PatternBased</title>
-  
-  
-  	<style>
-	  table.center {
-			width: 100%;
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			position: absolute;
-			margin-left: 5%; 
-			margin-right: 5%;
-			}
-	   
-	   html {
-			background-color: #000000; 
-			}
-			
-	</style>
+  <title>EarthQuaker Devices Randomizer and Samplepacks by PatternBased</title>  
+  <link rel="stylesheet" href="style.css">
   
 </head>
 
