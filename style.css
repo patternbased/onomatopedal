@@ -100,6 +100,7 @@ hr {
 footer {
 	margin: 80px auto 0 auto;
 	bottom: 0;
+	position: static;
 }
 .footerLogo {
 	width: 200px;
@@ -137,6 +138,7 @@ footer {
 	margin: 0;
 	padding: 0;
 	z-index: 1000;
+	visibility: hidden
 }
 
 /* Shuffle Button */
@@ -213,7 +215,7 @@ canvas{
 	border-radius: 25px;
 }
 
-#actions li span {
+#actions li span, #showAll span {
 	display: none;
 	font-size: 14px;
 	font-weight: 800;
@@ -222,7 +224,7 @@ canvas{
 	margin-right: 20px;
 }
 
-#actions li img {
+#actions li img, #showAll img {
 	width: 50px;
 	height: 50px;
 }
@@ -257,4 +259,16 @@ canvas{
 #morePedals li{
 	display: inline;
 	margin: 20px;
+}
+
+#showAll {
+	position: fixed;
+	right: 30px;
+	bottom: 20px;
+	display: inline-block;
+	background: #FFFFFF;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	visibility: hidden;
 }
