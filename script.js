@@ -10,7 +10,8 @@ $('.close').click(function () {
     'transition-duration':'300ms'});
 });
 
-// Pedal page Action buttons
+// Pedal page Action buttons animation
+
 $('.actionBtn').hover(function () { 
   $(this).css({ 
     'width': '220px',
@@ -27,6 +28,8 @@ $('.actionBtn').hover(function () {
   })
 });
 
+// Full browser mode
+
 $('#fullscreenMode').click(function () { 
   $('#pedal').fadeOut(500);
   $('footer').css({
@@ -36,6 +39,8 @@ $('#fullscreenMode').click(function () {
     'visibility': 'visible'
   });
 });
+
+// showAll button animation
 
 $('#showAll').hover(function () {
   $(this).css({
@@ -53,6 +58,8 @@ $('#showAll').hover(function () {
     });
   }
 );
+
+// Back from Full browser mode
 
 $('#showAll').click(function () { 
   $('#pedal').fadeIn(300);

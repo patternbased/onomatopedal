@@ -198,6 +198,8 @@ canvas{
 	left: 0;
 }
 
+/* Avtion Buttons */
+
 #actions {
 	width: 100vw;
 	height: 70px;
@@ -229,6 +231,8 @@ canvas{
 	height: 50px;
 }
 
+/* Onomonapia Description */
+
 #onomoInfo {
 	color: #838080;
 	text-align: justify;
@@ -245,6 +249,8 @@ canvas{
 	margin-right: 10px;
 }
 
+/* List of other pedals */
+
 #morePedals {
 	width: 500px;
 	max-width: 80vw;
@@ -260,6 +266,8 @@ canvas{
 	display: inline;
 	margin: 20px;
 }
+
+/* showAll Button */
 
 #showAll {
 	position: fixed;
