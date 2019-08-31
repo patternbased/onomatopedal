@@ -7,6 +7,7 @@ body {
 	background: #000000;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 	text-align: center;
+	position: relative;
 }
 
 .clear {	clear: both;}
@@ -16,10 +17,16 @@ a:hover {
 	transition-duration: 500ms;
 }
 
+hr {
+	border: #3f3f3f 1px solid;
+	margin: 40px auto;
+	width: 500px;
+	max-width: 80vw;
+}
+
 /****** Header ******/
 
 .header {
-	position: fixed;
 	top: 0;
 	height: 60px;
 	width: 100vw;
@@ -28,12 +35,23 @@ a:hover {
 }
 
 .title {
-	width: 300px;
-	color: #3b3b3b;
+	width: 240px;
 	margin: 0 auto ;
 	padding-top: 20px;
-	font-weight: 800;
-	font-size: 20px;
+	opacity: 0.5;
+}
+
+.title-pedal {
+	width: 240px;
+	margin: 0 auto ;
+	padding-top: 20px;
+}
+
+.title-small {
+	width: 120px;
+	margin: 20px 30px;
+	float: left;
+	opacity: 0.5;
 }
 
 .info {
@@ -41,31 +59,52 @@ a:hover {
 	height: 30px;
 	float: right;
 	margin: 20px 30px;
-	background: #3b3b3b;
-	border-radius: 15px;
-	color: #000000;
-	font-weight: 800;
-	font-size: 22px;
+	opacity: 0.5;
+}
+
+.close {
+	width: 30px;
+	height: 30px;
+	float: right;
+	margin: 0;
+	opacity: 0.5;
 }
 
 .info:hover {
-	background: #FFFFFF;
+	opacity: 1;
 	transition-duration: 500ms;
+}
+
+/****** Right Panel ******/
+
+.rightSPWrapper {
+	height: 100vh;
+	width: 280px;
+	background: #838080;
+	color: #000000;
+	position: absolute;
+	top: 0;
+	padding: 20px 30px 30px 30px;
+	text-align: left;
+	right: -360px;
+}
+
+.rightSPWrapper h1 {
+	font-size: 24px;
+	font-weight: 800;
+	margin-top: 50px;
 }
 
 /****** Footer ******/
 
 footer {
-	margin:0;
-	position: fixed;
+	margin: 80px auto 0 auto;
 	bottom: 0;
-	left: 50%;
-	transform: translate(-50%, 0)
 }
 .footerLogo {
 	width: 200px;
 	margin: 20px;
-	opacity: 0.3;
+	opacity: 0.5;
 }
 
 /****** Main Page ******/
@@ -92,6 +131,12 @@ footer {
 .pedalList {
 	width: 30vw;
 	max-width: 300px;;
+}
+
+.pedal {
+	margin: 0;
+	padding: 0;
+	z-index: 1000;
 }
 
 /* Shuffle Button */
@@ -123,7 +168,7 @@ footer {
 }
 
 #randomDiv:hover {
-	animation: colorShuffler 4s linear infinite;
+	animation: colorShuffler 6s linear infinite;
 }
 
 #randomIcon {
@@ -134,8 +179,82 @@ footer {
 
 /****** Individual Pedal Page ******/
 
-.pedal {
-	margin: 0;
+#pedal {
+	margin: 0 auto;
 	padding: 0;
+	margin-top: 10vh;
 	z-index: 1000;
+}
+
+canvas{
+	width: 100%;
+	height: 100%;
+	background: black;
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#actions {
+	width: 100vw;
+	height: 70px;
+	margin: 20px auto;
+	padding: 0;
+	overflow: hidden;
+}
+
+#actions li {
+	display: inline-block;
+	margin: 10px;
+	background: #FFFFFF;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+}
+
+#actions li span {
+	display: none;
+	font-size: 14px;
+	font-weight: 800;
+	position: relative;
+	top: -18px;
+	margin-right: 20px;
+}
+
+#actions li img {
+	width: 50px;
+	height: 50px;
+}
+
+#onomoInfo {
+	color: #838080;
+	text-align: justify;
+	width: 500px;
+	max-width: 80vw;
+	font-size: 16px;
+	line-height: 21px;
+	margin: 0 auto;
+}
+
+#onomoInfo span {
+	font-weight: 800;
+	color: #dfc669;
+	margin-right: 10px;
+}
+
+#morePedals {
+	width: 500px;
+	max-width: 80vw;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#morePedals li img{
+	width: 120px;
+}
+
+#morePedals li{
+	display: inline;
+	margin: 20px;
 }

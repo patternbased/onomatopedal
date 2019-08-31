@@ -2,31 +2,10 @@
 <html>
 <head>
 	<title>Acapulco Gold Sampler</title>
-	
-	<style>
-	
-		#pedal {
-			background: url(../images/Acapulco-Gold.png) no-repeat center center;
-			width: 100%;
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			position: absolute;
-			z-index: 1000;
-		}
-		
-		html {
-			background-color: #000000; 
-		}
-		
-	</style>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.3/paper-full.js"></script>
-
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.js"></script>
-
-	<link rel="stylesheet" type="text/css" href="assets/stylesheets/samplerpage.css">
-
+	<link rel="stylesheet" type="text/css" href="../style.css">
 	<script type="text/paperscript" canvas="myCanvas">
 
 	var keyData = {
@@ -235,10 +214,50 @@
 		}
 	}
 
-</script>
+	</script>
 </head>
+
 <body>
-	<div id="pedal"></div>
+<div class="header">
+  <div class="info"><img src="../images/menuIcon.svg"></div>
+	<div class="title-small"><a href="../index.html"><img src="../images/onomatoPedal-Logo.svg"></a></div>
+	<div class="title-pedal"><img src="../images/zakuzaku-title.svg"></div>
+</div>
+
+<div class='clear'></div>
+
+<!-- Right Panel -->
+<div class="rightSPWrapper">
+  <div class="close"><img src="../images/closeIcon.svg"></div>
+  <h1>OnomonoPedal</h1>
+  <p>OnomonoPedal is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  <h1>How To Play</h1>
+  <p>OnomonoPedal is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+
+<!-- Pedal -->
+	<div id="pedal">
+		<img src="../images/Acapulco-Gold.png">
+		<ul id="actions">
+			<li class='actionBtn' id="listenBeat"><img src="../images/playBeat.svg"><span>Listen to Beat</span></li>
+			<li class='actionBtn' id="download"><img src="../images/downloadSample.svg"><span>Download Sample</span></li>
+			<li class='actionBtn' id="aboutPedal"><img src="../images/seePedal.svg"><span>Check out Pedal</span></li>
+		</ul>
+		<p id="onomoInfo"><span>ざくざく Zaku zaku</span> <b>(1)</b> Describes a large number of metal coins or jewels. <b>(2)</b> Describes the sound of chopping vegetables or the like. Also describes cutting something roughly. <b>(3)</b> Describes the sound of gravel or the like being mixed. <b>(4)</b> Describes the sound of walking over gravel or frost.</p>
+		<hr>
+		<ul id="morePedals">
+			<li><a href=""><img src="../images/Data-Corrupter-bgtx.png"></a></li>
+			<li><a href=""><img src="../images/Rainbow-Machine-bgtx.png"></a></li>
+			<li><a href=""><img src="../images/Acapulco-Gold-bgtx.png"></a></li>
+		</ul>
+	</div>
+
 	<canvas id="myCanvas" resize></canvas>
+<footer>
+	<a href="https://www.earthquakerdevices.com/" target="_blank"><img src="../images/EarthQuaker-Devices-Logo.png" class="footerLogo"></a>
+	<a href="https://www.patternbased.com/" target="_blank"><img src="../images/PatternBased_Music-Logo.png" class="footerLogo"></a>
+</footer>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="../script.js"></script>
 </body>
 </html>
