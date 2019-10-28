@@ -1,4 +1,8 @@
+// 
+
+
 // Right side panel
+
 $('.info').click(function () { 
   $('.rightSPWrapper').css({
     'right':'0', 
@@ -12,19 +16,22 @@ $('.close').click(function () {
 
 // Pedal page Action buttons animation
 
-$('.actionBtn').hover(function () { 
+$('.actionBtn').on('mouseenter',function () { 
   $(this).css({ 
     'width': '220px',
     'background': '#dfc669',
-    'transition-duration':'100ms'
+    'transition-duration':'50ms'
   }),
-  $('span', this).css('display','inline')
-}, function() {
+  $('span', this).css({
+    'display':'inline'
+  })
+});
+$('.actionBtn').on('mouseleave',function() {
   $('span', this).css('display','none'),
   $(this).css({
     'width': '50px',
     'background': '#ffffff',
-    'transition-duration':'50ms'
+    'transition-duration':'100ms'
   })
 });
 
@@ -39,25 +46,6 @@ $('#fullscreenMode').click(function () {
     'visibility': 'visible'
   });
 });
-
-// showAll button animation
-
-$('#showAll').hover(function () {
-  $(this).css({
-    'width': '220px',
-    'background': '#dfc669',
-    'transition-duration':'100ms'
-  }),
-  $('span', this).css('display','inline')
-  }, function () {
-    $('span', this).css('display','none')
-    $(this).css({
-      'width': '50px',
-      'background': '#ffffff',
-      'transition-duration':'50ms'
-    });
-  }
-);
 
 // Back from Full browser mode
 

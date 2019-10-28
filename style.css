@@ -35,21 +35,21 @@ hr {
 }
 
 .title {
-	width: 240px;
+	width: 200px;
 	margin: 0 auto ;
 	padding-top: 20px;
 	opacity: 0.5;
 }
 
 .title-pedal {
-	width: 240px;
+	width: 200px;
 	margin: 0 auto ;
 	padding-top: 20px;
 }
 
 .title-small {
 	width: 120px;
-	margin: 20px 30px;
+	margin: 20px 20px;
 	float: left;
 	opacity: 0.5;
 }
@@ -98,9 +98,11 @@ hr {
 /****** Footer ******/
 
 footer {
-	margin: 80px auto 0 auto;
+	margin-top: 80px;
 	bottom: 0;
-	position: static;
+	height: 80px;
+	width: 100%;
+	position: fixed;
 }
 .footerLogo {
 	width: 200px;
@@ -118,19 +120,19 @@ footer {
 	height: 360px;
 	min-width: 300px;
 	min-height: 120px;
-	margin: 20vh auto 0 auto;
+	margin: 15vh auto 0 auto;
 	padding: 0;
 }  
 			
 .pedalCont {
-	width: 30vw;
+	width: 20vw;
 	max-width: 300px;
 	margin: 0;
 	padding: 1vw;
 }
 
 .pedalList {
-	width: 30vw;
+	width: 20vw;
 	max-width: 300px;;
 }
 
@@ -146,11 +148,17 @@ footer {
 #randomDiv {
 	margin: 60px auto;
 	height: 80px;
-	width: 80px;
+	width: 200px;
 	background: #FFFFFF;
 	border-radius: 40px;
-	font-size: 16px;
 	border: none;
+}
+
+#randomDiv span {
+	font-size: 16px;
+	margin-top: 30px;
+	float: right;
+	margin-right: 40px;
 }
 
 @keyframes colorShuffler {
@@ -177,6 +185,8 @@ footer {
 	width: 40px;
 	height: 40px;
 	margin-top: 20px;
+	float: left;
+	margin-left: 40px;
 }
 
 /****** Individual Pedal Page ******/
@@ -201,7 +211,8 @@ canvas{
 /* Avtion Buttons */
 
 #actions {
-	width: 100vw;
+	width: max-content ;
+	max-width: 500px;
 	height: 70px;
 	margin: 20px auto;
 	padding: 0;
@@ -209,7 +220,8 @@ canvas{
 }
 
 #actions li {
-	display: inline-block;
+	display: block;
+	float: left;
 	margin: 10px;
 	background: #FFFFFF;
 	width: 50px;
@@ -222,13 +234,14 @@ canvas{
 	font-size: 14px;
 	font-weight: 800;
 	position: relative;
-	top: -18px;
+	top: -13px;
 	margin-right: 20px;
 }
 
 #actions li img, #showAll img {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
+	margin-top: 5px;
 }
 
 /* Onomonapia Description */
@@ -252,19 +265,46 @@ canvas{
 /* List of other pedals */
 
 #morePedals {
-	width: 500px;
-	max-width: 80vw;
-	margin: 0 auto;
+	width: 140px;
+	margin: 0;
 	padding: 0;
+	position: fixed;
+	left: 0;
+	top: 20vh;
+	height: 80vh;
+	background: #000000;
 }
 
 #morePedals li img{
-	width: 120px;
+	width: 80px;
 }
 
 #morePedals li{
-	display: inline;
-	margin: 20px;
+	display: block;
+	margin: 30px 0;
+}
+
+.arrows {
+	display: block;
+	height: 20px;
+	width: 140px;
+}
+
+.bottomArrow {
+	background-image: url('images/downArrow.svg');
+	width: 140px;
+	opacity: 0.2;
+}
+
+.topArrow {
+	background-image: url('images/upArrow.svg');
+	width: 140px;
+	opacity: 0.2;
+}
+
+.bottomArrow:hover, .topArrow:hover {
+	opacity: 0.5;
+	transition-duration: 100ms;
 }
 
 /* showAll Button */
@@ -279,4 +319,5 @@ canvas{
 	height: 50px;
 	border-radius: 25px;
 	visibility: hidden;
+	z-index: 999;
 }
