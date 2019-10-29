@@ -66,7 +66,7 @@ $("li#aboutPedal").on("click",function(){
 // More Pedals Carousel
 var carousel = $('#carousel'),
     threshold = 80,
-    slideHeight = 123,
+    slideWidth = 110,
     dragStart, 
     dragEnd;
 
@@ -79,7 +79,7 @@ function shiftSlide(direction) {
   $(document).off('mouseup')
   carousel.off('mousemove')
           .addClass('transition')
-          .css('transform','translateY(' + (direction * slideHeight) + 'px)'); 
+          .css('transform','translateX(' + (direction * slideWidth) + 'px)'); 
   setTimeout(function(){
     if (direction === 1) {
      $('.slide:first').before($('.slide:last'));
@@ -87,7 +87,7 @@ function shiftSlide(direction) {
       $('.slide:last').after($('.slide:first'));
     }
     carousel.removeClass('transition')
-		carousel.css('transform','translateY(0px)'); 
+		carousel.css('transform','translateX(0px)'); 
   }, 400)
 }
 
@@ -116,6 +116,12 @@ $(window).on('resize', function() {
          'width':'100vw'  });
       $('#carousel, #carouselWindow').css({
          'width':'calc(100vw - 100px)'  });
+         $('.footerLogo').css({
+          'width':'150px',
+          'margin':'10px'
+          });
+        $('footer').css({
+          'height':'60px'  });
   } else { }
     }
 });
