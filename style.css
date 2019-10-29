@@ -32,7 +32,7 @@ hr {
 .header {
 	top: 0;
 	height: 90px;
-	width: 100vw;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -217,7 +217,7 @@ footer {
 #pedal {
 	margin: 0 auto;
 	padding: 0;
-	margin-top: 10vh;
+	margin-top: 60px;
 	z-index: 1000;
 	position: relative;
 }
@@ -240,7 +240,7 @@ footer {
 	width: max-content ;
 	max-width: 500px;
 	height: 70px;
-	margin: 20px auto;
+	margin: 40px auto;
 	padding: 0;
 	overflow: hidden;
 }
@@ -276,7 +276,7 @@ footer {
 	color: #838080;
 	text-align: justify;
 	width: 500px;
-	max-width: 80vw;
+	max-width: 90vw;
 	font-size: 16px;
 	line-height: 21px;
 	margin: 0 auto 60px auto;
@@ -298,7 +298,6 @@ footer {
 	padding: 0;
 	position: static;
 	height: 93px;
-	background: #000000;
 }
 
 #carousel, #carouselWindow {

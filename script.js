@@ -102,7 +102,7 @@ if ($(window).width() < 960) {
     'width':'calc(100vw - 100px)'  });
   $('.footerLogo').css({
     'width':'150px',
-    'margin':'10px'
+    'margin':'20px'
     });
   $('footer').css({
     'height':'60px'  });
