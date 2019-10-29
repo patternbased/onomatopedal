@@ -57,3 +57,65 @@ $('#showAll').click(function () {
   $('#showAll').css({
     'visibility': 'hidden'});
   });
+
+// Open Pedal page in EQD
+$("li#aboutPedal").on("click",function(){
+  window.open('https://www.earthquakerdevices.com/acapulco-gold','_blank');
+});
+
+// More Pedals Carousel
+var carousel = $('#carousel'),
+    threshold = 80,
+    slideHeight = 123,
+    dragStart, 
+    dragEnd;
+
+$('#next').click(function(){ shiftSlide(-1) })
+$('#prev').click(function(){ shiftSlide(1) })
+
+function shiftSlide(direction) {
+  if (carousel.hasClass('transition')) return;
+  dragEnd = dragStart;
+  $(document).off('mouseup')
+  carousel.off('mousemove')
+          .addClass('transition')
+          .css('transform','translateY(' + (direction * slideHeight) + 'px)'); 
+  setTimeout(function(){
+    if (direction === 1) {
+     $('.slide:first').before($('.slide:last'));
+    } else if (direction === -1) {
+      $('.slide:last').after($('.slide:first'));
+    }
+    carousel.removeClass('transition')
+		carousel.css('transform','translateY(0px)'); 
+  }, 400)
+}
+
+    /* ========== Mobile view ========== */
+
+    var eventFired = 0;
+
+if ($(window).width() < 960) {
+  $('#morePedals').css({
+    'width':'100vw'  });
+  $('#carousel, #carouselWindow').css({
+    'width':'calc(100vw - 100px)'  });
+  $('.footerLogo').css({
+    'width':'150px',
+    'margin':'10px'
+    });
+  $('footer').css({
+    'height':'60px'  });
+} else {
+    eventFired = 1;}
+
+$(window).on('resize', function() {
+   if (!eventFired) {
+    if ($(window).width() < 960) {
+      $('#morePedals').css({
+         'width':'100vw'  });
+      $('#carousel, #carouselWindow').css({
+         'width':'calc(100vw - 100px)'  });
+  } else { }
+    }
+});

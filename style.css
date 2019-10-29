@@ -5,9 +5,12 @@ body {
 	margin: 0;
 	padding: 0;
 	background: #000000;
-	font-family: 'M PLUS Rounded 1c', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
-	position: relative;
+}
+
+.wrap {
+	min-height: calc(100vh - 100px);
 }
 
 .clear {	clear: both;}
@@ -28,7 +31,7 @@ hr {
 
 .header {
 	top: 0;
-	height: 60px;
+	height: 90px;
 	width: 100vw;
 	margin: 0;
 	padding: 0;
@@ -44,22 +47,25 @@ hr {
 .title-pedal {
 	width: 200px;
 	margin: 0 auto ;
-	padding-top: 20px;
+	padding-top: 10px;
 }
 
 .title-small {
-	width: 120px;
-	margin: 20px 20px;
+	width: 70px;
+	margin: 10px 20px;
 	float: left;
 	opacity: 0.5;
 }
 
 .info {
-	width: 30px;
-	height: 30px;
+	width: 50px;
+	height: 50px;
+	background: #FFFFFF;
+	border-radius: 30px;
 	float: right;
 	margin: 20px 30px;
 	opacity: 0.5;
+	color: black;
 }
 
 .close {
@@ -67,7 +73,13 @@ hr {
 	height: 30px;
 	float: right;
 	margin: 0;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.close:hover {
 	opacity: 0.5;
+	transition-duration: 500ms;
 }
 
 .info:hover {
@@ -75,38 +87,44 @@ hr {
 	transition-duration: 500ms;
 }
 
-/****** Right Panel ******/
+.header .info span {
+	font-size: 24px;
+	display: inline-block;
+	margin-top: 8px;
+	font-weight: bold;
+}
+
+/****** Right Side Panel ******/
 
 .rightSPWrapper {
-	height: 100vh;
+	height: 100%;
 	width: 280px;
 	background: #838080;
 	color: #000000;
-	position: absolute;
+	position: fixed;
 	top: 0;
-	padding: 20px 30px 30px 30px;
+	padding: 30px;
 	text-align: left;
 	right: -360px;
+	z-index: 9998;
 }
 
 .rightSPWrapper h1 {
 	font-size: 24px;
 	font-weight: 800;
-	margin-top: 50px;
+	margin-top: 70px;
 }
 
 /****** Footer ******/
 
 footer {
-	margin-top: 80px;
-	bottom: 0;
-	height: 80px;
+	height: 100px;
 	width: 100%;
-	position: fixed;
 }
+
 .footerLogo {
 	width: 200px;
-	margin: 20px;
+	margin: 30px;
 	opacity: 0.5;
 }
 
@@ -147,16 +165,17 @@ footer {
 
 #randomDiv {
 	margin: 60px auto;
-	height: 80px;
+	height: 70px;
 	width: 200px;
 	background: #FFFFFF;
 	border-radius: 40px;
 	border: none;
+	opacity: 0.5;
 }
 
 #randomDiv span {
 	font-size: 16px;
-	margin-top: 30px;
+	margin-top: 25px;
 	float: right;
 	margin-right: 40px;
 }
@@ -181,10 +200,14 @@ footer {
 	animation: colorShuffler 6s linear infinite;
 }
 
+#randomDiv:active {
+	opacity: 1;
+}
+
 #randomIcon {
 	width: 40px;
 	height: 40px;
-	margin-top: 20px;
+	margin-top: 15px;
 	float: left;
 	margin-left: 40px;
 }
@@ -196,11 +219,14 @@ footer {
 	padding: 0;
 	margin-top: 10vh;
 	z-index: 1000;
+	position: relative;
 }
 
-canvas{
+#myCanvas{
 	width: 100%;
 	height: 100%;
+	margin: 0;
+	padding: 0;
 	background: black;
 	z-index: -1;
 	position: fixed;
@@ -253,58 +279,70 @@ canvas{
 	max-width: 80vw;
 	font-size: 16px;
 	line-height: 21px;
-	margin: 0 auto;
+	margin: 0 auto 60px auto;
 }
 
 #onomoInfo span {
 	font-weight: 800;
 	color: #dfc669;
 	margin-right: 10px;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 /* List of other pedals */
 
 #morePedals {
-	width: 140px;
-	margin: 0;
+	display: block;
+	width: 80vw;
+	margin: 0 auto 40px auto;
 	padding: 0;
-	position: fixed;
-	left: 0;
-	top: 20vh;
-	height: 80vh;
+	position: static;
+	height: 93px;
 	background: #000000;
 }
 
-#morePedals li img{
+#carousel, #carouselWindow {
+	height: 93px;
+	overflow: hidden;
+	width: calc(80vw - 100px);
+	margin: 0;
+	display: inline-block;
+}
+
+.slide img{
+	height: 93px;
 	width: 80px;
 }
 
-#morePedals li{
-	display: block;
-	margin: 30px 0;
+.slide {
+	margin: 30px 20px;
+	display: inline;
 }
 
 .arrows {
-	display: block;
-	height: 20px;
-	width: 140px;
+	display: inline-flex;
+	height: 93px;
+	width: 17px;
+	background-repeat: no-repeat;
 }
 
 .bottomArrow {
-	background-image: url('images/downArrow.svg');
-	width: 140px;
+	background-image: url('images/nextArrow.svg');
 	opacity: 0.2;
 }
 
 .topArrow {
-	background-image: url('images/upArrow.svg');
-	width: 140px;
+	background-image: url('images/prevArrow.svg');
 	opacity: 0.2;
 }
 
 .bottomArrow:hover, .topArrow:hover {
 	opacity: 0.5;
 	transition-duration: 100ms;
+}
+
+.transition {
+  transition: .4s;
 }
 
 /* showAll Button */

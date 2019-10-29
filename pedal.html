@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title>OnomatoPedal - Acapulco Gold Sampler</title>
-
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.3/paper-full.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,800|Open+Sans:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/paperscript" canvas="myCanvas">
 
@@ -218,22 +218,26 @@
 </head>
 
 <body>
+
+<!-- Right Side Panel -->
+<div class="rightSPWrapper">
+		<div class="close"><img src="images/closeIcon.svg"></div>
+		<h1>OnomatoPedal</h1>
+		<p>OnomatoPedal is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+		<h1>How To Play</h1>
+		<p>OnomatoPedal is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+	</div>
+
+<!-- Body -->
+
+<div class="wrap">
 <div class="header">
-  <div class="info"><img src="images/menuIcon.svg"></div>
-	<div class="title-small"><a href="index.html"><img src="images/onomatoPedal-Logo.svg"></a></div>
+  <div class="info"><span>?</span></div>
+	<div class="title-small"><a href="index.html"><img src="images/onomatoPedal-Logo-small.svg"></a></div>
 	<div class="title-pedal"><img src="images/zakuzaku-title.svg"></div>
 </div>
 
 <div class='clear'></div>
-
-<!-- Right Panel -->
-<div class="rightSPWrapper">
-  <div class="close"><img src="images/closeIcon.svg"></div>
-  <h1>OnomatoPedal</h1>
-  <p>OnomatoPedal is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-  <h1>How To Play</h1>
-  <p>OnomatoPedal is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-</div>
 
 <!-- Pedal -->
 	<div id="pedal">
@@ -253,14 +257,23 @@
 
     <!-- More Pedals on the Right side-->
 
-    <ul id="morePedals">
-      <li class="arrows topArrow"></li>
-			<li><a href=""><img src="images/Data-Corrupter-bgtx.png"></a></li>
-			<li><a href=""><img src="images/Rainbow-Machine-bgtx.png"></a></li>
-      <li><a href=""><img src="images/organizer-bgtx.png"></a></li>
-      <li class="arrows bottomArrow"></li>
-		</ul>
+    <div id="morePedals">
+			<div class="arrows topArrow" id="prev"></div>
+			<div id="carouselWindow">
+				<div id="carousel">
+				<div class="slide" id="b1"><a href=""><img src="images/Data-Corrupter-bgtx.png"></a></div>
+				<div class="slide" id="b2"><a href=""><img src="images/Rainbow-Machine-bgtx.png"></a></div>
+				<div class="slide" id="b3"><a href=""><img src="images/organizer-bgtx.png"></a></div>
+				<div class="slide" id="b4"><a href=""><img src="images/Acapulco-Gold-bgtx.png"></a></div>
+				<div class="slide" id="b5"><a href=""><img src="images/Data-Corrupter-bgtx.png"></a></div>
+				<div class="slide" id="b6"><a href=""><img src="images/Rainbow-Machine-bgtx.png"></a></div>
+				<div class="slide" id="b7"><a href=""><img src="images/organizer-bgtx.png"></a></div>
+			</div>
+			</div>
+			<div class="arrows bottomArrow" id="next"></div>
+		</div>
 	</div>
+	<div class="clear"></div>
 
 	<!-- Show all button when full browser mode-->
 
@@ -269,7 +282,7 @@
 	<!-- BG Canvas for Paper.js -->
 
 	<canvas id="myCanvas" resize></canvas>
-
+</div>
 	<footer>
 	<a href="https://www.earthquakerdevices.com/" target="_blank"><img src="images/EarthQuaker-Devices-Logo.png" class="footerLogo"></a>
 	<a href="https://www.patternbased.com/" target="_blank"><img src="images/PatternBased_Music-Logo.png" class="footerLogo"></a>
