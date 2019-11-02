@@ -227,6 +227,10 @@ footer {
 	left: 0;
 }
 
+#thePedal {
+	width: 300px;
+	height: 250px;
+}
 /* Avtion Buttons */
 
 #actions {
