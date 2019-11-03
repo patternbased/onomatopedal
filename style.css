@@ -91,7 +91,7 @@ a:hover {
 /****** Right Side Panel ******/
 
 .rightSPWrapper {
-	height: 100%;
+	height: 100vh;
 	width: 280px;
 	background: #838080;
 	color: #000000;
@@ -101,12 +101,18 @@ a:hover {
 	text-align: left;
 	right: -360px;
 	z-index: 9998;
+	overflow-y: scroll;
+	display: block;
 }
 
 .rightSPWrapper h1 {
 	font-size: 24px;
 	font-weight: 800;
-	margin-top: 70px;
+	margin-top: 40px;
+}
+
+.rightSPWrapper p:last-child {
+	margin-bottom: 80px;
 }
 
 /****** Footer ******/
@@ -265,6 +271,7 @@ cursor: pointer;
 	width: 50px;
 	height: 50px;
 	border-radius: 25px;
+	cursor: pointer;
 }
 
 #actions li span, #showAll span {

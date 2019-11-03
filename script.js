@@ -43,7 +43,10 @@ $('#download, #fullscreenMode').css({
     'display':'none'  
     });
 $('#listenBeat').addClass('fullScreenMode');
-// Global elements
+$('.next, .prev').css({
+    'display':'none'
+  });
+    // Global elements
 $('footer').css({
   'margin-top':'50px'  
 });
@@ -97,7 +100,10 @@ $(window).on('resize', function() {
             'display':'none'  
             });
         $('#listenBeat').addClass('fullScreenMode');
-    // Global elements
+        $('.next, .prev').css({
+          'display':'none'
+        }); 
+        // Global elements
       $('footer').css({
         'margin-top':'50px'  
       });
@@ -150,7 +156,10 @@ $('#carousel, #carouselWindow').css({
       'display':'block'  
       });
   $('#listenBeat').removeClass('fullScreenMode');
-// Global elements
+  $('.next, .prev').css({
+    'display':'static'
+  });
+  // Global elements
 $('footer').css({
   'margin-top':'auto'  
 });
@@ -234,6 +243,74 @@ $('.actionBtn').on('mouseleave',function() {
 });
 };
 
+// ===== Open Pedal page in EQD =====
+$("li#aboutPedal").on("click",function(){
+  window.open('https://www.earthquakerdevices.com/acapulco-gold','_blank');
+});
+
+// ===== More Pedals Carousel =====
+
+$('#carousel').slick({
+	prevArrow: $('.prev'),
+	nextArrow: $('.next'),
+  infinite: true,
+  speed: 300,
+  slidesToShow: 7,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 3,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }
+  ]
+});
+
+// ===== Play the Beat =====
+
+$(document).ready(function() {
+  var audioElement = document.createElement('audio');
+  audioElement.setAttribute('src', 'sounds/beats/IceDisco.mp3');
+  
+  audioElement.addEventListener('ended', function() {
+      this.play();
+  }, false);
+
+  
+  $('.playAudio').click(function() {
+    if (audioElement.paused == false) {
+      audioElement.pause();
+      $(".playAudio > img").attr('src', "images/playBeat.svg");
+      $(".playAudio > span").html("Play Beat");
+  } else {
+      audioElement.play();
+      $(".playAudio > img").attr('src', "images/pauseBeat.svg");
+      $(".playAudio > span").html("Pause");  };
+  });
+
+  $('#showAll').click(function() {
+    audioElement.pause();
+    $(".playAudio > img").attr('src', "images/playBeat.svg");
+    $(".playAudio > span").html("Play Beat");
+  });
+});
+
 // ===== Pedal page Full browser mode =====
 
 $('#fullscreenMode, .fullScreenMode').click(function () { 
@@ -256,76 +333,3 @@ $('#showAll').click(function () {
   $('#showAll').css({
     'visibility': 'hidden'});
   });
-
-// ===== Open Pedal page in EQD =====
-$("li#aboutPedal").on("click",function(){
-  window.open('https://www.earthquakerdevices.com/acapulco-gold','_blank');
-});
-
-// ===== More Pedals Carousel =====
-
-$('#carousel').slick({
-  dots: true,
-	prevArrow: $('.prev'),
-	nextArrow: $('.next'),
-  infinite: true,
-  speed: 300,
-  slidesToShow: 7,
-  slidesToScroll: 4,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
-/*
-var carousel = $('#carousel'),
-    threshold = 80,
-    slideWidth = 110,
-    dragStart, 
-    dragEnd;
-
-$('#next').click(function(){ shiftSlide(-1) })
-$('#prev').click(function(){ shiftSlide(1) })
-
-function shiftSlide(direction) {
-  if (carousel.hasClass('transition')) return;
-  dragEnd = dragStart;
-  $(document).off('mouseup')
-  carousel.off('mousemove')
-          .addClass('transition')
-          .css('transform','translateX(' + (direction * slideWidth) + 'px)'); 
-  setTimeout(function(){
-    if (direction === 1) {
-     $('.slide:first').before($('.slide:last'));
-    } else if (direction === -1) {
-      $('.slide:last').after($('.slide:first'));
-    }
-    carousel.removeClass('transition')
-		carousel.css('transform','translateX(0px)'); 
-  }, 400)
-};
-*/
