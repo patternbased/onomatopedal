@@ -32,6 +32,7 @@ a:hover {
 
 .title {
 	width: 200px;
+	max-width: 30%;
 	margin: 0 auto ;
 	padding-top: 20px;
 	opacity: 0.5;
@@ -117,6 +118,7 @@ footer {
 
 .footerLogo {
 	width: 200px;
+	max-width: 30%;
 	margin: 30px;
 	opacity: 0.5;
 }
@@ -126,25 +128,17 @@ footer {
 /* Three Pedals */
 
 #pedalTable {
-	width: 90vw;
+	width: 90%;
 	max-width: 900px;
-	height: 360px;
-	min-width: 300px;
-	min-height: 120px;
-	margin: 15vh auto 0 auto;
+	margin: 10vh auto 0 auto;
 	padding: 0;
 }  
 			
-.pedalCont {
-	width: 20vw;
-	max-width: 300px;
+img.pedalList {
 	margin: 0;
-	padding: 1vw;
-}
-
-.pedalList {
-	width: 20vw;
-	max-width: 300px;;
+	display: inline-block;
+	padding: 20px;
+	width: 240px;
 }
 
 .pedal {
@@ -159,18 +153,39 @@ footer {
 #randomDiv {
 	margin: 60px auto;
 	height: 70px;
-	width: 200px;
+	width: 300px;
 	background: #FFFFFF;
 	border-radius: 40px;
 	border: none;
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 #randomDiv span {
 	font-size: 16px;
-	margin-top: 25px;
+	margin-top: 5px;
 	float: right;
-	margin-right: 40px;
+	margin-right: 60px;
+}
+
+#randomDivMobile {
+	display: none;
+	width:100px;
+	max-width: 20%;
+  height:120px;
+  background-color:#FFFFFF;
+  background-image:url("images/randomIcon.svg");
+  background-size:70px 70px;
+  background-repeat:no-repeat;
+  background-position:center;
+  border-radius:20px;
+  border:none;
+	margin: 50px 10%;
+	padding: 10px;
+  animation:colorShuffler 6s linear infinite;
+}
+
+#randomDivMobile, #randomDiv {
+cursor: pointer;
 }
 
 @keyframes colorShuffler {
@@ -202,7 +217,7 @@ footer {
 	height: 40px;
 	margin-top: 15px;
 	float: left;
-	margin-left: 40px;
+	margin-left: 60px;
 }
 
 /****** Individual Pedal Page ******/
@@ -293,7 +308,7 @@ footer {
 	width: 80vw;
 	margin: 0 auto 40px auto;
 	padding: 0;
-	position: static;
+	position: static relative;
 	height: 93px;
 }
 
@@ -316,23 +331,26 @@ footer {
 }
 
 .arrows {
-	display: inline-flex;
 	height: 93px;
 	width: 17px;
+	position: absolute;
 	background-repeat: no-repeat;
 }
 
-.bottomArrow {
+.next {
 	background-image: url('images/nextArrow.svg');
 	opacity: 0.2;
+	right: 10vw;
+	bottom: 0;
 }
 
-.topArrow {
+.prev {
 	background-image: url('images/prevArrow.svg');
 	opacity: 0.2;
+	left: 10vw;
 }
 
-.bottomArrow:hover, .topArrow:hover {
+.next:hover, .prev:hover {
 	opacity: 0.5;
 	transition-duration: 100ms;
 }
