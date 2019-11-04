@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.3/paper-full.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,800|Open+Sans:400,700&display=swap" rel="stylesheet">
@@ -185,14 +187,14 @@
 <div class="header">
   <div class="info"><span>?</span></div>
 	<div class="title-small"><a href="index.html"><img src="images/onomatoPedal-Logo-small.svg"></a></div>
-	<div class="title-pedal"><img src="images/zakuzaku-title.svg"></div>
+	<div class="title-pedal"><img id="onomoTitle" src="images/zakuzaku-title.svg"></div>
 </div>
 
 <div class='clear'></div>
 
 <!-- Pedal -->
 	<div id="pedal">
-		<img id="thePedal" src="images/pedalsOnly/Acapulco-Gold@2x.png">
+		<img id="thePedal" src="images/pedalsOnly/acapulcogold@2x.png">
 
 		<!-- Circular Action Buttons -->
 
@@ -204,6 +206,7 @@
 		</ul>
 
 		<!-- Onomonapia Description-->
+		<h1 id="pedalName"></h1>
 		<p id="onomoInfo"><span>ざくざく Zaku zaku</span> <b>(1)</b> Describes a large number of metal coins or jewels. <b>(2)</b> Describes the sound of chopping vegetables or the like. Also describes cutting something roughly. <b>(3)</b> Describes the sound of gravel or the like being mixed. <b>(4)</b> Describes the sound of walking over gravel or frost.</p>
 
     <!-- More Pedals on the Right side-->
@@ -213,19 +216,19 @@
 				<div class="arrows prev">
 				</div>
 				<div id="carousel">
-				<div class="slide" id="b1"><a href=""><img src="images/pedalsOnom/Data-Corrupter-bgtx.png"></a></div>
-				<div class="slide" id="b2"><a href=""><img src="images/pedalsOnom/Rainbow-Machine-bgtx.png"></a></div>
-				<div class="slide" id="b3"><a href=""><img src="images/pedalsOnom/Organizer-bgtx.png"></a></div>
-				<div class="slide" id="b4"><a href=""><img src="images/pedalsOnom/Acapulco-Gold-bgtx.png"></a></div>
-				<div class="slide" id="b5"><a href=""><img src="images/pedalsOnom/Arpanoid-bgtx.png"></a></div>
-				<div class="slide" id="b6"><a href=""><img src="images/pedalsOnom/Avalanche-Run-bgtx.png"></a></div>
-				<div class="slide" id="b7"><a href=""><img src="images/pedalsOnom/Disaster-Transport-SR-bgtx.png"></a></div>
-				<div class="slide" id="b8"><a href=""><img src="images/pedalsOnom/Dream-Crusher-bgtx.png"></a></div>
-				<div class="slide" id="b9"><a href=""><img src="images/pedalsOnom/Hoof-Reaper-bgtx.png"></a></div>
-				<div class="slide" id="b10"><a href=""><img src="images/pedalsOnom/Hummingbird-bgtx.png"></a></div>
-				<div class="slide" id="b11"><a href=""><img src="images/pedalsOnom/Levitation-bgtx.png"></a></div>
-				<div class="slide" id="b12"><a href=""><img src="images/pedalsOnom/Palisades-bgtx.png"></a></div>
-				<div class="slide" id="b13"><a href=""><img src="images/pedalsOnom/Spatial-Delivery-bgtx.png"></a></div>
+				<div class="slide" id="4"><img src="images/pedalsOnom/Data-Corrupter-bgtx.png"></div>
+				<div class="slide" id="0"><img src="images/pedalsOnom/Rainbow-Machine-bgtx.png"></div>
+				<div class="slide" id="10"><img src="images/pedalsOnom/Organizer-bgtx.png"></div>
+				<div class="slide" id="1"><img src="images/pedalsOnom/Acapulco-Gold-bgtx.png"></div>
+				<div class="slide" id="3"><img src="images/pedalsOnom/Arpanoid-bgtx.png"></div>
+				<div class="slide" id="2"><img src="images/pedalsOnom/Avalanche-Run-bgtx.png"></div>
+				<div class="slide" id="5"><img src="images/pedalsOnom/Disaster-Transport-SR-bgtx.png"></div>
+				<div class="slide" id="6"><img src="images/pedalsOnom/Dream-Crusher-bgtx.png"></div>
+				<div class="slide" id="7"><img src="images/pedalsOnom/Hoof-Reaper-bgtx.png"></div>
+				<div class="slide" id="8"><img src="images/pedalsOnom/Hummingbird-bgtx.png"></div>
+				<div class="slide" id="9"><img src="images/pedalsOnom/Levitation-bgtx.png"></div>
+				<div class="slide" id="11"><img src="images/pedalsOnom/Palisades-bgtx.png"></div>
+				<div class="slide" id="12"><img src="images/pedalsOnom/Spatial-Delivery-bgtx.png"></div>
 			</div>
 			</div>
 			<div class="arrows next">
@@ -248,8 +251,8 @@
 	<a href="https://www.patternbased.com/" target="_blank"><img src="images/PatternBased_Music-Logo.png" class="footerLogo"></a>
 </footer>
 
-<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
 <script src="script.js"></script>
+<script src="responsive.js"></script>
+<script src="pedal.js"></script>
 </body>
 </html>
