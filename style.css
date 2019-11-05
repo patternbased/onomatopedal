@@ -177,7 +177,7 @@ img.pedalList {
 	display: none;
 	width:100px;
 	max-width: 20%;
-  height:120px;
+  height:100px;
   background-color:#FFFFFF;
   background-image:url("images/randomIcon.svg");
   background-size:70px 70px;
@@ -334,6 +334,7 @@ cursor: pointer;
 	height: auto;
 	width: 93px;
 	margin: 20px;
+	cursor: pointer;
 }
 
 .arrows {

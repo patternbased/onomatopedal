@@ -75,7 +75,7 @@
     "hex":"#9c8035",
     "onomoid":"kachikachi",
     "onomoDesc":"<span>かちかち Kachi kachi</span> <b>(1)</b> Describes the sound made when solid objects hit each other. <b>(2)</b> Describes something very hard. Also used to describe someone's stright-laced views or to describe a person who is stiff with nervous tension. Rigid.",
-    "beaturl":"sounds/beats/Infinity.mp3",
+    "beaturl":"sounds/beats/kachikachi.mp3",
     "sampleurl":"",
     "eqdurl":"https://www.earthquakerdevices.com/hoof-reaper"
   },
@@ -115,7 +115,7 @@
     "hex":"#d1d0d5",
     "onomoid":"guchagucha",
     "onomoDesc":"<span>ぐちゃぐちゃ Gucha gucha</span> <b>(1)</b> Describes something soft and soggy. Also describes the action of stiring or mashing such a substance. <b>(2)</b> Describes something in awful disarray. Higgledy-piigledy. <b>(3)</b> Describes grumbling.",
-    "beaturl":"sounds/beats/Infinity.mp3",
+    "beaturl":"sounds/beats/guchagucha.mp3",
     "sampleurl":"",
     "eqdurl":"https://www.earthquakerdevices.com/palisades"
   },

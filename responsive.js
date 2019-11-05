@@ -34,7 +34,6 @@ $('#actions').css({
 });  
 $('#listenBeat, #aboutPedal').css({
   'width': '220px',
-  'background': '#dfc669',
   'float':'none'  
   });     
 $('#listenBeat > span, #aboutPedal > span').css({

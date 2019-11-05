@@ -27,6 +27,7 @@ var pedalNumber = getUrlParameter('pedalid');
     var onomoColor = $('p#onomoInfo');
     var onomoHeader = $('#onomoTitle');
     var eqdPedalLink = $('li#aboutPedal');
+    var sampleJS = $('#sampleJS');
   
     // render HTML
   
@@ -44,6 +45,7 @@ var pedalNumber = getUrlParameter('pedalid');
     $(onomoColor).find('span').css("color", onomoColorString);
     $(onomoHeader).attr("src","images/" + onomoHeaderString + "-title.svg")
     $(eqdPedalLink).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
+    $(sampleJS).attr("src", "playSampleJs/play-" + pedalImgString + '.js');
   
     // ===== Action button animation =====
 
@@ -96,8 +98,34 @@ var pedalNumber = getUrlParameter('pedalid');
     });
   });
 
+    // ===== Change hex on Mobile view =====
+  var eventFired = 0;
+  if ($(window).width() < 960) {
+    $('#listenBeat, #aboutPedal').css({
+      'background': onomoColorString
+    });     
+  } else {
+    eventFired = 1;
+  };
+  $(window).on('resize', function() {
+    if ($(window).width() < 960) {
+      $('#listenBeat, #aboutPedal').css({
+        'background': onomoColorString
+      });
+    }
+  });
+  $(window).on('resize', function() {
+    if ($(window).width() > 960) {
+      $('#listenBeat, #aboutPedal').css({
+        'background': '#FFFFFF'
+      });
+    }
+  });
+
   };
   pedalRequest.send();
+
+  // ===== End of rendering HTML while loading =====
 
   // ===== More Pedals Carousel in Pedal.html =====
 
