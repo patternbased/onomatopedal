@@ -21,31 +21,34 @@ var pedalNumber = getUrlParameter('pedalid');
 // Rendering the page with PedalID
 
     // Content Distinations
-    var pedalName = $('#pedalName');
+    var onomoName = $('#onomoName');
     var pedalImg = $('#thePedal');
     var pedalDesc = $('#onomoInfo');
     var onomoColor = $('p#onomoInfo');
-    var onomoHeader = $('#onomoTitle');
+    var onomoHeader = $('#OnomoPedalHeader');
     var eqdPedalLink = $('li#aboutPedal');
     var sampleJS = $('#sampleJS');
+    var pedalSlides = $('.slides');
   
     // render HTML
   
-    var pedalNameString = pedalData[pedalNumber].name;
+    var onomoNameString = pedalData[pedalNumber].onomoname;
     var pedalImgString = pedalData[pedalNumber].nameid;
     var pedalDescString = pedalData[pedalNumber].onomoDesc;
     var onomoColorString = pedalData[pedalNumber].hex;
-    var onomoHeaderString = pedalData[pedalNumber].onomoid;
+    var onomoHeaderString = pedalData[pedalNumber].header;
     var eqdPedalLinkString = pedalData[pedalNumber].eqdurl;
     var beatUrlString = pedalData[pedalNumber].beaturl;
+    var samePedal = "#" + pedalNumber;
   
-    $(pedalName).html(pedalNameString).css("color", onomoColorString);
+    $(onomoName).html(onomoNameString).css("color", onomoColorString);
     $(pedalImg).attr("src","images/pedalsOnly/" + pedalImgString + "@2x.png");
     $(pedalDesc).html(pedalDescString);
     $(onomoColor).find('span').css("color", onomoColorString);
-    $(onomoHeader).attr("src","images/" + onomoHeaderString + "-title.svg")
+    $(onomoHeader).html(onomoHeaderString).css("color", onomoColorString);
     $(eqdPedalLink).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
     $(sampleJS).attr("src", "playSampleJs/play-" + pedalImgString + '.js');
+    $(samePedal).css("display", "none");
   
     // ===== Action button animation =====
 
@@ -127,7 +130,7 @@ var pedalNumber = getUrlParameter('pedalid');
 
   // ===== End of rendering HTML while loading =====
 
-  // ===== More Pedals Carousel in Pedal.html =====
+// ===== More Pedals Carousel in Pedal.html =====
 
 $('#carousel').slick({
 	prevArrow: $('.prev'),

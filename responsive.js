@@ -23,10 +23,10 @@ $('#randomDivMobile').css({
 
 // Pedal page mobile
 
-$('#morePedals').css({
+$('#carouselWindow').css({
   'width':'100vw'  
   });
-$('#carousel, #carouselWindow').css({
+$('#carousel').css({
   'width':'calc(100vw - 100px)'  
   });
 $('#actions').css({
@@ -45,7 +45,7 @@ $('#download, #fullscreenMode').css({
     'display':'none'  
     });
 $('#listenBeat').addClass('fullScreenMode');
-$('.next, .prev').css({
+$('.arrows').css({
     'display':'none'
   });
 
@@ -84,10 +84,10 @@ $(window).on('resize', function() {
     
         // Pedal page mobile
 
-      $('#morePedals').css({
+      $('#carouselWindow').css({
         'width':'100vw'  
         });
-      $('#carousel, #carouselWindow').css({
+      $('#carousel').css({
         'width':'calc(100vw - 100px)'  
         });
         $('#actions').css({
@@ -107,7 +107,7 @@ $(window).on('resize', function() {
             'display':'none'  
             });
         $('#listenBeat').addClass('fullScreenMode');
-        $('.next, .prev').css({
+        $('.arrows').css({
           'display':'none'
         }); 
 
@@ -144,10 +144,10 @@ if ($(window).width() > 960) {
 
 // Pedal page mobile
 
-$('#morePedals').css({
+$('#carouselWindow').css({
   'width':'80vw'  
   });
-$('#carousel, #carouselWindow').css({
+$('#carousel').css({
   'width':'calc(80vw - 100px)'  
   });
   $('#actions').css({
