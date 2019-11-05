@@ -15,7 +15,7 @@ body {
 
 .clear {	clear: both;}
 
-a:hover {
+a:hover, img.pedalList:hover, img.slide:hover {
 	opacity: 0.5;
 	transition-duration: 500ms;
 }
@@ -24,14 +24,15 @@ a:hover {
 
 .header {
 	top: 0;
-	height: 90px;
+	min-height: 90px;
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	border-bottom:2px solid  #040404;
 }
 
 .title {
-	width: 200px;
+	width: 160px;
 	max-width: 30%;
 	margin: 0 auto ;
 	padding-top: 20px;
@@ -39,9 +40,9 @@ a:hover {
 }
 
 .title-pedal {
-	width: 200px;
+	width: 400px;
 	margin: 0 auto ;
-	padding-top: 10px;
+	padding: 10px;
 }
 
 .title-small {
@@ -49,6 +50,13 @@ a:hover {
 	margin: 10px 20px;
 	float: left;
 	opacity: 0.5;
+}
+
+#OnomoPedalHeader {
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	padding-top: 25px;
 }
 
 .info {
@@ -111,8 +119,20 @@ a:hover {
 	margin-top: 40px;
 }
 
+.rightSPWrapper hr {
+	border: 1px solid #3f3f3f;
+	margin: 40px 0 ;
+}
 .rightSPWrapper p:last-child {
 	margin-bottom: 80px;
+}
+
+.rightSPWrapper p {
+	line-height: 1.5em;
+}
+
+.rightSPWrapper p span {
+	margin-left: 20px;
 }
 
 /****** Footer ******/
@@ -143,8 +163,9 @@ footer {
 img.pedalList {
 	margin: 0;
 	display: inline-block;
-	padding: 30px;
+	padding: 40px;
 	width: 240px;
+	cursor: pointer;
 }
 
 .pedal {
@@ -157,20 +178,27 @@ img.pedalList {
 /* Shuffle Button */
 
 #randomDiv {
-	margin: 80px auto;
-	height: 70px;
-	width: 300px;
+	margin: 80px 0;
+	height: 100px;
+	width: 100%;
 	background: #FFFFFF;
-	border-radius: 40px;
 	border: none;
 	opacity: 0.7;
+	text-align: center;
+	position: relative;
 }
 
-#randomDiv span {
-	font-size: 16px;
-	margin-top: 5px;
-	float: right;
-	margin-right: 60px;
+#randomWrap {
+	height: 40px;
+	display: block;
+	padding: 25px 0;
+	width: 400px;
+	margin: 0 auto;
+}
+
+#randombtn {
+	width: auto;
+	height: 50px;
 }
 
 #randomDivMobile {
@@ -218,14 +246,6 @@ cursor: pointer;
 	opacity: 1;
 }
 
-#randomIcon {
-	width: 40px;
-	height: 40px;
-	margin-top: 15px;
-	float: left;
-	margin-left: 60px;
-}
-
 /****** Individual Pedal Page ******/
 
 #pedal {
@@ -236,9 +256,9 @@ cursor: pointer;
 	position: relative;
 }
 
-#pedalName {
+#onomoName {
 	color: #838080;
-	font-size: 24px;
+	font-size: 18px;
 }
 #myCanvas{
 	width: 100%;
@@ -262,7 +282,7 @@ cursor: pointer;
 	width: max-content ;
 	max-width: 500px;
 	height: 70px;
-	margin: 40px auto;
+	margin: 30px auto;
 	padding: 0;
 	overflow: hidden;
 }
@@ -297,8 +317,8 @@ cursor: pointer;
 
 #onomoInfo {
 	color: #838080;
-	text-align: justify;
-	width: 500px;
+	text-align: justify center;
+	width: 400px;
 	max-width: 90vw;
 	font-size: 16px;
 	line-height: 21px;
@@ -315,47 +335,52 @@ cursor: pointer;
 
 #morePedals {
 	display: block;
-	width: 80vw;
-	margin: 0 auto 40px auto;
+	background: #040404;
+	width: 100%;
+	margin-bottom: 20px;
 	padding: 0;
-	position: static relative;
-	height: auto;
 }
 
-#carousel, #carouselWindow {
+#carouselWindow {
 	height: auto;
-	overflow: hidden;
-	width: calc(80vw - 100px);
-	margin: 0;
+	width: 80vw;
 	display: inline-block;
+	position: relative;
+}
+
+#carousel {
+	width: calc(80vw - 100px);
+	overflow: hidden;
+	margin: 0 50px;
 }
 
 .slide{
 	height: auto;
-	width: 93px;
+	width: auto;
 	margin: 20px;
 	cursor: pointer;
 }
 
 .arrows {
-	height: 93px;
+	display: inline-block;
+	height: 100px;
 	width: 17px;
 	margin: 20px 0;
 	position: absolute;
+	bottom: 0;
 	background-repeat: no-repeat;
 }
 
 .next {
 	background-image: url('images/nextArrow.svg');
 	opacity: 0.2;
-	right: 10vw;
-	bottom: 0;
+	right: 0;
 }
 
 .prev {
 	background-image: url('images/prevArrow.svg');
 	opacity: 0.2;
-	left: 10vw;
+	left: 0;
 }
 
 .next:hover, .prev:hover {
