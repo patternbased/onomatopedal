@@ -319,30 +319,27 @@ cursor: pointer;
 	margin: 0 auto 40px auto;
 	padding: 0;
 	position: static relative;
-	height: 93px;
+	height: auto;
 }
 
 #carousel, #carouselWindow {
-	height: 93px;
+	height: auto;
 	overflow: hidden;
 	width: calc(80vw - 100px);
 	margin: 0;
 	display: inline-block;
 }
 
-.slide img{
-	height: 93px;
-	width: 80px;
-}
-
-.slide {
-	margin: 30px 20px;
-	display: inline;
+.slide{
+	height: auto;
+	width: 93px;
+	margin: 20px;
 }
 
 .arrows {
 	height: 93px;
 	width: 17px;
+	margin: 20px 0;
 	position: absolute;
 	background-repeat: no-repeat;
 }

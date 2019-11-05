@@ -5,7 +5,7 @@
     "hex":"#ef569f",
     "onomoid":"ukiuki",
     "onomoDesc":"<span>うきうき Uki uki</span> Describes someone who is happy and excited. In a buoyant mood.",
-    "beaturl":"sounds/beats/IceDisco.mp3",
+    "beaturl":"sounds/beats/All.mp3",
     "sampleurl":"",
     "eqdurl":"https://www.earthquakerdevices.com/rainbow-machine"
   },
@@ -15,7 +15,7 @@
     "hex":"#dfc669",
     "onomoid":"zakuzaku",
     "onomoDesc":"<span>ざくざく Zaku zaku</span> <b>(1)</b> Describes a large number of metal coins or jewels. <b>(2)</b> Describes the sound of chopping vegetables or the like. Also describes cutting something roughly. <b>(3)</b> Describes the sound of gravel or the like being mixed. <b>(4)</b> Describes the sound of walking over gravel or frost.",
-    "beaturl":"sounds/beats/IceDisco.mp3",
+    "beaturl":"sounds/beats/Billionaires.mp3",
     "sampleurl":"",
     "eqdurl":"https://www.earthquakerdevices.com/acapulco-gold"
   },
@@ -35,7 +35,7 @@
     "hex":"#08c792",
     "onomoid":"giragira",
     "onomoDesc":"<span>ぎらぎら Gira gira</span> Describes something shining brightly. Dazzlingly. Also used to describe a person's appearance or look. Glaring.",
-    "beaturl":"sounds/beats/IceDisco.mp3",
+    "beaturl":"sounds/beats/Infinity.mp3",
     "sampleurl":"",
     "eqdurl":"https://www.earthquakerdevices.com/arpanoid"
   },
@@ -45,7 +45,7 @@
     "hex":"#3f3f3f",
     "onomoid":"kibikibi",
     "onomoDesc":"<span>きびきび Kibi kibi</span> Describes attitude, behaviour, or speech that is prompt, businesslike, and alert.",
-    "beaturl":"sounds/beats/IceDisco.mp3",
+    "beaturl":"sounds/beats/All.mp3",
     "sampleurl":"",
     "eqdurl":"https://www.earthquakerdevices.com/data-corrupter"
   },
@@ -55,7 +55,7 @@
     "hex":"#a3a3a5",
     "onomoid":"kutakuta",
     "onomoDesc":"<span>くたくた Kuta kuta</span> Describes something that is withered. Also is used to describe someone who is realy tired. Worn-out. Exhausted.",
-    "beaturl":"sounds/beats/IceDisco.mp3",
+    "beaturl":"sounds/beats/Billionaires.mp3",
     "sampleurl":"",
     "eqdurl":"https://www.earthquakerdevices.com/disaster-transport-sr"
   },
@@ -75,7 +75,7 @@
     "hex":"#9c8035",
     "onomoid":"kachikachi",
     "onomoDesc":"<span>かちかち Kachi kachi</span> <b>(1)</b> Describes the sound made when solid objects hit each other. <b>(2)</b> Describes something very hard. Also used to describe someone's stright-laced views or to describe a person who is stiff with nervous tension. Rigid.",
-    "beaturl":"sounds/beats/IceDisco.mp3",
+    "beaturl":"sounds/beats/Infinity.mp3",
     "sampleurl":"",
     "eqdurl":"https://www.earthquakerdevices.com/hoof-reaper"
   },
@@ -85,7 +85,7 @@
     "hex":"#55af2f",
     "onomoid":"yurayura",
     "onomoDesc":"<span>ゆらゆら Yura yura</span> <b>(1)</b> Describes something very loose. <b>(2)</b> Describes slow movement.",
-    "beaturl":"sounds/beats/IceDisco.mp3",
+    "beaturl":"sounds/beats/All.mp3",
     "sampleurl":"",
     "eqdurl":"https://www.earthquakerdevices.com/hummingbird"
   },
@@ -95,7 +95,7 @@
     "hex":"#838080",
     "onomoid":"potapota",
     "onomoDesc":"<span>ぽたぽた Pota pota</span> Describes dripping water.",
-    "beaturl":"sounds/beats/IceDisco.mp3",
+    "beaturl":"sounds/beats/Billionaires.mp3",
     "sampleurl":"",
     "eqdurl":"https://www.earthquakerdevices.com/levitation"
   },
@@ -115,7 +115,7 @@
     "hex":"#d1d0d5",
     "onomoid":"guchagucha",
     "onomoDesc":"<span>ぐちゃぐちゃ Gucha gucha</span> <b>(1)</b> Describes something soft and soggy. Also describes the action of stiring or mashing such a substance. <b>(2)</b> Describes something in awful disarray. Higgledy-piigledy. <b>(3)</b> Describes grumbling.",
-    "beaturl":"sounds/beats/IceDisco.mp3",
+    "beaturl":"sounds/beats/Infinity.mp3",
     "sampleurl":"",
     "eqdurl":"https://www.earthquakerdevices.com/palisades"
   },
@@ -125,7 +125,7 @@
     "hex":"#e87e57",
     "onomoid":"kebakeba",
     "onomoDesc":"<span>けばけば Keba keba</span> Describes someone or something that is gaudy. Garish.",
-    "beaturl":"sounds/beats/IceDisco.mp3",
+    "beaturl":"sounds/beats/All.mp3",
     "sampleurl":"",
     "eqdurl":"https://www.earthquakerdevices.com/spatial-delivery"
   }

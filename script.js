@@ -1,7 +1,7 @@
 // ===== Top page Pedal Shuffle =====
 
     function randomize() {
-      var allBanners = $('#pedalTable a');
+      var allBanners = $('#pedalTable img');
       shuffle(allBanners.hide()).slice(10).show();    
     }
 
@@ -43,43 +43,37 @@ $('.close').click(function () {
     'transition-duration':'300ms'});
 });
 
-// ===== AJAX =====
+// ===== Link to Pedal with PedalID as URL Parameter =====
+
 var pedalBtn = $('.slide, .pedalList');
 
 $(pedalBtn).click(function() {
-  // Connect to JSON
-  var pedalRequest = new XMLHttpRequest();
-  var thisPedal = this;
-  pedalRequest.open('GET','pedalinfo.json');
-  pedalRequest.onload = function() {
-    var pedalData = JSON.parse(pedalRequest.responseText);
-  
+  var thisPedal = event.currentTarget;
     // Get id#
-
     var pedalNumber = $(thisPedal).attr("id");
-
-    // Content Distinations
-    var pedalName = $('#pedalName');
-    var pedalImg = $('#thePedal');
-    var pedalDesc = $('#onomoInfo');
-    var onomoColor = $('p#onomoInfo');
-    var onomoHeader = $('#onomoTitle');
-
-    // render HTML
-
-    var pedalNameString = pedalData[pedalNumber].name;
-    var pedalImgString = pedalData[pedalNumber].nameid;
-    var pedalDescString = pedalData[pedalNumber].onomoDesc;
-    var onomoColorString = pedalData[pedalNumber].hex;
-    var onomoHeaderString = pedalData[pedalNumber].onomoid;
-
-    $(pedalName).html(pedalNameString).css("color", onomoColorString);
-    $(pedalImg).attr("src","images/pedalsOnly/" + pedalImgString + "@2x.png");
-    $(pedalDesc).html(pedalDescString);
-    $(onomoColor).find('span').css("color", onomoColorString);
-    $(onomoHeader).attr("src","images/" + onomoHeaderString + "-title.svg")
-
-  };
-  pedalRequest.send();
+    // Open Pedal with it as a URL Parameter
+    window.location.replace('pedal.html?pedalid=' + pedalNumber );
 });
 
+// ===== Full browser mode in Pedal.html =====
+
+$('#fullscreenMode, .fullScreenMode').click(function () { 
+  $('#pedal').fadeOut(500);
+  $('footer').css({
+    'position': 'fixed',
+  });
+  $('#showAll').css({
+    'visibility': 'visible'
+  });
+});
+
+// Back from Full browser mode
+
+$('#showAll').click(function () { 
+  $('#pedal').fadeIn(300);
+  $('footer').css({
+    'position': 'static',
+  });
+  $('#showAll').css({
+    'visibility': 'hidden'});
+  });
