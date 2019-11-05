@@ -128,8 +128,7 @@ var pedalNumber = getUrlParameter('pedalid');
   };
   pedalRequest.send();
 
-  // ===== End of rendering HTML while loading =====
-
+// ===== End of rendering HTML while loading =====
 // ===== More Pedals Carousel in Pedal.html =====
 
 $('#carousel').slick({
