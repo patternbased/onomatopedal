@@ -2,6 +2,7 @@
 var eventFired = 0;
 
 if ($(window).width() < 960) {
+  localStorage.clear();
 
 // Top page mobile
 
@@ -63,6 +64,7 @@ $('.wrap').css({
 
 $(window).on('resize', function() {
     if ($(window).width() < 960) {
+      localStorage.clear();
       $('#randomDivMobile').css({
         'display':'inline-block'
         });
