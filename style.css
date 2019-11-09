@@ -201,24 +201,7 @@ img.pedalList {
 	height: 50px;
 }
 
-#randomDivMobile {
-	display: none;
-	width:100px;
-	max-width: 20%;
-  height:100px;
-  background-color:#FFFFFF;
-  background-image:url("images/randomIcon.svg");
-  background-size:70px 70px;
-  background-repeat:no-repeat;
-  background-position:center;
-  border-radius:20px;
-  border:none;
-	margin: 50px 10%;
-	padding: 10px;
-  animation:colorShuffler 6s linear infinite;
-}
-
-#randomDivMobile, #randomDiv {
+#randomDiv {
 cursor: pointer;
 }
 

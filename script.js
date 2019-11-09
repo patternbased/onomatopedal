@@ -1,9 +1,16 @@
 // ===== Top page Pedal Shuffle =====
 
+  if ($(window).width() < 960) {
+    function randomize() {
+      var allBanners = $('#pedalTable img');
+      shuffle(allBanners.hide()).slice(9).show();    
+    }
+  } else {
     function randomize() {
       var allBanners = $('#pedalTable img');
       shuffle(allBanners.hide()).slice(10).show();    
     }
+  };
 
     $('#randomDiv, #randomDivMobile').click(randomize);
     randomize();

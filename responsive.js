@@ -2,20 +2,19 @@
 var eventFired = 0;
 
 if ($(window).width() < 960) {
-  localStorage.clear();
 
 // Top page mobile
 
-$('#randomDivMobile').css({
-  'display':'inline-block'
-  });
   $('#pedalTable').css({
     'max-width':'839px',
-    'width':'100%'
+    'width':'100%',
+    'margin-top':'50px'
   });
   $('#randomDiv').css({
-    'display':'none'
-  }); 
+    'margin':'50px 0',
+    'animation': 'colorShuffler 6s linear infinite',
+    'cursor':'pointer'
+  });
   $('.pedalList').css({
     'width':'220px',
     'max-width':'30%',
@@ -64,22 +63,22 @@ $('.wrap').css({
 
 $(window).on('resize', function() {
     if ($(window).width() < 960) {
-      localStorage.clear();
-      $('#randomDivMobile').css({
-        'display':'inline-block'
-        });
-        $('#pedalTable').css({
-          'max-width':'839px',
-          'width':'100%'
-        });
-        $('#randomDiv').css({
-          'display':'none'
-        }); 
-        $('.pedalList').css({
-          'width':'220px',
-          'max-width':'30%',
-          'padding':'30px'
-        });
+
+    // Top page mobile
+
+      $('#pedalTable').css({
+        'max-width':'839px',
+        'width':'100%',
+        'margin-top':'50px'
+      });
+      $('#randomDiv').css({
+        'margin':'50px 0'
+      });
+      $('.pedalList').css({
+        'width':'220px',
+        'max-width':'30%',
+        'padding':'30px'
+      });
     
         // Pedal page mobile
 
@@ -122,15 +121,15 @@ $(window).on('resize', function() {
 
 $(window).on('resize', function() {
 if ($(window).width() > 960) {
-  $('#randomDivMobile').css({
-    'display':'none'
-  });
+  // Top page mobile
+
   $('#pedalTable').css({
     'max-width':'900px',
-    'width':'90%'
+    'width':'90%',
+    'margin-top':'10vh'
   });
   $('#randomDiv').css({
-    'display':'block'
+    'margin':'80px 0'
   }); 
   $('.pedalList').css({
     'width':'240px',
