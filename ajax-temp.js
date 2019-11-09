@@ -15,6 +15,7 @@ var pedalNumber = getUrlParameter('pedalid');
 // Connect to JSON
   var pedalRequest = new XMLHttpRequest();
   pedalRequest.open('GET','pedalinfo.json');
+  pedalRequest.setRequestHeader('Cache-Control', 'no-cache');
   pedalRequest.onload = function() {
   var pedalData = JSON.parse(pedalRequest.responseText);
 
