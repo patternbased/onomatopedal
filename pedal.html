@@ -29,6 +29,24 @@
 		<p>OnomatoPedal is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 	</div>
 
+<!-- Tapping divs in Play mode mobile-->
+
+	<div id="tapKeyWrap">
+		<div class="tapKey" id="keyQ"></div>
+		<div class="tapKey" id="keyW"></div>
+		<div class="tapKey" id="keyE"></div>
+		<div class="tapKey" id="keyR"></div>
+		<div class="tapKey" id="keyA"></div>
+		<div class="tapKey" id="keyS"></div>
+		<div class="tapKey" id="keyD"></div>
+		<div class="tapKey" id="keyF"></div>
+		<div class="tapKey" id="keyZ"></div>
+		<div class="tapKey" id="keyX"></div>
+		<div class="tapKey" id="keyC"></div>
+		<div class="tapKey" id="keyV"></div>
+	</div>
+
+	
 <!-- Body -->
 
 <div class="wrap">
@@ -42,12 +60,13 @@
 
 <!-- Pedal -->
 	<div id="pedal">
-		<img id="thePedal" src="images/pedalsOnly/acapulcogold@2x.png">
+		<img id="thePedal">
 
 		<!-- Circular Action Buttons -->
 
 		<ul id="actions">
 			<li class='actionBtn playAudio' id="listenBeat"><img src="images/playBeat.svg"><span>Play Beat</span></li>
+			<li class='actionBtnMobile playAudio' id="playMode"><img src="images/playBeat.svg"><span>Play Mode</span></li>
 			<li class='actionBtn' id="download"><img src="images/downloadSample.svg"><span>Download Sample</span></li>
 			<li class='actionBtn' id="aboutPedal"><img src="images/seePedal.svg"><span>Check out Pedal</span></li>
 			<li class='actionBtn' id='fullscreenMode'><img src="images/fullscreen.svg"><span>Full Browser Mode</span></li>
@@ -55,7 +74,7 @@
 
 		<!-- Onomonapia Description-->
 		<h1 id="onomoName"></h1>
-		<p id="onomoInfo"><span>ざくざく Zaku zaku</span> <b>(1)</b> Describes a large number of metal coins or jewels. <b>(2)</b> Describes the sound of chopping vegetables or the like. Also describes cutting something roughly. <b>(3)</b> Describes the sound of gravel or the like being mixed. <b>(4)</b> Describes the sound of walking over gravel or frost.</p>
+		<p id="onomoInfo"></p>
 
     <!-- More Pedals on the Right side-->
 
@@ -85,7 +104,7 @@
 	</div>
 	<div class="clear"></div>
 
-	<!-- Show all button when full browser mode-->
+	<!-- Show all button in full browser mode-->
 
 	<div id="showAll" class="actionBtn"><img src="images/showAll.svg"><span>Back to Pedal</span></div>
 

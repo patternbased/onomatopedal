@@ -29,6 +29,18 @@ var pedalNumber = getUrlParameter('pedalid');
     var eqdPedalLink = $('li#aboutPedal');
     var sampleJS = $('#sampleJS');
     var pedalSlides = $('.slides');
+    var mobileKeyQ = $('#keyQ');
+    var mobileKeyW = $('#keyW');
+    var mobileKeyE = $('#keyE');
+    var mobileKeyR = $('#keyR');
+    var mobileKeyA = $('#keyA');
+    var mobileKeyS = $('#keyS');
+    var mobileKeyD = $('#keyD');
+    var mobileKeyF = $('#keyF');
+    var mobileKeyZ = $('#keyZ');
+    var mobileKeyX = $('#keyX');
+    var mobileKeyC = $('#keyC');
+    var mobileKeyV = $('#keyV');
   
     // render HTML
   
@@ -40,6 +52,19 @@ var pedalNumber = getUrlParameter('pedalid');
     var eqdPedalLinkString = pedalData[pedalNumber].eqdurl;
     var beatUrlString = pedalData[pedalNumber].beaturl;
     var samePedal = "#" + pedalNumber;
+    var mobileKeyQString = pedalData[pedalNumber].keyq;
+    var mobileKeyWString = pedalData[pedalNumber].keyw;
+    var mobileKeyEString = pedalData[pedalNumber].keye;
+    var mobileKeyRString = pedalData[pedalNumber].keyr;
+    var mobileKeyAString = pedalData[pedalNumber].keya;
+    var mobileKeySString = pedalData[pedalNumber].keys;
+    var mobileKeyDString = pedalData[pedalNumber].keyd;
+    var mobileKeyFString = pedalData[pedalNumber].keyf;
+    var mobileKeyZString = pedalData[pedalNumber].keyz;
+    var mobileKeyXString = pedalData[pedalNumber].keyx;
+    var mobileKeyCString = pedalData[pedalNumber].keyc;
+    var mobileKeyVString = pedalData[pedalNumber].keyv;
+
   
     $(onomoName).html(onomoNameString).css("color", onomoColorString);
     $(pedalImg).attr("src","images/pedalsOnly/" + pedalImgString + "@2x.png");
@@ -49,6 +74,18 @@ var pedalNumber = getUrlParameter('pedalid');
     $(eqdPedalLink).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
     $(sampleJS).attr("src", "playSampleJs/play-" + pedalImgString + '.js');
     $(samePedal).css("display", "none");
+    $(mobileKeyQ).css("background-color", mobileKeyQString);
+    $(mobileKeyW).css("background-color", mobileKeyWString);
+    $(mobileKeyE).css("background-color", mobileKeyEString);
+    $(mobileKeyR).css("background-color", mobileKeyRString);
+    $(mobileKeyA).css("background-color", mobileKeyAString);
+    $(mobileKeyS).css("background-color", mobileKeySString);
+    $(mobileKeyD).css("background-color", mobileKeyDString);
+    $(mobileKeyF).css("background-color", mobileKeyFString);
+    $(mobileKeyZ).css("background-color", mobileKeyZString);
+    $(mobileKeyX).css("background-color", mobileKeyXString);
+    $(mobileKeyC).css("background-color", mobileKeyCString);
+    $(mobileKeyV).css("background-color", mobileKeyVString);
   
     // ===== Action button animation =====
 
@@ -75,36 +112,42 @@ var pedalNumber = getUrlParameter('pedalid');
 
     // ===== Play the Beat =====
 
-  $(document).ready(function() {
-    var audioElement = document.createElement('audio');
-    audioElement.setAttribute('src', beatUrlString);
-    
-    audioElement.addEventListener('ended', function() {
-        this.play();
-    }, false);
+    function playBeat(params) {
+      var audioElement = document.createElement('audio');
+      audioElement.setAttribute('src', beatUrlString);
+      
+      audioElement.addEventListener('ended', function() {
+          this.play();
+      }, false);
+  
+      $('.playAudio').click(function() {
+        if (audioElement.paused == false) {
+          audioElement.pause();
+          $(".playAudio > img").attr('src', "images/playBeat.svg");
+          $(".playAudio > span").html("Play Beat");
+      } else {
+          audioElement.play();
+          $(".playAudio > img").attr('src', "images/pauseBeat.svg");
+          $(".playAudio > span").html("Pause");  };
+      });
 
-    $('.playAudio').click(function() {
-      if (audioElement.paused == false) {
+      if ($(window).width() < 960) {
+      $('#showAll').click(function() {
         audioElement.pause();
         $(".playAudio > img").attr('src', "images/playBeat.svg");
-        $(".playAudio > span").html("Play Beat");
-    } else {
-        audioElement.play();
-        $(".playAudio > img").attr('src', "images/pauseBeat.svg");
-        $(".playAudio > span").html("Pause");  };
-    });
-
-    $('#showAll').click(function() {
-      audioElement.pause();
-      $(".playAudio > img").attr('src', "images/playBeat.svg");
-      $(".playAudio > span").html("Play Beat");
-    });
+        $(".playAudio > span").html("Play Mode");
+      });
+      };
+    }
+    
+  $(document).ready(function() {
+    playBeat();
   });
 
     // ===== Change hex on Mobile view =====
   var eventFired = 0;
   if ($(window).width() < 960) {
-    $('#listenBeat, #aboutPedal').css({
+    $('#playMode, #aboutPedal').css({
       'background': onomoColorString
     });     
   } else {
@@ -169,3 +212,64 @@ $('#carousel').slick({
     }
   ]
 });
+
+// ===== Pedal page : MODE =====
+// ===== Full browser mode in Pedal.html =====
+
+function fullScreenStart() {
+  $('#pedal').fadeOut(500);
+  $('footer').css({
+    'position': 'fixed',
+  });
+  $('#showAll').css({
+    'visibility': 'visible'
+  });
+}
+
+function tapKeys() {
+  $('#tapKeyWrap').css({
+    'display':'grid'
+  });
+};
+
+$('#fullscreenMode, #playMode').click(function () {
+  if ($(window).width() < 960) {
+    // Mobile Play mode (Full Screen + Beat Play)
+  tapKeys(); 
+  fullScreenStart();
+  } else {
+    // Full screen mode (HD)
+  fullScreenStart();
+  }
+});
+
+// Back from Full browser mode
+
+function fullScreenEnd() {
+  $('#pedal').fadeIn(300);
+  $('footer').css({
+    'position': 'static',
+  });
+  $('#showAll').css({
+    'visibility': 'hidden'});
+}
+
+function tapKeysEnd() {
+  $('#tapKeyWrap').css({
+    'display':'none'
+  });
+};
+
+$('#showAll').click(function () { 
+  if ($(window).width() < 960) {
+    // Mobile Play mode (Full Screen + Beat Play)
+  tapKeysEnd(); 
+  fullScreenEnd();
+  } else {
+    // Full screen mode (HD)
+  fullScreenEnd();
+  }
+  });
+
+ 
+

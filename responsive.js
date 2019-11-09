@@ -32,21 +32,18 @@ $('#carousel').css({
 $('#actions').css({
   'height':'140px'
 });  
-$('#listenBeat, #aboutPedal').css({
+$('#aboutPedal').css({
   'width': '220px',
   'float':'none'  
   });     
-$('#listenBeat > span, #aboutPedal > span').css({
+$('#aboutPedal > span').css({
   'display':'inline-block'  
   });
-$('#listenBeat > span').html('Play Mode'  
-  );   
-$('#download, #fullscreenMode').css({
+$('#listenBeat, #download, #fullscreenMode, .arrows').css({
     'display':'none'  
-    });
-$('#listenBeat').addClass('fullScreenMode');
-$('.arrows').css({
-    'display':'none'
+  });
+$('li#playMode').css({
+  'display':'block'
   });
 
     // Global elements
@@ -84,32 +81,28 @@ $(window).on('resize', function() {
     
         // Pedal page mobile
 
-      $('#carouselWindow').css({
-        'width':'100vw'  
-        });
-      $('#carousel').css({
-        'width':'calc(100vw - 100px)'  
-        });
+        $('#carouselWindow').css({
+          'width':'100vw'  
+          });
+        $('#carousel').css({
+          'width':'calc(100vw - 100px)'  
+          });
         $('#actions').css({
           'height':'140px'
         });  
-        $('#listenBeat, #aboutPedal').css({
+        $('#aboutPedal').css({
           'width': '220px',
-          'background': '#dfc669',
           'float':'none'  
           });     
-        $('#listenBeat > span, #aboutPedal > span').css({
+        $('#aboutPedal > span').css({
           'display':'inline-block'  
           });
-        $('#listenBeat > span').html('Play Mode'  
-          );   
-        $('#download, #fullscreenMode').css({
+        $('#listenBeat, #download, #fullscreenMode, .arrows').css({
             'display':'none'  
-            });
-        $('#listenBeat').addClass('fullScreenMode');
-        $('.arrows').css({
-          'display':'none'
-        }); 
+          });
+        $('li#playMode').css({
+          'display':'block'
+          });
 
         // Global elements
 
@@ -153,23 +146,24 @@ $('#carousel').css({
   $('#actions').css({
     'height':'70px'
   });  
-  $('#listenBeat, #aboutPedal').css({
+  $('#aboutPedal').css({
     'width': '50px',
     'background': '#FFFFFF',
     'float':'left'  
     });     
-  $('#listenBeat > span, #aboutPedal > span').css({
+  $('#aboutPedal > span').css({
     'display':'none'  
     });
-  $('#listenBeat > span').html('Listen to Beat'  
-    );   
-  $('#download, #fullscreenMode').css({
+  $('#listenBeat, #download, #fullscreenMode').css({
       'display':'block'  
       });
   $('#listenBeat').removeClass('fullScreenMode');
   $('.next, .prev').css({
     'display':'static'
   });
+  $('li#playMode').css({
+    'display':'none'
+    });
 
   // Global elements
 

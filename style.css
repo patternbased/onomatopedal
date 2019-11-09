@@ -28,7 +28,7 @@ a:hover, img.pedalList:hover, img.slide:hover {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	border-bottom:2px solid  #040404;
+	border-bottom:2px solid  rgba(33,47,61,0.5);
 }
 
 .title {
@@ -298,7 +298,7 @@ cursor: pointer;
 	cursor: pointer;
 }
 
-#actions li span, #showAll span {
+#actions li.actionBtn span, #showAll span {
 	display: none;
 	font-size: 14px;
 	font-weight: 800;
@@ -311,6 +311,20 @@ cursor: pointer;
 	width: 40px;
 	height: 40px;
 	margin-top: 5px;
+}
+
+li#playMode {
+	display: none;
+	width: 220px;
+  float:none;
+}
+
+li#playMode span {
+	font-size: 14px;
+	font-weight: 800;
+	position: relative;
+	top: -13px;
+	margin-right: 20px;
 }
 
 /* Onomonapia Description */
@@ -335,7 +349,7 @@ cursor: pointer;
 
 #morePedals {
 	display: block;
-	background: #040404;
+	background: rgba(33,47,61,0.5);
 	width: 100%;
 	margin-bottom: 20px;
 	padding: 0;
@@ -405,4 +419,30 @@ cursor: pointer;
 	border-radius: 25px;
 	visibility: hidden;
 	z-index: 999;
+}
+
+/* tapping Keys on Mobile */
+
+div#tapKeyWrap {
+	display: none;
+  grid-template-columns: auto auto auto;
+	width: calc(100vw - 40px);
+	height: calc(100vh - 200px);
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 100px 20px;
+	padding: 0;
+	z-index: 9999;
+}
+div.tapKey {
+	margin: 20px;
+	border-radius: 20px;
+	background: fuchsia;
+	opacity: 0.3;
+}
+
+div.tapKey:active {
+	opacity: 0.8;
+	transition-duration: 200ms;
 }

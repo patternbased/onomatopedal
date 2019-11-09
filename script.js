@@ -54,26 +54,3 @@ $(pedalBtn).click(function() {
     // Open Pedal with it as a URL Parameter
     window.location.replace('pedal.html?pedalid=' + pedalNumber );
 });
-
-// ===== Full browser mode in Pedal.html =====
-
-$('#fullscreenMode, .fullScreenMode').click(function () { 
-  $('#pedal').fadeOut(500);
-  $('footer').css({
-    'position': 'fixed',
-  });
-  $('#showAll').css({
-    'visibility': 'visible'
-  });
-});
-
-// Back from Full browser mode
-
-$('#showAll').click(function () { 
-  $('#pedal').fadeIn(300);
-  $('footer').css({
-    'position': 'static',
-  });
-  $('#showAll').css({
-    'visibility': 'hidden'});
-  });
