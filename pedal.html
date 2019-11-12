@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google" value="notranslate">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.3/paper-full.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/paper-full.js"></script>
+	<script type="text/javascript" src="js/howler.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,800|Open+Sans:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script id="sampleJS" type="text/paperscript" src="play-rainbowmachine.js" canvas="myCanvas"></script>
@@ -54,6 +54,10 @@
   <div class="info"><span>?</span></div>
 	<div class="title-small"><a href="index.html"><img src="images/onomatoPedal-Logo-small.svg"></a></div>
 	<div class="title-pedal" id="OnomoPedalHeader"></div>
+	<div id="playModeHeader">
+		<div class="pedal-small"> <img id="pedalSmall"></div>
+		<div class="title-PlayMode"></div>
+</div>
 </div>
 
 <div class='clear'></div>
@@ -107,6 +111,9 @@
 	<!-- Show all button in full browser mode-->
 
 	<div id="showAll" class="actionBtn"><img src="images/showAll.svg"><span>Back to Pedal</span></div>
+	<div id="pauseMobile" class="actionBtn"><img src="images/pauseBeat.svg"></div>
+	<div id="mobileLogo"><img src="images/EQD-PB_logo@2x.png"></div>
+
 
 	<!-- BG Canvas for Paper.js -->
 

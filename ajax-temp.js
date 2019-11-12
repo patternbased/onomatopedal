@@ -23,10 +23,10 @@ var pedalNumber = getUrlParameter('pedalid');
 
     // Content Distinations
     var onomoName = $('#onomoName');
-    var pedalImg = $('#thePedal');
+    var pedalImg = $('#thePedal, #pedalSmall');
     var pedalDesc = $('#onomoInfo');
     var onomoColor = $('p#onomoInfo');
-    var onomoHeader = $('#OnomoPedalHeader');
+    var onomoHeader = $('#OnomoPedalHeader, .title-PlayMode');
     var eqdPedalLink = $('li#aboutPedal');
     var sampleJS = $('#sampleJS');
     var pedalSlides = $('.slides');
@@ -129,7 +129,9 @@ var pedalNumber = getUrlParameter('pedalid');
       } else {
           audioElement.play();
           $(".playAudio > img").attr('src', "images/pauseBeat.svg");
-          $(".playAudio > span").html("Pause");  };
+          $(".playAudio > span").html("Pause");
+          $("#pauseMobile > img").attr('src', "images/pauseBeat.svg");
+          $("#pauseMobile > span").html("Pause");  };
       });
 
       if ($(window).width() < 960) {
@@ -139,6 +141,20 @@ var pedalNumber = getUrlParameter('pedalid');
         $(".playAudio > span").html("Play Mode");
       });
       };
+
+      if ($(window).width() < 960) {
+        $('#pauseMobile').click(function() {
+          if (audioElement.paused == false) {
+            audioElement.pause();
+            $("#pauseMobile > img").attr('src', "images/playBeat.svg");
+            $("#pauseMobile > span").html("Play");
+        } else {
+            audioElement.play();
+            $("#pauseMobile > img").attr('src', "images/pauseBeat.svg");
+            $("#pauseMobile > span").html("Pause");
+        };
+      });
+        };
     }
     
   $(document).ready(function() {
@@ -222,9 +238,15 @@ function fullScreenStart() {
   $('footer').css({
     'position': 'fixed',
   });
-  $('#showAll').css({
+  $('#showAll, #pauseMobile').css({
     'visibility': 'visible'
   });
+  $('.info, .title-small, .title-pedal, .footerLogo').css({
+    'display':'none'
+  })
+  $('#playModeHeader, #mobileLogo').css({
+    'display':'block'
+  })
 }
 
 function tapKeys() {
@@ -251,8 +273,17 @@ function fullScreenEnd() {
   $('footer').css({
     'position': 'static',
   });
-  $('#showAll').css({
+  $('#showAll, #pauseMobile').css({
     'visibility': 'hidden'});
+  $('.info, .title-small, .title-pedal').css({
+      'display':'block'
+    });
+  $('.footerLogo').css({
+    'display':'inline'
+  });
+  $('#playModeHeader, #mobileLogo').css({
+      'display':'none'
+    });
 }
 
 function tapKeysEnd() {

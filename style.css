@@ -59,6 +59,14 @@ a:hover, img.pedalList:hover, img.slide:hover {
 	padding-top: 25px;
 }
 
+.title-PlayMode {
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 25px;
+	float: left;
+}
+
 .info {
 	width: 50px;
 	height: 50px;
@@ -94,6 +102,24 @@ a:hover, img.pedalList:hover, img.slide:hover {
 	display: inline-block;
 	margin-top: 8px;
 	font-weight: bold;
+}
+
+#playModeHeader {
+	width: max-content;
+	max-width: 70vw;
+	margin: 10px auto;
+	height: 75px;
+	display: none;
+}
+
+.pedal-small {
+	float: left;
+	margin: 10px;
+}
+
+#pedalSmall {
+width: 60px;
+height: 50px;
 }
 
 /****** Right Side Panel ******/
@@ -259,6 +285,8 @@ cursor: pointer;
 	width: 300px;
 	height: 250px;
 }
+
+
 /* Avtion Buttons */
 
 #actions {
@@ -391,9 +419,8 @@ li#playMode span {
 
 /* showAll Button */
 
-#showAll {
+#showAll, #pauseMobile {
 	position: fixed;
-	right: 30px;
 	bottom: 20px;
 	display: inline-block;
 	background: #FFFFFF;
@@ -404,22 +431,44 @@ li#playMode span {
 	z-index: 999;
 }
 
+#showAll {
+	right: 30px;
+}
+
+#pauseMobile {
+	left: 30px;
+}
+
+#mobileLogo {
+	display: none;
+	position: fixed;
+	bottom: 16px;
+	left: 50%;
+  transform: translate(-50%, 0);
+	height: max-content;
+	margin: 0 auto;
+}
+
+#mobileLogo img {
+	width: 160px;
+}
+
 /* tapping Keys on Mobile */
 
 div#tapKeyWrap {
 	display: none;
   grid-template-columns: auto auto auto;
 	width: calc(100vw - 40px);
-	height: calc(100vh - 200px);
+	height: calc(100vh - 240px);
 	position: fixed;
 	top: 0;
 	left: 0;
-	margin: 100px 20px;
+	margin: 100px 20px 140px 20px;
 	padding: 0;
 	z-index: 9999;
 }
 div.tapKey {
-	margin: 20px;
+	margin: 10px;
 	border-radius: 20px;
 	background: fuchsia;
 	opacity: 0.3;
