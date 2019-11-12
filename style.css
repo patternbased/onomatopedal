@@ -106,7 +106,6 @@ a:hover, img.pedalList:hover, img.slide:hover {
 
 #playModeHeader {
 	width: max-content;
-	max-width: 70vw;
 	margin: 10px auto;
 	height: 75px;
 	display: none;
