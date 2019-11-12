@@ -238,7 +238,7 @@ function fullScreenStart() {
   $('footer').css({
     'position': 'fixed',
   });
-  $('#showAll, #pauseMobile').css({
+  $('#showAll').css({
     'visibility': 'visible'
   });
   $('.info, .title-small, .title-pedal, .footerLogo').css({
@@ -252,6 +252,9 @@ function fullScreenStart() {
 function tapKeys() {
   $('#tapKeyWrap').css({
     'display':'grid'
+  });
+  $('#pauseMobile').css({
+    'visibility': 'visible'
   });
 };
 
