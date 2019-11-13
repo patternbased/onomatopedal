@@ -1,53 +1,53 @@
 var keyData = {
 		q: {
 			sound: new Howl({
-	  		src: ['sounds/acapulcogold/bubbles.mp3']}),
+	  		src: ['sounds/dreamcrusher/q.mp3']}),
 			color: '#BE3E82'},
 		w: {
 			sound: new Howl({
-	  		src: ['sounds/acapulcogold/clay.mp3']}),
+	  		src: ['sounds/dreamcrusher/w.mp3']}),
 			color: '#036c9b'},
 		e: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/confetti.mp3']}),
+	  		src: ['sounds/dreamcrusher/e.mp3']}),
 			color: '#e87e57'},
 		r: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/corona.mp3']}),
+	  		src: ['sounds/dreamcrusher/r.mp3']}),
 			color: '#973E76'},
 		
 		a: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/pinwheel.mp3']}),
+	  		src: ['sounds/dreamcrusher/a.mp3']}),
 			color: '#B566CC'},
 		s: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/piston-1.mp3']}),
+	  		src: ['sounds/dreamcrusher/s.mp3']}),
 			color: '#CC444B'},
 		d: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/piston-2.mp3']}),
+	  		src: ['sounds/dreamcrusher/d.mp3']}),
 			color: '#B2675E'},
 		f: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/prism-1.mp3']}),
+	  		src: ['sounds/dreamcrusher/f.mp3']}),
 			color: '#DF7373'},
 		
 		z: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/01KickZ.mp3']}),
+	  		src: ['sounds/dreamcrusher/z.mp3']}),
 			color: '#820263'},
 		x: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/02SnareX.mp3']}),
+	  		src: ['sounds/dreamcrusher/x.mp3']}),
 			color: '#E58F65'},
 		c: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/ufo.mp3']}),
+	  		src: ['sounds/dreamcrusher/c.mp3']}),
 			color: '#D1462F'},
 		v: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/veil.mp3']}),
+	  		src: ['sounds/dreamcrusher/v.mp3']}),
 			color: '#CA1551'}
 	};
 
@@ -70,140 +70,26 @@ var keyData = {
 		};
 	};
 
-//==== Mobile tapKey elements to play beats === START
+//==== Mobile tapKey elements to play beats === 
 
-var keyQtrigger = document.getElementById("keyQ");
-keyQtrigger.onclick = function(){
+function squareClickEvent(key) {
 	var maxPoint = new Point(view.size.width, view.size.height);
 	var randomPoint = Point.random();
 	var point = maxPoint * randomPoint;
 	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.q.color;
-	keyData.q.sound.play();
+	newCircle.fillColor = keyData[key].color;
+	keyData[key].sound.play();
 	circles.push(newCircle);
 };
 
-var keyWtrigger = document.getElementById("keyW");
-keyWtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.w.color;
-	keyData.w.sound.play();
-	circles.push(newCircle);
-};
+var squareIDs = [	"keyQ", "keyW", "keyE", "keyR", "keyA", "keyS", "keyD", "keyF", "keyZ", "keyX", "keyC", "keyV"];
+var squareToKey = [	"q", "w", "e", "r", "a", "s", "d", "f", "z", "x", "c", "v"];
+var keyLength = squareToKey.length;
 
-var keyEtrigger = document.getElementById("keyE");
-keyEtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.e.color;
-	keyData.e.sound.play();
-	circles.push(newCircle);
+for (i = 0; i < keyLength; i++) {
+	document.getElementById(squareIDs[i]).onclick =  
+	squareClickEvent.bind(this, squareToKey[i]);
 };
-
-var keyRtrigger = document.getElementById("keyR");
-keyRtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.r.color;
-	keyData.r.sound.play();
-	circles.push(newCircle);
-};
-
-var keyAtrigger = document.getElementById("keyA");
-keyAtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.a.color;
-	keyData.a.sound.play();
-	circles.push(newCircle);
-};
-
-var keyStrigger = document.getElementById("keyS");
-keyStrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.s.color;
-	keyData.s.sound.play();
-	circles.push(newCircle);
-};
-
-var keyDtrigger = document.getElementById("keyD");
-keyDtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.d.color;
-	keyData.d.sound.play();
-	circles.push(newCircle);
-};
-
-var keyFtrigger = document.getElementById("keyF");
-keyFtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.f.color;
-	keyData.f.sound.play();
-	circles.push(newCircle);
-};
-
-var keyZtrigger = document.getElementById("keyZ");
-keyZtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.z.color;
-	keyData.z.sound.play();
-	circles.push(newCircle);
-};
-
-var keyXtrigger = document.getElementById("keyX");
-keyXtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.x.color;
-	keyData.x.sound.play();
-	circles.push(newCircle);
-};
-
-var keyCtrigger = document.getElementById("keyC");
-keyCtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.c.color;
-	keyData.c.sound.play();
-	circles.push(newCircle);
-};
-
-var keyVtrigger = document.getElementById("keyV");
-keyVtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.v.color;
-	keyData.v.sound.play();
-	circles.push(newCircle);
-};
-//==== Mobile tapKey elements to play beats === END
 
 //	Animation for Key elements
 	function onFrame(event) {

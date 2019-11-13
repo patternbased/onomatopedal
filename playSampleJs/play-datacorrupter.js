@@ -70,140 +70,26 @@ var keyData = {
 		};
 	};
 
-//==== Mobile tapKey elements to play beats === START
+//==== Mobile tapKey elements to play beats === 
 
-var keyQtrigger = document.getElementById("keyQ");
-keyQtrigger.onclick = function(){
+function squareClickEvent(key) {
 	var maxPoint = new Point(view.size.width, view.size.height);
 	var randomPoint = Point.random();
 	var point = maxPoint * randomPoint;
 	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.q.color;
-	keyData.q.sound.play();
+	newCircle.fillColor = keyData[key].color;
+	keyData[key].sound.play();
 	circles.push(newCircle);
 };
 
-var keyWtrigger = document.getElementById("keyW");
-keyWtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.w.color;
-	keyData.w.sound.play();
-	circles.push(newCircle);
-};
+var squareIDs = [	"keyQ", "keyW", "keyE", "keyR", "keyA", "keyS", "keyD", "keyF", "keyZ", "keyX", "keyC", "keyV"];
+var squareToKey = [	"q", "w", "e", "r", "a", "s", "d", "f", "z", "x", "c", "v"];
+var keyLength = squareToKey.length;
 
-var keyEtrigger = document.getElementById("keyE");
-keyEtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.e.color;
-	keyData.e.sound.play();
-	circles.push(newCircle);
+for (i = 0; i < keyLength; i++) {
+	document.getElementById(squareIDs[i]).onclick =  
+	squareClickEvent.bind(this, squareToKey[i]);
 };
-
-var keyRtrigger = document.getElementById("keyR");
-keyRtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.r.color;
-	keyData.r.sound.play();
-	circles.push(newCircle);
-};
-
-var keyAtrigger = document.getElementById("keyA");
-keyAtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.a.color;
-	keyData.a.sound.play();
-	circles.push(newCircle);
-};
-
-var keyStrigger = document.getElementById("keyS");
-keyStrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.s.color;
-	keyData.s.sound.play();
-	circles.push(newCircle);
-};
-
-var keyDtrigger = document.getElementById("keyD");
-keyDtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.d.color;
-	keyData.d.sound.play();
-	circles.push(newCircle);
-};
-
-var keyFtrigger = document.getElementById("keyF");
-keyFtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.f.color;
-	keyData.f.sound.play();
-	circles.push(newCircle);
-};
-
-var keyZtrigger = document.getElementById("keyZ");
-keyZtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.z.color;
-	keyData.z.sound.play();
-	circles.push(newCircle);
-};
-
-var keyXtrigger = document.getElementById("keyX");
-keyXtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.x.color;
-	keyData.x.sound.play();
-	circles.push(newCircle);
-};
-
-var keyCtrigger = document.getElementById("keyC");
-keyCtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.c.color;
-	keyData.c.sound.play();
-	circles.push(newCircle);
-};
-
-var keyVtrigger = document.getElementById("keyV");
-keyVtrigger.onclick = function(){
-	var maxPoint = new Point(view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint * randomPoint;
-	var newCircle = new Path.Circle(point, 500);
-	newCircle.fillColor = keyData.v.color;
-	keyData.v.sound.play();
-	circles.push(newCircle);
-};
-//==== Mobile tapKey elements to play beats === END
 
 //	Animation for Key elements
 	function onFrame(event) {
