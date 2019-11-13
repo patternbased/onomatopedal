@@ -1,54 +1,54 @@
 var keyData = {
 		q: {
 			sound: new Howl({
-	  		src: ['sounds/acapulcogold/bubbles.mp3']}),
+	  		src: ['sounds/spatialdelivery/q.mp3']}),
 			color: '#FF6A86'},
 		w: {
 			sound: new Howl({
-	  		src: ['sounds/acapulcogold/clay.mp3']}),
+	  		src: ['sounds/spatialdelivery/w.mp3']}),
 			color: '#54C6EB'},
 		e: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/confetti.mp3']}),
+	  			src: ['sounds/spatialdelivery/e.mp3']}),
 			color: '#B2FF9E'},
 		r: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/corona.mp3']}),
-			color: '#FFD45C'},
+				src: ['sounds/spatialdelivery/r.mp3']}),
+				color: '#FFD45C'},
 		
 		a: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/pinwheel.mp3']}),
-			color: '#FF346D'},
+				src: ['sounds/spatialdelivery/a.mp3']}),
+				color: '#FF346D'},
 		s: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/piston-1.mp3']}),
-			color: '#9DE6FF'},
+				src: ['sounds/spatialdelivery/s.mp3']}),
+				color: '#9DE6FF'},
 		d: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/piston-2.mp3']}),
-			color: '#FFAF5E'},
+				src: ['sounds/spatialdelivery/d.mp3']}),
+				color: '#FFAF5E'},
 		f: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/prism-1.mp3']}),
-			color: '#4DCCBD'},
+				src: ['sounds/spatialdelivery/f.mp3']}),
+				color: '#4DCCBD'},
 		
 		z: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/01KickZ.mp3']}),
-			color: '#CCFF66'},
+				src: ['sounds/spatialdelivery/z.mp3']}),
+				color: '#CCFF66'},
 		x: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/02SnareX.mp3']}),
-			color: '#FF8A6F'},
+				src: ['sounds/spatialdelivery/x.mp3']}),
+				color: '#FF8A6F'},
 		c: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/ufo.mp3']}),
-			color: '#26FFE6'},
+				src: ['sounds/spatialdelivery/c.mp3']}),
+				color: '#26FFE6'},
 		v: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/veil.mp3']}),
-			color: '#EE92C2'}
+				src: ['sounds/spatialdelivery/v.mp3']}),
+				color: '#EE92C2'}
 	};
 
 	var circles = [];
