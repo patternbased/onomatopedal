@@ -121,17 +121,16 @@ var pedalNumber = getUrlParameter('pedalid');
           this.play();
       }, false);
   
-      $('.playAudio').click(function() {
+      $('.playAudio, #pauseMobile').click(function() {
         if (audioElement.paused == false) {
           audioElement.pause();
-          $(".playAudio > img").attr('src', "images/playBeat.svg");
-          $(".playAudio > span").html("Play Beat");
+          $(".playAudio > img, #pauseMobile > img").attr('src', "images/playBeat.svg");
+          $(".playAudio > span, #pauseMobile > span").html("Play Beat");
       } else {
           audioElement.play();
-          $(".playAudio > img").attr('src', "images/pauseBeat.svg");
-          $(".playAudio > span").html("Pause");
-          $("#pauseMobile > img").attr('src', "images/pauseBeat.svg");
-          $("#pauseMobile > span").html("Pause");  };
+          $(".playAudio > img, #pauseMobile > img").attr('src', "images/pauseBeat.svg");
+          $(".playAudio > span, #pauseMobile > span").html("Pause");
+         };
       });
 
       if ($(window).width() < 960) {
@@ -141,27 +140,14 @@ var pedalNumber = getUrlParameter('pedalid');
         $(".playAudio > span").html("Play Mode");
       });
       };
-
-      if ($(window).width() < 960) {
-        $('#pauseMobile').click(function() {
-          if (audioElement.paused == false) {
-            audioElement.pause();
-            $("#pauseMobile > img").attr('src', "images/playBeat.svg");
-            $("#pauseMobile > span").html("Play");
-        } else {
-            audioElement.play();
-            $("#pauseMobile > img").attr('src', "images/pauseBeat.svg");
-            $("#pauseMobile > span").html("Pause");
-        };
-      });
-        };
-    }
+    };
     
   $(document).ready(function() {
     playBeat();
   });
 
     // ===== Change hex on Mobile view =====
+
   var eventFired = 0;
   if ($(window).width() < 960) {
     $('#playMode, #aboutPedal').css({
@@ -189,6 +175,7 @@ var pedalNumber = getUrlParameter('pedalid');
   pedalRequest.send();
 
 // ===== End of rendering HTML while loading =====
+
 // ===== More Pedals Carousel in Pedal.html =====
 
 $('#carousel').slick({
@@ -238,7 +225,7 @@ function fullScreenStart() {
   $('footer').css({
     'position': 'fixed',
   });
-  $('#showAll').css({
+  $('#showAll, #pauseMobile').css({
     'visibility': 'visible'
   });
   $('.info, .title-small, .title-pedal, .footerLogo').css({
@@ -253,13 +240,21 @@ function tapKeys() {
   $('#tapKeyWrap').css({
     'display':'grid'
   });
-  $('#pauseMobile').css({
-    'visibility': 'visible'
-  });
 };
 
 $('#fullscreenMode, #playMode').click(function () {
   if ($(window).width() < 960) {
+    // === Keytap on Mobile portrait
+    if($(window).height() < $(window).width()){
+      $('div#tapKeyWrap').css({
+        'grid-template-columns' : 'auto auto auto auto',
+        'height' : 'calc(100vh - 100px)',
+        'margin' : '20px 20px 80px 20px'
+      });
+      $('.header').css({
+        'display' : 'none'
+      })
+    };
     // Mobile Play mode (Full Screen + Beat Play)
   tapKeys(); 
   fullScreenStart();
@@ -287,6 +282,14 @@ function fullScreenEnd() {
   $('#playModeHeader, #mobileLogo').css({
       'display':'none'
     });
+  $('div#tapKeyWrap').css({
+      'grid-template-columns' : 'auto auto auto',
+      'height' : 'calc(100vh - 240px)',
+      'margin' : '100px 20px 140px 20px'
+  });
+  $('.header').css({
+      'display' : 'block'
+  })
 }
 
 function tapKeysEnd() {
@@ -297,14 +300,12 @@ function tapKeysEnd() {
 
 $('#showAll').click(function () { 
   if ($(window).width() < 960) {
-    // Mobile Play mode (Full Screen + Beat Play)
-  tapKeysEnd(); 
-  fullScreenEnd();
+      tapKeysEnd(); 
+      fullScreenEnd();
   } else {
     // Full screen mode (HD)
   fullScreenEnd();
-  }
+  };
   });
 
- 
-
+  

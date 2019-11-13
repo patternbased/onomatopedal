@@ -308,7 +308,7 @@ cursor: pointer;
 	cursor: pointer;
 }
 
-#actions li.actionBtn span, #showAll span {
+#actions li.actionBtn span, #showAll span, #pauseMobile span {
 	display: none;
 	font-size: 14px;
 	font-weight: 800;
@@ -317,7 +317,7 @@ cursor: pointer;
 	margin-right: 20px;
 }
 
-#actions li img, #showAll img {
+#actions li img, #showAll img, #pauseMobile img {
 	width: 40px;
 	height: 40px;
 	margin-top: 5px;
