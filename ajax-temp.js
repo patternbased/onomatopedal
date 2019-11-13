@@ -121,6 +121,14 @@ var pedalNumber = getUrlParameter('pedalid');
           this.play();
       }, false);
   
+      if (audioElement.play == true) {
+        $(".playAudio > img, #pauseMobile > img").attr('src', "images/pauseBeat.svg");
+        $(".playAudio > span, #pauseMobile > span").html("Pause");
+    } else {
+      $(".playAudio > img, #pauseMobile > img").attr('src', "images/playBeat.svg");
+      $(".playAudio > span, #pauseMobile > span").html("Play Beat");
+       };
+       
       $('.playAudio, #pauseMobile').click(function() {
         if (audioElement.paused == false) {
           audioElement.pause();
@@ -234,7 +242,7 @@ function fullScreenStart() {
   $('#playModeHeader, #mobileLogo').css({
     'display':'block'
   })
-}
+};
 
 function tapKeys() {
   $('#tapKeyWrap').css({
