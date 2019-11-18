@@ -29,7 +29,6 @@ var pedalNumber = getUrlParameter('pedalid');
     var onomoHeader = $('#OnomoPedalHeader, .title-PlayMode');
     var eqdPedalLink = $('li#aboutPedal');
     var sampleJS = $('#sampleJS');
-    var pedalSlides = $('.slides');
     var mobileKeyQ = $('#keyQ');
     var mobileKeyW = $('#keyW');
     var mobileKeyE = $('#keyE');

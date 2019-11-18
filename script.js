@@ -61,3 +61,6 @@ $(pedalBtn).click(function() {
     // Open Pedal with it as a URL Parameter
     window.location.replace('pedal.html?pedalid=' + pedalNumber );
 });
+
+// Make the modal closable once the page is fully loaded
+//$(document).ready(function(){...});
