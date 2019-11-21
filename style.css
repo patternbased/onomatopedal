@@ -54,8 +54,8 @@ a:hover, img.pedalList:hover, img.slide:hover {
 }
 
 .title-small {
-	width: 70px;
-	margin: 10px 20px;
+	width: 60px;
+	margin: 15px 20px;
 	float: left;
 	opacity: 0.5;
 }
@@ -76,8 +76,8 @@ a:hover, img.pedalList:hover, img.slide:hover {
 }
 
 .info {
-	width: 50px;
-	height: 50px;
+	width: 42px;
+	height: 42px;
 	background: #FFFFFF;
 	border-radius: 30px;
 	float: right;
@@ -108,7 +108,7 @@ a:hover, img.pedalList:hover, img.slide:hover {
 .header .info span {
 	font-size: 24px;
 	display: inline-block;
-	margin-top: 8px;
+	margin-top: 4px;
 	font-weight: bold;
 }
 
@@ -354,6 +354,7 @@ cursor: pointer;
 
 .modalContent {
 	width: 500px;
+	max-width: 80vw;
 	margin: 30vh auto;
 	display: none;
 }

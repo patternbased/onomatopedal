@@ -21,13 +21,15 @@ if ($(window).width() < 960) {
     'padding':'30px'
   });
 
+
 // Pedal page mobile
 
 $('#carouselWindow').css({
   'width':'100vw'  
   });
 $('#carousel').css({
-  'width':'calc(100vw - 100px)'  
+  'width':'100vw',
+  'margin':'0' 
   });
 $('#actions').css({
   'height':'140px'
@@ -45,6 +47,9 @@ $('#listenBeat, #download, #fullscreenMode, .arrows').css({
 $('li#playMode').css({
   'display':'block'
   });
+$('#OnomoPedalHeader').css({
+    'font-size':'18px'
+    });
 
     // Global elements
 
@@ -86,7 +91,8 @@ $(window).on('resize', function() {
           'width':'100vw'  
           });
         $('#carousel').css({
-          'width':'calc(100vw - 100px)'  
+          'width':'100vw',
+          'margin':'0'
           });
         $('#actions').css({
           'height':'140px'
@@ -104,6 +110,9 @@ $(window).on('resize', function() {
         $('li#playMode').css({
           'display':'block'
           });
+        $('#OnomoPedalHeader').css({
+            'font-size':'18px'
+            });
 
         // Global elements
 
@@ -142,7 +151,8 @@ $('#carouselWindow').css({
   'width':'80vw'  
   });
 $('#carousel').css({
-  'width':'calc(80vw - 100px)'  
+  'width':'calc(80vw - 100px)',
+  'margin':'0 50px'
   });
   $('#actions').css({
     'height':'70px'
@@ -165,6 +175,9 @@ $('#carousel').css({
   $('li#playMode').css({
     'display':'none'
     });
+  $('#OnomoPedalHeader').css({
+      'font-size':'24px'
+      });
 
   // Global elements
 
