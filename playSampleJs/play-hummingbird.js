@@ -1,53 +1,53 @@
 var keyData = {
 		q: {
 			sound: new Howl({
-	  		src: ['sounds/acapulcogold/bubbles.mp3']}),
+	  		src: ['sounds/temp/bubbles.mp3']}),
 			color: '#C9F180'},
 		w: {
 			sound: new Howl({
-	  		src: ['sounds/acapulcogold/clay.mp3']}),
+	  		src: ['sounds/temp/clay.mp3']}),
 			color: '#76B041'},
 		e: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/confetti.mp3']}),
+	  			src: ['sounds/temp/confetti.mp3']}),
 			color: '#00736B'},
 		r: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/corona.mp3']}),
+	  			src: ['sounds/temp/corona.mp3']}),
 			color: '#B5BD89'},
 		
 		a: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/pinwheel.mp3']}),
+	  			src: ['sounds/temp/pinwheel.mp3']}),
 			color: '#F9F871'},
 		s: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/piston-1.mp3']}),
+	  			src: ['sounds/temp/piston-1.mp3']}),
 			color: '#80DED9'},
 		d: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/piston-2.mp3']}),
+	  			src: ['sounds/temp/piston-2.mp3']}),
 			color: '#7CDAA2'},
 		f: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/prism-1.mp3']}),
+	  			src: ['sounds/temp/prism-1.mp3']}),
 			color: '#2394a0'},
 		
 		z: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/01KickZ.mp3']}),
+	  			src: ['sounds/temp/01KickZ.mp3']}),
 			color: '#60D394'},
 		x: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/02SnareX.mp3']}),
+	  			src: ['sounds/temp/02SnareX.mp3']}),
 			color: '#007CA3'},
 		c: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/ufo.mp3']}),
+	  			src: ['sounds/temp/ufo.mp3']}),
 			color: '#AAF683'},
 		v: {
 			sound: new Howl({
-	  			src: ['sounds/acapulcogold/veil.mp3']}),
+	  			src: ['sounds/temp/veil.mp3']}),
 			color: '#4AAD52'}
 	};
 
