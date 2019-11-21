@@ -350,7 +350,6 @@ cursor: pointer;
 	width: 100%;
 	height: calc(100vh - 100px);
 	z-index: 9999;
-	display: none;
 }
 
 .modalContent {
