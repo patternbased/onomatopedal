@@ -75,5 +75,5 @@ $('#showStarter').click(function() {
   $('.pedalPageWrap').css('display','block');
   $('#modalBG').css('display','none');
   localStorage.setItem("modal", "clicked");
-})
+});
 

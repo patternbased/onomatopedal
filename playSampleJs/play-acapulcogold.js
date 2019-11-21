@@ -97,6 +97,6 @@ for (i = 0; i < keyLength; i++) {
 			if(circles[i].area < 1) {
 				circles[i].remove();
 				circles.splice(i, 1);
-			};
+			}
 		};
   };

@@ -108,7 +108,7 @@ var pedalNumber = getUrlParameter('pedalid');
           'transition-duration':'100ms'
         })
       });
-      };
+      }
 
     // ===== Play the Beat =====
 
@@ -126,7 +126,7 @@ var pedalNumber = getUrlParameter('pedalid');
     } else {
       $(".playAudio > img, #pauseMobile > img").attr('src', "images/playBeat.svg");
       $(".playAudio > span, #pauseMobile > span").html("Play Beat");
-       };
+       }
        
       $('.playAudio, #pauseMobile').click(function() {
         if (audioElement.paused == false) {
@@ -137,7 +137,7 @@ var pedalNumber = getUrlParameter('pedalid');
           audioElement.play();
           $(".playAudio > img, #pauseMobile > img").attr('src', "images/pauseBeat.svg");
           $(".playAudio > span, #pauseMobile > span").html("Pause");
-         };
+         }
       });
 
       if ($(window).width() < 960) {
@@ -146,7 +146,7 @@ var pedalNumber = getUrlParameter('pedalid');
         $(".playAudio > img").attr('src', "images/playBeat.svg");
         $(".playAudio > span").html("Play Mode");
       });
-      };
+      }
     };
     
   $(document).ready(function() {
@@ -312,7 +312,7 @@ $('#showAll').click(function () {
   } else {
     // Full screen mode (HD)
   fullScreenEnd();
-  };
+  }
   });
 
   
