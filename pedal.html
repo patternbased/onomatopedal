@@ -15,7 +15,12 @@
 		  if (localStorage.getItem("modal") === null) {
 		  	$('.modalContent, #modalBG').css('display','block');
 		  } else {		  };		}
-		
+		// Reload all JS external files
+		function reload_js(src) {
+  		      $('script[src="' + src + '"]').remove();
+  		      $('<script>').attr('src', src).appendTo('head');
+ 		   }
+ 	    reload_js('js/paper-full.js');
 	</script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/howler.js"></script>
