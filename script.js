@@ -59,6 +59,10 @@ $(pedalBtn).click(function() {
   localStorage.clear();
   localStorage.setItem('modal',modalCache);
   
+  $('.loadingSpinner').css('display','inline-block');
+  $('#modalBG').css('display','block');
+
+
   var thisPedal = event.currentTarget;
     // Get id#
     var pedalNumber = $(thisPedal).attr("id");
