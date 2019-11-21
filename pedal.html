@@ -7,6 +7,15 @@
 	<meta name="google" value="notranslate">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script>
+		// Make the modal closable once the page is fully loaded
+		$( window ).on( "load", function() {
+		  $('.loadingSpinner').css('display','none');
+		  if (localStorage.getItem("modal") === null) {
+		  	$('.modalContent, #modalBG').css('display','block');
+		  } else {		  };
+		});
+	</script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/paper-full.js"></script>
 	<script type="text/javascript" src="js/howler.js"></script>
@@ -20,7 +29,15 @@
 
 <body>
 <!-- Modal -->
-
+<div id="modalBG">
+	<div class="loadingSpinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="modalContent" id="modalScreen">
+		<p>Press these keys below on your keyboard to play sample beats. <br><b>Z,X,C,V,A,S,D,F,Q,W,E,R</b></p>
+		<img src="images/keysOnBoard.svg">
+		<button class="modalButton" id="showStarter">OK</button>
+	</div>
+	<div class="modalContent" id="modalMobile"></div>
+</div>
 
 <!-- Right Panel -->
 <div class="rightSPWrapper">
@@ -61,20 +78,20 @@
 	
 <!-- Body -->
 
-<div class="wrap">
-<div class="header">
-  <div class="info"><span>?</span></div>
-	<div class="title-small"><a href="index.html"><img src="images/onomatoPedal-Logo-small.svg"></a></div>
-	<div class="title-pedal" id="OnomoPedalHeader"></div>
-	<div id="playModeHeader">
-		<div class="pedal-small"> <img id="pedalSmall"></div>
-		<div class="title-PlayMode"></div>
-</div>
-</div>
+<div class="wrap pedalPageWrap">
+	<div class="header">
+	<div class="info"><span>?</span></div>
+		<div class="title-small"><a href="index.html"><img src="images/onomatoPedal-Logo-small.svg"></a></div>
+		<div class="title-pedal" id="OnomoPedalHeader"></div>
+		<div id="playModeHeader">
+			<div class="pedal-small"> <img id="pedalSmall"></div>
+			<div class="title-PlayMode"></div>
+		</div>
+	</div>
 
-<div class='clear'></div>
+	<div class='clear'></div>
 
-<!-- Pedal -->
+	<!-- Pedal -->
 	<div id="pedal">
 		<img id="thePedal">
 
@@ -92,7 +109,7 @@
 		<h1 id="onomoName"></h1>
 		<p id="onomoInfo"></p>
 
-    <!-- More Pedals on the Right side-->
+    <!-- More Pedals -->
 
     <div id="morePedals">
 			<div id="carouselWindow">
@@ -112,11 +129,11 @@
 				<img class="slide" id="9" src="images/pedalsOnom/Levitation-bgtx.png">
 				<img class="slide" id="11" src="images/pedalsOnom/Palisades-bgtx.png">
 				<img class="slide" id="12" src="images/pedalsOnom/Spatial-Delivery-bgtx.png">
+				</div>
+				<div class="arrows next">
+				</div>
 			</div>
-			<div class="arrows next">
-			</div>
-			</div>
-		</div>
+	</div>
 	</div>
 	<div class="clear"></div>
 
@@ -131,9 +148,9 @@
 
 	<canvas id="myCanvas" resize></canvas>
 </div>
-	<footer>
+<footer>
 	<a href="https://www.earthquakerdevices.com/" target="_blank"><img src="images/EarthQuaker-Devices-Logo.png" class="footerLogo"></a>
-	<a href="https://www.patternbased.com/" target="_blank"><img src="images/PatternBased_Music-Logo.png" class="footerLogo"></a>
+	<a href="https://www.patternbased.com/" target="_blank"><img src="images/PatternBased_Logo_WHCL.png" class="footerLogo"></a>
 </footer>
 
 <script src="responsive.js"></script>

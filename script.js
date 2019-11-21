@@ -55,6 +55,10 @@ $('.close').click(function () {
 var pedalBtn = $('.slide, .pedalList');
 
 $(pedalBtn).click(function() {
+  var modalCache = localStorage.getItem('modal');
+  localStorage.clear();
+  localStorage.setItem('modal',modalCache);
+  
   var thisPedal = event.currentTarget;
     // Get id#
     var pedalNumber = $(thisPedal).attr("id");
@@ -62,5 +66,11 @@ $(pedalBtn).click(function() {
     window.location.replace('pedal.html?pedalid=' + pedalNumber );
 });
 
-// Make the modal closable once the page is fully loaded
-//$(document).ready(function(){...});
+// ===== Hide the modal and show the page content =====
+
+$('#showStarter').click(function() {
+  $('.pedalPageWrap').css('display','block');
+  $('#modalBG').css('display','none');
+  localStorage.setItem("modal", "clicked");
+})
+

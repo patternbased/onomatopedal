@@ -13,11 +13,19 @@ body {
 	min-height: calc(100vh - 100px);
 }
 
+.pedalPageWrap {
+	display: block;
+}
+
 .clear {	clear: both;}
 
 a:hover, img.pedalList:hover, img.slide:hover {
 	opacity: 0.5;
 	transition-duration: 500ms;
+}
+
+.displayNone {
+	display: none;
 }
 
 /****** Header ******/
@@ -133,7 +141,7 @@ height: 50px;
 	padding: 30px;
 	text-align: left;
 	right: -360px;
-	z-index: 9998;
+	z-index: 9997;
 	overflow-y: scroll;
 	display: block;
 }
@@ -165,6 +173,8 @@ height: 50px;
 footer {
 	height: 100px;
 	width: 100%;
+	position: fixed;
+	bottom: 0;
 }
 
 .footerLogo {
@@ -255,6 +265,115 @@ cursor: pointer;
 }
 
 /****** Individual Pedal Page ******/
+
+/** spinner **/
+.loadingSpinner {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+	margin: 40vh auto;
+  }
+  .loadingSpinner div {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #fff;
+	animation: loadingSpinner 1.2s linear infinite;
+  }
+  .loadingSpinner div:nth-child(1) {
+	top: 8px;
+	left: 8px;
+	animation-delay: 0s;
+  }
+  .loadingSpinner div:nth-child(2) {
+	background-color: #DA2C5E;
+	top: 8px;
+	left: 32px;
+	animation-delay: -0.4s;
+  }
+  .loadingSpinner div:nth-child(3) {
+	top: 8px;
+	left: 56px;
+	animation-delay: -0.8s;
+  }
+  .loadingSpinner div:nth-child(4) {
+	background-color: #DA2C5E;
+	top: 32px;
+	left: 8px;
+	animation-delay: -0.4s;
+  }
+  .loadingSpinner div:nth-child(5) {
+	top: 32px;
+	left: 32px;
+	animation-delay: -0.8s;
+  }
+  .loadingSpinner div:nth-child(6) {
+	background-color: #DA2C5E;
+	top: 32px;
+	left: 56px;
+	animation-delay: -1.2s;
+  }
+  .loadingSpinner div:nth-child(7) {
+	top: 56px;
+	left: 8px;
+	animation-delay: -0.8s;
+  }
+  .loadingSpinner div:nth-child(8) {
+	background-color: #DA2C5E;
+	top: 56px;
+	left: 32px;
+	animation-delay: -1.2s;
+  }
+  .loadingSpinner div:nth-child(9) {
+	top: 56px;
+	left: 56px;
+	animation-delay: -1.6s;
+  }
+  @keyframes loadingSpinner {
+	0%, 100% {
+	  opacity: 1;
+	}
+	50% {
+	  opacity: 0.5;
+	}
+  }
+
+  /** modal **/
+
+#modalBG {
+	position: fixed;
+	background: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100vh - 100px);
+	z-index: 9999;
+	display: none;
+}
+
+.modalContent {
+	width: 500px;
+	margin: 30vh auto;
+	display: none;
+}
+
+.modalContent p {
+	color: #d1d0d5;
+}
+
+.modalButton {
+	height: 60px;
+	width: auto;
+	min-width: 100px;
+	background: #DA2C5E;
+	border: none;
+	margin: 20px auto;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	border-radius: 10px;
+}
 
 #pedal {
 	margin: 0 auto;
@@ -464,7 +583,7 @@ div#tapKeyWrap {
 	left: 0;
 	margin: 100px 20px 140px 20px;
 	padding: 0;
-	z-index: 9999;
+	z-index: 9998;
 }
 div.tapKey {
 	margin: 10px;
