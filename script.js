@@ -58,7 +58,6 @@ $(pedalBtn).click(function() {
   var modalCache = localStorage.getItem('modal');
   localStorage.clear();
   localStorage.setItem('modal',modalCache);
-  
   $('.loadingSpinner').css('display','inline-block');
   $('#modalBG').css('display','block');
 
