@@ -180,3 +180,9 @@ $('.wrap').css({
 } 
 });
 
+if ($(window).height() < 960) {
+  $('footer').css({
+    'position':'unset'
+  });
+};
+
