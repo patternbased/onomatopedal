@@ -63,7 +63,7 @@ $('.wrap').css({
   'min-height':'calc(100vh - 150px)'  
 });
 } else {
-    eventFired = 1;};
+    eventFired = 1;}
 
 
 $(window).on('resize', function() {
@@ -197,5 +197,5 @@ if ($(window).height() < 960) {
   $('footer').css({
     'position':'unset'
   });
-};
+}
 

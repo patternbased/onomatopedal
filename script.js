@@ -4,7 +4,7 @@
 		if ($(window).width() > 960) {
 		  if (localStorage.getItem("modal") === null) {
 		  	$('.modalContent, #modalBG').css('display','block');
-		  } else {		  }		};
+		  } else {		  }		}
 		};
 		// Reload all JS external files
 		function reload_js(src) {
@@ -24,7 +24,7 @@
       var allBanners = $('#pedalTable img');
       shuffle(allBanners.hide()).slice(12).show();    
     }
-  };
+  }
 
     $('#randomDiv, #randomDivMobile').click(randomize);
     randomize();

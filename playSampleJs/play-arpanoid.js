@@ -66,7 +66,7 @@ var keyData = {
 			circles.push(newCircle);
 //			<!-- Cant do this because push() pushes in the string "orange" since it is the last time returned -->
 //			<!-- circles.push(new Path.Circle(point, 500).fillColor = "orange"); -->
-		};
+		}
 	};
 
 //==== Mobile tapKey elements to play beats === 
@@ -98,6 +98,6 @@ for (i = 0; i < keyLength; i++) {
 			if(circles[i].area < 1) {
 				circles[i].remove();
 				circles.splice(i, 1);
-			};
+			}
 		};
   };

@@ -65,7 +65,7 @@ function onKeyDown(event) {
 			newCircle.fillColor = keyData[event.key].color;
 			keyData[event.key].sound.play();
 			circles.push(newCircle);
-		};
+		}
 	};
 
 //==== Mobile tapKey elements to play beats === 

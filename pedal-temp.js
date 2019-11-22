@@ -162,7 +162,7 @@ var pedalNumber = getUrlParameter('pedalid');
     });     
   } else {
     eventFired = 1;
-  };
+  }
   $(window).on('resize', function() {
     if ($(window).width() < 960) {
       $('#listenBeat, #aboutPedal').css({
@@ -254,7 +254,7 @@ $('#fullscreenMode, #playMode').click(function () {
       $('.header').css({
         'display' : 'none'
       })
-    };
+    }
     // Mobile Play mode (Full Screen + Beat Play)
   tapKeys(); 
   fullScreenStart();
