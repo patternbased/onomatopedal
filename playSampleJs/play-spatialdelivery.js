@@ -15,7 +15,7 @@ var keyData = {
 			sound: new Howl({
 				src: ['sounds/spatialdelivery/r.mp3']}),
 				color: '#FFD45C'},
-		
+
 		a: {
 			sound: new Howl({
 				src: ['sounds/spatialdelivery/a.mp3']}),
@@ -55,18 +55,14 @@ var keyData = {
 
 	function onKeyDown(event) {
 //		<!-- If truthy (if keyData exists do this else dont do anything) -->
-		if(keyData[event.key]) {
+		if (keyData[event.key]) {
 			var maxPoint = new Point(view.size.width, view.size.height);
-			//			<!-- Basically it is doing this: new Point(Math.random(), Math.random()) -->
 			var randomPoint = Point.random();
-			//			<!-- Pretty much doing Math.random() * maxPoint -->
 			var point = maxPoint * randomPoint;
 			var newCircle = new Path.Circle(point, 500);
 			newCircle.fillColor = keyData[event.key].color;
 			keyData[event.key].sound.play();
 			circles.push(newCircle);
-//			<!-- Cant do this because push() pushes in the string "orange" since it is the last time returned -->
-//			<!-- circles.push(new Path.Circle(point, 500).fillColor = "orange"); -->
 		}
 	};
 
@@ -93,12 +89,12 @@ for (i = 0; i < keyLength; i++) {
 
 //	Animation for Key elements
 	function onFrame(event) {
-		for(var i = 0; i < circles.length; i++) {
-			circles[i].fillColor.hue += 1;
-			circles[i].scale(0.9);
-			if(circles[i].area < 1) {
-				circles[i].remove();
-				circles.splice(i, 1);
+		for (var x = 0; x < circles.length; x++) {
+			circles[x].fillColor.hue += 1;
+			circles[x].scale(0.9);
+			if (circles[x].area < 1) {
+				circles[x].remove();
+				circles.splice(x, 1);
 			}
 		}
   };
