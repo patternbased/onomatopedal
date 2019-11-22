@@ -91,3 +91,10 @@ $('#showStarter').click(function() {
   localStorage.setItem("modal", "clicked");
 });
 
+
+window.onerror = function() {
+  alert('Oops. Something went wrong!');
+  if(confirm('Oops. Something went wrong!')){
+    window.location.reload();  
+}
+};

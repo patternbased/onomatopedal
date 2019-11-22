@@ -14,8 +14,10 @@ var pedalNumber = getUrlParameter('pedalid');
   
 // Connect to JSON
   var pedalRequest = new XMLHttpRequest();
+  if (!pedalRequest) {
+    alert('Giving up :( Cannot create an XMLHTTP instance');
+  }
   pedalRequest.open('GET','pedalinfo.json', true);
-  pedalRequest.setRequestHeader('Cache-Control', 'no-cache');
   pedalRequest.onload = function() {
   var pedalData = JSON.parse(pedalRequest.responseText);
 
@@ -180,6 +182,7 @@ var pedalNumber = getUrlParameter('pedalid');
 
   };
   pedalRequest.send();
+  
 
 // ===== End of rendering HTML while loading =====
 
