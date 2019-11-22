@@ -95,5 +95,4 @@ $('#showStarter').click(function() {
 window.onerror = function() {
   alert('Oops. Something went wrong!');
   window.location.reload();  
-}
 };
