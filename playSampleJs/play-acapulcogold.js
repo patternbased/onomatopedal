@@ -87,7 +87,7 @@ var keyLength = squareToKey.length;
 for (i = 0; i < keyLength; i++) {
 	document.getElementById(squareIDs[i]).onclick =  
 	squareClickEvent.bind(this, squareToKey[i]);
-};
+}
 
 //	Animation for Key elements
 	function onFrame(event) {
@@ -98,5 +98,5 @@ for (i = 0; i < keyLength; i++) {
 				circles[i].remove();
 				circles.splice(i, 1);
 			}
-		};
+		}
   };
