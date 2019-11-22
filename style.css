@@ -506,12 +506,13 @@ li#playMode span {
 
 .arrows {
 	display: inline-block;
-	height: 100px;
+	height: 100%;
 	width: 17px;
-	margin: 20px 0;
+	margin: 0;
 	position: absolute;
 	bottom: 0;
 	background-repeat: no-repeat;
+	background-position-y: center;
 }
 
 .next {

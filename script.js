@@ -1,14 +1,28 @@
+// Make the modal closable once the page is fully loaded
+		window.onload = function() {
+			$('.loadingSpinner, #modalBG').css('display','none');
+		if ($(window).width() > 960) {
+		  if (localStorage.getItem("modal") === null) {
+		  	$('.modalContent, #modalBG').css('display','block');
+		  } else {		  }		};
+		};
+		// Reload all JS external files
+		function reload_js(src) {
+  		      $('script[src="' + src + '"]').remove();
+  		      $('<script>').attr('src', src).appendTo('head');
+        };
+        
 // ===== Top page Pedal Shuffle =====
 
   if ($(window).width() < 960) {
     function randomize() {
       var allBanners = $('#pedalTable img');
-      shuffle(allBanners.hide()).slice(9).show();    
+      shuffle(allBanners.hide()).slice(11).show();    
     }
   } else {
     function randomize() {
       var allBanners = $('#pedalTable img');
-      shuffle(allBanners.hide()).slice(10).show();    
+      shuffle(allBanners.hide()).slice(12).show();    
     }
   };
 

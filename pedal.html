@@ -6,34 +6,15 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google" value="notranslate">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,800|Open+Sans:400,700&display=swap" rel="stylesheet">
-<!--	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script type="text/javascript">
-		// Make the modal closable once the page is fully loaded
-		window.onload = function() {
-			$('.loadingSpinner, #modalBG').css('display','none');
-		if ($(window).width() > 960) {
-		  if (localStorage.getItem("modal") === null) {
-		  	$('.modalContent, #modalBG').css('display','block');
-		  } else {		  }		};
-		};
-		// Reload all JS external files
-		function reload_js(src) {
-  		      $('script[src="' + src + '"]').remove();
-  		      $('<script>').attr('src', src).appendTo('head');
- 		   }
- 	    reload_js("https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.3/paper-full.js");
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.3/paper-full.js"></script>
-<!--	<script type="text/javascript" src="js/paper-full.js"></script> -->
+	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,800|Open+Sans:400,700&display=swap" rel="stylesheet"/>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.3/paper-full.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/howler.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script id="sampleJS" type="text/paperscript" src="" canvas="myCanvas"></script>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<link rel="icon" 
 	type="image/png" 
-	href="images/patternBased_Logo_icon.png">
+	href="images/patternBased_Logo_icon.png"/>
 </head>
 
 <body>
@@ -41,7 +22,7 @@
 <div id="modalBG">
 	<div class="loadingSpinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 	<div class="modalContent" id="modalScreen">
-		<p>Press these keys below on your keyboard to play sample beats. <br><b>Z,X,C,V,A,S,D,F,Q,W,E,R</b></p>
+		<p>Press these keys below on your keyboard to play sample beats.<br><b>Z,X,C,V,A,S,D,F,Q,W,E,R</b></p>
 		<img src="images/keysOnBoard.svg">
 		<button class="modalButton" id="showStarter">OK</button>
 	</div>
@@ -131,13 +112,15 @@
 				<img class="slide" id="1" src="images/pedalsOnom/Acapulco-Gold-bgtx.png">
 				<img class="slide" id="3" src="images/pedalsOnom/Arpanoid-bgtx.png">
 				<img class="slide" id="2" src="images/pedalsOnom/Avalanche-Run-bgtx.png">
-				<img class="slide" id="5" src="images/pedalsOnom/Disaster-Transport-SR-bgtx.png">
+				<img class="slide" id="5" src="images/pedalsOnom/Disaster-Transport-SR-bgtx_V2.png">
 				<img class="slide" id="6" src="images/pedalsOnom/Dream-Crusher-bgtx.png">
-				<img class="slide" id="7" src="images/pedalsOnom/Hoof-Reaper-bgtx.png">
-				<img class="slide" id="8" src="images/pedalsOnom/Hummingbird-bgtx.png">
+				<img class="slide" id="7" src="images/pedalsOnom/Hoof-Reaper-bgtx_V2.png">
+				<img class="slide" id="8" src="images/pedalsOnom/Hummingbird-bgtx_V2.png">
 				<img class="slide" id="9" src="images/pedalsOnom/Levitation-bgtx.png">
 				<img class="slide" id="11" src="images/pedalsOnom/Palisades-bgtx.png">
-				<img class="slide" id="12" src="images/pedalsOnom/Spatial-Delivery-bgtx.png">
+				<img class="slide" id="12" src="images/pedalsOnom/Spatial-Delivery-bgtx_V2.png">
+				<img class="slide" id="13" src="images/pedalsOnom/Afterneath-bgtx_V2.png">
+				<img class="slide" id="14" src="images/pedalsOnom/Hoof-Fuzz-bgtx_V2.png">
 				</div>
 				<div class="arrows next">
 				</div>
@@ -164,6 +147,7 @@
 
 <script type="text/javascript" src="responsive.js"></script>
 <script type="text/javascript" src="script.js"></script>
-<script type="text/javascript" src="ajax-temp.js"></script>
+<script type="text/javascript" src="pedal-temp.js"></script>
+<script id="sampleJS" type="text/paperscript" src="" canvas="myCanvas"></script>
 </body>
 </html>

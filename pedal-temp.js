@@ -14,7 +14,7 @@ var pedalNumber = getUrlParameter('pedalid');
   
 // Connect to JSON
   var pedalRequest = new XMLHttpRequest();
-  pedalRequest.open('GET','pedalinfo.json');
+  pedalRequest.open('GET','pedalinfo.json', true);
   pedalRequest.setRequestHeader('Cache-Control', 'no-cache');
   pedalRequest.onload = function() {
   var pedalData = JSON.parse(pedalRequest.responseText);
@@ -191,33 +191,26 @@ $('#carousel').slick({
   infinite: true,
   speed: 300,
   slidesToShow: 9,
-  slidesToScroll: 6,
+  slidesToScroll: 3,
   responsive: [
     {
       breakpoint: 1440,
       settings: {
-        slidesToShow: 7,
-        slidesToScroll: 4,
+        slidesToShow: 6,
+        slidesToScroll: 3,
       }
     },
     {
-      breakpoint: 1024,
+      breakpoint: 678,
       settings: {
-        slidesToShow: 5,
-        slidesToScroll: 2,
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToShow: 4,
+        slidesToScroll: 2
       }
     },
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1
       }
     }
