@@ -44,7 +44,6 @@ a:hover, img.pedalList:hover, img.slide:hover {
 	max-width: 30%;
 	margin: 0 auto ;
 	padding-top: 20px;
-	opacity: 0.5;
 }
 
 .title-pedal {
@@ -57,7 +56,6 @@ a:hover, img.pedalList:hover, img.slide:hover {
 	width: 60px;
 	margin: 15px 20px;
 	float: left;
-	opacity: 0.5;
 }
 
 #OnomoPedalHeader {
@@ -82,7 +80,6 @@ a:hover, img.pedalList:hover, img.slide:hover {
 	border-radius: 30px;
 	float: right;
 	margin: 20px 30px;
-	opacity: 0.5;
 	color: black;
 }
 
@@ -101,7 +98,7 @@ a:hover, img.pedalList:hover, img.slide:hover {
 }
 
 .info:hover {
-	opacity: 1;
+	opacity: 0.5;
 	transition-duration: 500ms;
 }
 
@@ -133,20 +130,20 @@ height: 50px;
 
 .rightSPWrapper {
 	height: 100vh;
-	width: 280px;
+	width: 400px;
 	background: #838080;
 	color: #000000;
 	position: fixed;
 	top: 0;
 	padding: 30px;
 	text-align: left;
-	right: -360px;
+	right: -480px;
 	z-index: 9997;
 	overflow-y: scroll;
 	display: block;
 }
 
-.rightSPWrapper h1 {
+.rightSPWrapper h1, .rightSPWrapper h2 {
 	font-size: 24px;
 	font-weight: 800;
 	margin-top: 40px;
@@ -165,7 +162,11 @@ height: 50px;
 }
 
 .rightSPWrapper p span {
-	margin-left: 20px;
+	font-style: italic;
+}
+
+.rightSPWrapper p a {
+	color: #6b0d28;
 }
 
 /****** Footer ******/
@@ -181,7 +182,6 @@ footer {
 	width: 200px;
 	max-width: 30%;
 	margin: 30px;
-	opacity: 0.5;
 }
 
 /****** Main Page ******/

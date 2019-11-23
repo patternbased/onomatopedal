@@ -60,7 +60,7 @@ $('.info').click(function () {
 });
 $('.close').click(function () { 
   $('.rightSPWrapper').css({
-    'right':'-360px', 
+    'right':'-480px', 
     'transition-duration':'300ms'});
 });
 
