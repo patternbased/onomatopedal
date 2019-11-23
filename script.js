@@ -75,7 +75,6 @@ $(pedalBtn).click(function() {
   $('.loadingSpinner').css('display','inline-block');
   $('#modalBG').css('display','block');
 
-
   var thisPedal = event.currentTarget;
     // Get id#
     var pedalNumber = $(thisPedal).attr("id");
@@ -91,8 +90,11 @@ $('#showStarter').click(function() {
   localStorage.setItem("modal", "clicked");
 });
 
+// ===== When error, show alert to reload =====
 
 window.onerror = function() {
   alert('Oops. Something went wrong!');
-  window.location.reload();
+  if(confirm('Oops. Something went wrong!')){
+    window.location.reload();  
+}
 };
