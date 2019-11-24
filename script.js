@@ -93,7 +93,6 @@ $('#showStarter').click(function() {
 // ===== When error, show alert to reload =====
 
 window.onerror = function() {
-  alert('Oops. Something went wrong!');
   if(confirm('Oops. Something went wrong!')){
     window.location.reload();  
 }

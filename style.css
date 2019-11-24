@@ -149,6 +149,12 @@ height: 50px;
 	margin-top: 40px;
 }
 
+.rightSPWrapper h3 {
+	font-size: 18px;
+	font-weight: 800;
+	margin-bottom: -10px;
+}
+
 .rightSPWrapper hr {
 	border: 1px solid #3f3f3f;
 	margin: 40px 0 ;
@@ -167,6 +173,40 @@ height: 50px;
 
 .rightSPWrapper p a {
 	color: #6b0d28;
+}
+
+.rightSPWrapper .sideBanner {
+	width: 340px;
+	height: 100px;
+	padding: 20px;
+	background: #000000;
+	color: #838080;
+	margin: 30px 0;
+	border-radius: 6px;
+}
+
+.rightSPWrapper .sideBanner img {
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin-right: 20px;
+}
+
+.rightSPWrapper .sideBanner p {
+	margin: 10px 0 0 0;
+}
+
+.rightSPWrapper .sideBanner p b {
+	color: #b3b3b6;
+}
+
+#sidepanelLogos {
+	text-align: center;
+	margin-bottom: 50px;
+}
+.sidepanelLogo {
+	width: 220px;
+	margin: 10px auto;
 }
 
 /****** Footer ******/
