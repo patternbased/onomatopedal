@@ -43,6 +43,7 @@ var pedalNumber = getUrlParameter('pedalid');
     var mobileKeyX = $('#keyX');
     var mobileKeyC = $('#keyC');
     var mobileKeyV = $('#keyV');
+    var sampleDownload = $('#download');
   
     // render HTML
   
@@ -66,8 +67,8 @@ var pedalNumber = getUrlParameter('pedalid');
     var mobileKeyXString = pedalData[pedalNumber].keyx;
     var mobileKeyCString = pedalData[pedalNumber].keyc;
     var mobileKeyVString = pedalData[pedalNumber].keyv;
+    var sampleDownloadString = pedalData[pedalNumber].sampleurl;
 
-  
     $(onomoName).html(onomoNameString).css("color", onomoColorString);
     $(pedalImg).attr("src","images/pedalsOnly/" + pedalImgString + "@2x.png");
     $(pedalDesc).html(pedalDescString);
@@ -88,6 +89,11 @@ var pedalNumber = getUrlParameter('pedalid');
     $(mobileKeyX).css("background-color", mobileKeyXString);
     $(mobileKeyC).css("background-color", mobileKeyCString);
     $(mobileKeyV).css("background-color", mobileKeyVString);
+
+    $(sampleDownload).click(function(e) {
+      e.preventDefault();
+      window.location.href = sampleDownloadString;
+  });
   
     // ===== Action button animation =====
 

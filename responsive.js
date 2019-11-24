@@ -54,7 +54,8 @@ $('#OnomoPedalHeader').css({
     // Global elements
 
 $('footer').css({
-  'margin-top':'50px'  
+  'margin-top':'40px',
+  'height':'60px'
 });
 $('.footerLogo').css({
   'margin':'10px'  
