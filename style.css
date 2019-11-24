@@ -141,7 +141,7 @@ height: 50px;
 	z-index: 9997;
 	overflow-y: scroll;
 	display: block;
-	max-width: calc(100% - 60px);
+	max-width: calc(100vw - 60px);
 }
 
 .rightSPWrapper h1, .rightSPWrapper h2 {
