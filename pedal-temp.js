@@ -97,7 +97,7 @@ var pedalNumber = getUrlParameter('pedalid');
           'width': '220px',
           'background': onomoColorString,
           'transition-duration':'50ms'
-        }),
+        });
         $('span', this).css({
           'display':'inline'
         })
@@ -127,7 +127,9 @@ var pedalNumber = getUrlParameter('pedalid');
         $(".playAudio > span, #pauseMobile > span").html("Pause");
     } else {
       $(".playAudio > img, #pauseMobile > img").attr('src', "images/playBeat.svg");
+      if ($(window).width() > 960) {
       $(".playAudio > span, #pauseMobile > span").html("Play Beat");
+      }
        }
        
       $('.playAudio, #pauseMobile').click(function() {
@@ -207,14 +209,14 @@ $('#carousel').slick({
       breakpoint: 678,
       settings: {
         slidesToShow: 4,
-        slidesToScroll: 2
+        slidesToScroll: 2,
       }
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 2,
       }
     }
   ]
@@ -233,10 +235,13 @@ function fullScreenStart() {
   });
   $('.info, .title-small, .title-pedal, .footerLogo').css({
     'display':'none'
-  })
+  });
   $('#playModeHeader, #mobileLogo').css({
     'display':'block'
-  })
+  });
+  $('.header').css({
+    'border-bottom':'none'
+  });
 };
 
 function tapKeys() {
@@ -256,7 +261,7 @@ $('#fullscreenMode, #playMode').click(function () {
       });
       $('.header').css({
         'display' : 'none'
-      })
+      });
     }
     // Mobile Play mode (Full Screen + Beat Play)
   tapKeys(); 
@@ -272,7 +277,7 @@ $('#fullscreenMode, #playMode').click(function () {
 function fullScreenEnd() {
   $('#pedal').fadeIn(300);
   $('footer').css({
-    'position': 'static',
+    'position': 'static'
   });
   $('#showAll, #pauseMobile').css({
     'visibility': 'hidden'});
@@ -285,13 +290,14 @@ function fullScreenEnd() {
   $('#playModeHeader, #mobileLogo').css({
       'display':'none'
     });
-  $('div#tapKeyWrap').css({
+  $('#tapKeyWrap').css({
       'grid-template-columns' : 'auto auto auto',
       'height' : 'calc(100vh - 240px)',
       'margin' : '100px 20px 140px 20px'
   });
   $('.header').css({
-      'display' : 'block'
+      'display' : 'block',
+      'border-bottom':'2px solid  rgba(33,47,61,0.5)'
   })
 }
 

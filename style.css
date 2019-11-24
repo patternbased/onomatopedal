@@ -15,6 +15,7 @@ body {
 
 .pedalPageWrap {
 	display: block;
+	margin-top:0;
 }
 
 .clear {	clear: both;}

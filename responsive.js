@@ -44,7 +44,7 @@ $('#aboutPedal > span').css({
 $('#listenBeat, #download, #fullscreenMode, .arrows').css({
     'display':'none'  
   });
-$('li#playMode').css({
+$('#playMode').css({
   'display':'block'
   });
 $('#OnomoPedalHeader').css({
