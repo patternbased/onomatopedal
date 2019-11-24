@@ -50,7 +50,6 @@ a:hover, img.pedalList:hover, img.slide:hover {
 .title-pedal {
 	width: 400px;
 	margin: 0 auto ;
-	padding: 10px;
 }
 
 .title-small {
@@ -60,6 +59,7 @@ a:hover, img.pedalList:hover, img.slide:hover {
 }
 
 #OnomoPedalHeader {
+	width: 100%;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 	font-size: 24px;
 	font-weight: bold;
@@ -177,8 +177,13 @@ height: 50px;
 	color: #6b0d28;
 }
 
+.SPImages {
+	width: 400px;
+	max-width: calc(100vw - 60px);
+}
 .rightSPWrapper .sideBanner {
 	width: 340px;
+	max-width: calc(100vw - 100px);
 	height: 100px;
 	padding: 20px;
 	background: #000000;

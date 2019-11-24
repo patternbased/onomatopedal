@@ -53,7 +53,7 @@
 
 // ===== Right side sliding panel =====
 
-$('.info').click(function () { 
+$('.info').click(function () {
   $('.rightSPWrapper').css({
     'right':'0', 
     'transition-duration':'300ms'});
