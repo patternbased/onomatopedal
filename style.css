@@ -60,14 +60,14 @@ a:hover, img.pedalList:hover, img.slide:hover {
 
 #OnomoPedalHeader {
 	width: 100%;
-	font-family: 'M PLUS Rounded 1c', sans-serif;
+	/*font-family: 'M PLUS Rounded 1c', sans-serif;*/
 	font-size: 24px;
 	font-weight: bold;
 	padding-top: 25px;
 }
 
 .title-PlayMode {
-	font-family: 'M PLUS Rounded 1c', sans-serif;
+	/*font-family: 'M PLUS Rounded 1c', sans-serif;*/
 	font-size: 18px;
 	font-weight: bold;
 	padding-top: 25px;
@@ -518,7 +518,7 @@ li#playMode span {
 #onomoInfo span {
 	font-weight: 800;
 	margin-right: 10px;
-	font-family: 'M PLUS Rounded 1c', sans-serif;
+	/*font-family: 'M PLUS Rounded 1c', sans-serif;*/
 }
 
 /* List of other pedals */
