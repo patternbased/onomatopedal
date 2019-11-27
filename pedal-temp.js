@@ -69,13 +69,13 @@ var pedalNumber = getUrlParameter('pedalid');
     var mobileKeyVString = pedalData[pedalNumber].keyv;
     var sampleDownloadString = pedalData[pedalNumber].sampleurl;
 
+    $(sampleJS).attr("src", "playSampleJs/play-" + pedalImgString + '.js');
     $(onomoName).html(onomoNameString).css("color", onomoColorString);
     $(pedalImg).attr("src","images/pedalsOnly/" + pedalImgString + "@2x.png");
     $(pedalDesc).html(pedalDescString);
     $(onomoColor).find('span').css("color", onomoColorString);
     $(onomoHeader).html(onomoHeaderString).css("color", onomoColorString);
     $(eqdPedalLink).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
-    $(sampleJS).attr("src", "playSampleJs/play-" + pedalImgString + '.js');
     $(samePedal).css("display", "none");
     $(mobileKeyQ).css("background-color", mobileKeyQString);
     $(mobileKeyW).css("background-color", mobileKeyWString);
