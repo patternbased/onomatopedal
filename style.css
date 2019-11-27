@@ -1,6 +1,19 @@
 
 /****** Global ******/
 
+@font-face {
+    font-family: "Open Sans";
+    src:  url("fonts/OpenSans-Regular.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Open Sans";
+    src:  url("fonts/OpenSans-Bold.ttf") format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
 	margin: 0;
 	padding: 0;
