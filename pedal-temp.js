@@ -80,7 +80,6 @@ var pedalNumber = getUrlParameter('pedalid');
 //    sampleScript.canvas = "myCanvas";
 //    document.body.appendChild(sampleScript);
 
-
     $(onomoName).html(onomoNameString).css("color", onomoColorString);
     $(pedalImg).attr("src","images/pedalsOnly/" + pedalImgString + "@2x.png");
     $(pedalDesc).html(pedalDescString);
