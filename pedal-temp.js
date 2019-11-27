@@ -53,6 +53,7 @@ var pedalNumber = getUrlParameter('pedalid');
     var onomoColorString = pedalData[pedalNumber].hex;
     var onomoHeaderString = pedalData[pedalNumber].header;
     var eqdPedalLinkString = pedalData[pedalNumber].eqdurl;
+    var sampleJSString = "playSampleJs/play-" + pedalImgString + '.js';
     var beatUrlString = pedalData[pedalNumber].beaturl;
     var samePedal = "#" + pedalNumber;
     var mobileKeyQString = pedalData[pedalNumber].keyq;
@@ -69,7 +70,17 @@ var pedalNumber = getUrlParameter('pedalid');
     var mobileKeyVString = pedalData[pedalNumber].keyv;
     var sampleDownloadString = pedalData[pedalNumber].sampleurl;
 
-    $(sampleJS).attr("src", "playSampleJs/play-" + pedalImgString + '.js');
+    $(sampleJS).attr("src", sampleJSString);
+    $.getScript(sampleJSString);
+
+//    let sampleScript = document.createElement('script');        
+//    sampleScript.type = 'text/paperscript';
+//    sampleScript.src = "playSampleJs/play-" + pedalImgString + '.js';
+//    sampleScript.async = false;
+//    sampleScript.canvas = "myCanvas";
+//    document.body.appendChild(sampleScript);
+
+
     $(onomoName).html(onomoNameString).css("color", onomoColorString);
     $(pedalImg).attr("src","images/pedalsOnly/" + pedalImgString + "@2x.png");
     $(pedalDesc).html(pedalDescString);
