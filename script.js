@@ -7,10 +7,10 @@
 		  } else {		  }		}
 		};
 		// Reload all JS external files
-		function reload_js(src) {
-  		      $('script[src="' + src + '"]').remove();
-  		      $('<script>').attr('src', src).appendTo('head');
-        };
+//		function reload_js(src) {
+//  		      $('script[src="' + src + '"]').remove();
+//  		      $('<script>').attr('src', src).appendTo('head');
+//        };
         
 // ===== Top page Pedal Shuffle =====
 
