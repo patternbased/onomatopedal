@@ -17,7 +17,7 @@ var pedalNumber = getUrlParameter('pedalid');
   if (!pedalRequest) {
     alert('Giving up :( Cannot create an XMLHTTP instance');
   }
-  pedalRequest.open('GET','pedalinfo.json?_=' + new Date().getTime(), true);
+  pedalRequest.open('GET','pedalinfo.json', true);
   pedalRequest.onload = function() {
   var pedalData = JSON.parse(pedalRequest.responseText);
 
