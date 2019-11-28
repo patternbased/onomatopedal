@@ -307,7 +307,7 @@ $('#fullscreenMode, #playMode').click(function () {
 function fullScreenEnd() {
   $('#pedal').fadeIn(300);
   $('footer').css({
-    'position': 'static'
+    'display': 'block'
   });
   $('#showAll, #pauseMobile').css({
     'display': 'none'});

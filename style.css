@@ -204,7 +204,7 @@
 
 	.rightSPWrapper {
 		height: 100vh;
-		width: 400px;
+		width: 480px;
 		color: #000000;
 		position: fixed;
 		top: 0;
@@ -250,7 +250,7 @@
 	}
 
 	.SPImages {
-		width: 340px;
+		width: 420px;
 		max-width: calc(100vw - 60px);
 		margin-bottom: 20px;
 	}
@@ -267,7 +267,7 @@
 /****** Banner @ Right SP ******/
 
 	.rightSPWrapper .sideBanner {
-		width: 300px;
+		width: 380px;
 		max-width: calc(100vw - 60px);
 		height: auto;
 		min-height: 100px;
@@ -770,7 +770,7 @@ div#tapKeyWrap {
 	display: none;
     grid-template-columns: auto auto auto;
 	width: calc(100vw - 40px);
-	height: calc(100vh - 180px);
+	height: calc(100% - 180px);
 	position: fixed;
 	padding: 0;
 	top: 0;
@@ -794,7 +794,7 @@ div.tapKey:active {
 	div#tapKeyWrap {
 		grid-template-columns: auto auto auto auto;
 		width: calc(100vw - 40px);
-		height: calc(100vh - 100px);
+		height: calc(100% - 100px);
 		position: fixed;
 		top: 0;
 		left: 0;
