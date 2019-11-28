@@ -145,7 +145,7 @@ var pedalNumber = getUrlParameter('pedalid');
     } else {
       $(".playAudio > img, #pauseMobile > img").attr('src', "images/playBeat.svg");
       if ($(window).width() > 960) {
-      $(".playAudio > span, #pauseMobile > span").html("Play Beat");
+      $("#pauseMobile > span, #pauseMobile > span").html("Play Beat");
       }
        }
        
@@ -161,7 +161,7 @@ var pedalNumber = getUrlParameter('pedalid');
          }
       });
 
-      if ($(window).width() < 960) {
+      if (($(window).width() < 960) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
       $('#showAll').click(function() {
         audioElement.pause();
         $(".playAudio > img").attr('src', "images/playBeat.svg");
@@ -199,6 +199,27 @@ var pedalNumber = getUrlParameter('pedalid');
     }
   });
 
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $('#actions').css({
+      'height': '140px'
+    });
+    $('#playMode, #aboutPedal').css({
+      'width': '220px',
+      'background': onomoColorString,
+      'float': 'none'
+    });
+    $('#playMode > span, #aboutPedal > span').css({
+      'display': 'inline-block'
+    });
+    $('#playMode > span').html('Play Mode');
+    $('#listenBeat, #download, #fullscreenMode').css({
+      'display': 'none'
+    });
+    $('#playMode').css({
+      'display': 'block'
+    });
+  }
+  
   };
   pedalRequest.send();
   
@@ -288,7 +309,7 @@ function tapKeys() {
 };
 
 $('#fullscreenMode, #playMode').click(function () {
-  if ($(window).width() < 960) { 
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { 
     // Mobile Play mode (Full Screen + Beat Play)
     if($(window).height() < $(window).width()){
       fullScreenLandscape();

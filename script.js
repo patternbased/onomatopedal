@@ -1,10 +1,12 @@
 // Make the modal closable once the page is fully loaded
 		window.onload = function() {
 			$('.loadingSpinner, #modalBG').css('display','none');
-		if ($(window).width() > 960) {
+		if (($(window).width() < 960) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
+      console.log('Mobile Play Mode is activated.')
+    } else { 
 		  if (localStorage.getItem("modal") === null) {
 		  	$('.modalContent, #modalBG').css('display','block');
-		  } else {		  }		}
+		  }		}
 		};
         
 // ===== Top page Pedal Shuffle =====
