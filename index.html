@@ -14,88 +14,64 @@
 
 <body>
 <div class="wrap">
-<div class="header">
-  <div class="onomHiragana"></div>
-  <div class="info"><span>?</span></div>
-  <div class="title"><img src="images/onomatoPedal-Logo.svg"></div>
-</div>
 
-<div class='clear'></div>
+  <!-- Header -->
+  <div class="header">
+    <div class="onomHiragana"></div>
+    <div class="info"><span>?</span></div>
+    <div class="title"><img src="images/onomatoPedal-Logo.svg"></div>
+  </div>
+  <div class='clear'></div>
 
-<!-- Right Panel -->
-<div class="rightSPWrapper">
-    <div class="close"><img src="images/closeIcon.svg"></div>
-    <h1>OnomatoPedal</h1>
-      <p><b>OnomatoPedal</b> is an audio playground and a series of downloadable sample packs and music tracks inspired by the Japanese Onomotopoetic words and the music effects pedals of the world famous EarthQuaker Devices.</p>
-      <hr>
-    <h2>How To Play</h2>
-      <p>The <a href="index.html">main screen</a> will display several EarthQuaker pedals. Click on 'Shuffle Pedals' to get a new set of choices. Once you see a pedal/onomotopeia that you would like to explore, click on it.</p>
-     <h3>On Desktop</h3><p>You will be able to play a set of sounds with the following 12 keys on your computer keyboard: <b>z, x, c, v, a, s, d, f, q, w, e, r.</b></p>
-    <img src="images/keysOnBoard.svg">
-      <h3>On Mobile</h3><p>Click to enter 'Play Mode', the track will start and you will see twelve drum pads. You can play along with the track or pause the track to just play the pads.</p>
-    <img src="images/mobile-preview@2x.png" width="400">
-      <hr>
-    <h2>Free Sample Pack</h2>
-      <p>On the desktop version, you see an option to download the sample pack files. Each pedal also has a link to it's official page at the EarthQuaker website.</p>
-      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="images/CC-BY-SA_icons.svg" height="40"/></a><br />Sample packs are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
-    <hr>
-    <p><b>Created</b> by <a href="https://www.patternbased.com/" target="_blank">PatternBased</a></p>
-    <p><b>Music</b> by <a href="http://www.puffyshapes.com" target="_blank">Puffy Shapes</a></p>
-    <p><b>Design and Code</b> by <a href="http://www.siorikitajima.com" target="_blank">Siori Kitajima</a>
-    <br /><span><img src="images/github-icon.svg" width="20" height="20" style="margin-bottom: -4px;"> <a href="https://github.com/patternbased/eqd" target="_blank">Fork this project on github</a></span></p>
-    <p><b>Music production/curation</b> by <a href="http://www.josephminadeo.com" target="_blank">Joseph Minadeo</a></span></p>
-    <p><b>Music</b> by <a href="http://www.puffyshapes.com" target="_blank">Puffy Shapes</a>, <a href="http://www.lowinthesky.com" target="_blank">Low in the Sky</a>, <a href="https://www.instagram.com/takanocaca/" target="_blank">Taka Tozawa</a>, Billy Dixon, Corey Farrow, Patrick McNulty</span></p>
-  
-    <div class="sideBanner">
-        <img src="images/OnomonoPedal_Cover_DP.jpg">
-        <p><b>OnomotoPedal, The album</b> is available at the PatternBased Bandcamp.</p>
+  <!-- Right Panel -->
+  <div class="rightSPWrapper">
+    <div class="rightSPgrayBG">
+      <div class="close"><img src="images/closeIcon.svg"></div>
+      <div class="rightSPOPlogo"><img src="images/onomatoPedal-Logo_Black.svg"></div>
     </div>
-  
-    <p><b>Pedals</b> by <a href="https://www.earthquakerdevices.com/devices" target="_blank">EarthQuaker Devices</a></p>
-    <p><b>Japanese Onomotope description</b> by <i>"An Illustrated Dictionary of Japanese Onomatopoetic Expressions"</i> by Taro Gomi, published by Kodansha Ltd,</p>
-    <p>Made with <b>amazing tools</b> including <a href="http://paperjs.org/" target="_blank">Pepar.js</a>, <a href="https://howlerjs.com/" target="_blank">Howler.js</a>, <a href="https://kenwheeler.github.io/slick/" target="_blank">Slick.js</a>, </p>
-      <hr>
-    <div id="sidepanelLogos">
-      <p>© 2019 PatternBased and EarthQuakerDevices.<br />All Rights Reserved.</p>
-      <a href="https://www.patternbased.com/" target="_blank"><img src="images/PatternBased_Logo_CL.png" class="sidepanelLogo"></a>  
-      <a href="https://www.earthquakerdevices.com/" target="_blank"><img src="images/EarthQuaker-Devices-Logo_dark.png" class="sidepanelLogo"></a>
+    <div class="rightSPgrayBG" id="aboutOP"></div>
+    <div class="rightSPwhiteBG" id="howToPlay"></div>
+    <div class="rightSPgrayBG" id="freeSamplePack"></div>
+    <div class="rightSPwhiteBG" id="credit"></div>
+    <div class="rightSPgrayBG" id="sidepanelLogos"></div>
+  </div>
+
+  <!-- Pedals -->
+  <div id="pedalTable">
+    <img src="images/pedalsOnom/Acapulco-Gold-bgtx@2x.png" class="pedalList" data-pedal-id="1">
+    <img src="images/pedalsOnom/Data-Corrupter-bgtx_V2@2x.png" class="pedalList" data-pedal-id="4"> 
+    <img src="images/pedalsOnom/Rainbow-Machine-bgtx@2x.png" class="pedalList" data-pedal-id="0"> 
+    <img src="images/pedalsOnom/Arpanoid-bgtx@2x.png" class="pedalList" data-pedal-id="3"> 
+    <img src="images/pedalsOnom/Avalanche-Run-bgtx@2x.png" class="pedalList" data-pedal-id="2"> 
+    <img src="images/pedalsOnom/Disaster-Transport-SR-bgtx_V2@2x.png" class="pedalList" data-pedal-id="5"> 
+    <img src="images/pedalsOnom/Dream-Crusher-bgtx@2x.png" class="pedalList" data-pedal-id="6"> 
+    <img src="images/pedalsOnom/Hoof-Reaper-bgtx_V2@2x.png" class="pedalList" data-pedal-id="7"> 
+    <img src="images/pedalsOnom/Levitation-bgtx@2x.png" class="pedalList" data-pedal-id="9"> 
+    <img src="images/pedalsOnom/Hummingbird-bgtx_V2@2x.png" class="pedalList" data-pedal-id="8"> 
+    <img src="images/pedalsOnom/Organizer-bgtx@2x.png" class="pedalList" data-pedal-id="10"> 
+    <img src="images/pedalsOnom/Palisades-bgtx@2x.png" class="pedalList" data-pedal-id="11"> 
+    <img src="images/pedalsOnom/Spatial-Delivery-bgtx_V2@2x.png" class="pedalList" data-pedal-id="12"> 
+    <img src="images/pedalsOnom/Afterneath-bgtx_V2@2x.png" class="pedalList" data-pedal-id="13"> 
+    <img src="images/pedalsOnom/Hoof-Fuzz-bgtx_V2@2x.png" class="pedalList" data-pedal-id="14"> 
+    <div id="randomDivMobile"></div>  
+  </div>
+
+  <!-- Random button -->
+
+  <div id="randomDiv">
+    <div id="randomWrap">
+      <img src="images/randombtn.svg" id="randombtn">
     </div>
   </div>
 
-<!-- Pedals -->
-
-<div id="pedalTable">
-  <img src="images/pedalsOnom/Acapulco-Gold-bgtx@2x.png" class="pedalList" id="1">
-  <img src="images/pedalsOnom/Data-Corrupter-bgtx_V2@2x.png" class="pedalList" id="4"> 
-  <img src="images/pedalsOnom/Rainbow-Machine-bgtx@2x.png" class="pedalList" id="0"> 
-  <img src="images/pedalsOnom/Arpanoid-bgtx@2x.png" class="pedalList" id="3"> 
-  <img src="images/pedalsOnom/Avalanche-Run-bgtx@2x.png" class="pedalList" id="2"> 
-  <img src="images/pedalsOnom/Disaster-Transport-SR-bgtx_V2@2x.png" class="pedalList" id="5"> 
-  <img src="images/pedalsOnom/Dream-Crusher-bgtx@2x.png" class="pedalList" id="6"> 
-  <img src="images/pedalsOnom/Hoof-Reaper-bgtx_V2@2x.png" class="pedalList" id="7"> 
-  <img src="images/pedalsOnom/Levitation-bgtx@2x.png" class="pedalList" id="9"> 
-  <img src="images/pedalsOnom/Hummingbird-bgtx_V2@2x.png" class="pedalList" id="8"> 
-  <img src="images/pedalsOnom/Organizer-bgtx@2x.png" class="pedalList" id="10"> 
-  <img src="images/pedalsOnom/Palisades-bgtx@2x.png" class="pedalList" id="11"> 
-  <img src="images/pedalsOnom/Spatial-Delivery-bgtx_V2@2x.png" class="pedalList" id="12"> 
-  <img src="images/pedalsOnom/Afterneath-bgtx_V2@2x.png" class="pedalList" id="13"> 
-  <img src="images/pedalsOnom/Hoof-Fuzz-bgtx_V2@2x.png" class="pedalList" id="14"> 
-  <div id="randomDivMobile"></div>  
 </div>
 
-<div id="randomDiv">
-  <div id="randomWrap">
-  <img src="images/randombtn.svg" id="randombtn">
-  </div>
-</div>
-
-</div>
-
+<!-- Footer -->
 <footer>
   <a href="https://www.earthquakerdevices.com/" target="_blank"><img src="images/EarthQuaker-Devices-Logo.png" class="footerLogo"></a>
   <a href="https://www.patternbased.com/" target="_blank"><img src="images/PatternBased_Logo_WHCL.png" class="footerLogo"></a>
 </footer>
+
 <script type="text/javascript" src="script.js"></script>
-<script type="text/javascript" src="responsive.js"></script>
 </body>
 </html>

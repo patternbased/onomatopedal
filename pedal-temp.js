@@ -80,6 +80,7 @@ var pedalNumber = getUrlParameter('pedalid');
 //    sampleScript.canvas = "myCanvas";
 //    document.body.appendChild(sampleScript);
 
+
     $(onomoName).html(onomoNameString).css("color", onomoColorString);
     $(pedalImg).attr("src","images/pedalsOnly/" + pedalImgString + "@2x.png");
     $(pedalDesc).html(pedalDescString);
@@ -211,8 +212,8 @@ $('#carousel').slick({
 	nextArrow: $('.next'),
   infinite: true,
   speed: 300,
-  slidesToShow: 9,
-  slidesToScroll: 3,
+  slidesToShow: 8,
+  slidesToScroll: 4,
   responsive: [
     {
       breakpoint: 1440,
@@ -222,16 +223,16 @@ $('#carousel').slick({
       }
     },
     {
-      breakpoint: 678,
+      breakpoint: 687,
       settings: {
         slidesToShow: 4,
         slidesToScroll: 2,
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 400,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 2,
       }
     }
@@ -244,19 +245,39 @@ $('#carousel').slick({
 function fullScreenStart() {
   $('#pedal').fadeOut(500);
   $('footer').css({
-    'position': 'fixed',
-  });
-  $('#showAll, #pauseMobile').css({
-    'visibility': 'visible'
+    'display':'none'
   });
   $('.info, .title-small, .title-pedal, .footerLogo').css({
     'display':'none'
   });
-  $('#playModeHeader, #mobileLogo').css({
+  $('#playModeHeader, #mobileLogo, #showAll, #pauseMobile, #playModeIcons').css({
     'display':'block'
   });
   $('.header').css({
+    'display': 'block',
     'border-bottom':'none'
+  });
+  $('.wrap').css({
+    'min-height': '100vh',
+  });
+};
+
+function fullScreenLandscape() {
+  $('#pedal').fadeOut(500);
+  $('footer').css({
+    'display':'none'
+  });
+  $('.info, .title-small, .title-pedal, .footerLogo').css({
+    'display':'none'
+  });
+  $('#mobileLogo, #showAll, #pauseMobile, #playModeIcons').css({
+    'display':'block'
+  });
+  $('#playModeHeader').css({
+    'display':'none'
+  });
+  $('.wrap').css({
+    'height': '100vh'
   });
 };
 
@@ -267,21 +288,14 @@ function tapKeys() {
 };
 
 $('#fullscreenMode, #playMode').click(function () {
-  if ($(window).width() < 960) {
-    // === Keytap on Mobile portrait
-    if($(window).height() < $(window).width()){
-      $('div#tapKeyWrap').css({
-        'grid-template-columns' : 'auto auto auto auto',
-        'height' : 'calc(100vh - 100px)',
-        'margin' : '20px 20px 80px 20px'
-      });
-      $('.header').css({
-        'display' : 'none'
-      });
-    }
+  if ($(window).width() < 960) { 
     // Mobile Play mode (Full Screen + Beat Play)
-  tapKeys(); 
-  fullScreenStart();
+    if($(window).height() < $(window).width()){
+      fullScreenLandscape();
+    } else {
+      fullScreenStart();
+    }
+    tapKeys(); 
   } else {
     // Full screen mode (HD)
   fullScreenStart();
@@ -296,7 +310,7 @@ function fullScreenEnd() {
     'position': 'static'
   });
   $('#showAll, #pauseMobile').css({
-    'visibility': 'hidden'});
+    'display': 'none'});
   $('.info, .title-small, .title-pedal').css({
       'display':'block'
     });
@@ -312,9 +326,11 @@ function fullScreenEnd() {
       'margin' : '100px 20px 140px 20px'
   });
   $('.header').css({
-      'display' : 'block',
       'border-bottom':'2px solid  rgba(33,47,61,0.5)'
-  })
+  });
+  $('#playModeHeader, #mobileLogo, #showAll, #pauseMobile, #playModeIcons').css({
+    'display':'none'
+  });
 }
 
 function tapKeysEnd() {
@@ -324,13 +340,6 @@ function tapKeysEnd() {
 };
 
 $('#showAll').click(function () { 
-  if ($(window).width() < 960) {
       tapKeysEnd(); 
       fullScreenEnd();
-  } else {
-    // Full screen mode (HD)
-  fullScreenEnd();
-  }
   });
-
-  

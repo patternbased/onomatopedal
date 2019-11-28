@@ -1,76 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>OnomatoPedal - Acapulco Gold Sampler</title>
+	<title>OnomatoPedal - EarthQuaker Devices Randomizer and Samplepacks by PatternBased</title>
 	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google" value="notranslate">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!--	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,800|Open+Sans:400,700&display=swap" rel="stylesheet" />-->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/paper-full.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/howler.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<link rel="icon" 
-	type="image/png" 
-	href="images/patternBased_Logo_icon.png" />
+	<link rel="icon" type="image/png" href="images/patternBased_Logo_icon.png" />
 </head>
 
 <body>
+
 <!-- Modal -->
-<div id="modalBG">
-	<div class="loadingSpinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-	<div class="modalContent" id="modalScreen">
-		<p>Press these keys below on your keyboard to play sample beats.<br><b>Z,X,C,V,A,S,D,F,Q,W,E,R</b></p>
-		<img src="images/keysOnBoard.svg">
-		<button class="modalButton" id="showStarter">OK</button>
+	<div id="modalBG">
+		<div class="loadingSpinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+		<div class="modalContent" id="modalScreen">
+			<p>Press these keys below on your keyboard to play sample beats.<br><b>Z,X,C,V,A,S,D,F,Q,W,E,R</b></p>
+			<img src="images/keysOnBoard.svg">
+			<button class="modalButton" id="showStarter">OK</button>
+		</div>
+		<div class="modalContent" id="modalMobile"></div>
 	</div>
-	<div class="modalContent" id="modalMobile"></div>
-</div>
 
 <!-- Right Panel -->
-<div class="rightSPWrapper">
-	<div class="close"><img src="images/closeIcon.svg"></div>
-	<h1>OnomatoPedal</h1>
-	  <p><b>OnomatoPedal</b> is an audio playground and a series of downloadable sample packs and music tracks inspired by the Japanese Onomotopoetic words and the music effects pedals of the world famous EarthQuaker Devices.</p>
-	  <hr>
-	<h2>How To Play</h2>
-	  <p>The <a href="index.html">main screen</a> will display several EarthQuaker pedals. Click on 'Shuffle Pedals' to get a new set of choices. Once you see a pedal/onomotopeia that you would like to explore, click on it.</p>
-	 <h3>On Desktop</h3><p>You will be able to play a set of sounds with the following 12 keys on your computer keyboard: <b>z, x, c, v, a, s, d, f, q, w, e, r.</b></p>
-	<img class="SPImages" src="images/keysOnBoard.svg">
-	  <h3>On Mobile</h3><p>Click to enter 'Play Mode', the track will start and you will see twelve drum pads. You can play along with the track or pause the track to just play the pads.</p>
-	<img class="SPImages" src="images/mobile-preview@2x.png" width="400">
-	  <hr>
-	<h2>Free Sample Pack</h2>
-		<p>On the desktop version, you see an option to download the sample pack files. Each pedal also has a link to it's official page at the EarthQuaker website.</p>
-		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="images/CC-BY-SA_icons.svg" height="40"/></a><br />Sample packs are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
-	<hr>
-	<p><b>Created</b> by <a href="https://www.patternbased.com/" target="_blank">PatternBased</a></p>
-	<p><b>Music</b> by <a href="http://www.puffyshapes.com" target="_blank">Puffy Shapes</a></p>
-	<p><b>Design and Code</b> by <a href="http://www.siorikitajima.com" target="_blank">Siori Kitajima</a>
-	<br /><span><img src="images/github-icon.svg" width="20" height="20" style="margin-bottom: -4px;"> <a href="https://github.com/patternbased/eqd" target="_blank">Fork this project on github</a></span></p>
-	<p><b>Music production/curation</b> by <a href="http://www.josephminadeo.com" target="_blank">Joseph Minadeo</a></span></p>
-	<p><b>Music</b> by <a href="http://www.puffyshapes.com" target="_blank">Puffy Shapes</a>, <a href="http://www.lowinthesky.com" target="_blank">Low in the Sky</a>, <a href="https://www.instagram.com/takanocaca/" target="_blank">Taka Tozawa</a>, Billy Dixon, Corey Farrow, Patrick McNulty</span></p>
-
-	<div class="sideBanner">
-		<img src="images/OnomonoPedal_Cover_DP.jpg">
-		<p><b>OnomotoPedal, The album</b> is available at the PatternBased Bandcamp.</p>
+	<div class="rightSPWrapper">
+		<div class="rightSPgrayBG">
+			<div class="close"><img src="images/closeIcon.svg"></div>
+			<div class="rightSPOPlogo"><img src="images/onomatoPedal-Logo_Black.svg"></div>
+		</div>
+		<div class="rightSPgrayBG" id="aboutOP"></div>
+		<div class="rightSPwhiteBG" id="howToPlay"></div>
+		<div class="rightSPgrayBG" id="freeSamplePack"></div>
+		<div class="rightSPwhiteBG" id="credit"></div>
+		<div class="rightSPgrayBG" id="sidepanelLogos"></div>
 	</div>
-
-	<p><b>Pedals</b> by <a href="https://www.earthquakerdevices.com/devices" target="_blank">EarthQuaker Devices</a></p>
-	<p><b>Japanese Onomotope description</b> by <i>"An Illustrated Dictionary of Japanese Onomatopoetic Expressions"</i> by Taro Gomi, published by Kodansha Ltd,</p>
-	<p>Made with <b>amazing tools</b> including <a href="http://paperjs.org/" target="_blank">Pepar.js</a>, <a href="https://howlerjs.com/" target="_blank">Howler.js</a>, <a href="https://kenwheeler.github.io/slick/" target="_blank">Slick.js</a>, </p>
-	  <hr>
-	<div id="sidepanelLogos">
-		<p>© 2019 PatternBased and EarthQuakerDevices.<br />All Rights Reserved.</p>
-		<a href="https://www.patternbased.com/" target="_blank"><img src="images/PatternBased_Logo_CL.png" class="sidepanelLogo"></a>  
-		<a href="https://www.earthquakerdevices.com/" target="_blank"><img src="images/EarthQuaker-Devices-Logo_dark.png" class="sidepanelLogo"></a>
-	</div>
-</div>
 
 <!-- Tapping divs in Play mode mobile-->
-
 	<div id="tapKeyWrap">
 		<div class="tapKey" id="keyR"></div>
 		<div class="tapKey" id="keyF"></div>
@@ -88,86 +58,84 @@
 
 	
 <!-- Body -->
-
-<div class="wrap pedalPageWrap">
-	<div class="header">
-	<div class="info"><span>?</span></div>
-		<div class="title-small"><a href="index.html"><img src="images/onomatoPedal-Logo-small.svg"></a></div>
-		<div class="title-pedal" id="OnomoPedalHeader"></div>
-		<div id="playModeHeader">
-			<div class="pedal-small"> <img id="pedalSmall"></div>
-			<div class="title-PlayMode"></div>
+	<div class="wrap pedalPageWrap">
+		<!-- Header -->
+		<div class="header">
+			<div class="info"><span>?</span></div>
+			<div class="title-small"><a href="index.html"><img src="images/onomatoPedal-Logo-small.svg"></a></div>
+			<div class="clear"></div>
+			<div class="title-pedal" id="OnomoPedalHeader"></div>
+			<div id="playModeHeader">
+				<div class="pedal-small"> <img id="pedalSmall"></div>
+				<div class="title-PlayMode"></div>
+				<div class='clear'></div>
+			</div>
 		</div>
-	</div>
+		<div class='clear'></div>
 
-	<div class='clear'></div>
+		<!-- Pedal -->
+		<div id="pedal">
+			<img id="thePedal">
 
-	<!-- Pedal -->
-	<div id="pedal">
-		<img id="thePedal">
+			<!-- Circular Action Buttons -->
+			<ul id="actions">
+				<li class='actionBtn playAudio' id="listenBeat"><img src="images/playBeat.svg"><span>Play Beat</span></li>
+				<li class='actionBtnMobile playAudio' id="playMode"><img src="images/playBeat.svg"><span>Play Mode</span></li>
+				<li class='actionBtn' id="download"><img src="images/downloadSample.svg"><span>Download Sample</span></li>
+				<li class='actionBtn' id="aboutPedal"><img src="images/seePedal.svg"><span>Check out Pedal</span></li>
+				<li class='actionBtn' id='fullscreenMode'><img src="images/fullscreen.svg"><span>Full Browser Mode</span></li>
+			</ul>
 
-		<!-- Circular Action Buttons -->
+			<!-- Onomonapia Description-->
+			<h1 id="onomoName"></h1>
+			<p id="onomoInfo"></p>
 
-		<ul id="actions">
-			<li class='actionBtn playAudio' id="listenBeat"><img src="images/playBeat.svg"><span>Play Beat</span></li>
-			<li class='actionBtnMobile playAudio' id="playMode"><img src="images/playBeat.svg"><span>Play Mode</span></li>
-			<li class='actionBtn' id="download"><img src="images/downloadSample.svg"><span>Download Sample</span></li>
-			<li class='actionBtn' id="aboutPedal"><img src="images/seePedal.svg"><span>Check out Pedal</span></li>
-			<li class='actionBtn' id='fullscreenMode'><img src="images/fullscreen.svg"><span>Full Browser Mode</span></li>
-		</ul>
+			<!-- More Pedals -->
 
-		<!-- Onomonapia Description-->
-		<h1 id="onomoName"></h1>
-		<p id="onomoInfo"></p>
-
-    <!-- More Pedals -->
-
-    <div id="morePedals">
-			<div id="carouselWindow">
-				<div class="arrows prev">
-				</div>
-				<div id="carousel">
-				<img class="slide" id="4" src="images/pedalsOnom/Data-Corrupter-bgtx_V2.png">
-				<img class="slide" id="0" src="images/pedalsOnom/Rainbow-Machine-bgtx.png">
-				<img class="slide" id="10" src="images/pedalsOnom/Organizer-bgtx.png">
-				<img class="slide" id="1" src="images/pedalsOnom/Acapulco-Gold-bgtx.png">
-				<img class="slide" id="3" src="images/pedalsOnom/Arpanoid-bgtx.png">
-				<img class="slide" id="2" src="images/pedalsOnom/Avalanche-Run-bgtx.png">
-				<img class="slide" id="5" src="images/pedalsOnom/Disaster-Transport-SR-bgtx_V2.png">
-				<img class="slide" id="6" src="images/pedalsOnom/Dream-Crusher-bgtx.png">
-				<img class="slide" id="7" src="images/pedalsOnom/Hoof-Reaper-bgtx_V2.png">
-				<img class="slide" id="8" src="images/pedalsOnom/Hummingbird-bgtx_V2.png">
-				<img class="slide" id="9" src="images/pedalsOnom/Levitation-bgtx.png">
-				<img class="slide" id="11" src="images/pedalsOnom/Palisades-bgtx.png">
-				<img class="slide" id="12" src="images/pedalsOnom/Spatial-Delivery-bgtx_V2.png">
-				<img class="slide" id="13" src="images/pedalsOnom/Afterneath-bgtx_V2.png">
-				<img class="slide" id="14" src="images/pedalsOnom/Hoof-Fuzz-bgtx_V2.png">
-				</div>
-				<div class="arrows next">
+			<div id="morePedals">
+				<div id="carouselWindow">
+					<div class="arrows prev"></div>
+					<div id="carousel">
+						<img class="slide" data-pedal-id="4" src="images/pedalsOnom/Data-Corrupter-bgtx_V2.png">
+						<img class="slide" data-pedal-id="0" src="images/pedalsOnom/Rainbow-Machine-bgtx.png">
+						<img class="slide" data-pedal-id="10" src="images/pedalsOnom/Organizer-bgtx.png">
+						<img class="slide" data-pedal-id="1" src="images/pedalsOnom/Acapulco-Gold-bgtx.png">
+						<img class="slide" data-pedal-id="3" src="images/pedalsOnom/Arpanoid-bgtx.png">
+						<img class="slide" data-pedal-id="2" src="images/pedalsOnom/Avalanche-Run-bgtx.png">
+						<img class="slide" data-pedal-id="5" src="images/pedalsOnom/Disaster-Transport-SR-bgtx_V2.png">
+						<img class="slide" data-pedal-id="6" src="images/pedalsOnom/Dream-Crusher-bgtx.png">
+						<img class="slide" data-pedal-id="7" src="images/pedalsOnom/Hoof-Reaper-bgtx_V2.png">
+						<img class="slide" data-pedal-id="8" src="images/pedalsOnom/Hummingbird-bgtx_V2.png">
+						<img class="slide" data-pedal-id="9" src="images/pedalsOnom/Levitation-bgtx.png">
+						<img class="slide" data-pedal-id="11" src="images/pedalsOnom/Palisades-bgtx.png">
+						<img class="slide" data-pedal-id="12" src="images/pedalsOnom/Spatial-Delivery-bgtx_V2.png">
+						<img class="slide" data-pedal-id="13" src="images/pedalsOnom/Afterneath-bgtx_V2.png">
+						<img class="slide" data-pedal-id="14" src="images/pedalsOnom/Hoof-Fuzz-bgtx_V2.png">
+					</div>
+					<div class="arrows next"></div>
 				</div>
 			</div>
+		</div>
+		<div class="clear"></div>
+
+		<!-- 'Show-all' button in full browser mode-->
+		<div id="playModeIcons">
+			<div id="showAll" class="actionBtn"><img src="images/showAll.svg"><span>Back to Pedal</span></div>
+			<div id="pauseMobile" class="actionBtn"><img src="images/pauseBeat.svg"><span>Pause</span></div>
+			<div id="mobileLogo"><img src="images/EQD-PB_logo@2x.png"></div>
+		</div>
+
+		<!-- BG Canvas for Paper.js -->
+		<canvas id="myCanvas" resize></canvas>
 	</div>
-	</div>
-	<div class="clear"></div>
 
-	<!-- Show all button in full browser mode-->
+	<footer>
+		<a href="https://www.earthquakerdevices.com/" target="_blank"><img src="images/EarthQuaker-Devices-Logo.png" class="footerLogo"></a>
+		<a href="https://www.patternbased.com/" target="_blank"><img src="images/PatternBased_Logo_WHCL.png" class="footerLogo"></a>
+	</footer>
 
-	<div id="showAll" class="actionBtn"><img src="images/showAll.svg"><span>Back to Pedal</span></div>
-	<div id="pauseMobile" class="actionBtn"><img src="images/pauseBeat.svg"><span>Pause</span></div>
-	<div id="mobileLogo"><img src="images/EQD-PB_logo@2x.png"></div>
-
-
-	<!-- BG Canvas for Paper.js -->
-
-	<canvas id="myCanvas" resize></canvas>
-</div>
-<footer>
-	<a href="https://www.earthquakerdevices.com/" target="_blank"><img src="images/EarthQuaker-Devices-Logo.png" class="footerLogo"></a>
-	<a href="https://www.patternbased.com/" target="_blank"><img src="images/PatternBased_Logo_WHCL.png" class="footerLogo"></a>
-</footer>
-<script type="text/javascript" src="pedal-temp.js"></script>
-<script type="text/javascript" src="responsive.js"></script>
-<script type="text/javascript" src="script.js"></script>
-<script id="sampleJS" type="text/paperscript" src="" canvas="myCanvas"></script>
+	<script type="text/javascript" src="pedal-temp.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script id="sampleJS" type="text/paperscript" src="pedal-temp-paper.js" canvas="myCanvas"></script>
 </body>
 </html>
