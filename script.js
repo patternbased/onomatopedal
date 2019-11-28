@@ -65,9 +65,13 @@ $('.close').click(function () {
 var pedalBtn = $('.slide, .pedalList');
 
 $(pedalBtn).click(function() {
-//  var modalCache = localStorage.getItem('modal');
-//  localStorage.clear();
-//  localStorage.setItem('modal',modalCache);
+  if (($(window).width() < 960) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
+    localStorage.clear();
+  } else {
+  var modalCache = localStorage.getItem('modal');
+  localStorage.clear();
+  localStorage.setItem('modal',modalCache);
+  }
   $('.loadingSpinner').css('display','inline-block');
   $('#modalBG').css('display','block');
 
