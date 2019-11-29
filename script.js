@@ -49,12 +49,12 @@ $('#sidepanelLogos').html("<a href='https://www.patternbased.com/' target='_blan
 });
 
 $('.info').click(function () {
-$('.rightSPWrapper').css({
+$('.rightSPWrapper, #rightSPHeader').css({
 'right':'0', 
 'transition-duration':'300ms'});
 });
 $('.close').click(function () { 
-$('.rightSPWrapper').css({
+$('.rightSPWrapper, #rightSPHeader').css({
 'right':'-480px', 
 'transition-duration':'300ms'});
 });

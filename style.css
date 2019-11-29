@@ -183,7 +183,6 @@
 	}
 
 /****** Right Side Panel ******/
-
 	.close {
 		width: 30px;
 		height: 30px;
@@ -207,6 +206,7 @@
 		width: 480px;
 		color: #000000;
 		position: fixed;
+		padding-top: 92px;
 		top: 0;
 		text-align: left;
 		right: -480px;
@@ -217,7 +217,7 @@
 	}
 	.rightSPgrayBG {
 		background: #838080;
-		padding: 30px;
+		padding: 20px 30px;
 		display: block;
 		width: calc(100% - 60px);
 	}
@@ -225,8 +225,19 @@
 		background: #d1d0d5;
 		padding: 30px;
 		display: block;
-		width: 100%;
 		width: calc(100% - 60px);
+	}
+
+	#rightSPHeader {
+		background: #d1d0d5;
+		padding: 20px 30px 12px 30px;
+		right: -480px;
+		position: fixed;
+		top: 0;
+		z-index: 9998;
+		width: 420px;
+		max-width: 100vw;
+		display: block;
 	}
 
 	.rightSPWrapper h1, .rightSPWrapper h2 {
