@@ -44,7 +44,7 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   var onomoHeaderString = pedalData[pedalNumber].header;
   var eqdPedalLinkString = pedalData[pedalNumber].eqdurl;
   var beatUrlString = pedalData[pedalNumber].beaturl;
-  var samePedal = "#" + pedalNumber;
+  var samePedal = $('#carousel').find('[data-pedal-id="' + pedalNumber + '"]');
   var sampleDownloadString = pedalData[pedalNumber].sampleurl;
 
   $(onomoName).html(onomoNameString).css("color", onomoColorString);
@@ -73,12 +73,14 @@ var pedalData = JSON.parse(pedalRequest.responseText);
       })
     });
     $('.actionBtn').on('mouseleave',function() {
+      if ( $(window).width() > 960 ) {
       $('span', this).css('display','none'),
       $(this).css({
         'width': '50px',
         'background': '#ffffff',
         'transition-duration':'100ms'
       })
+    } else {}
     });
     }
 
@@ -217,41 +219,41 @@ responsive: [
 
 function fullScreenStart() {
 $('#pedal').fadeOut(500);
-$('footer').css({
-  'display':'none'
-});
-$('.info, .title-small, .title-pedal, .footerLogo').css({
+$('footer, .info, .title-small, .title-pedal, .footerLogo').css({
   'display':'none'
 });
 $('#playModeHeader, #mobileLogo, #showAll, #pauseMobile, #playModeIcons').css({
   'display':'block'
 });
 $('.header').css({
-  'display': 'block',
   'border-bottom':'none'
 });
-$('.wrap').css({
-  'min-height': '100vh',
-});
+$("body").css("overflow", "hidden");
 };
 
 function fullScreenLandscape() {
 $('#pedal').fadeOut(500);
-$('footer').css({
-  'display':'none'
-});
-$('.info, .title-small, .title-pedal, .footerLogo').css({
+$('footer, #playModeHeader, .info, .title-small, .title-pedal, .footerLogo').css({
   'display':'none'
 });
 $('#mobileLogo, #showAll, #pauseMobile, #playModeIcons').css({
   'display':'block'
 });
-$('#playModeHeader').css({
-  'display':'none'
+$('#tapKeyWrap').css({
+  'grid-template-columns': 'auto auto auto auto',
+  'height' : 'calc(100% - 100px)',
+  'margin' : '80px 20px 20px 20px'
 });
-$('.wrap').css({
-  'height': '100vh'
+$('.tapKey').css({
+  'margin': '6px'
 });
+$('#playModeIcons').css({
+  'top' : '0'
+});
+$('#mobileLogo').css({
+  'top': '15px'
+});
+$("body").css("overflow", "hidden");
 };
 
 function tapKeys() {
@@ -259,6 +261,33 @@ $('#tapKeyWrap').css({
   'display':'grid'
 });
 };
+
+// var elem = document.documentElement;
+
+// /* View in fullscreen */
+// function openFullscreen() {
+//   if (elem.requestFullscreen) {
+//     elem.requestFullscreen();
+//   } else if (elem.mozRequestFullScreen) { /* Firefox */
+//     elem.mozRequestFullScreen();
+//   } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+//     elem.webkitRequestFullscreen();
+//   } else if (elem.msRequestFullscreen) { /* IE/Edge */
+//     elem.msRequestFullscreen();
+//   }
+// };
+// /* Close fullscreen */
+// function closeFullscreen() {
+//   if (document.exitFullscreen) {
+//     document.exitFullscreen();
+//   } else if (document.mozCancelFullScreen) { /* Firefox */
+//     document.mozCancelFullScreen();
+//   } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+//     document.webkitExitFullscreen();
+//   } else if (document.msExitFullscreen) { /* IE/Edge */
+//     document.msExitFullscreen();
+//   }
+// }
 
 $('#fullscreenMode, #playMode').click(function () {
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { 
@@ -268,6 +297,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   } else {
     fullScreenStart();
   }
+//  openFullscreen()
   tapKeys(); 
 } else {
   // Full screen mode (HD)
@@ -279,24 +309,13 @@ fullScreenStart();
 
 function fullScreenEnd() {
 $('#pedal').fadeIn(300);
-$('footer').css({
-  'display': 'block'
-});
 $('#showAll, #pauseMobile').css({
   'display': 'none'});
-$('.info, .title-small, .title-pedal').css({
+$('footer, .info, .title-small, .title-pedal').css({
     'display':'block'
   });
 $('.footerLogo').css({
   'display':'inline'
-});
-$('#playModeHeader, #mobileLogo').css({
-    'display':'none'
-  });
-$('#tapKeyWrap').css({
-    'grid-template-columns' : 'auto auto auto',
-    'height' : 'calc(100vh - 240px)',
-    'margin' : '100px 20px 140px 20px'
 });
 $('.header').css({
     'border-bottom':'2px solid  rgba(33,47,61,0.5)'
@@ -304,6 +323,23 @@ $('.header').css({
 $('#playModeHeader, #mobileLogo, #showAll, #pauseMobile, #playModeIcons').css({
   'display':'none'
 });
+$('#tapKeyWrap').css({
+  'grid-template-columns': 'auto auto auto',
+  'height' : 'calc(100% - 180px)',
+  'margin' : '80px 20px 100px 20px'
+});
+$('.tapKey').css({
+  'margin': '8px'
+});
+$('#playModeIcons').css({
+  'bottom' : '0',
+  'top' : 'unset'
+});
+$('#mobileLogo').css({
+  'bottom': '15px',
+  'top': 'unset'
+});
+$("body").css("overflow", "auto");
 }
 
 function tapKeysEnd() {
@@ -315,4 +351,5 @@ $('#tapKeyWrap').css({
 $('#showAll').click(function () { 
     tapKeysEnd(); 
     fullScreenEnd();
+//    closeFullscreen()
 });

@@ -31,7 +31,7 @@
     "onomoname":"こつこつ Kotsu kotsu",
     "onomoid":"kotsukotsu",
     "onomoDesc":"<b>(1)</b> Describes the sound of a large object hitting something, such as shoes hitting the pavement or someone knocking at a door. Tapping. Clicking. Drumming. <b>(2)</b> Describes someone grinding away at their job. Unflaggingly.",
-    "beaturl":"sounds/tracks/IceDisco.mp3",
+    "beaturl":"sounds/tracks/zakuzaku.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/avalanche-run"
   },
@@ -166,6 +166,18 @@
     "beaturl":"sounds/tracks/kebakeba.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/afterneath"
+  },
+  {
+    "name":"Hoof Fuzz",
+    "nameid":"hooffuzz",
+    "hex":"#ab8c4d",
+    "header":"ざらざら + Hoof Fuzz",
+    "onomoname":"ざらざら Zara zara",
+    "onomoid":"zarazara",
+    "onomoDesc":"Describes someone or something that glitters, sparkles or shines.",
+    "beaturl":"sounds/tracks/kebakeba.mp3",
+    "sampleurl":"sample/test.zip",
+    "eqdurl":"https://www.earthquakerdevices.com/hoof"
   },
   {
     "name":"Hoof Fuzz",

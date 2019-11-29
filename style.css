@@ -217,13 +217,13 @@
 	}
 	.rightSPgrayBG {
 		background: #838080;
-		padding: 20px 30px;
+		padding: 30px;
 		display: block;
 		width: calc(100% - 60px);
 	}
 	.rightSPwhiteBG {
 		background: #d1d0d5;
-		padding: 20px 30px;
+		padding: 30px;
 		display: block;
 		width: 100%;
 		width: calc(100% - 60px);
@@ -249,6 +249,19 @@
 		color: #6b0d28;
 	}
 
+	.pedalLineup {
+		width: 100%;
+		max-width: 100vw;
+		height: 80px;
+		margin: 0;
+		padding: 0;
+		border-top: #242424 15px solid;
+		border-bottom: #242424 15px solid;
+		background: #242424 url(images/OnomonoPedals-six-TR.png);
+		background-size:cover;
+		display: block;
+	}
+
 	.SPImages {
 		width: 420px;
 		max-width: calc(100vw - 60px);
@@ -257,7 +270,7 @@
 
 	#sidepanelLogos {
 		text-align: center;
-		padding-bottom: 30px;
+		padding-bottom: 10px;
 	}
 	.sidepanelLogo {
 		width: 220px;
@@ -657,6 +670,7 @@
 		background: rgba(33,47,61,0.5);
 		width: 100%;
 		padding: 0;
+		overflow: hidden;
 	}
 
 	#carouselWindow {
@@ -788,30 +802,6 @@ div.tapKey {
 div.tapKey:active {
 	opacity: 0.8;
 	transition-duration: 200ms;
-}
-
-@media(max-width: 960px) and (orientation: landscape) {
-	div#tapKeyWrap {
-		grid-template-columns: auto auto auto auto;
-		width: calc(100vw - 40px);
-		height: calc(100% - 100px);
-		position: fixed;
-		top: 0;
-		left: 0;
-		margin: 80px 20px 20px 20px;
-		padding: 0;
-		z-index: 9998;
-	}
-	div.tapKey {
-		margin: 6px;
-	}
-	#playModeIcons {
-		padding: 20px 0;
-		top: 0;
-	}
-	#mobileLogo {
-		top: 15px;
-	}
 }
 
 @media(max-width: 400px) {
