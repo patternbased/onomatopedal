@@ -7,9 +7,163 @@
 	<meta name="google" value="notranslate">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/paper-full.js"></script>
+    <script type="text/javascript" src="js/paper-full_0.12.3.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
-	<script type="text/javascript" src="js/howler.js"></script>
+    <script type="text/javascript" src="js/howler.js"></script>
+<script type="text/javascript">
+
+// Get PedalID as URL Parameter
+    var pedalIDParam = new URLSearchParams(window.location.search);
+    var keys = pedalIDParam.keys();
+    for (key of keys);
+    var entries = pedalIDParam.entries();
+    for(pair of entries);
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+    var pedalNumber = getUrlParameter('pedalid'); 
+
+// Connect to JSON
+var paperRequest = new XMLHttpRequest();
+if (!paperRequest) {
+    alert('Giving up :( Cannot create an XMLHTTP instance');
+}
+paperRequest.open('GET','pedal-paperinfo.json', true);
+paperRequest.onload = function() {
+    var paperData = JSON.parse(paperRequest.responseText);
+    var sampleQString = paperData[pedalNumber].sampleQ;
+    var sampleQColor = paperData[pedalNumber].keyColorQ;
+    var sampleWString = paperData[pedalNumber].sampleW;
+    var sampleWColor = paperData[pedalNumber].keyColorW;
+    var sampleEString = paperData[pedalNumber].sampleE;
+    var sampleEColor = paperData[pedalNumber].keyColorE;
+    var sampleRString = paperData[pedalNumber].sampleR;
+    var sampleRColor = paperData[pedalNumber].keyColorR;
+    var sampleAString = paperData[pedalNumber].sampleA;
+    var sampleAColor = paperData[pedalNumber].keyColorA;
+    var sampleSString = paperData[pedalNumber].sampleS;
+    var sampleSColor = paperData[pedalNumber].keyColorS;
+    var sampleDString = paperData[pedalNumber].sampleD;
+    var sampleDColor = paperData[pedalNumber].keyColorD;
+    var sampleFString = paperData[pedalNumber].sampleF;
+    var sampleFColor = paperData[pedalNumber].keyColorF;
+    var sampleZString = paperData[pedalNumber].sampleZ;
+    var sampleZColor = paperData[pedalNumber].keyColorZ;
+    var sampleXString = paperData[pedalNumber].sampleX;
+    var sampleXColor = paperData[pedalNumber].keyColorX;
+    var sampleCString = paperData[pedalNumber].sampleC;
+    var sampleCColor = paperData[pedalNumber].keyColorC;
+    var sampleVString = paperData[pedalNumber].sampleV;
+    var sampleVColor = paperData[pedalNumber].keyColorV;
+// Coloring Mobile Drumpads
+	var mobileKeyQ = $('#keyQ');
+	var mobileKeyW = $('#keyW');
+	var mobileKeyE = $('#keyE');
+	var mobileKeyR = $('#keyR');
+	var mobileKeyA = $('#keyA');
+	var mobileKeyS = $('#keyS');
+	var mobileKeyD = $('#keyD');
+	var mobileKeyF = $('#keyF');
+	var mobileKeyZ = $('#keyZ');
+	var mobileKeyX = $('#keyX');
+	var mobileKeyC = $('#keyC');
+	var mobileKeyV = $('#keyV');
+	$(mobileKeyQ).css("background-color", sampleQColor);
+	$(mobileKeyW).css("background-color", sampleWColor);
+	$(mobileKeyE).css("background-color", sampleEColor);
+	$(mobileKeyR).css("background-color", sampleRColor);
+	$(mobileKeyA).css("background-color", sampleAColor);
+	$(mobileKeyS).css("background-color", sampleSColor);
+	$(mobileKeyD).css("background-color", sampleDColor);
+	$(mobileKeyF).css("background-color", sampleFColor);
+	$(mobileKeyZ).css("background-color", sampleZColor);
+	$(mobileKeyX).css("background-color", sampleXColor);
+	$(mobileKeyC).css("background-color", sampleCColor);
+	$(mobileKeyV).css("background-color", sampleVColor);
+
+// Paper.js setup
+paper.install(window);
+    $(document).ready( function() {
+        paper.setup('myCanvas');
+            
+// Paper + Howler
+            var keyData = {
+                q: {sound: new Howl({ src: sampleQString}),
+                    color: sampleQColor},
+                w: {sound: new Howl({ src: sampleWString}),
+                    color: sampleWColor},
+                e: {sound: new Howl({ src: sampleEString}),
+                    color: sampleEColor},
+                r: {sound: new Howl({ src: sampleRString}),
+                    color: sampleRColor},
+                a: {sound: new Howl({ src: sampleAString}),
+                    color: sampleAColor},
+                s: {sound: new Howl({ src: sampleSString}),
+                    color: sampleSColor},
+                d: {sound: new Howl({ src: sampleDString}),
+                    color: sampleDColor},
+                f: {sound: new Howl({ src: sampleFString}),
+                    color: sampleFColor},
+                z: {sound: new Howl({ src: sampleZString}),
+                    color: sampleZColor},
+                x: {sound: new Howl({ src: sampleXString}),
+                    color: sampleXColor},
+                c: {sound: new Howl({ src: sampleCString}),
+                    color: sampleCColor},
+                v: {sound: new Howl({ src: sampleVString}),
+                    color: sampleVColor}               
+            };
+            var circles = [];
+            var canvasWidth = window.innerWidth;
+            var canvasHeight = window.innerHeight;
+
+            function squareClickEvent(key) {
+                var randomPointWidth = canvasWidth * Math.random();
+                var randomPointHeight = canvasHeight * Math.random();
+                var randomePoint = new paper.Point(randomPointWidth, randomPointHeight);
+                var newCircle = new paper.Path.Circle(randomePoint, 500);
+                newCircle.fillColor = keyData[key].color;
+                keyData[key].sound.play();
+                circles.push(newCircle);
+            };
+
+    $(document).keydown(function(event) { 
+            if (keyData[event.key]) {
+                var randomPointWidth = canvasWidth * Math.random();
+                var randomPointHeight = canvasHeight * Math.random();
+                var randomePoint = new paper.Point(randomPointWidth, randomPointHeight);
+                var newCircle = new paper.Path.Circle(randomePoint, 500);
+                newCircle.fillColor = keyData[event.key].color;
+                keyData[event.key].sound.play();
+                circles.push(newCircle);
+                } else {}
+        });
+    
+     var squareIDs = [	"keyQ", "keyW", "keyE", "keyR", "keyA", "keyS", "keyD", "keyF", "keyZ", "keyX", "keyC", "keyV"];
+     var squareToKey = [	"q", "w", "e", "r", "a", "s", "d", "f", "z", "x", "c", "v"];
+     var keyLength = squareToKey.length;
+    
+     for (i = 0; i < keyLength; i++) {
+         document.getElementById(squareIDs[i]).onclick =  
+         squareClickEvent.bind(this, squareToKey[i]);
+     }
+    //Animation for Key elements
+    view.onFrame = function(event) {
+        for (var x = 0; x < circles.length; x++) {
+            circles[x].fillColor.hue += 1;
+            circles[x].scale(0.9);
+            if (circles[x].area < 1) {
+                circles[x].remove();
+                circles.splice(x, 1);
+            }}};
+    });
+};
+  paperRequest.send();
+
+</script>
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<link rel="icon" type="image/png" href="images/patternBased_Logo_icon.png" />
 </head>
@@ -55,7 +209,6 @@
 		<div class="tapKey" id="keyX"></div>
 		<div class="tapKey" id="keyC"></div>
 	</div>
-
 	
 <!-- Body -->
 	<div class="wrap pedalPageWrap">
@@ -136,6 +289,5 @@
 
 	<script type="text/javascript" src="pedal-temp.js"></script>
 	<script type="text/javascript" src="script.js"></script>
-	<script id="sampleJS" type="text/paperscript" src="pedal-temp-paper.js" canvas="myCanvas"></script>
 </body>
 </html>
