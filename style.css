@@ -202,12 +202,11 @@
 	}
 
 	.rightSPWrapper {
-		height: 100vh;
+		height: calc(100vh - 90px);
 		width: 480px;
 		color: #000000;
 		position: fixed;
-		padding-bottom: 92px;
-		top: 0;
+		top: 90px;
 		text-align: left;
 		right: -480px;
 		z-index: 9997;
