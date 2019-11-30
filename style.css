@@ -215,7 +215,7 @@
 		max-width: 100vw;
 	}
 	.rightSPgrayBG {
-		background: #838080;
+		background: #9e9d9d;
 		padding: 20px 30px;
 		display: block;
 		width: calc(100% - 60px);
@@ -239,24 +239,24 @@
 		display: block;
 	}
 
-	.rightSPWrapper h1, .rightSPWrapper h2 {
+	.rightSPgrayBG h1, .rightSPgrayBG h2, .rightSPwhiteBG h1, .rightSPwhiteBG h2 {
 		font-size: 24px;
 		font-weight: 800;
 		margin-top: 20px;
 	}
 
-	.rightSPWrapper h3 {
+	.rightSPgrayBG h3, .rightSPwhiteBG h3 {
 		font-size: 18px;
 		font-weight: 800;
 		margin: 20px 0 0 0;
 	}
 
-	.rightSPWrapper p {
+	.rightSPgrayBG p, .rightSPwhiteBG p {
 		line-height: 1.5em;
 	}
 
-	.rightSPWrapper p a {
-		color: #020001;
+	.rightSPgrayBG p a, .rightSPwhiteBG p a {
+		color: #8f0148;
 	}
 
 	.pedalLineup {

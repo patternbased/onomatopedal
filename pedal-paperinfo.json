@@ -388,5 +388,31 @@
     "keyColorX":"#FF8A6F",
     "keyColorC":"#26FFE6",
     "keyColorV":"#EE92C2"
+  },
+  {
+    "sampleQ":"sounds/thedepths/q.mp3",
+    "sampleW":"sounds/thedepths/w.mp3",
+    "sampleE":"sounds/thedepths/e.mp3",
+    "sampleR":"sounds/thedepths/r.mp3",
+    "sampleA":"sounds/thedepths/a.mp3",
+    "sampleS":"sounds/thedepths/s.mp3",
+    "sampleD":"sounds/thedepths/d.mp3",
+    "sampleF":"sounds/thedepths/f.mp3",
+    "sampleZ":"sounds/thedepths/z.mp3",
+    "sampleX":"sounds/thedepths/x.mp3",
+    "sampleC":"sounds/thedepths/c.mp3",
+    "sampleV":"sounds/thedepths/v.mp3",
+    "keyColorQ":"#FF6A86",
+    "keyColorW":"#54C6EB",
+    "keyColorE":"#B2FF9E",
+    "keyColorR":"#FFD45C",
+    "keyColorA":"#FF346D",
+    "keyColorS":"#9DE6FF",
+    "keyColorD":"#FFAF5E",
+    "keyColorF":"#4DCCBD",
+    "keyColorZ":"#CCFF66",
+    "keyColorX":"#FF8A6F",
+    "keyColorC":"#26FFE6",
+    "keyColorV":"#EE92C2"
   }
 ]

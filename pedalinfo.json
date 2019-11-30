@@ -180,15 +180,15 @@
     "eqdurl":"https://www.earthquakerdevices.com/hoof"
   },
   {
-    "name":"Hoof Fuzz",
-    "nameid":"hooffuzz",
-    "hex":"#ab8c4d",
-    "header":"ざらざら + Hoof Fuzz",
-    "onomoname":"ざらざら Zara zara",
-    "onomoid":"zarazara",
+    "name":"The Depths",
+    "nameid":"thedepths",
+    "hex":"#035b53",
+    "header":"ぶくぶく + The Depths",
+    "onomoname":"ぶくぶく Buku Buku",
+    "onomoid":"bukubuku",
     "onomoDesc":"Describes someone or something that glitters, sparkles or shines.",
     "beaturl":"sounds/tracks/kebakeba.mp3",
     "sampleurl":"sample/test.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/hoof"
+    "eqdurl":"https://www.earthquakerdevices.com/the-depths"
   }
 ]

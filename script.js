@@ -12,12 +12,12 @@ if (($(window).width() < 960) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IE
 if ($(window).width() < 960) {
 function randomize() {
   var allBanners = $('#pedalTable img');
-  shuffle(allBanners.hide()).slice(11).show();    
+  shuffle(allBanners.hide()).slice(12).show();    
 }
 } else {
 function randomize() {
   var allBanners = $('#pedalTable img');
-  shuffle(allBanners.hide()).slice(12).show();    
+  shuffle(allBanners.hide()).slice(13).show();    
 }
 }
 $('#randomDiv').click(randomize);
