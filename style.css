@@ -235,7 +235,7 @@
 		top: 0;
 		z-index: 9998;
 		width: 420px;
-		max-width: 100vw;
+		max-width: calc(100% - 60px);
 		display: block;
 	}
 
@@ -256,19 +256,19 @@
 	}
 
 	.rightSPWrapper p a {
-		color: #6b0d28;
+		color: #020001;
 	}
 
 	.pedalLineup {
 		width: 100%;
-		max-width: 100vw;
 		height: 80px;
 		margin: 0;
 		padding: 0;
 		border-top: #242424 15px solid;
 		border-bottom: #242424 15px solid;
-		background: #242424 url(images/OnomonoPedals-six-TR.png);
-		background-size:cover;
+		background: #242424 url(images/OnomonoPedals-six-TR.png) no-repeat;
+		background-size: 100%;
+		background-position-y: center;
 		display: block;
 	}
 
@@ -280,7 +280,7 @@
 
 	#sidepanelLogos {
 		text-align: center;
-		padding-bottom: 10px;
+		padding-bottom: 40px;
 	}
 	.sidepanelLogo {
 		width: 220px;

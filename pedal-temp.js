@@ -100,7 +100,7 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   } else {
     $(".playAudio > img, #pauseMobile > img").attr('src', "images/playBeat.svg");
     if ($(window).width() > 960) {
-    $("#pauseMobile > span, #pauseMobile > span").html("Play Beat");
+    $("#pauseMobile > span, #pauseMobile > span").html("Play Track");
     }
      }
      
@@ -108,7 +108,7 @@ var pedalData = JSON.parse(pedalRequest.responseText);
       if (audioElement.paused == false) {
         audioElement.pause();
         $(".playAudio > img, #pauseMobile > img").attr('src', "images/playBeat.svg");
-        $(".playAudio > span, #pauseMobile > span").html("Play Beat");
+        $(".playAudio > span, #pauseMobile > span").html("Play Track");
     } else {
         audioElement.play();
         $(".playAudio > img, #pauseMobile > img").attr('src', "images/pauseBeat.svg");
