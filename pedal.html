@@ -128,13 +128,63 @@ paperRequest.onload = function() {
             var canvasHeight = window.innerHeight;
 
     function squareClickEvent(key) {
-                var randomPointWidth = canvasWidth * Math.random();
-                var randomPointHeight = canvasHeight * Math.random();
-                var randomePoint = new paper.Point(randomPointWidth, randomPointHeight);
+        var randomPointWidth = canvasWidth * Math.random();
+        var randomPointHeight = canvasHeight * Math.random();
+        var randomePoint = new paper.Point(randomPointWidth, randomPointHeight);
+            if (key == 'q' || key == 'd') {
+                var newCircle = new paper.Path.Circle(randomePoint, 4);
+                newCircle.strokeColor = keyData[key].color;
+                newCircle.strokeWidth = 6;
+                keyData[key].sound.play();
+                lineCircles.push(newCircle);
+            } else if (key == 'a' || key == 'v') {
                 var newCircle = new paper.Path.Circle(randomePoint, 500);
                 newCircle.fillColor = keyData[key].color;
                 keyData[key].sound.play();
                 circles.push(newCircle);
+            } else if (key == 'f' || key == 'x') {
+                var topLeftPoint = new paper.Point(0, 0);
+                var topRightPoint = new paper.Point(canvasWidth, 100)
+                var newRectangle = new paper.Path.Rectangle(topLeftPoint, topRightPoint);
+                newRectangle.fillColor = keyData[key].color;
+                keyData[key].sound.play();
+                thinLine.push(newRectangle);
+            } else if (key == 'r' || key == 's') {
+                var onomatoSvg = new Path(onoSvgPath1Data);
+                onomatoSvg.strokeColor = keyData[key].color;
+                onomatoSvg.strokeWidth = 6;
+                onomatoSvg.position = randomePoint;
+                keyData[key].sound.play();
+                onoSvg.push(onomatoSvg);
+            } else if (key == 'w' || key == 'c') {
+                var onomatoSvg = new Path(onoSvgPath2Data);
+                onomatoSvg.strokeColor = keyData[key].color;
+                onomatoSvg.strokeWidth = 6;
+                onomatoSvg.position = randomePoint;
+                keyData[key].sound.play();
+                lineCircles.push(onomatoSvg);
+            } else if (key == 'e' || key == 'z') {
+                var width, height, center;
+                var points = 12;
+                var smooth = true;
+                var path = new Path();
+                var center = new paper.Point(canvasWidth / 2, canvasHeight / 2);
+                var width = canvasWidth;
+                var height = canvasHeight;
+                    path.strokeColor = keyData[key].color;
+                    path.strokeWidth = 4;
+                    path.position.y = center.y;
+                    path.segments = [];
+                    path.add(0, center.y);
+                    for (var i = 1; i < points; i++) {
+                        var point = new paper.Point(width / points * i, height * Math.random());
+                        path.add(point);
+                    }
+                    path.add(canvasWidth , center.y);
+                    path.smooth({ type: 'continuous' });
+                keyData[key].sound.play();
+                waveBlock.push(path);
+            }
             };
 
     function keyDownEvent(key) {
