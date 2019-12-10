@@ -15,7 +15,7 @@
 	body {
 		margin: 0;
 		padding: 0;
-		background: #1a1919;
+		background: rgb(23, 23, 23);
 		font-family: 'Open Sans', sans-serif;
 		text-align: center;
 	}
@@ -35,7 +35,7 @@
 		width: 100vw;
 		margin: 0;
 		padding: 0;
-		border-bottom:2px solid  rgba(33,47,61,0.5);
+		border-bottom:2px solid  rgba(0, 0, 0, 0.5);
 		position: relative;
 	}
 
@@ -572,7 +572,7 @@
 		height: 100vh;
 		margin: 0;
 		padding: 0;
-		background: black;
+		background: rgb(23, 23, 23);
 		z-index: -1;
 		position: fixed;
 		top: 0;
@@ -677,7 +677,7 @@
 
 	#morePedals {
 		display: block;
-		background: rgba(33,47,61,0.5);
+		background: rgba(0, 0, 0, 0.5);
 		width: 100%;
 		padding: 0;
 		overflow: hidden;
