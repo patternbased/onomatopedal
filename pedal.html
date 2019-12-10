@@ -60,7 +60,7 @@ paperRequest.onload = function() {
     var sampleVColor = paperData[pedalNumber].keyColorV;
     var onoSvgPath1Data = paperData[pedalNumber].onoSvgPath1;
     var onoSvgPath2Data = paperData[pedalNumber].onoSvgPath2;
-// Coloring Mobile Drumpads
+    // Coloring Mobile Drumpads
 	var mobileKeyQ = $('#keyQ');
 	var mobileKeyW = $('#keyW');
 	var mobileKeyE = $('#keyE');
@@ -86,13 +86,13 @@ paperRequest.onload = function() {
 	$(mobileKeyC).css("background-color", sampleCColor);
 	$(mobileKeyV).css("background-color", sampleVColor);
 
-// Paper.js setup
-paper.install(window);
-    $(document).ready( function() {
-        paper.setup('myCanvas');
+    // Paper.js setup
+    paper.install(window);
+        $(document).ready( function() {
+            paper.setup('myCanvas');
             
-// Paper + Howler
-var keyData = {
+    // Paper + Howler
+    var keyData = {
                 q: {sound: new Howl({ src: sampleQString}),
                     color: sampleQColor},
                 w: {sound: new Howl({ src: sampleWString}),
@@ -117,7 +117,7 @@ var keyData = {
                     color: sampleCColor},
                 v: {sound: new Howl({ src: sampleVString}),
                     color: sampleVColor}               
-            };
+                };
             var lineCircles = [];
             var circles = [];
             var thinLine = [];
@@ -127,7 +127,17 @@ var keyData = {
             var canvasWidth = window.innerWidth;
             var canvasHeight = window.innerHeight;
 
-    $(document).keydown(function(event) {
+    function squareClickEvent(key) {
+                var randomPointWidth = canvasWidth * Math.random();
+                var randomPointHeight = canvasHeight * Math.random();
+                var randomePoint = new paper.Point(randomPointWidth, randomPointHeight);
+                var newCircle = new paper.Path.Circle(randomePoint, 500);
+                newCircle.fillColor = keyData[key].color;
+                keyData[key].sound.play();
+                circles.push(newCircle);
+            };
+
+    function keyDownEvent(key) {
         var key = (event.key);
         var randomPointWidth = canvasWidth * Math.random();
         var randomPointHeight = canvasHeight * Math.random();
@@ -143,8 +153,6 @@ var keyData = {
                 newCircle.fillColor = keyData[key].color;
                 keyData[key].sound.play();
                 circles.push(newCircle);
-                view.onFrame = function(event) {
-                    };
             } else if (key == 'f' || key == 'x') {
                 var topLeftPoint = new paper.Point(0, 0);
                 var topRightPoint = new paper.Point(canvasWidth, 100)
@@ -177,7 +185,6 @@ var keyData = {
                     path.strokeColor = keyData[key].color;
                     path.strokeWidth = 4;
                     path.position.y = center.y;
-
                     path.segments = [];
                     path.add(0, center.y);
                     for (var i = 1; i < points; i++) {
@@ -188,8 +195,23 @@ var keyData = {
                     path.smooth({ type: 'continuous' });
                 keyData[key].sound.play();
                 waveBlock.push(path);
-            };
-        view.onFrame = function(event) {
+            }
+        };
+
+    $(document).keydown(function()  {
+        keyDownEvent();
+    });
+
+    var squareIDs = [	"keyQ", "keyW", "keyE", "keyR", "keyA", "keyS", "keyD", "keyF", "keyZ", "keyX", "keyC", "keyV"];
+    var squareToKey = [	"q", "w", "e", "r", "a", "s", "d", "f", "z", "x", "c", "v"];
+    var keyLength = squareToKey.length;
+    
+    for (i = 0; i < keyLength; i++) {
+        document.getElementById(squareIDs[i]).onclick =  
+        squareClickEvent.bind(this, squareToKey[i]);
+    }
+
+    view.onFrame = function(event) {
                     for (var x = 0; x < lineCircles.length; x++) {
                         lineCircles[x].strokeColor.hue += 1;
                         lineCircles[x].scale(1.2);
@@ -229,7 +251,6 @@ var keyData = {
                         }
                     }
         };
-    });
     });
 };
   paperRequest.send();

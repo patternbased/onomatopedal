@@ -203,13 +203,13 @@ paperRequest.onload = function() {
     });
 
     var squareIDs = [	"keyQ", "keyW", "keyE", "keyR", "keyA", "keyS", "keyD", "keyF", "keyZ", "keyX", "keyC", "keyV"];
-     var squareToKey = [	"q", "w", "e", "r", "a", "s", "d", "f", "z", "x", "c", "v"];
-     var keyLength = squareToKey.length;
+    var squareToKey = [	"q", "w", "e", "r", "a", "s", "d", "f", "z", "x", "c", "v"];
+    var keyLength = squareToKey.length;
     
-     for (i = 0; i < keyLength; i++) {
-         document.getElementById(squareIDs[i]).onclick =  
-         squareClickEvent.bind(this, squareToKey[i]);
-     }
+    for (i = 0; i < keyLength; i++) {
+        document.getElementById(squareIDs[i]).onclick =  
+        squareClickEvent.bind(this, squareToKey[i]);
+    }
 
     view.onFrame = function(event) {
                     for (var x = 0; x < lineCircles.length; x++) {
