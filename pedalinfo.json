@@ -7,6 +7,7 @@
     "onomoname":"うきうき Uki Uki",
     "onomoid":"ukiuki",
     "onomoDesc":"Describes someone who is happy and excited. In a buoyant mood.",
+    "onomoDescJP":"うれしくて、心がはずむ様子。浮かれるさま。",
     "beaturl":"sounds/tracks/ukiuki.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/rainbow-machine"
@@ -19,6 +20,7 @@
     "onomoname":"ざくざく Zaku Zaku",
     "onomoid":"zakuzaku",
     "onomoDesc":"<b>(1)</b> Describes the sound of walking over gravel or frost. <b>(2)</b> Describes the sound of chopping vegetables or the like. Also describes cutting something roughly. <b>(3)</b> Describes the sound of gravel or the like being mixed. <b>(4)</b> Describes a large number of metal coins or jewels.",
+    "onomoDescJP":"<b>(1)</b> 金貨、宝石などがたくさんある様子。 <b>(2)</b> 野菜などを切り刻む音。また、切り方が粗いさま。 <b>(3)</b> 粗い粒状のものが混ざり合う音。 <b>(4)</b> 砂利や霜柱などを踏んで歩く音。",
     "beaturl":"sounds/tracks/zakuzaku.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/acapulco-gold"
@@ -31,6 +33,7 @@
     "onomoname":"こつこつ Kotsu Kotsu",
     "onomoid":"kotsukotsu",
     "onomoDesc":"<b>(1)</b> Describes the sound of a large object hitting something, such as shoes hitting the pavement or someone knocking at a door. Tapping. Clicking. Drumming. <b>(2)</b> Describes someone grinding away at their job. Unflaggingly.",
+    "onomoDescJP":"<b>(1)</b> 硬いものが打ち当たって発する音。舗道を歩く靴音、ノックの音など。 <b>(2)</b> 地道な努力を続けるさま。",
     "beaturl":"sounds/tracks/zakuzaku.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/avalanche-run"
@@ -43,6 +46,7 @@
     "onomoname":"ぎらぎら Gira Gira",
     "onomoid":"giragira",
     "onomoDesc":"Describes something shining brightly. Dazzlingly. Also used to describe a person's appearance or look.",
+    "onomoDescJP":"強く輝く様子。どぎつく光るさま。態度、視線などにも用いる。",
     "beaturl":"sounds/tracks/giragira.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/arpanoid"
@@ -50,11 +54,12 @@
   {
     "name":"Data Corrupter",
     "nameid":"datacorrupter",
-    "hex":"#3f3f3f",
+    "hex":"#4f4f4f",
     "header":"がらがら + Data Corrupter",
     "onomoname":"がらがら Gara Gara",
     "onomoid":"garagara",
-    "onomoDesc":"Describes the sound of rattling or clattering. In Japanese a rattlesnake is called gara gara hebi.",
+    "onomoDesc":"Describes the sound of rattling or clattering. In Japanese a rattlesnake is called gara gara hebi. <b>(2)</b> Describes husky voice.",
+    "onomoDescJP":"<b>(1)</b>物が崩れたりぶつかったりして発する、大きく響く音。<b>(2)</b>かすれた声のさま。",
     "beaturl":"sounds/tracks/garagara.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/data-corrupter"
@@ -67,6 +72,7 @@
     "onomoname":"すやすや Suya Suya",
     "onomoid":"kutakuta",
     "onomoDesc":"Describes sleeping peacefully.",
+    "onomoDescJP":"やすらかに眠っている様子。",
     "beaturl":"sounds/tracks/suyasuya.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/disaster-transport-sr"
@@ -79,6 +85,7 @@
     "onomoname":"うじゃうじゃ Uja Uja",
     "onomoid":"ujauja",
     "onomoDesc":"Describes many small things gathered together and moving, such as a swarm of insects.",
+    "onomoDescJP":"小さな虫などがたくさん集まってうごめいているさま。",
     "beaturl":"sounds/tracks/ujauja.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/dream-crusher"
@@ -91,6 +98,7 @@
     "onomoname":"かちかち Kachi Kachi",
     "onomoid":"kachikachi",
     "onomoDesc":"<b>(1)</b> Describes the sound made when solid objects hit each other. <b>(2)</b> Describes something very hard. Also used to describe someone's stright-laced views or to describe a person who is stiff with nervous tension. Rigid.",
+    "onomoDescJP":"<b>(1)</b> 硬いものがぶつかり合う音。 <b>(2)</b> とても堅いさま。人の考え方が堅苦しい様子や、緊張などで体が硬くなっている様子にも用いられる。",
     "beaturl":"sounds/tracks/kachikachi.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/hoof-reaper"
@@ -102,7 +110,8 @@
     "header":"ぶんぶん + Hummingbird",
     "onomoname":"ぶんぶん Bun Bun",
     "onomoid":"bun bun",
-    "onomoDesc":"<b>(1)</b> Bescribes the buzzing of a bee or a hummingbird.",
+    "onomoDesc":"<b>(1)</b> Bescribes the buzzing of a bee or a hummingbird. <b>(2)</b> Describes things pass by in speed.",
+    "onomoDescJP":"<b>(1)</b> 虫やハミングバードなどの羽音。 <b>(2)</b> 物が繰り返し風を切るさま。",
     "beaturl":"sounds/tracks/bunbun.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/hummingbird"
@@ -115,6 +124,7 @@
     "onomoname":"ぽたぽた Pota Pota",
     "onomoid":"potapota",
     "onomoDesc":"Describes dripping water.",
+    "onomoDescJP":"液体がしたたり落ちるさま。",
     "beaturl":"sounds/tracks/potapota.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/levitation"
@@ -127,6 +137,7 @@
     "onomoname":"つるつる Tsuru Tsuru",
     "onomoid":"tsurutsuru",
     "onomoDesc":"<b>(1)</b> Describes a smooth surface. Polished. Also describes slipping on a smooth surface. <b>(2)</b> Describes the sound of someone slurping noodles.",
+    "onomoDescJP":"<b>(1)</b> 表面がなめらかなさま。また、なめらかなものに触れてすべるさま。 <b>(2)</b> 麺類をすする音。",
     "beaturl":"sounds/tracks/tsurutsuru.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/organizer"
@@ -139,6 +150,7 @@
     "onomoname":"ぐちゃぐちゃ Gucha Gucha",
     "onomoid":"guchagucha",
     "onomoDesc":"<b>(1)</b> Describes something soft and soggy. Also describes the action of stiring or mashing such a substance. <b>(2)</b> Describes something in awful disarray. Higgledy-piigledy. <b>(3)</b> Describes grumbling.",
+    "onomoDescJP":"<b>(1)</b> 水分をたっぷり含んで柔らかい様子。または、水分を含んだものをかき回したりつぶしたりする様子。 <b>(2)</b> ひどく乱れた様子。 <b>(3)</b> ぐちっぽく、あれこれ言う様子。",
     "beaturl":"sounds/tracks/guchagucha.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/palisades"
@@ -151,6 +163,7 @@
     "onomoname":"ぴかぴか Pika Pika",
     "onomoid":"kebakeba",
     "onomoDesc":"Describes someone or something that glitters, sparkles or shines.",
+    "onomoDescJP":"光り輝くさま。また、ま新しい様子を比喩的に言うこともある。",
     "beaturl":"sounds/tracks/kebakeba.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/spatial-delivery"
@@ -163,6 +176,7 @@
     "onomoname":"うとうと Uto Uto",
     "onomoid":"utouto",
     "onomoDesc":"Describes someone dozing. Napping.",
+    "onomoDescJP":"いねむりしている様子。",
     "beaturl":"sounds/tracks/kebakeba.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/afterneath"
@@ -174,7 +188,8 @@
     "header":"ざらざら + Hoof Fuzz",
     "onomoname":"ざらざら Zara Zara",
     "onomoid":"zarazara",
-    "onomoDesc":"Describes someone or something that glitters, sparkles or shines.",
+    "onomoDesc":"<b>(1)</b> Sound of small stones or sand moving. <b>(2)</b> Descrive texture of rough and bumpy cerface.",
+    "onomoDescJP":"<b>(1)</b> 小粒で堅いものが触れ合ってたてる音。 <b>(2)</b> 触った感じが粗く滑らかでないさま。ささくれて荒さの感じられるさま。",
     "beaturl":"sounds/tracks/kebakeba.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/hoof"
@@ -187,6 +202,7 @@
     "onomoname":"ぶくぶく Buku Buku",
     "onomoid":"bukubuku",
     "onomoDesc":"Describes the sound or act of bubbles or foam rising or of something giving off bubbles while sinking.",
+    "onomoDescJP":"泡立つ音や様子。泡を出しながら沈んでいくさま。",
     "beaturl":"sounds/tracks/kebakeba.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/the-depths"

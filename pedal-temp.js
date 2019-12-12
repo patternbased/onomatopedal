@@ -40,6 +40,7 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   var onomoNameString = pedalData[pedalNumber].onomoname;
   var pedalImgString = pedalData[pedalNumber].nameid;
   var pedalDescString = pedalData[pedalNumber].onomoDesc;
+  var pedalDescStringJP = pedalData[pedalNumber].onomoDescJP;
   var onomoColorString = pedalData[pedalNumber].hex;
   var onomoHeaderString = pedalData[pedalNumber].header;
   var eqdPedalLinkString = pedalData[pedalNumber].eqdurl;
@@ -49,7 +50,11 @@ var pedalData = JSON.parse(pedalRequest.responseText);
 
   $(onomoName).html(onomoNameString).css("color", onomoColorString);
   $(pedalImg).attr("src","images/pedalsOnly/" + pedalImgString + "@2x.png");
-  $(pedalDesc).html(pedalDescString);
+  if (localStorage.getItem("language") == 'jp') {  
+    $(pedalDesc).html(pedalDescStringJP);
+  } else {
+    $(pedalDesc).html(pedalDescString);
+  }
   $(onomoColor).find('span').css("color", onomoColorString);
   $(onomoHeader).html(onomoHeaderString).css("color", onomoColorString);
   $(eqdPedalLink).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
@@ -57,6 +62,12 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   $(sampleDownload).click(function(e) {
     e.preventDefault();
     window.location.href = sampleDownloadString;
+});
+$('#en').click(function(){
+  $(pedalDesc).html(pedalDescString);
+});
+$('#jp').click(function(){
+  $(pedalDesc).html(pedalDescStringJP);
 });
 
   // ===== Action button animation =====
@@ -174,7 +185,6 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     'display': 'block'
   });
 }
-
 };
 pedalRequest.send();
 
@@ -219,21 +229,18 @@ responsive: [
 
 function fullScreenStart() {
 $('#pedal').fadeOut(500);
-$('footer, .info, .title-small, .title-pedal, .footerLogo').css({
+$('footer, .info, .title-small, .title-pedal, .footerLogo, .header').css({
   'display':'none'
 });
 $('#playModeHeader, #mobileLogo, #showAll, #pauseMobile, #playModeIcons').css({
   'display':'block'
-});
-$('.header').css({
-  'border-bottom':'none'
 });
 $("body").css("overflow", "hidden");
 };
 
 function fullScreenLandscape() {
 $('#pedal').fadeOut(500);
-$('footer, #playModeHeader, .info, .title-small, .title-pedal, .footerLogo').css({
+$('footer, #playModeHeader, .header, .info, .title-small, .title-pedal, .footerLogo').css({
   'display':'none'
 });
 $('#mobileLogo, #showAll, #pauseMobile, #playModeIcons').css({
@@ -261,33 +268,6 @@ $('#tapKeyWrap').css({
   'display':'grid'
 });
 };
-
-// var elem = document.documentElement;
-
-// /* View in fullscreen */
-// function openFullscreen() {
-//   if (elem.requestFullscreen) {
-//     elem.requestFullscreen();
-//   } else if (elem.mozRequestFullScreen) { /* Firefox */
-//     elem.mozRequestFullScreen();
-//   } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-//     elem.webkitRequestFullscreen();
-//   } else if (elem.msRequestFullscreen) { /* IE/Edge */
-//     elem.msRequestFullscreen();
-//   }
-// };
-// /* Close fullscreen */
-// function closeFullscreen() {
-//   if (document.exitFullscreen) {
-//     document.exitFullscreen();
-//   } else if (document.mozCancelFullScreen) { /* Firefox */
-//     document.mozCancelFullScreen();
-//   } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
-//     document.webkitExitFullscreen();
-//   } else if (document.msExitFullscreen) { /* IE/Edge */
-//     document.msExitFullscreen();
-//   }
-// }
 
 $('#fullscreenMode, #playMode').click(function () {
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { 
@@ -318,7 +298,7 @@ $('.footerLogo').css({
   'display':'inline'
 });
 $('.header').css({
-    'border-bottom':'2px solid  rgba(33,47,61,0.5)'
+    'display':'block'
 });
 $('#playModeHeader, #mobileLogo, #showAll, #pauseMobile, #playModeIcons').css({
   'display':'none'

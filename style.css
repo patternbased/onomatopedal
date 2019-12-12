@@ -15,7 +15,7 @@
 	body {
 		margin: 0;
 		padding: 0;
-		background: rgb(23, 23, 23);
+		background: #1f1f1f;
 		font-family: 'Open Sans', sans-serif;
 		text-align: center;
 	}
@@ -44,22 +44,45 @@
 		max-width: 40vW;
 		margin: 0 auto ;
 		padding: 20px;
+		opacity: 0.7;
 	}
 
-	.title-small {
-		width: 60px;
-		margin: 15px 20px;
+	.languages {
+		width: 80px;
+		margin: 30px 20px;
 		float: left;
+		z-index: 9000;
+	}
+
+	.language {
+		width: 30px;
+		margin-right: 10px;
+		color: #FFFFFF;
+		opacity: 0.3;
+		float: left;
+		display: block;
+	}
+
+	.language:hover {
+		opacity: 0.6;
+		transition-duration: 400ms;
+	}
+
+	.languageActive, .languageActive:hover {
+		opacity: 0.8;
+		transition-duration: 500ms;
+	}
+
+	.language img {
+		display: inline;
+		margin-right: 3px;
 	}
 
 	#OnomoPedalHeader {
-		width: calc(100% - 160px);
-		margin: 0 80px;
+		width: auto;
+		margin: 0 auto 30px auto;
 		font-size: 24px;
 		font-weight: bold;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
 	}
 
 	.info {
@@ -122,10 +145,6 @@
 		#OnomoPedalHeader {
 			width: calc(100vw - 120px);
 			margin: 0 60px;
-		}
-		.title-small {
-			width: 40px;
-			margin: 20px;
 		}
 		.info {
 			width: 36px;
@@ -558,7 +577,7 @@
 	#pedal {
 		margin: 0 auto;
 		padding: 0;
-		margin-top: 60px;
+		margin-top: 40px;
 		z-index: 1000;
 		position: relative;
 	}
@@ -572,7 +591,7 @@
 		height: 100vh;
 		margin: 0;
 		padding: 0;
-		background: rgb(23, 23, 23);
+		background:#1f1f1f;
 		z-index: -1;
 		position: fixed;
 		top: 0;
