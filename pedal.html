@@ -326,14 +326,24 @@
 <!-- Right Panel -->
 	<div id="rightSPHeader">
 		<div class="close"><img src="images/closeIcon.svg"></div>
-		<div class="rightSPOPlogo"><a href="./"><img src="images/onomatoPedal-Logo_Dark.svg"></a></div>
+        <div class="languages">
+            <div class="language languageActive en"><img src="images/language-en_dark.svg" height="30" height="30"></div>
+            <div class="language jp"><img src="images/language-jp_dark.svg" height="30" width="30"></div>
+        </div>
+        <div class="rightSPOPlogo"><a href="./"><img src="images/onomatoPedal-Logo_Dark.svg"></a></div>
 	</div>
 	<div class="rightSPWrapper">
 		<div class="pedalLineup"></div>
 		<div class="rightSPgrayBG" id="aboutOP"></div>
 		<div class="rightSPwhiteBG" id="howToPlay"></div>
 		<div class="rightSPgrayBG" id="freeSamplePack"></div>
-		<div class="rightSPwhiteBG" id="credit"></div>
+        <div class="rightSPwhiteBG" id="credit"></div>
+        <div id="bunnyYard">
+            <img src="images/Orlando.png" id="orlandBunny">
+            <a href="pedal.html?pedalid=16"><img src="images/pyonpyon-bubble.png" id="pyonpyonBubble"></a>
+            <img src="images/Corabelle.png" id="corabelleBunny">
+        </div>
+        <div class="pedalLineup" id="bunniesPedals"></div>
 		<div class="rightSPgrayBG" id="sidepanelLogos"></div>
 	</div>
 
@@ -353,20 +363,21 @@
 		<div class="tapKey" id="keyC"></div>
 	</div>
 	
-<!-- Body -->
+<!-- ****** Body ****** -->
 	<div class="wrap pedalPageWrap">
         <!-- Header -->
                 
         <div class="header">
-            <div class="onomHiragana"></div>
             <div class="info"><span>?</span></div>
             <div class="languages">
-              <div class="language languageActive" id="en"><img src="images/language-en.svg" height="30" width="30"></div>
-              <div class="language" id="jp"><img src="images/language-jp.svg" height="30" width="30"></div>
+                <div class="language languageActive en"><img src="images/language-en.svg" height="30" width="30"></div>
+                <div class="language jp"><img src="images/language-jp.svg" height="30" width="30"></div>
             </div>
             <div class="title"><a href="./"><img src="images/onomatoPedal-Logo_Light.svg"></a></div>
-          </div>
-		<div class='clear'></div>
+        </div>
+        <div class='clear' width="0"></div>
+
+        <div class="title-pedal" id="OnomoPedalHeader"></div>
         <div id="playModeHeader">
 				<div class="pedal-small"> <img id="pedalSmall"></div>
 				<div class="title-PlayMode"></div>
@@ -386,7 +397,6 @@
 			</ul>
 
             <!-- Onomonapia Description-->
-            <div class="title-pedal" id="OnomoPedalHeader"></div>
 			<h1 id="onomoName"></h1>
 			<p id="onomoInfo"></p>
 

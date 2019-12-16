@@ -31,31 +31,40 @@
 
 	.header {
 		top: 0;
-		max-height: 90px;
+		height: auto ;
 		width: 100vw;
 		margin: 0;
 		padding: 0;
-		border-bottom:2px solid  rgba(0, 0, 0, 0.5);
 		position: relative;
 	}
 
-	.title {
+	.title, .rightSPOPlogo {
 		width: 160px;
 		max-width: 40vW;
 		margin: 0 auto ;
-		padding: 20px;
+		padding: 16px 5px;
 		opacity: 0.7;
+	}
+
+	.rightSPOPlogo {
+		margin: 0 auto 0 10px;
 	}
 
 	.languages {
 		width: 80px;
-		margin: 30px 20px;
+		max-width: 20vw;
+		margin: 25px 5px 25px 20px;
 		float: left;
 		z-index: 9000;
 	}
 
+	#rightSPHeader .languages {
+		display: none;
+	}
+
 	.language {
 		width: 30px;
+		max-width: 8vw;
 		margin-right: 10px;
 		color: #FFFFFF;
 		opacity: 0.3;
@@ -79,20 +88,35 @@
 	}
 
 	#OnomoPedalHeader {
-		width: auto;
-		margin: 0 auto 30px auto;
-		font-size: 24px;
+		width: 100%;
+		height: auto;
+		min-height: 30px;
+		margin: 0 0 60px 0;
+		padding: 10px 0;
+		font-size: 20px;
 		font-weight: bold;
+		opacity: 0.5;
+		color: #1f1f1f;
 	}
 
-	.info {
+	#OnomoPedalHeader img {
+		height: 24px;
+		margin: 0 8px;
+		position: relative;
+		top: 3px;
+	}
+
+	.info, .close  {
 		width: 42px;
 		height: 42px;
 		background: #FFFFFF;
 		border-radius: 30px;
 		float: right;
-		margin: 20px 30px;
+		margin: 20px 30px 20px 5px;
 		color: black;
+	}
+	.close {
+		background: unset;
 	}
 
 	.info:hover {
@@ -134,23 +158,35 @@
 	}
 
 	@media(max-width: 960px) {
+		.rightSPOPlogo {
+			margin: 0 auto;
+		}
+		#rightSPHeader .languages {
+			display: block;
+		}
+
 		#OnomoPedalHeader {
-			font-size: 18px;
+			font-size: 16px;
+			height: 34px;
+			padding: 8px 0;
+		}
+		#OnomoPedalHeader img {
+			top: 5px;
+			margin: 0 5px;
 		}
 		.title-PlayMode {
 			font-size: 16px;
 		}
 	}
 	@media(max-width: 400px) {
-		#OnomoPedalHeader {
-			width: calc(100vw - 120px);
-			margin: 0 60px;
-		}
 		.info {
 			width: 36px;
 			height: 36px;
 			border-radius: 18px;
 			margin: 20px;
+		}
+		.title {
+			padding: 20px 5px;
 		}
 		.header .info span {
 			margin-top: 2px;
@@ -202,30 +238,18 @@
 	}
 
 /****** Right Side Panel ******/
-	.close {
-		width: 30px;
-		height: 30px;
-		float: right;
-		margin: 10px 0 0 0;
-		opacity: 1;
-		cursor: pointer;
-	}
+
 	.close:hover {
 		opacity: 0.5;
 		transition-duration: 500ms;
 	}
 
-	.rightSPOPlogo {
-		width: 160px;
-		max-width: 80%;
-	}
-
 	.rightSPWrapper {
-		height: calc(100vh - 90px);
+		height: calc(100vh - 85px);
 		width: 480px;
 		color: #000000;
 		position: fixed;
-		top: 90px;
+		top: 85px;
 		text-align: left;
 		right: -480px;
 		z-index: 9997;
@@ -248,13 +272,12 @@
 
 	#rightSPHeader {
 		background: #d1d0d5;
-		padding: 20px 30px 12px 30px;
 		right: -480px;
 		position: fixed;
 		top: 0;
 		z-index: 9998;
-		width: 420px;
-		max-width: calc(100% - 60px);
+		width: 480px;
+		max-width: 100%;
 		display: block;
 	}
 
@@ -278,6 +301,9 @@
 		color: #8f0148;
 	}
 
+	#credit {
+		padding-bottom: 80px;
+	}
 	.pedalLineup {
 		width: 100%;
 		height: 80px;
@@ -289,6 +315,53 @@
 		background-size: 100%;
 		background-position-y: center;
 		display: block;
+	}
+	#bunniesPedals {
+		position: relative;
+	}
+	#bunnyYard {
+		width: 100%;
+		height: 80px;
+		margin: 0;
+		padding: 0;
+		display: block;
+		position: absolute;
+		transform: translateY(-80px);
+		overflow: hidden;
+	}
+
+	#orlandBunny, #corabelleBunny {
+		height: 80px;
+		position: absolute;
+		top: 80px;
+	}
+
+	#orlandBunny {
+		left: 50px;
+	}
+
+	#corabelleBunny {
+		right: 50px;
+	}
+
+	#pyonpyonBubble {
+		height: 80px;
+		position: absolute;
+		left: 34%;
+		opacity: 0;
+	}
+
+	.bunnyShowup {
+		transform: translateY(-80px);
+		top : 0;
+		transition-duration : 200ms;
+	}
+	
+	#orlandoTrigger, #corabelleTrigger {
+		color: #8f0148;
+		cursor: pointer;
+		text-decoration: underline;
+		display: inline-block;
 	}
 
 	.SPImages {
@@ -546,7 +619,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: calc(100vh - 100px);
+		height: 100vh;
 		z-index: 9999;
 	}
 

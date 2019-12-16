@@ -31,18 +31,22 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   var pedalImg = $('#thePedal, #pedalSmall');
   var pedalDesc = $('#onomoInfo');
   var onomoColor = $('p#onomoInfo');
-  var onomoHeader = $('#OnomoPedalHeader, .title-PlayMode');
+  var onomoHeader = $('#OnomoPedalHeader');
+  var onomoPlaymodeHeader = $('.title-PlayMode');
   var eqdPedalLink = $('li#aboutPedal');
   var sampleDownload = $('#download');
 
   // render HTML
 
   var onomoNameString = pedalData[pedalNumber].onomoname;
+  var pedalNameString = pedalData[pedalNumber].name;
   var pedalImgString = pedalData[pedalNumber].nameid;
   var pedalDescString = pedalData[pedalNumber].onomoDesc;
   var pedalDescStringJP = pedalData[pedalNumber].onomoDescJP;
   var onomoColorString = pedalData[pedalNumber].hex;
-  var onomoHeaderString = pedalData[pedalNumber].header;
+  var onomoHeaderString = pedalData[pedalNumber].onohiragana + " + " + pedalNameString;
+  var onomoHeaderFullString = "<img src='images/pedalHeader-ono.svg'>" + pedalData[pedalNumber].onohiragana + " +<img src='images/pedalHeader-pedal.svg'>" + pedalNameString;
+
   var eqdPedalLinkString = pedalData[pedalNumber].eqdurl;
   var beatUrlString = pedalData[pedalNumber].beaturl;
   var samePedal = $('#carousel').find('[data-pedal-id="' + pedalNumber + '"]');
@@ -56,17 +60,19 @@ var pedalData = JSON.parse(pedalRequest.responseText);
     $(pedalDesc).html(pedalDescString);
   }
   $(onomoColor).find('span').css("color", onomoColorString);
-  $(onomoHeader).html(onomoHeaderString).css("color", onomoColorString);
+  $(onomoHeader).css("background-color", onomoColorString);
+  $(onomoHeader).html(onomoHeaderFullString);  
+  $(onomoPlaymodeHeader).html(onomoHeaderString).css("color", onomoColorString);
   $(eqdPedalLink).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
   $(samePedal).css("display", "none");
   $(sampleDownload).click(function(e) {
     e.preventDefault();
     window.location.href = sampleDownloadString;
 });
-$('#en').click(function(){
+$('.en').click(function(){
   $(pedalDesc).html(pedalDescString);
 });
-$('#jp').click(function(){
+$('.jp').click(function(){
   $(pedalDesc).html(pedalDescStringJP);
 });
 
@@ -142,13 +148,11 @@ $(document).ready(function() {
 
   // ===== Change hex on Mobile view =====
 
-var eventFired = 0;
 if ($(window).width() < 960) {
   $('#playMode, #aboutPedal').css({
     'background': onomoColorString
   });     
 } else {
-  eventFired = 1;
 }
 $(window).on('resize', function() {
   if ($(window).width() < 960) {
