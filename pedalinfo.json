@@ -26,7 +26,7 @@
     "eqdurl":"https://www.earthquakerdevices.com/acapulco-gold"
   },
   {
-    "name":"Avalanch Run",
+    "name":"Avalanche Run",
     "nameid":"avalanchrun",
     "hex":"#036c9b",
     "onohiragana":"こつこつ",
@@ -164,7 +164,7 @@
     "onomoid":"kebakeba",
     "onomoDesc":"Describes someone or something that glitters, sparkles or shines.",
     "onomoDescJP":"光り輝くさま。また、ま新しい様子を比喩的に言うこともある。",
-    "beaturl":"sounds/tracks/kebakeba.mp3",
+    "beaturl":"sounds/tracks/pikapika.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/spatial-delivery"
   },
@@ -177,7 +177,7 @@
     "onomoid":"utouto",
     "onomoDesc":"Describes someone dozing. Napping.",
     "onomoDescJP":"いねむりしている様子。",
-    "beaturl":"sounds/tracks/kebakeba.mp3",
+    "beaturl":"sounds/tracks/utouto.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/afterneath"
   },
@@ -190,7 +190,7 @@
     "onomoid":"zarazara",
     "onomoDesc":"<b>(1)</b> Sound of small stones or sand moving. <b>(2)</b> Descrive texture of rough and bumpy cerface.",
     "onomoDescJP":"<b>(1)</b> 小粒で堅いものが触れ合ってたてる音。 <b>(2)</b> 触った感じが粗く滑らかでないさま。ささくれて荒さの感じられるさま。",
-    "beaturl":"sounds/tracks/kebakeba.mp3",
+    "beaturl":"sounds/tracks/zarazara.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/hoof"
   },
@@ -203,7 +203,7 @@
     "onomoid":"bukubuku",
     "onomoDesc":"Describes the sound or act of bubbles or foam rising or of something giving off bubbles while sinking.",
     "onomoDescJP":"泡立つ音や様子。泡を出しながら沈んでいくさま。",
-    "beaturl":"sounds/tracks/kebakeba.mp3",
+    "beaturl":"sounds/tracks/bukubuku.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/the-depths"
   },
@@ -216,7 +216,7 @@
     "onomoid":"pyonpyon",
     "onomoDesc":"Describes the sound or act of bubbles or foam rising or of something giving off bubbles while sinking.",
     "onomoDescJP":"泡立つ音や様子。泡を出しながら沈んでいくさま。",
-    "beaturl":"sounds/tracks/kebakeba.mp3",
+    "beaturl":"sounds/tracks/pyonpyon.mp3",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/the-depths"
   }
