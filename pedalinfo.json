@@ -27,7 +27,7 @@
   },
   {
     "name":"Avalanche Run",
-    "nameid":"avalanchrun",
+    "nameid":"avalancherun",
     "hex":"#036c9b",
     "onohiragana":"こつこつ",
     "onomoname":"こつこつ Kotsu Kotsu",
@@ -214,7 +214,7 @@
     "onohiragana":"ぴょんぴょん",
     "onomoname":"ぴょんぴょん Pyon Pyon",
     "onomoid":"pyonpyon",
-    "onomoDesc":"Describes hopping cutely. Commonly associated with small animals.",
+    "onomoDesc":"Describes hopping or skipping agilely.",
     "onomoDescJP":"泡立つ音や様子。泡を出しながら沈んでいくさま。",
     "beaturl":"sounds/tracks/pyonpyon.mp3",
     "sampleurl":"sample/test.zip",
