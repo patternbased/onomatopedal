@@ -35,6 +35,7 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   var onomoPlaymodeHeader = $('.title-PlayMode');
   var eqdPedalLink = $('li#aboutPedal');
   var sampleDownload = $('#download');
+  var pedalPageTitle = $('#pedalPageTitle');
 
   // render HTML
 
@@ -46,12 +47,15 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   var onomoColorString = pedalData[pedalNumber].hex;
   var onomoHeaderString = pedalData[pedalNumber].onohiragana + " + " + pedalNameString;
   var onomoHeaderFullString = "<img src='images/pedalHeader-ono.svg'>" + pedalData[pedalNumber].onohiragana + " +<img src='images/pedalHeader-pedal.svg'>" + pedalNameString;
-
   var eqdPedalLinkString = pedalData[pedalNumber].eqdurl;
   var beatUrlString = pedalData[pedalNumber].beaturl;
   var samePedal = $('#carousel').find('[data-pedal-id="' + pedalNumber + '"]');
   var sampleDownloadString = pedalData[pedalNumber].sampleurl;
+  var pedalPageTitleString = "OnomatoPedal - " + pedalNameString + " Sampler";
+  var aboutBunniesString = "<img src='images/aboutBunnies.svg'><span>Check Out Bunnies</span>";
+  var aboutBunniesUrl = "https://www.bunnysantachi.com/";
 
+  $(pedalPageTitle).html(pedalPageTitleString);
   $(onomoName).html(onomoNameString).css("color", onomoColorString);
   $(pedalImg).attr("src","images/pedalsOnly/" + pedalImgString + "@2x.png");
   if (localStorage.getItem("language") == 'jp') {  
@@ -63,8 +67,15 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   $(onomoHeader).css("background-color", onomoColorString);
   $(onomoHeader).html(onomoHeaderFullString);  
   $(onomoPlaymodeHeader).html(onomoHeaderString).css("color", onomoColorString);
-  $(eqdPedalLink).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
+
+  if(pedalNumber == 16) {
+    $(eqdPedalLink).html(aboutBunniesString).on("click",function(){window.open(aboutBunniesUrl,'_blank');});
+  } else {
+    $(eqdPedalLink).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
+  }
+
   $(samePedal).css("display", "none");
+
   $(sampleDownload).click(function(e) {
     e.preventDefault();
     window.location.href = sampleDownloadString;

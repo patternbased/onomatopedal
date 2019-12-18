@@ -86,7 +86,7 @@
 		display: inline;
 		margin-right: 3px;
 	}
-
+	
 	#OnomoPedalHeader {
 		width: 100%;
 		height: auto;
@@ -348,6 +348,7 @@
 		height: 80px;
 		position: absolute;
 		left: 34%;
+		display: none;
 		opacity: 0;
 	}
 
@@ -446,7 +447,7 @@
 	#pedalTable {
 		min-width: 90%;
 		max-width: 960px;
-		margin: 8vh auto 0 auto;
+		margin: 40px auto 0 auto;
 		padding: 0;
 	}  
 				
@@ -482,7 +483,7 @@
 
 /* Shuffle Button */
 	#randomDiv {
-		margin: 80px 0;
+		margin: 40px 0 80px 0;
 		height: 100px;
 		width: 100%;
 		background: #FFFFFF;
@@ -492,6 +493,17 @@
 		position: relative;
 		cursor: pointer;
 	}
+
+	#topPageHeader {
+		width: 100%;
+		height: auto;
+		min-height: 30px;
+		margin: 0 0 60px 0;
+		padding: 10px 0;
+		background: #FFFFFF;
+		opacity: 0.3;
+	}
+
 
 	@media(max-width: 960px) {
 		#randomDiv {
@@ -530,12 +542,93 @@
 		91%, 100% {background-color: #e87e57;}
 	}
 
-	#randomDiv:hover {
+	.randomAnimation:hover, .addAnimation {
 		animation: colorShuffler 6s linear infinite;
 	}
 
 	#randomDiv:active {
 		opacity: 1;
+	}
+
+	/* Banners */
+	.bodyContent {
+		width: 960px;
+		max-width: 80vw;
+		height: auto;
+		margin: 0 auto;
+	}
+	.bannerContainer {
+		height: 160px;
+		margin: 40px auto;
+	}
+	.bannerContainer  div:hover {
+		opacity: 0.6;
+		transition-duration: 500ms;
+	}
+
+	.bannerWide {
+		width: 100%;
+		height: 100%;
+		display: inline-block;
+		border-radius: 4px;
+	}
+	.bannerNarrow {
+		width: calc(50% - 20px);
+		height: 100%;
+		display: inline-block;
+		border-radius: 4px;
+	}
+	.bannerWide p, .bannerNarrow p {
+		font-size: 20px;
+		font-weight: bold;
+		color: #0e0e0e;
+		position: relative;
+		margin: 0 auto;
+		top: 50%;
+		transform: translateY(-50%);
+		line-height: 1.5em;
+	}
+	.bannerWide p span, .bannerNarrow p span {
+		font-size: 14px;
+		letter-spacing: 0.2em;
+		position: relative;
+	}
+
+	.bannerWide p span:after, .bannerNarrow p span:after {
+        position: absolute;
+        content: '';
+		height: 2px;
+		bottom: -4px; 
+		background: #0e0e0e;
+		margin: 0 auto;
+		left: 0;
+	  	right: 0;
+		width: 100%;
+	}
+
+	#bannerLeft {
+		float: left;
+		background: linear-gradient(145deg,rgba(81, 171, 177, 0.8), rgba(199, 99, 71, 0.8)),
+		url('images/markus-spiske-qjnAnF0jIGk-unsplash.jpg') no-repeat center center; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: 100%;;	}
+	#bannerRight {
+		float: right;
+		background: linear-gradient(145deg,rgba(153, 81, 177, 0.8), rgba(189, 175, 64, 0.8)),
+		url('images/OnomonoPedal_Cover_DP.jpg') no-repeat center center; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: 100%;;	}
+	#bannerBottom {
+		background: linear-gradient(145deg,rgba(218, 108, 108, 0.8), rgba(39, 79, 199, 0.8)),
+		url('images/allAboutEQD.jpg') no-repeat center center; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: 100%;;
 	}
 
 /****** Individual Pedal Page *****/

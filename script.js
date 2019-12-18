@@ -48,6 +48,14 @@ while (0 !== currentIndex) {
 return array;
 }
 
+$('#randomDiv').mouseover( function() {
+  $('#topPageHeader').addClass('addAnimation');
+});
+
+$('#randomDiv').mouseleave( function() {
+  $('#topPageHeader').removeClass('addAnimation');
+});
+
 // ===== English // Japanese =====
 
 var language; 
@@ -105,10 +113,14 @@ $(document).on('click', '#orlandoTrigger', function () {
   $('img#orlandBunny').addClass('bunnyShowup');
   if($('img#corabelleBunny').hasClass('bunnyShowup')) {
     $('#pyonpyonBubble').css({
-      'opacity' : '1',
-      'transition-delay' : '1000ms',
-      'transition-duration' : '200ms'
+      'display' : 'inline',
     });
+    setTimeout( function() {
+      $('#pyonpyonBubble').css({
+        'opacity' : '1',
+        'transition-delay' : '1000ms',
+        'transition-duration' : '200ms'
+      })   }, 100);
   }
 });
 
@@ -116,10 +128,14 @@ $(document).on('click', '#orlandoTrigger', function () {
     $('img#corabelleBunny').addClass('bunnyShowup');
     if($('img#orlandBunny').hasClass('bunnyShowup')) {
       $('#pyonpyonBubble').css({
-        'opacity' : '1',
-        'transition-delay' : '1000ms',
-        'transition-duration' : '200ms'
+        'display' : 'inline'
       });
+      setTimeout( function() {
+        $('#pyonpyonBubble').css({
+          'opacity' : '1',
+          'transition-delay' : '1000ms',
+          'transition-duration' : '200ms'
+        })   }, 100);
     }
   });
 
