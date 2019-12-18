@@ -9,6 +9,9 @@
     "onomoDesc":"Describes someone who is happy and excited. In a buoyant mood.",
     "onomoDescJP":"うれしくて、心がはずむ様子。浮かれるさま。",
     "beaturl":"sounds/tracks/ukiuki.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Polyphonic Pitch Mesmerizer",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/rainbow-machine"
   },
@@ -22,6 +25,9 @@
     "onomoDesc":"<b>(1)</b> Describes a large number of metal coins or jewels. <b>(2)</b> Describes the sound of chopping vegetables or the like. Also describes cutting something roughly. <b>(3)</b> Describes the sound of gravel or the like being mixed. <b>(4)</b> Describes the sound of walking over gravel or frost.<b>(4)</b> ",
     "onomoDescJP":"<b>(1)</b> 金貨、宝石などがたくさんある様子。 <b>(2)</b> 野菜などを切り刻む音。また、切り方が粗いさま。 <b>(3)</b> 粗い粒状のものが混ざり合う音。 <b>(4)</b> 砂利や霜柱などを踏んで歩く音。",
     "beaturl":"sounds/tracks/zakuzaku.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Power Amp Distortion",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/acapulco-gold"
   },
@@ -35,6 +41,9 @@
     "onomoDesc":"<b>(1)</b> Describes the sound of a large object hitting something, such as shoes hitting the pavement or someone knocking at a door. Tapping. Clicking. Drumming. <b>(2)</b> Describes someone grinding away at their job. Unflaggingly.",
     "onomoDescJP":"<b>(1)</b> 硬いものが打ち当たって発する音。舗道を歩く靴音、ノックの音など。 <b>(2)</b> 地道な努力を続けるさま。",
     "beaturl":"sounds/tracks/kotsukotsu.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Stereo Reverb & Delay with Tap Tempo",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/avalanche-run"
   },
@@ -48,6 +57,9 @@
     "onomoDesc":"Describes something shining brightly. Dazzlingly. Also used to describe a person's appearance or look.",
     "onomoDescJP":"強く輝く様子。どぎつく光るさま。態度、視線などにも用いる。",
     "beaturl":"sounds/tracks/giragira.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Polyphonic Pitch Arpeggiator",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/arpanoid"
   },
@@ -61,6 +73,9 @@
     "onomoDesc":"Describes the sound of rattling or clattering. In Japanese a rattlesnake is called gara gara hebi. <b>(2)</b> Describes a husky voice.",
     "onomoDescJP":"<b>(1)</b>物が崩れたりぶつかったりして発する、大きく響く音。<b>(2)</b>かすれた声のさま。",
     "beaturl":"sounds/tracks/garagara.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Modulated Monophonic Harmonizing PLL",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/data-corrupter"
   },
@@ -74,6 +89,9 @@
     "onomoDesc":"Describes sleeping peacefully.",
     "onomoDescJP":"やすらかに眠っている様子。",
     "beaturl":"sounds/tracks/suyasuya.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Advanced Modulated Delay & Reverb Machine",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/disaster-transport-sr"
   },
@@ -87,6 +105,9 @@
     "onomoDesc":"Describes many small things gathered together and moving, such as a swarm of insects.",
     "onomoDescJP":"小さな虫などがたくさん集まってうごめいているさま。",
     "beaturl":"sounds/tracks/ujauja.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"THIS DEVICE IS NO LONGER IN PRODUCTION.",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/dream-crusher"
   },
@@ -100,6 +121,9 @@
     "onomoDesc":"<b>(1)</b> Describes the sound made when solid objects hit each other. <b>(2)</b> Describes something very hard. Also used to describe someone's stright-laced views or to describe a person who is stiff with nervous tension. Rigid.",
     "onomoDescJP":"<b>(1)</b> 硬いものがぶつかり合う音。 <b>(2)</b> とても堅いさま。人の考え方が堅苦しい様子や、緊張などで体が硬くなっている様子にも用いられる。",
     "beaturl":"sounds/tracks/kachikachi.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Double Fuzz with Octave Up",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/hoof-reaper"
   },
@@ -113,6 +137,9 @@
     "onomoDesc":"<b>(1)</b> Bescribes the buzzing of a bee or a hummingbird. <b>(2)</b> Describes things pass by in speed.",
     "onomoDescJP":"<b>(1)</b> 虫やハミングバードなどの羽音。 <b>(2)</b> 物が繰り返し風を切るさま。",
     "beaturl":"sounds/tracks/bunbun.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Repeat Percussions",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/hummingbird"
   },
@@ -126,6 +153,9 @@
     "onomoDesc":"Describes dripping water.",
     "onomoDescJP":"液体がしたたり落ちるさま。",
     "beaturl":"sounds/tracks/potapota.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Reverberation Machine",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/levitation"
   },
@@ -139,6 +169,9 @@
     "onomoDesc":"<b>(1)</b> Describes a smooth surface. Polished. Also describes slipping on a smooth surface. <b>(2)</b> Describes the sound of someone slurping noodles.",
     "onomoDescJP":"<b>(1)</b> 表面がなめらかなさま。また、なめらかなものに触れてすべるさま。 <b>(2)</b> 麺類をすする音。",
     "beaturl":"sounds/tracks/tsurutsuru.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Polyphonic Organ Emulator",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/organizer"
   },
@@ -152,6 +185,9 @@
     "onomoDesc":"<b>(1)</b> Describes something soft and soggy. Also describes the action of stiring or mashing such a substance. <b>(2)</b> Describes something in awful disarray. <b>(3)</b> Describes grumbling.",
     "onomoDescJP":"<b>(1)</b> 水分をたっぷり含んで柔らかい様子。または、水分を含んだものをかき回したりつぶしたりする様子。 <b>(2)</b> ひどく乱れた様子。 <b>(3)</b> ぐちっぽく、あれこれ言う様子。",
     "beaturl":"sounds/tracks/guchagucha.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Mega Ultimate Overdrive",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/palisades"
   },
@@ -165,6 +201,9 @@
     "onomoDesc":"Describes someone or something that glitters, sparkles or shines.",
     "onomoDescJP":"光り輝くさま。また、ま新しい様子を比喩的に言うこともある。",
     "beaturl":"sounds/tracks/pikapika.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Envelope Filter with Sample & Hold",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/spatial-delivery"
   },
@@ -178,6 +217,9 @@
     "onomoDesc":"Describes someone dozing. Napping.",
     "onomoDescJP":"いねむりしている様子。",
     "beaturl":"sounds/tracks/utouto.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Otherworldly Reverberator",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/afterneath"
   },
@@ -191,6 +233,9 @@
     "onomoDesc":"<b>(1)</b> The sound of small stones or sand moving. <b>(2)</b> Describes a rough and bumpy surface.",
     "onomoDescJP":"<b>(1)</b> 小粒で堅いものが触れ合ってたてる音。 <b>(2)</b> 触った感じが粗く滑らかでないさま。ささくれて荒さの感じられるさま。",
     "beaturl":"sounds/tracks/zarazara.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Hybrid Fuzz",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/hoof"
   },
@@ -204,6 +249,9 @@
     "onomoDesc":"Describes the sound or act of bubbles or foam rising or of something giving off bubbles while sinking.",
     "onomoDescJP":"泡立つ音や様子。泡を出しながら沈んでいくさま。",
     "beaturl":"sounds/tracks/bukubuku.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Analog Optical Vibe Machine",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/the-depths"
   },
@@ -215,9 +263,12 @@
     "onomoname":"ぴょんぴょん Pyon Pyon",
     "onomoid":"pyonpyon",
     "onomoDesc":"Describes hopping or skipping agilely.",
-    "onomoDescJP":"泡立つ音や様子。泡を出しながら沈んでいくさま。",
+    "onomoDescJP":"繰り返し、身軽にはねるさま。",
     "beaturl":"sounds/tracks/pyonpyon.mp3",
+    "trackname":"TrackName Here",
+    "trackinfo":"TrackName info. <b>Artists:</b> First Lastname, First Lastname, First Lastname, First Lastname, First Lastname",
+    "pedalinfo":"Corabelle and Orlando",
     "sampleurl":"sample/test.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/the-depths"
+    "eqdurl":"https://www.bunnysantachi.com/"
   }
 ]

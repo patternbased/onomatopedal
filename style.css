@@ -42,7 +42,7 @@
 		width: 160px;
 		max-width: 40vW;
 		margin: 0 auto ;
-		padding: 16px 5px;
+		padding: 16px 5px 10px 5px;
 		opacity: 0.7;
 	}
 
@@ -52,7 +52,7 @@
 
 	.languages {
 		width: 80px;
-		max-width: 20vw;
+		max-width: 25vw;
 		margin: 25px 5px 25px 20px;
 		float: left;
 		z-index: 9000;
@@ -64,6 +64,7 @@
 
 	.language {
 		width: 30px;
+		height: 30px;
 		max-width: 8vw;
 		margin-right: 10px;
 		color: #FFFFFF;
@@ -83,10 +84,12 @@
 	}
 
 	.language img {
+		width: 30px;
+		height: 30px;
 		display: inline;
 		margin-right: 3px;
 	}
-	
+
 	#OnomoPedalHeader {
 		width: 100%;
 		height: auto;
@@ -179,6 +182,10 @@
 		}
 	}
 	@media(max-width: 400px) {
+		.languages {
+			margin: 25px 0 25px 15px;
+		}
+
 		.info {
 			width: 36px;
 			height: 36px;
@@ -186,6 +193,9 @@
 			margin: 20px;
 		}
 		.title {
+			width: 140px;
+		}
+		.title, .rightSPOPlogo {
 			padding: 20px 5px;
 		}
 		.header .info span {
@@ -208,6 +218,7 @@
 		height: 100px;
 		width: 100vw;
 		bottom: 0;
+		display: block;
 	}
 	.footerLogo {
 		width: 200px;
@@ -447,14 +458,14 @@
 	#pedalTable {
 		min-width: 90%;
 		max-width: 960px;
-		margin: 40px auto 0 auto;
+		margin: 40px auto;
 		padding: 0;
 	}  
 				
 	img.pedalList {
 		margin: 0;
 		display: inline-block;
-		padding: 40px;
+		padding: 36px;
 		width: 240px;
 		cursor: pointer;
 	}
@@ -475,15 +486,24 @@
 		}
 
 		img.pedalList {
-			padding: 30px;
+			padding: 33px;
 			width: 220px;
 			max-width: 30%;
 		}
 	}
 
+	@media(max-width: 600px) {
+		#pedalTable {
+			margin: 20px auto;
+		}
+		img.pedalList {
+			padding: 20px;
+		}
+	}
+
 /* Shuffle Button */
 	#randomDiv {
-		margin: 40px 0 80px 0;
+		margin: 0;
 		height: 100px;
 		width: 100%;
 		background: #FFFFFF;
@@ -496,19 +516,34 @@
 
 	#topPageHeader {
 		width: 100%;
-		height: auto;
-		min-height: 30px;
-		margin: 0 0 60px 0;
-		padding: 10px 0;
+		height: 22px;
+		margin: 0;
+		padding: 15px 0;
 		background: #FFFFFF;
 		opacity: 0.3;
+		font-size: 16px;
+		font-weight: bold;
+		letter-spacing: 0.5em;
+		color: #1f1f1f;
 	}
 
 
 	@media(max-width: 960px) {
 		#randomDiv {
-			margin: 50px 0;
 			animation: colorShuffler 6s linear infinite;
+		}
+		#topPageHeader {
+			animation: colorShuffler 6s linear infinite;
+		}
+	}
+	@media(max-width: 480px) {
+		#topPageHeader {
+			letter-spacing: 0.3em;
+		}
+	}
+	@media(max-width: 410px) {
+		#topPageHeader {
+			letter-spacing: 0.1em;
 		}
 	}
 
@@ -555,12 +590,15 @@
 		width: 960px;
 		max-width: 80vw;
 		height: auto;
-		margin: 0 auto;
+		margin: 40px auto;
+		display: block;
 	}
 	.bannerContainer {
 		height: 160px;
 		margin: 40px auto;
+		display: block;
 	}
+
 	.bannerContainer  div:hover {
 		opacity: 0.6;
 		transition-duration: 500ms;
@@ -586,7 +624,7 @@
 		margin: 0 auto;
 		top: 50%;
 		transform: translateY(-50%);
-		line-height: 1.5em;
+		padding: 20px;
 	}
 	.bannerWide p span, .bannerNarrow p span {
 		font-size: 14px;
@@ -604,7 +642,37 @@
 		left: 0;
 	  	right: 0;
 		width: 100%;
+		margin-bottom: 3px;
 	}
+
+	@media(max-width: 960px) {
+		.bannerContainer {
+			margin: 20px auto;
+		}
+		.bannerNarrow {
+			width: calc(50% - 10px);
+		}
+	}
+	@media(max-width: 600px) {
+		.bannerNarrow {
+			width: 100%;
+			height: calc(50% - 10px);
+			margin-bottom: 10px;
+			display: bo;
+		}
+		.twoBanners {
+			height: 340px;
+			margin: 40px auto 0 auto;
+		}
+		.oneBanner {
+			margin: 20px auto;
+		}
+		#bannerRight {
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+	}
+
 
 	#bannerLeft {
 		float: left;
@@ -748,6 +816,16 @@
 		position: relative;
 	}
 
+	#pedal h3 {
+		margin-block-end: 0.5em;
+	}
+
+	#pedal h3 img {
+		width: 24px;
+		display: inline;
+		transform: translateY(20%);
+		margin-right: 10px;
+	}
 	#onomoName {
 		color: #838080;
 		font-size: 18px;
@@ -843,17 +921,17 @@
 
 /* Onomonapia Description */
 
-	#onomoInfo {
+	#pedal p {
 		color: #838080;
 		text-align: justify center;
-		width: 400px;
+		width: 500px;
 		max-width: 90vw;
 		font-size: 16px;
 		line-height: 21px;
-		margin: 0 auto 60px auto;
+		margin: 0 auto 20px auto;
 	}
 
-	#onomoInfo span {
+	#pedal p span {
 		font-weight: 800;
 		margin-right: 10px;
 	}
@@ -866,6 +944,7 @@
 		width: 100%;
 		padding: 0;
 		overflow: hidden;
+		margin-top: 60px;
 	}
 
 	#carouselWindow {

@@ -30,20 +30,26 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   var onomoName = $('#onomoName');
   var pedalImg = $('#thePedal, #pedalSmall');
   var pedalDesc = $('#onomoInfo');
+  var trackName = $('#trackName');
+  var trackInfo = $('#trackInfo');
   var onomoColor = $('p#onomoInfo');
   var onomoHeader = $('#OnomoPedalHeader');
   var onomoPlaymodeHeader = $('.title-PlayMode');
   var eqdPedalLink = $('li#aboutPedal');
   var sampleDownload = $('#download');
   var pedalPageTitle = $('#pedalPageTitle');
+  var pedalName = $('#pedalName');
+  var pedalInfo = $('#pedalInfo');
 
   // render HTML
 
-  var onomoNameString = pedalData[pedalNumber].onomoname;
+  var onomoNameString = "<img src='images/onoName.svg'>" + pedalData[pedalNumber].onomoname;
   var pedalNameString = pedalData[pedalNumber].name;
   var pedalImgString = pedalData[pedalNumber].nameid;
   var pedalDescString = pedalData[pedalNumber].onomoDesc;
   var pedalDescStringJP = pedalData[pedalNumber].onomoDescJP;
+  var trackNameString = "<img src='images/trackName.svg'>" + pedalData[pedalNumber].trackname;
+  var trackInfoString = pedalData[pedalNumber].trackinfo;
   var onomoColorString = pedalData[pedalNumber].hex;
   var onomoHeaderString = pedalData[pedalNumber].onohiragana + " + " + pedalNameString;
   var onomoHeaderFullString = "<img src='images/pedalHeader-ono.svg'>" + pedalData[pedalNumber].onohiragana + " +<img src='images/pedalHeader-pedal.svg'>" + pedalNameString;
@@ -53,7 +59,9 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   var sampleDownloadString = pedalData[pedalNumber].sampleurl;
   var pedalPageTitleString = "OnomatoPedal - " + pedalNameString + " Sampler";
   var aboutBunniesString = "<img src='images/aboutBunnies.svg'><span>Check Out Bunnies</span>";
-  var aboutBunniesUrl = "https://www.bunnysantachi.com/";
+  var pedalNameStringIcon =  "<img src='images/pedalName.svg'>" + pedalData[pedalNumber].name;
+  var bunnyNameStringIcon =  "<img src='images/bunnyName.svg'>" + pedalData[pedalNumber].name;
+  var pedalInfoString = pedalData[pedalNumber].pedalinfo;
 
   $(pedalPageTitle).html(pedalPageTitleString);
   $(onomoName).html(onomoNameString).css("color", onomoColorString);
@@ -63,15 +71,21 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   } else {
     $(pedalDesc).html(pedalDescString);
   }
+  $(trackName).html(trackNameString).css("color", onomoColorString);
+  $(trackInfo).html(trackInfoString);
+  $(pedalInfo).html(pedalInfoString);
+
   $(onomoColor).find('span').css("color", onomoColorString);
   $(onomoHeader).css("background-color", onomoColorString);
   $(onomoHeader).html(onomoHeaderFullString);  
   $(onomoPlaymodeHeader).html(onomoHeaderString).css("color", onomoColorString);
 
   if(pedalNumber == 16) {
-    $(eqdPedalLink).html(aboutBunniesString).on("click",function(){window.open(aboutBunniesUrl,'_blank');});
+    $(eqdPedalLink).html(aboutBunniesString).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
+    $(pedalName).html(bunnyNameStringIcon).css("color", onomoColorString);
   } else {
     $(eqdPedalLink).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
+    $(pedalName).html(pedalNameStringIcon).css("color", onomoColorString);
   }
 
   $(samePedal).css("display", "none");
