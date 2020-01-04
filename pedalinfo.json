@@ -201,8 +201,8 @@
     "onomoDesc":"Describes someone or something that glitters, sparkles or shines.",
     "onomoDescJP":"光り輝くさま。また、ま新しい様子を比喩的に言うこともある。",
     "beaturl":"sounds/tracks/pikapika.mp3",
-    "trackname":"feat. Artist Here",
-    "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
+    "trackname":"feat. Ralph Carney and Microstructures",
+    "trackinfo":"R. Carney, J. Trombetta, C. Farrow, J. Minadeo",
     "pedalinfo":"Envelope Filter with Sample & Hold",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.earthquakerdevices.com/spatial-delivery"
@@ -270,5 +270,21 @@
     "pedalinfo":"Corabelle and Orlando",
     "sampleurl":"sample/test.zip",
     "eqdurl":"https://www.bunnysantachi.com/"
-  }
+  },
+  {
+    "name":"Julie",
+    "nameid":"julie",
+    "hex":"#A678DD",
+    "onohiragana":"The Boss",
+    "onomoname":"Julie",
+    "onomoid":"julie",
+    "onomoDesc":"Life is tough and full of stuff but nevermind 'cause Julies magic.<br> Life, it stings. Its full of things but nevermind 'cause Julies magic.",
+    "onomoDescJP":"Life is tough and full of stuff but nevermind 'cause Julies magic.<br> Life, it stings. Its full of things but nevermind 'cause Julies magic.",
+    "beaturl":"sounds/tracks/julie.mp3",
+    "trackname":"feat. Bunny San Tachi",
+    "trackinfo":"S. Kitajima, J. Minadeo",
+    "pedalinfo":"Julianne Robbins",
+    "sampleurl":"sample/test.zip",
+    "eqdurl":"https://www.earthquakerdevices.com/"
+  } 
 ]
