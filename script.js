@@ -1,8 +1,9 @@
 // Make the modal closable once the page is fully loaded
 window.onload = function() {
   $('.loadingSpinner, #modalBG').css('display','none');
+  window.scrollTo(0,1);
 
-  if (( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
+  if (( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) | (navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2)) {
   } else { 
     if (localStorage.getItem("modal") === null) {
       $('.modalContent, #modalBG').css('display','block');

@@ -18,7 +18,7 @@ if (!pedalRequest) {
   alert('Giving up :( Cannot create an XMLHTTP instance');
 }
 pedalRequest.open('GET','pedalinfo.json', true);
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+if(( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) | (navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2)) {
 pedalRequest.setRequestHeader('cache-control', 'no-cache');
 }
 pedalRequest.onload = function() {
@@ -103,7 +103,8 @@ $('.jp').click(function(){
 
   // ===== Action button animation =====
 
-  if ( $(window).width() > 960 ) {
+  if (($(window).width() < 960) | ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) | (navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2)) {
+  } else {
     $('.actionBtn').on('mouseenter',function () { 
       $(this).css({ 
         'width': '220px',
@@ -115,14 +116,12 @@ $('.jp').click(function(){
       })
     });
     $('.actionBtn').on('mouseleave',function() {
-      if ( $(window).width() > 960 ) {
       $('span', this).css('display','none'),
       $(this).css({
         'width': '50px',
         'background': '#ffffff',
         'transition-duration':'100ms'
       })
-    } else {}
     });
     }
 
@@ -141,10 +140,11 @@ $('.jp').click(function(){
       $(".playAudio > span, #pauseMobile > span").html("Pause");
   } else {
     $(".playAudio > img, #pauseMobile > img").attr('src', "images/playBeat.svg");
-    if ($(window).width() > 960) {
+    if (($(window).width() < 960) | ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) | (navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2)) {
+    } else {
     $("#pauseMobile > span, #pauseMobile > span").html("Play Track");
     }
-     }
+    }
      
     $('.playAudio, #pauseMobile').click(function() {
       if (audioElement.paused == false) {
@@ -158,7 +158,7 @@ $('.jp').click(function(){
        }
     });
 
-    if (($(window).width() < 960) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
+    if (($(window).width() < 960) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) | (navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2)) {
     $('#showAll').click(function() {
       audioElement.pause();
       $(".playAudio > img").attr('src', "images/playBeat.svg");
@@ -187,14 +187,15 @@ $(window).on('resize', function() {
   }
 });
 $(window).on('resize', function() {
-  if ($(window).width() > 960) {
+  if (($(window).width() < 960) | ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) | (navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2)) {
+  } else {
     $('#listenBeat, #aboutPedal').css({
       'background': '#FFFFFF'
     });
   }
 });
 
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+if(( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) | (navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2)) {
   $('#actions').css({
     'height': '140px'
   });
@@ -299,7 +300,7 @@ $('#tapKeyWrap').css({
 };
 
 $('#fullscreenMode, #playMode').click(function () {
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { 
+if(( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) | (navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2)) { 
   // Mobile Play mode (Full Screen + Beat Play)
   if($(window).height() < $(window).width()){
     fullScreenLandscape();
