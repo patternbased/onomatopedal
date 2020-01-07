@@ -661,7 +661,7 @@
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
-		background-size: 100%;;	}
+		background-size: 100%;	}
 	#bannerRight {
 		float: right;
 		background: linear-gradient(145deg,rgba(153, 81, 177, 0.8), rgba(189, 175, 64, 0.8)),
@@ -669,16 +669,8 @@
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
-		background-size: 100%;;	}
-/*	#bannerBottom {
-		background: linear-gradient(145deg,rgba(218, 108, 108, 0.8), rgba(39, 79, 199, 0.8)),
-		url('images/allAboutEQD.jpg') no-repeat center center; 
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: 100%;;
-	}
-*/
+		background-size: 100%;	}
+
 
 	@media(max-width: 600px) {
 		.bannerNarrow {
@@ -1086,4 +1078,37 @@ div.tapKey:active {
 	#mobileLogo img {
 		width: 140px;
 	}
+}
+
+/****** Single Text Page *****/
+/**********************************/
+
+/** spinner **/
+
+.bodyText {
+	width: 700px;
+	max-width: 90vw;
+	height: auto;
+	margin: 60px auto;
+	color: #FFFFFF;
+	opacity: 0.8;
+}
+
+.bodyText h1 {
+	opacity: 0.5;
+}
+
+.bodyText h3 {
+	margin: 40px auto;
+}
+
+.bodyText p {
+		text-align: justify center;
+		font-size: 16px;
+		line-height: 21px;
+}
+
+.postPageWidth {
+	width: 700px;
+	max-width: 90vw;
 }
