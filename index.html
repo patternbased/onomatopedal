@@ -18,10 +18,12 @@
   <meta name="google" value="notranslate">
   <meta name="mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#DA1C5C">
   <link rel="stylesheet" href="style.css">  
   <link rel="icon"  type="image/png"  href="images/patternBased_Logo_icon.png" />
   <link rel="apple-touch-icon" sizes="128x128" href="images/patternBased_Logo_icon_128.png" />
   <link rel="icon" sizes="192x192" href="images/patternBased_Logo_icon_192.png" />
+  <link rel="manifest" href="manifest.json">
 <!--	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
@@ -103,9 +105,7 @@
  <!--   <div class="bannerContainer oneBanner">
       <div class="bannerWide" id="bannerBottom"><p><span>CHECKITOUT</span><br/>All About EarthQuaker Devices</p></div>
     </div>-->
-
   </div>
-
 </div>
 
 <!-- Footer -->
@@ -115,5 +115,19 @@
 </footer>
 
 <script type="text/javascript" src="script.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+ </script>
 </body>
 </html>
