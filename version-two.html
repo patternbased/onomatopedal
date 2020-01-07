@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-346260-9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-346260-9');
+  </script>
+
+  <title>OnomatoPedal - Ver 2.0 In Progress</title>  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" value="notranslate">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#DA1C5C">
+  <link rel="stylesheet" href="style.css">  
+  <link rel="icon"  type="image/png"  href="images/patternBased_Logo_icon.png" />
+<!--	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="info"><span>?</span></div>
+    <div class="languages">
+      <div class="language languageActive en"><img src="images/language-en.svg"></div>
+      <div class="language jp"><img src="images/language-jp.svg"></div>
+    </div>
+    <div class="title"><a href="./"><img src="images/onomatoPedal-Logo_Light.svg"></a></div>
+  </div>
+  <div class='clear'></div>
+
+  <div id="topPageHeader">AudioVisual Playground</div>
+
+<!-- Right Panel -->
+<div id="rightSPHeader">
+  <div class="close"><img src="images/closeIcon.svg"></div>
+      <div class="languages">
+          <div class="language languageActive en"><img src="images/language-en_dark.svg" height="30" height="30"></div>
+          <div class="language jp"><img src="images/language-jp_dark.svg" height="30" width="30"></div>
+      </div>
+      <div class="rightSPOPlogo"><a href="./"><img src="images/onomatoPedal-Logo_Dark.svg"></a></div>
+</div>
+<div class="rightSPWrapper">
+  <div class="pedalLineup"></div>
+  <div class="rightSPgrayBG" id="aboutOP"></div>
+  <div class="rightSPwhiteBG" id="howToPlay"></div>
+  <div class="rightSPgrayBG" id="freeSamplePack"></div>
+      <div class="rightSPwhiteBG" id="credit"></div>
+      <div id="bunnyYard">
+          <img src="images/Orlando.png" id="orlandBunny">
+          <a href="pedal.html?pedalid=16"><img src="images/pyonpyon-bubble.png" id="pyonpyonBubble"></a>
+          <img src="images/Corabelle.png" id="corabelleBunny">
+      </div>
+      <div class="pedalLineup" id="bunniesPedals"></div>
+  <div class="rightSPgrayBG" id="sidepanelLogos"></div>
+</div>
+
+  <!-- Pedals -->
+  <div id="pedalTable">
+    <img src="images/pedalsOnom/Acapulco-Gold-bgtx@2x.png" class="pedalList" data-pedal-id="1">
+    <img src="images/pedalsOnom/Data-Corrupter-bgtx_V2@2x.png" class="pedalList" data-pedal-id="4"> 
+    <img src="images/pedalsOnom/Rainbow-Machine-bgtx@2x.png" class="pedalList" data-pedal-id="0"> 
+    <img src="images/pedalsOnom/Arpanoid-bgtx@2x.png" class="pedalList" data-pedal-id="3"> 
+    <img src="images/pedalsOnom/Avalanche-Run-bgtx@2x.png" class="pedalList" data-pedal-id="2"> 
+    <img src="images/pedalsOnom/Disaster-Transport-SR-bgtx_V2@2x.png" class="pedalList" data-pedal-id="5"> 
+    <img src="images/pedalsOnom/Dream-Crusher-bgtx@2x.png" class="pedalList" data-pedal-id="6"> 
+    <img src="images/pedalsOnom/Hoof-Reaper-bgtx_V2@2x.png" class="pedalList" data-pedal-id="7"> 
+    <img src="images/pedalsOnom/Levitation-bgtx@2x.png" class="pedalList" data-pedal-id="9"> 
+    <img src="images/pedalsOnom/Hummingbird-bgtx_V2@2x.png" class="pedalList" data-pedal-id="8"> 
+    <img src="images/pedalsOnom/Organizer-bgtx@2x.png" class="pedalList" data-pedal-id="10"> 
+    <img src="images/pedalsOnom/Palisades-bgtx@2x.png" class="pedalList" data-pedal-id="11"> 
+    <img src="images/pedalsOnom/Spatial-Delivery-bgtx_V2@2x.png" class="pedalList" data-pedal-id="12"> 
+    <img src="images/pedalsOnom/Afterneath-bgtx_V2@2x.png" class="pedalList" data-pedal-id="13"> 
+    <img src="images/pedalsOnom/Hoof-Fuzz-bgtx_V2@2x.png" class="pedalList" data-pedal-id="14"> 
+    <img src="images/pedalsOnom/The-Depths-bgtx@2x.png" class="pedalList" data-pedal-id="15"> 
+    <div id="randomDivMobile"></div>  
+  </div>
+
+  <!-- Random button -->
+
+  <div id="randomDiv" class="randomAnimation">
+    <div id="randomWrap">
+      <img src="images/randombtn.svg" id="randombtn">
+    </div>
+  </div>
+
+  <div class="bodyContent">
+    <div class="bannerContainer twoBanners">
+      <a id="bannerLeftLink" href="" target="_blank"><div class="bannerNarrow" id="bannerLeft"></div></a>
+      <a id="bannerRightLink" href="" target="_blank"><div class="bannerNarrow" id="bannerRight"></div>
+    </div></a>
+ <!--   <div class="bannerContainer oneBanner">
+      <div class="bannerWide" id="bannerBottom"><p><span>CHECKITOUT</span><br/>All About EarthQuaker Devices</p></div>
+    </div>-->
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <a href="https://www.earthquakerdevices.com/" target="_blank"><img src="images/EarthQuaker-Devices-Logo.png" class="footerLogo"></a>
+  <a href="https://www.patternbased.com/" target="_blank"><img src="images/PatternBased_Logo_WHCL.png" class="footerLogo"></a>
+</footer>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
