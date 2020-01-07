@@ -78,6 +78,7 @@ languageRequest.onload = function() {
     $('#bannerRight').html(languageData.bannerAboutEqd);
     $('#bannerLeftLink').attr("href", languageData.bannerLeftUrl);
     $('#bannerRightLink').attr("href", languageData.bannerRightUrl);
+    $('#verTwoText').html(languageData.versionTwoBody);
     if(localStorage.getItem('language') == 'jp') {
       $('.jp').addClass('languageActive');
       $('.en').removeClass('languageActive');

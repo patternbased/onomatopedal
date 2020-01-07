@@ -7,5 +7,7 @@
     "bannerVerTwo" : "<p><span>WHAAA?</span><br/>Ver 2.0 絶賛制作中</p>",
     "bannerAboutEqd" : "<p><span>CHECKITOUT</span><br/>EarthQuaker Devicesについて</p>",
     "bannerLeftUrl" : "version-two.html",
-    "bannerRightUrl" : "https://www.earthquakerdevices.jp/about"
+    "bannerRightUrl" : "https://www.earthquakerdevices.jp/about",
+    "versionTwoBody" : "<h1>OnomatoPedal Ver 2.0 絶賛制作中</h1><p>PatternBasedとEarthQuaker Devicesは、おのまとペダルVer 2.0の制作を進行中です。バージョンアップしたおのまとペダル、さらにたくさんの参加アーティストによる楽曲とサンプル音源、新しいアニメーションや新機能をお楽しみに！</p><h3><b>Coming Early Summer 2020</b></h3>"
+
 }
