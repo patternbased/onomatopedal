@@ -12,7 +12,7 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Polyphonic Pitch Mesmerizer",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/ukiuki.zip",
     "eqdurl":"https://www.earthquakerdevices.com/rainbow-machine"
   },
   {
@@ -28,7 +28,7 @@
     "trackname":"feat. Billy Dixon & Low in the Sky",
     "trackinfo":"B. Dixon, C. Farrow, P. McNulty, J. Minadeo",
     "pedalinfo":"Power Amp Distortion",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/zakuzaku.zip",
     "eqdurl":"https://www.earthquakerdevices.com/acapulco-gold"
   },
   {
@@ -44,7 +44,7 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Stereo Reverb & Delay with Tap Tempo",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/kotsukotsu.zip",
     "eqdurl":"https://www.earthquakerdevices.com/avalanche-run"
   },
   {
@@ -60,7 +60,7 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Polyphonic Pitch Arpeggiator",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/giragira.zip",
     "eqdurl":"https://www.earthquakerdevices.com/arpanoid"
   },
   {
@@ -76,7 +76,7 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Modulated Monophonic Harmonizing PLL",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/garagara.zip",
     "eqdurl":"https://www.earthquakerdevices.com/data-corrupter"
   },
   {
@@ -85,14 +85,14 @@
     "hex":"#a3a3a5",
     "onohiragana":"すやすや",
     "onomoname":"すやすや Suya Suya",
-    "onomoid":"kutakuta",
+    "onomoid":"suyasuya",
     "onomoDesc":"Describes sleeping peacefully.",
     "onomoDescJP":"やすらかに眠っている様子。",
     "beaturl":"sounds/tracks/suyasuya.mp3",
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Advanced Modulated Delay & Reverb Machine",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/suyasuya.zip",
     "eqdurl":"https://www.earthquakerdevices.com/disaster-transport-sr"
   },
   {
@@ -108,7 +108,7 @@
     "trackname":"feat. Taka Tozawa",
     "trackinfo":"T. Tozawa, J. Minadeo",
     "pedalinfo":"Germanium Fuzz (Discontinued)",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/ujauja.zip",
     "eqdurl":"https://www.earthquakerdevices.com/dream-crusher"
   },
   {
@@ -124,7 +124,7 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Double Fuzz with Octave Up",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/kachikachi.zip",
     "eqdurl":"https://www.earthquakerdevices.com/hoof-reaper"
   },
   {
@@ -133,14 +133,14 @@
     "hex":"#55af2f",
     "onohiragana":"ぶんぶん",
     "onomoname":"ぶんぶん Bun Bun",
-    "onomoid":"bun bun",
+    "onomoid":"bunbun",
     "onomoDesc":"<b>(1)</b> Bescribes the buzzing of a bee or a hummingbird. <b>(2)</b> Describes things pass by in speed.",
     "onomoDescJP":"<b>(1)</b> 虫やハミングバードなどの羽音。 <b>(2)</b> 物が繰り返し風を切るさま。",
     "beaturl":"sounds/tracks/bunbun.mp3",
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Repeat Percussions",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/bunbun.zip",
     "eqdurl":"https://www.earthquakerdevices.com/hummingbird"
   },
   {
@@ -156,7 +156,7 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Reverberation Machine",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/potapota.zip",
     "eqdurl":"https://www.earthquakerdevices.com/levitation"
   },
   {
@@ -172,7 +172,7 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Polyphonic Organ Emulator",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/tsurutsuru.zip",
     "eqdurl":"https://www.earthquakerdevices.com/organizer"
   },
   {
@@ -188,7 +188,7 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Mega Ultimate Overdrive",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/guchagucha.zip",
     "eqdurl":"https://www.earthquakerdevices.com/palisades"
   },
   {
@@ -197,14 +197,14 @@
     "hex":"#e87e57",
     "onohiragana":"ぴかぴか",
     "onomoname":"ぴかぴか Pika Pika",
-    "onomoid":"kebakeba",
+    "onomoid":"pikapika",
     "onomoDesc":"Describes someone or something that glitters, sparkles or shines.",
     "onomoDescJP":"光り輝くさま。また、ま新しい様子を比喩的に言うこともある。",
     "beaturl":"sounds/tracks/pikapika.mp3",
     "trackname":"feat. Ralph Carney and Microstructures",
     "trackinfo":"R. Carney, J. Trombetta, C. Farrow, J. Minadeo",
     "pedalinfo":"Envelope Filter with Sample & Hold",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/pikapika.zip",
     "eqdurl":"https://www.earthquakerdevices.com/spatial-delivery"
   },
   {
@@ -220,7 +220,7 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Otherworldly Reverberator",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/utouto.zip",
     "eqdurl":"https://www.earthquakerdevices.com/afterneath"
   },
   {
@@ -236,7 +236,7 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Hybrid Fuzz",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/zarazara.zip",
     "eqdurl":"https://www.earthquakerdevices.com/hoof"
   },
   {
@@ -252,7 +252,7 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Analog Optical Vibe Machine",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/bukubuku.zip",
     "eqdurl":"https://www.earthquakerdevices.com/the-depths"
   },
   {
@@ -268,7 +268,7 @@
     "trackname":"feat. Bunny San Tachi",
     "trackinfo":"S. Kitajima, J. Minadeo",
     "pedalinfo":"Corabelle and Orlando",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/pyonpyon.zip",
     "eqdurl":"https://www.bunnysantachi.com/"
   },
   {
@@ -284,7 +284,7 @@
     "trackname":"feat. Bunny San Tachi",
     "trackinfo":"S. Kitajima, J. Minadeo",
     "pedalinfo":"Julianne Robbins",
-    "sampleurl":"sample/test.zip",
+    "sampleurl":"sounds/julie.zip",
     "eqdurl":"https://www.earthquakerdevices.com/"
   } 
 ]
