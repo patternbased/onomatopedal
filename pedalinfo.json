@@ -286,5 +286,21 @@
     "pedalinfo":"Julianne Robbins",
     "sampleurl":"sounds/julie.zip",
     "eqdurl":"https://www.earthquakerdevices.com/"
-  } 
+  },
+  {
+    "name":"Zap Machine",
+    "nameid":"zapmachine",
+    "hex":"#b5dcb5",
+    "onohiragana":"びりびり",
+    "onomoname":"びりびり Buli Buli",
+    "onomoid":"bilibili",
+    "onomoDesc":"PLACEHOLDER - Describes the sound or act of bubbles or foam rising or of something giving off bubbles while sinking.",
+    "onomoDescJP":"PLACEHOLDER - 泡立つ音や様子。泡を出しながら沈んでいくさま。",
+    "beaturl":"sounds/tracks/bukubuku.mp3",
+    "trackname":"feat. Artist Here",
+    "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
+    "pedalinfo":"Analog Optical Vibe Machine",
+    "sampleurl":"sounds/bukubuku.zip",
+    "eqdurl":"https://www.earthquakerdevices.com/zap-machine"
+  }
 ]
