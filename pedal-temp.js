@@ -80,7 +80,7 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   $(onomoHeader).html(onomoHeaderFullString);  
   $(onomoPlaymodeHeader).html(onomoHeaderString).css("color", onomoColorString);
 
-  if(pedalNumber == 16) {
+  if(pedalNumber == 17) {
     $(eqdPedalLink).html(aboutBunniesString).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
     $(pedalName).html(bunnyNameStringIcon).css("color", onomoColorString);
   } else {

@@ -23,12 +23,12 @@ window.onload = function() {
 if ($(window).width() < 960) {
 function randomize() {
   var allBanners = $('#pedalTable img');
-  shuffle(allBanners.hide()).slice(12).show();    
+  shuffle(allBanners.hide()).slice(13).show();    
 }
 } else {
 function randomize() {
   var allBanners = $('#pedalTable img');
-  shuffle(allBanners.hide()).slice(13).show();    
+  shuffle(allBanners.hide()).slice(14).show();    
 }
 }
 $('#randomDiv').click(randomize);

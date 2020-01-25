@@ -73,8 +73,8 @@
     "onomoDesc":"Describes the sound of rattling or clattering. In Japanese a rattlesnake is called gara gara hebi. <b>(2)</b> Describes a husky voice.",
     "onomoDescJP":"<b>(1)</b>物が崩れたりぶつかったりして発する、大きく響く音。<b>(2)</b>かすれた声のさま。",
     "beaturl":"sounds/tracks/garagara.mp3",
-    "trackname":"feat. Artist Here",
-    "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
+    "trackname":"feat. Corey Haren",
+    "trackinfo":"C. Haren, J. Minadeo",
     "pedalinfo":"Modulated Monophonic Harmonizing PLL",
     "sampleurl":"sounds/garagara.zip",
     "eqdurl":"https://www.earthquakerdevices.com/data-corrupter"
@@ -217,8 +217,8 @@
     "onomoDesc":"Describes someone dozing. Napping.",
     "onomoDescJP":"いねむりしている様子。",
     "beaturl":"sounds/tracks/utouto.mp3",
-    "trackname":"feat. Artist Here",
-    "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
+    "trackname":"feat. Michael Tolan",
+    "trackinfo":"M. Tolan, J. Minadeo",
     "pedalinfo":"Otherworldly Reverberator",
     "sampleurl":"sounds/utouto.zip",
     "eqdurl":"https://www.earthquakerdevices.com/afterneath"
@@ -256,6 +256,22 @@
     "eqdurl":"https://www.earthquakerdevices.com/the-depths"
   },
   {
+    "name":"Zap Machine",
+    "nameid":"zapmachine",
+    "hex":"#b5dcb5",
+    "onohiragana":"びりびり",
+    "onomoname":"びりびり Biri Biri",
+    "onomoid":"biribiri",
+    "onomoDesc":"1. Describes the feeling one gets from an electric shock or the like. 2. Describes the sound or act of tearing something up forcefully. Ripping",
+    "onomoDescJP":"PLACEHOLDER - 泡立つ音や様子。泡を出しながら沈んでいくさま。",
+    "beaturl":"sounds/tracks/biribiri.mp3",
+    "trackname":"feat. Taka Tozowa",
+    "trackinfo":"T. Tozowa, J. Minadeo",
+    "pedalinfo":"Hybrid Dirt Device",
+    "sampleurl":"sounds/biribiri.zip",
+    "eqdurl":"https://www.earthquakerdevices.com/zap-machine"
+  },
+  {
     "name":"The Bunnies",
     "nameid":"thebunnies",
     "hex":"#8f0148",
@@ -286,21 +302,5 @@
     "pedalinfo":"Julianne Robbins",
     "sampleurl":"sounds/julie.zip",
     "eqdurl":"https://www.earthquakerdevices.com/"
-  },
-  {
-    "name":"Zap Machine",
-    "nameid":"zapmachine",
-    "hex":"#b5dcb5",
-    "onohiragana":"びりびり",
-    "onomoname":"びりびり Buli Buli",
-    "onomoid":"bilibili",
-    "onomoDesc":"PLACEHOLDER - Describes the sound or act of bubbles or foam rising or of something giving off bubbles while sinking.",
-    "onomoDescJP":"PLACEHOLDER - 泡立つ音や様子。泡を出しながら沈んでいくさま。",
-    "beaturl":"sounds/tracks/bukubuku.mp3",
-    "trackname":"feat. Artist Here",
-    "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
-    "pedalinfo":"Analog Optical Vibe Machine",
-    "sampleurl":"sounds/bukubuku.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/zap-machine"
   }
 ]
