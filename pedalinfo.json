@@ -224,6 +224,22 @@
     "eqdurl":"https://www.earthquakerdevices.com/afterneath"
   },
   {
+    "name":"Afterneath Module",
+    "nameid":"afterneathmodule",
+    "hex":"#cfd696",
+    "onohiragana":"うとうと",
+    "onomoname":"うとうと ??? ???",
+    "onomoid":"utouto",
+    "onomoDesc":"?? What is this Gonna Be?",
+    "onomoDescJP":"いねむりしている様子。",
+    "beaturl":"sounds/tracks/utouto.mp3",
+    "trackname":"feat. Karl Vorndran & Curt Brown",
+    "trackinfo":"K. Vorndran, C. Brown, J. Minadeo",
+    "pedalinfo":"Otherworldly Reverberator",
+    "sampleurl":"sounds/utouto.zip",
+    "eqdurl":"https://www.earthquakerdevices.com/afterneathmodule"
+  },
+  {
     "name":"Hoof Fuzz",
     "nameid":"hooffuzz",
     "hex":"#ab8c4d",
@@ -249,8 +265,8 @@
     "onomoDesc":"Describes the sound or act of bubbles or foam rising or of something giving off bubbles while sinking.",
     "onomoDescJP":"泡立つ音や様子。泡を出しながら沈んでいくさま。",
     "beaturl":"sounds/tracks/bukubuku.mp3",
-    "trackname":"feat. Artist Here",
-    "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
+    "trackname":"feat. Joe Golden",
+    "trackinfo":"J. Golden, J. Stillman, C. Haren, J. Minadeo",
     "pedalinfo":"Analog Optical Vibe Machine",
     "sampleurl":"sounds/bukubuku.zip",
     "eqdurl":"https://www.earthquakerdevices.com/the-depths"
@@ -270,6 +286,22 @@
     "pedalinfo":"Hybrid Dirt Device",
     "sampleurl":"sounds/biribiri.zip",
     "eqdurl":"https://www.earthquakerdevices.com/zap-machine"
+  },
+  {
+    "name":"Night Wire",
+    "nameid":"nightwire",
+    "hex":"#b5dcb5",
+    "onohiragana":"どんどん",
+    "onomoname":"どんどん Don Don",
+    "onomoid":"dondon",
+    "onomoDesc":"1. Describes a continuous loud sound like the beating of a drum or someone stamping their feet on the floor. 2. Describes something that proceeds steadily or someone going ahead with something without hesitation",
+    "onomoDescJP":"PLACEHOLDER - 泡立つ音や様子。泡を出しながら沈んでいくさま。",
+    "beaturl":"sounds/tracks/dondon.mp3",
+    "trackname":"feat. Full Blown Kirk",
+    "trackinfo":"J. Randall, B. Lashua, K. Tortora, J. Minadeo",
+    "pedalinfo":"Harmonic Tremolo",
+    "sampleurl":"sounds/dondon.zip",
+    "eqdurl":"https://www.earthquakerdevices.com/night-wire"
   },
   {
     "name":"The Bunnies",
