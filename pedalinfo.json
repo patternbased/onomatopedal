@@ -320,6 +320,22 @@
     "eqdurl":"https://www.earthquakerdevices.com/erupter"
   },
   {
+    "name":"Pyramids",
+    "nameid":"pyramids",
+    "hex":"#b5dcb5",
+    "onohiragana":"じりじり",
+    "onomoname":"じりじり Jiri Jiri",
+    "onomoid":"jirijiri",
+    "onomoDesc":"1. Describes something that draws closer little by little. 2. Describes the scorching sun. 3. Describes something that has been burned. 4. Describes someone running out of patience and fretting.",
+    "onomoDescJP":"PLACEHOLDER - 泡立つ音や様子。泡を出しながら沈んでいくさま。",
+    "beaturl":"sounds/tracks/jirijiri.mp3",
+    "trackname":"feat. Taka Tozowa, Corey Haren and Jamie Stillman",
+    "trackinfo":"T. Tozowa, C. Haren, J. Stillman, J. Minadeo",
+    "pedalinfo":"Stereo Flangin Device",
+    "sampleurl":"sounds/jirijiri.zip",
+    "eqdurl":"https://www.earthquakerdevices.com/pyramids"
+  },
+  {
     "name":"The Bunnies",
     "nameid":"thebunnies",
     "hex":"#8f0148",
