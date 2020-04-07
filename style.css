@@ -465,8 +465,8 @@
 	img.pedalList {
 		margin: 0;
 		display: inline-block;
-		padding: 36px;
-		width: 240px;
+		padding: 30px;
+		width: 200px;
 		cursor: pointer;
 	}
 
@@ -476,18 +476,23 @@
 		z-index: 1000;
 		visibility: hidden
 	}
+	@media(max-width: 1200px) {
+		img.pedalList {
+			padding: 10px;
+		}
+	}
 
-	@media(max-width: 960px) {
+	@media(max-width: 1024px) {
 
 		#pedalTable {
 		width: 100%;
-		max-width: 839px;
+		max-width: 900px;
 		margin-top: 50PX;
 		}
 
 		img.pedalList {
 			padding: 33px;
-			width: 220px;
+			width: 240px;
 			max-width: 30%;
 		}
 	}

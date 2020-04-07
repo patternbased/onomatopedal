@@ -20,17 +20,12 @@ window.onload = function() {
   };
     
 // ===== Top page Pedal Shuffle =====
-if ($(window).width() < 960) {
+
 function randomize() {
   var allBanners = $('#pedalTable img');
-  shuffle(allBanners.hide()).slice(13).show();    
+  shuffle(allBanners.hide()).slice(17).show();    
 }
-} else {
-function randomize() {
-  var allBanners = $('#pedalTable img');
-  shuffle(allBanners.hide()).slice(14).show();    
-}
-}
+
 $('#randomDiv').click(randomize);
 randomize();
 
