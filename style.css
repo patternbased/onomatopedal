@@ -933,16 +933,55 @@
 		margin-right: 10px;
 	}
 
-/* Carousel of other pedals */
+/* More pedals */
 
 	#morePedals {
 		display: block;
-		background: rgba(0, 0, 0, 0.5);
-		width: 100%;
-		padding: 0;
+		background: rgba(0, 0, 0, 0.3);
+		width: calc(100% - 40px);
+		height: 160px;
+		padding: 20px;
 		overflow: hidden;
 		margin-top: 60px;
+		position: relative;
+		border-top: #838080 1px solid;
 	}
+
+	#pedalShelf {
+		width: 1140px;
+		max-width: 80%;
+		margin: 0 auto;
+	}
+
+	.morePedal {
+		height: 120px;
+		margin: 20px;
+	}
+	#pedalAccordionButton {
+		height: 40px;
+		background-color: #838080;
+		padding-top: 10px;
+		margin-bottom: 40px;
+		font-size: 1.2em;
+	}
+
+	@media(max-width: 960px) {
+		#pedalShelf {
+			max-width: 100%;
+		}
+	}
+
+	@media(max-width: 600px) {
+		#morePedals {
+			height: 290px;
+		}
+		.morePedal {
+			height: 100px;
+			margin: 20px;
+		}
+	}
+
+/* Carousel related code 1/3
 
 	#carouselWindow {
 		height: auto;
@@ -1005,6 +1044,7 @@
 			background-image: none;
 		}
 	}
+*/	
 
 /* showAll Button */
 

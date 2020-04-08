@@ -55,7 +55,7 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   var onomoHeaderFullString = "<img src='images/pedalHeader-ono.svg'>" + pedalData[pedalNumber].onohiragana + " +<img src='images/pedalHeader-pedal.svg'>" + pedalNameString;
   var eqdPedalLinkString = pedalData[pedalNumber].eqdurl;
   var beatUrlString = pedalData[pedalNumber].beaturl;
-  var samePedal = $('#carousel').find('[data-pedal-id="' + pedalNumber + '"]');
+  var samePedal = $('#allPedalsInShelf').find('[data-pedal-id="' + pedalNumber + '"]');
   var sampleDownloadString = pedalData[pedalNumber].sampleurl;
   var pedalPageTitleString = "OnomatoPedal - " + pedalNameString + " Sampler";
   var aboutBunniesString = "<img src='images/aboutBunnies.svg'><span>Check Out Bunnies</span>";
@@ -89,6 +89,50 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   }
 
   $(samePedal).css("display", "none");
+
+  $('#pedalAccordionButton').on('mouseenter',function () {
+    $(this).css({
+      'background-color': onomoColorString,
+      'transition-duration':'300ms'
+    });
+  });
+
+  $('#pedalAccordionButton').on('mouseleave',function() {
+    $(this).css({
+      'background-color': '#838080',
+      'transition-duration':'300ms'
+    });
+  });
+
+  $('#pedalAccordionButton').on('click',function() {
+    if($(this).hasClass('closeAccordion')) {
+      if (($(window).width() < 600)) {
+        $('#morePedals').css({
+          'height':'290px',
+          'transition-duration':'300ms'
+        });
+      } else {
+        $('#morePedals').css({
+          'height':'160px',
+          'transition-duration':'300ms'
+        });
+      }
+    $(this).html('SEE MORE PEDALS');
+    $(this).removeClass('closeAccordion');
+    $(this).addClass('openAccordion');
+  } else {
+    $('#morePedals').css({
+      'height':'auto',
+      'transition-duration':'300ms'
+    });
+    $(this).html('SEE LESS PEDALS');
+    $(this).removeClass('openAccordion');
+    $(this).addClass('closeAccordion');
+    $('html, body').animate({
+      scrollTop: $(this).offset().top
+    }, 1000);
+  }
+  });
 
   $(sampleDownload).click(function(e) {
     e.preventDefault();
@@ -220,39 +264,40 @@ pedalRequest.send();
 
 // ===== End of rendering HTML while loading =====
 
-// ===== More Pedals Carousel in Pedal.html =====
 
-$('#carousel').slick({
-prevArrow: $('.prev'),
-nextArrow: $('.next'),
-infinite: true,
-speed: 300,
-slidesToShow: 8,
-slidesToScroll: 4,
-responsive: [
-  {
-    breakpoint: 1440,
-    settings: {
-      slidesToShow: 6,
-      slidesToScroll: 3,
-    }
-  },
-  {
-    breakpoint: 687,
-    settings: {
-      slidesToShow: 4,
-      slidesToScroll: 2,
-    }
-  },
-  {
-    breakpoint: 400,
-    settings: {
-      slidesToShow: 2,
-      slidesToScroll: 2,
-    }
-  }
-]
-});
+// // ===== More Pedals Carousel in Pedal.html =====
+
+// $('#carousel').slick({
+// prevArrow: $('.prev'),
+// nextArrow: $('.next'),
+// infinite: true,
+// speed: 300,
+// slidesToShow: 8,
+// slidesToScroll: 4,
+// responsive: [
+//   {
+//     breakpoint: 1440,
+//     settings: {
+//       slidesToShow: 6,
+//       slidesToScroll: 3,
+//     }
+//   },
+//   {
+//     breakpoint: 687,
+//     settings: {
+//       slidesToShow: 4,
+//       slidesToScroll: 2,
+//     }
+//   },
+//   {
+//     breakpoint: 400,
+//     settings: {
+//       slidesToShow: 2,
+//       slidesToScroll: 2,
+//     }
+//   }
+// ]
+// });
 
 // ===== Pedal page : MODE =====
 // ===== Full browser mode in Pedal.html =====

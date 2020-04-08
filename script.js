@@ -142,7 +142,7 @@ $(document).on('click', '#orlandoTrigger', function () {
 
 // ===== Link to Pedal with PedalID as URL Parameter =====
 
-var pedalBtn = $('.slide, .pedalList');
+var pedalBtn = $('.slide, .pedalList, .morePedal');
 
 $(pedalBtn).click(function() {
 // if (($(window).width() < 960) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
