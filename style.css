@@ -84,8 +84,6 @@
 	}
 
 	.language img {
-		width: 30px;
-		height: 30px;
 		display: inline;
 		margin-right: 3px;
 	}
@@ -865,6 +863,7 @@
 		height: 50px;
 		border-radius: 25px;
 		cursor: pointer;
+		color: #1f1f1f;
 	}
 
 	#actions li.actionBtn span, #showAll span, #pauseMobile span {
