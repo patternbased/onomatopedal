@@ -12,8 +12,10 @@
     "trackname":"feat. DJ Kevlar",
     "trackinfo":"K. Carr, J. Minadeo",
     "pedalinfo":"Polyphonic Pitch Mesmerizer",
+    "pedalinfoJP":"ポリフォニックピッチシフター",
     "sampleurl":"sounds/ukiuki.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/rainbow-machine"
+    "eqdurl":"https://www.earthquakerdevices.com/rainbow-machine",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/rainbow-machine"
   },
   {
     "name":"Acapulco Gold",
@@ -28,8 +30,10 @@
     "trackname":"feat. Billy Dixon & Low in the Sky",
     "trackinfo":"B. Dixon, C. Farrow, P. McNulty, J. Minadeo",
     "pedalinfo":"Power Amp Distortion",
+    "pedalinfoJP":"パワーアンプ ディストーション",
     "sampleurl":"sounds/zakuzaku.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/acapulco-gold"
+    "eqdurl":"https://www.earthquakerdevices.com/acapulco-gold",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/acapulco-gold"
   },
   {
     "name":"Avalanche Run",
@@ -44,8 +48,10 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Stereo Reverb & Delay with Tap Tempo",
+    "pedalinfoJP":"ステレオディレイ＆リバーブ",
     "sampleurl":"sounds/kotsukotsu.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/avalanche-run"
+    "eqdurl":"https://www.earthquakerdevices.com/avalanche-run",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/avalanche-run"
   },
   {
     "name":"Arpanoid",
@@ -60,8 +66,10 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Polyphonic Pitch Arpeggiator",
+    "pedalinfoJP":"ポリフォニック ピッチ アルペジエータ",
     "sampleurl":"sounds/giragira.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/arpanoid"
+    "eqdurl":"https://www.earthquakerdevices.com/arpanoid",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/arpanoid"
   },
   {
     "name":"Data Corrupter",
@@ -76,8 +84,10 @@
     "trackname":"feat. Corey Haren",
     "trackinfo":"C. Haren, J. Minadeo",
     "pedalinfo":"Modulated Monophonic Harmonizing PLL",
+    "pedalinfoJP":"ハーモナイジングPLLシンセサイザー",
     "sampleurl":"sounds/garagara.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/data-corrupter"
+    "eqdurl":"https://www.earthquakerdevices.com/data-corrupter",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/data-corrupter"
   },
   {
     "name":"Disaster Transport Sr",
@@ -92,8 +102,10 @@
     "trackname":"feat. Michael Tolan",
     "trackinfo":"M. Tolan, J. Minadeo",
     "pedalinfo":"Advanced Modulated Delay & Reverb Machine",
+    "pedalinfoJP":"モジュレーションディレイ&リバーブ",
     "sampleurl":"sounds/suyasuya.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/disaster-transport-sr"
+    "eqdurl":"https://www.earthquakerdevices.com/disaster-transport-sr",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/disaster-transport-sr"
   },
   {
     "name":"Dream Crusher",
@@ -108,8 +120,10 @@
     "trackname":"feat. Taka Tozawa",
     "trackinfo":"T. Tozawa, J. Minadeo",
     "pedalinfo":"Germanium Fuzz (Discontinued)",
+    "pedalinfoJP":"ゲルマニウムファズ（製造終了）",
     "sampleurl":"sounds/ujauja.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/dream-crusher"
+    "eqdurl":"https://www.earthquakerdevices.com/dream-crusher",
+    "eqdurlJP":"https://www.earthquakerdevices.com/dream-crusher"
   },
   {
     "name":"Hoof Reaper",
@@ -124,8 +138,10 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Double Fuzz with Octave Up",
+    "pedalinfoJP":"オクターブファズ",
     "sampleurl":"sounds/kachikachi.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/hoof-reaper"
+    "eqdurl":"https://www.earthquakerdevices.com/hoof-reaper",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/hoof-reaper"
   },
   {
     "name":"Hummingbird",
@@ -140,8 +156,10 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Repeat Percussions",
+    "pedalinfoJP":"リピート パーカッション",
     "sampleurl":"sounds/bunbun.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/hummingbird"
+    "eqdurl":"https://www.earthquakerdevices.com/hummingbird",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/hummingbird"
   },
   {
     "name":"Levitation",
@@ -156,8 +174,10 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Reverberation Machine",
+    "pedalinfoJP":"サイケデリックリバーブ",
     "sampleurl":"sounds/potapota.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/levitation"
+    "eqdurl":"https://www.earthquakerdevices.com/levitation",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/levitation"
   },
   {
     "name":"Organizer",
@@ -172,8 +192,10 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Polyphonic Organ Emulator",
+    "pedalinfoJP":"ポリフォニック オルガン エミュレータ",
     "sampleurl":"sounds/tsurutsuru.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/organizer"
+    "eqdurl":"https://www.earthquakerdevices.com/organizer",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/organizer"
   },
   {
     "name":"Palisades",
@@ -188,8 +210,10 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Mega Ultimate Overdrive",
+    "pedalinfoJP":"オーバードライブ",
     "sampleurl":"sounds/guchagucha.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/palisades"
+    "eqdurl":"https://www.earthquakerdevices.com/palisades",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/palisades"
   },
   {
     "name":"Spatial Delivery",
@@ -204,8 +228,10 @@
     "trackname":"feat. Ralph Carney and Microstructures",
     "trackinfo":"R. Carney, J. Trombetta, C. Farrow, J. Minadeo",
     "pedalinfo":"Envelope Filter with Sample & Hold",
+    "pedalinfoJP":"エンベロープフィルター",
     "sampleurl":"sounds/pikapika.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/spatial-delivery"
+    "eqdurl":"https://www.earthquakerdevices.com/spatial-delivery",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/spatial-delivery"
   },
   {
     "name":"Afterneath",
@@ -220,8 +246,10 @@
     "trackname":"feat. Michael Tolan",
     "trackinfo":"M. Tolan, J. Minadeo",
     "pedalinfo":"Otherworldly Reverberator",
+    "pedalinfoJP":"ショートディレイリバーブ",
     "sampleurl":"sounds/utouto.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/afterneath"
+    "eqdurl":"https://www.earthquakerdevices.com/afterneath",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/afterneath"
   },
   {
     "name":"Afterneath Module",
@@ -229,15 +257,17 @@
     "hex":"#8896ab",
     "onohiragana":"こそこそ",
     "onomoname":"こそこそ Koso Koso",
-    "onomoid":"utouto",
+    "onomoid":"kosokoso",
     "onomoDesc":"Describes stealthy movement to avoid being discovered by others. Like a thief in the night.",
     "onomoDescJP":"人に知られないように、ひそかに行う様子。",
     "beaturl":"sounds/tracks/kosokoso.mp3",
     "trackname":"feat. Karl Vorndran & Curt Brown",
     "trackinfo":"K. Vorndran, C. Brown, J. Golden, J. Minadeo",
     "pedalinfo":"Otherworldly Reverberator",
+    "pedalinfoJP":"リバーブ",
     "sampleurl":"sounds/kosokoso.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/afterneathmodule"
+    "eqdurl":"https://www.earthquakerdevices.com/afterneathmodule",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/afterneath-eurorack-module"
   },
   {
     "name":"Hoof Fuzz",
@@ -252,8 +282,10 @@
     "trackname":"feat. Artist Here",
     "trackinfo":"F. Lastname, J. Lastname, T. Lastname, R. Lastname",
     "pedalinfo":"Hybrid Fuzz",
+    "pedalinfoJP":"ハイブリッド ファズ",
     "sampleurl":"sounds/zarazara.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/hoof"
+    "eqdurl":"https://www.earthquakerdevices.com/hoof",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/hoof"
   },
   {
     "name":"The Depths",
@@ -268,8 +300,10 @@
     "trackname":"feat. Joe Golden",
     "trackinfo":"J. Golden, J. Stillman, C. Haren, J. Minadeo",
     "pedalinfo":"Analog Optical Vibe Machine",
+    "pedalinfoJP":"アナログ オプティカル バイブマシーン",
     "sampleurl":"sounds/bukubuku.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/the-depths"
+    "eqdurl":"https://www.earthquakerdevices.com/the-depths",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/the-depths"
   },
   {
     "name":"Zap Machine",
@@ -284,8 +318,10 @@
     "trackname":"feat. Taka Tozowa",
     "trackinfo":"T. Tozowa, J. Minadeo",
     "pedalinfo":"Hybrid Dirt Device",
+    "pedalinfoJP":"ハイブリッドダートデバイス",
     "sampleurl":"sounds/biribiri.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/zap-machine"
+    "eqdurl":"https://www.earthquakerdevices.com/zap-machine",
+    "eqdurlJP":"https://www.earthquakerdevices.com/zap-machine"
   },
   {
     "name":"Night Wire",
@@ -300,8 +336,10 @@
     "trackname":"feat. Full Blown Kirk",
     "trackinfo":"J. Randall, B. Lashua, K. Tortora, J. Minadeo",
     "pedalinfo":"Harmonic Tremolo",
+    "pedalinfoJP":"ハーモニックトレモロ",
     "sampleurl":"sounds/dondon.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/night-wire"
+    "eqdurl":"https://www.earthquakerdevices.com/night-wire",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/night-wire"
   },
   {
     "name":"Erupter",
@@ -316,8 +354,10 @@
     "trackname":"feat. Jamie Stillman and Jack Randall",
     "trackinfo":"J. Stillman, J. Randall, J. Minadeo",
     "pedalinfo":"Ultimate Fuzz Tone",
+    "pedalinfoJP":"https://www.earthquakerdevices.jp/erupter",
     "sampleurl":"sounds/gorigori.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/erupter"
+    "eqdurl":"https://www.earthquakerdevices.com/erupter",
+    "eqdurlJP":"究極のファズトーン"
   },
   {
     "name":"Pyramids",
@@ -332,8 +372,10 @@
     "trackname":"feat. Taka Tozowa, Corey Haren and Jamie Stillman",
     "trackinfo":"T. Tozowa, C. Haren, J. Stillman, J. Minadeo",
     "pedalinfo":"Stereo Flangin Device",
+    "pedalinfoJP":"ステレオ フランジャー",
     "sampleurl":"sounds/jirijiri.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/pyramids"
+    "eqdurl":"https://www.earthquakerdevices.com/pyramids",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/pyramids"
   },
   {
     "name":"The Bunnies",
@@ -348,8 +390,10 @@
     "trackname":"feat. Bunny San Tachi",
     "trackinfo":"S. Kitajima, J. Minadeo",
     "pedalinfo":"Corabelle and Orlando",
+    "pedalinfoJP":"コラベルとオーランド",
     "sampleurl":"sounds/pyonpyon.zip",
-    "eqdurl":"https://www.bunnysantachi.com/"
+    "eqdurl":"https://www.bunnysantachi.com/",
+    "eqdurlJP":"https://www.bunnysantachi.com/"
   },
   {
     "name":"Julie",
@@ -364,7 +408,9 @@
     "trackname":"feat. Bunny San Tachi",
     "trackinfo":"S. Kitajima, J. Minadeo",
     "pedalinfo":"Julianne Robbins",
+    "pedalinfoJP":"",
     "sampleurl":"sounds/julie.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/"
+    "eqdurl":"https://www.earthquakerdevices.com/",
+    "eqdurlJP":""
   }
 ]

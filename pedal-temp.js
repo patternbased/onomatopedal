@@ -43,7 +43,7 @@ var pedalData = JSON.parse(pedalRequest.responseText);
 
   // render HTML
 
-  var onomoNameString = "<img src='images/onoName.svg'>" + pedalData[pedalNumber].onomoname;
+  var onomoNameString = "<img src='images/onoName.svg'>" + pedalData[pedalNumber].onomoname + "<img class='playPronBtn' src='images/speaker.svg'>";
   var pedalNameString = pedalData[pedalNumber].name;
   var pedalImgString = pedalData[pedalNumber].nameid;
   var pedalDescString = pedalData[pedalNumber].onomoDesc;
@@ -54,6 +54,7 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   var onomoHeaderString = pedalData[pedalNumber].onohiragana + " + " + pedalNameString;
   var onomoHeaderFullString = "<img src='images/pedalHeader-ono.svg'>" + pedalData[pedalNumber].onohiragana + " +<img src='images/pedalHeader-pedal.svg'>" + pedalNameString;
   var eqdPedalLinkString = pedalData[pedalNumber].eqdurl;
+  var eqdPedalLinkStringJP = pedalData[pedalNumber].eqdurlJP;
   var beatUrlString = pedalData[pedalNumber].beaturl;
   var samePedal = $('#allPedalsInShelf').find('[data-pedal-id="' + pedalNumber + '"]');
   var sampleDownloadString = pedalData[pedalNumber].sampleurl;
@@ -62,18 +63,21 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   var pedalNameStringIcon =  "<img src='images/pedalName.svg'>" + pedalData[pedalNumber].name;
   var bunnyNameStringIcon =  "<img src='images/bunnyName.svg'>" + pedalData[pedalNumber].name;
   var pedalInfoString = pedalData[pedalNumber].pedalinfo;
+  var pedalInfoStringJP = pedalData[pedalNumber].pedalinfoJP;
+  var onomoPronString = "sounds/pron/pron_" + pedalData[pedalNumber].onomoid + ".mp3"
 
   $(pedalPageTitle).html(pedalPageTitleString);
   $(onomoName).html(onomoNameString).css("color", onomoColorString);
   $(pedalImg).attr("src","images/pedalsOnly/" + pedalImgString + "@2x.png");
   if (localStorage.getItem("language") == 'jp') {  
     $(pedalDesc).html(pedalDescStringJP);
+    $(pedalInfo).html(pedalInfoStringJP);
   } else {
     $(pedalDesc).html(pedalDescString);
+    $(pedalInfo).html(pedalInfoString);
   }
   $(trackName).html(trackNameString).css("color", onomoColorString);
   $(trackInfo).html(trackInfoString);
-  $(pedalInfo).html(pedalInfoString);
 
   $(onomoColor).find('span').css("color", onomoColorString);
   $(onomoHeader).css("background-color", onomoColorString);
@@ -84,7 +88,11 @@ var pedalData = JSON.parse(pedalRequest.responseText);
     $(eqdPedalLink).html(aboutBunniesString).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
     $(pedalName).html(bunnyNameStringIcon).css("color", onomoColorString);
   } else {
-    $(eqdPedalLink).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
+    if (localStorage.getItem("language") == 'jp') {  
+      $(eqdPedalLink).on("click",function(){window.open(eqdPedalLinkStringJP,'_blank');});  
+    } else {
+      $(eqdPedalLink).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
+    }
     $(pedalName).html(pedalNameStringIcon).css("color", onomoColorString);
   }
 
@@ -213,6 +221,17 @@ $('.jp').click(function(){
   
 $(document).ready(function() {
   playBeat();
+});
+
+  // ===== Play Onomato Pronouciation =====
+
+function playPron(params) {
+  var pronAudio = document.createElement('audio');
+  pronAudio.setAttribute('src', onomoPronString);
+  pronAudio.play();
+};
+$('.playPronBtn').click(function (){
+  playPron();
 });
 
   // ===== Change hex on Mobile view =====

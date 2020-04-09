@@ -820,7 +820,7 @@
 		width: 24px;
 		display: inline;
 		transform: translateY(20%);
-		margin-right: 10px;
+		margin: 0 10px;
 	}
 	#onomoName {
 		color: #838080;
