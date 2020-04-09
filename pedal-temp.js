@@ -32,10 +32,11 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   var pedalDesc = $('#onomoInfo');
   var trackName = $('#trackName');
   var trackInfo = $('#trackInfo');
-  var onomoColor = $('p#onomoInfo');
+  var onomoColor = $('#onomoInfo');
   var onomoHeader = $('#OnomoPedalHeader');
   var onomoPlaymodeHeader = $('.title-PlayMode');
-  var eqdPedalLink = $('li#aboutPedal');
+  var eqdPedalLink = $('#aboutPedal');
+  var eqdPedalLinkBtn = $('#aboutPedalBtn');
   var sampleDownload = $('#download');
   var pedalPageTitle = $('#pedalPageTitle');
   var pedalName = $('#pedalName');
@@ -64,7 +65,7 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   var bunnyNameStringIcon =  "<img src='images/bunnyName.svg'>" + pedalData[pedalNumber].name;
   var pedalInfoString = pedalData[pedalNumber].pedalinfo;
   var pedalInfoStringJP = pedalData[pedalNumber].pedalinfoJP;
-  var onomoPronString = "sounds/pron/pron_" + pedalData[pedalNumber].onomoid + ".mp3"
+  var onomoPronString = "sounds/pron/pron_" + pedalData[pedalNumber].onomoid + ".mp3";
 
   $(pedalPageTitle).html(pedalPageTitleString);
   $(onomoName).html(onomoNameString).css("color", onomoColorString);
@@ -85,14 +86,15 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   $(onomoPlaymodeHeader).html(onomoHeaderString).css("color", onomoColorString);
 
   if(pedalNumber == 21) {
-    $(eqdPedalLink).html(aboutBunniesString).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
+    $(eqdPedalLink).html(aboutBunniesString);
+    $(eqdPedalLinkBtn).attr("href", eqdPedalLinkString);
     $(pedalName).html(bunnyNameStringIcon).css("color", onomoColorString);
   } else {
-    if (localStorage.getItem("language") == 'jp') {  
-      $(eqdPedalLink).on("click",function(){window.open(eqdPedalLinkStringJP,'_blank');});  
-    } else {
-      $(eqdPedalLink).on("click",function(){window.open(eqdPedalLinkString,'_blank');});
-    }
+    if (localStorage.getItem("language") == 'jp') { 
+      $(eqdPedalLinkBtn).attr("href", eqdPedalLinkStringJP);
+     } else {
+      $(eqdPedalLinkBtn).attr("href", eqdPedalLinkString);
+        }
     $(pedalName).html(pedalNameStringIcon).css("color", onomoColorString);
   }
 
@@ -146,11 +148,16 @@ var pedalData = JSON.parse(pedalRequest.responseText);
     e.preventDefault();
     window.location.href = sampleDownloadString;
 });
+
 $('.en').click(function(){
   $(pedalDesc).html(pedalDescString);
+  $(pedalInfo).html(pedalInfoString);
+  $(eqdPedalLinkBtn).attr("href", eqdPedalLinkString);
 });
 $('.jp').click(function(){
   $(pedalDesc).html(pedalDescStringJP);
+  $(pedalInfo).html(pedalInfoStringJP);
+  $(eqdPedalLinkBtn).attr("href", eqdPedalLinkStringJP);
 });
 
   // ===== Action button animation =====
