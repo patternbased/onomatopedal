@@ -1149,7 +1149,12 @@ div.tapKey:active {
 .bodyText p {
 		text-align: justify center;
 		font-size: 16px;
-		line-height: 21px;
+		line-height: 28px;
+}
+
+.bodyText p a {
+	color: #DA2C5E;
+	font-weight: bold;
 }
 
 .postPageWidth {
