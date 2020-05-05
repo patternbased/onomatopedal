@@ -313,18 +313,27 @@
 	#credit {
 		padding-bottom: 80px;
 	}
-	.pedalLineup {
+	.pedalLineup, .pedalLineup2 {
 		width: 100%;
 		height: 80px;
 		margin: 0;
 		padding: 0;
 		border-top: #242424 15px solid;
 		border-bottom: #242424 15px solid;
-		background: #242424 url(images/OnomonoPedals-six-TR.png) no-repeat;
-		background-size: 100%;
-		background-position-y: center;
 		display: block;
 	}
+
+	.pedalLineup {
+		background: #242424 url(images/OnomonoPedals-six-TR_V2.png) no-repeat;
+		background-size: 100%;
+		background-position-y: center;
+	}
+	.pedalLineup2 {
+		background: #242424 url(images/OnomonoPedals-six-TR_V3.png) no-repeat;
+		background-size: 100%;
+		background-position-y: center;
+	}
+
 	#bunniesPedals {
 		position: relative;
 	}
