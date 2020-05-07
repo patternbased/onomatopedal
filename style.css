@@ -942,6 +942,14 @@
 		margin-right: 10px;
 	}
 
+	#pedal p a {
+	color: #838080;
+	}
+
+	#pedal h3 a {
+		color:inherit;
+	}
+
 /* More pedals */
 
 	#morePedals {
@@ -989,71 +997,6 @@
 			margin: 20px;
 		}
 	}
-
-/* Carousel related code 1/3
-
-	#carouselWindow {
-		height: auto;
-		width: 80vw;
-		display: inline-block;
-		position: relative;
-	}
-
-	#carousel {
-		width: calc(80vw - 100px);
-		overflow: hidden;
-		margin: 0 50px;
-	}
-
-	.slide{
-		height: auto;
-		width: auto;
-		margin: 20px;
-		cursor: pointer;
-	}
-
-	.arrows {
-		display: inline-block;
-		height: 100%;
-		width: 17px;
-		margin: 0 10px;
-		position: absolute;
-		bottom: 0;
-		background-repeat: no-repeat;
-		background-position-y: center;
-	}
-
-	.next {
-		background-image: url('images/nextArrow.svg');
-		opacity: 0.2;
-		right: 0;
-	}
-
-	.prev {
-		background-image: url('images/prevArrow.svg');
-		opacity: 0.2;
-		left: 0;
-	}
-
-	.next:hover, .prev:hover {
-		opacity: 0.5;
-		transition-duration: 100ms;
-	}
-
-	.transition {
-		transition: .4s;
-	}
-
-	@media(max-width: 960px) {
-		#carouselWindow, #carousel {
-			width: 100vw;
-			margin: 0;
-		}
-		#carouselWindow .next, #carouselWindow .prev {
-			background-image: none;
-		}
-	}
-*/	
 
 /* showAll Button */
 
