@@ -291,40 +291,6 @@ pedalRequest.send();
 // ===== End of rendering HTML while loading =====
 
 
-// // ===== More Pedals Carousel in Pedal.html =====
-
-// $('#carousel').slick({
-// prevArrow: $('.prev'),
-// nextArrow: $('.next'),
-// infinite: true,
-// speed: 300,
-// slidesToShow: 8,
-// slidesToScroll: 4,
-// responsive: [
-//   {
-//     breakpoint: 1440,
-//     settings: {
-//       slidesToShow: 6,
-//       slidesToScroll: 3,
-//     }
-//   },
-//   {
-//     breakpoint: 687,
-//     settings: {
-//       slidesToShow: 4,
-//       slidesToScroll: 2,
-//     }
-//   },
-//   {
-//     breakpoint: 400,
-//     settings: {
-//       slidesToShow: 2,
-//       slidesToScroll: 2,
-//     }
-//   }
-// ]
-// });
-
 // ===== Pedal page : MODE =====
 // ===== Full browser mode in Pedal.html =====
 
