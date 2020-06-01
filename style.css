@@ -1023,11 +1023,11 @@
 
 	@media(max-width: 600px) {
 		#morePedals {
-			height: 270px;
+			height: 280px;
 		}
 		.morePedal {
-			height: 90px;
-			margin: 20px 15px;
+			height: 95px;
+			margin: 20px;
 		}
 	}
 

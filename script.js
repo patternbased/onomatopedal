@@ -190,13 +190,13 @@ $('.jp').click(function(){
 
 
 // Detect IE browser and show an alert
-function isIE(){
-  return window.navigator.userAgent.match(/(MSIE|Trident)/);
-};
+function is_IE() {
+  return (window.navigator.userAgent.match(/MSIE|Trident/) !== null);
+}
 
 //function to show alert if it's IE
 function ShowIEAlert(){
-if(isIE()){
+if(is_IE()){
 alert("Unspported Browser! OnomatoPedal won't work great in Internet Explore. Use Microsoft Edge or Google Chrome for full experience.");
 }
 };
