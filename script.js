@@ -1,3 +1,18 @@
+// Detect IE browser and show an alert
+function isIE() {
+  const ua = window.navigator.userAgent; //Check the userAgent property of the window.navigator object
+  const msie = ua.indexOf('MSIE '); // IE 10 or older
+  const trident = ua.indexOf('Trident/'); //IE 11
+  return (msie > 0 || trident > 0);
+}
+
+//function to show alert if it's IE
+function ShowIEAlert(){
+  if(isIE()){
+     alert("Unspported Browser! OnomatoPedal won't work great in Internet Explore. Use Microsoft Edge or Google Chrome for full experience.");
+  }
+}
+
 // Make the modal closable once the page is fully loaded
 window.onload = function() {
   $('.loadingSpinner, #modalBG').css('display','none');
@@ -69,8 +84,10 @@ languageRequest.onload = function() {
     $('#freeSamplePack').html( languageData.freeSamplePack );
     $('#credit').html( languageData.credits );
     $('#modalMessage').html(languageData.modalMessage);
+    $('#bannerTop').html(languageData.bannerEqdMerch);
     $('#bannerLeft').html(languageData.bannerVerTwo);
     $('#bannerRight').html(languageData.bannerAboutEqd);
+    $('#bannerTopLink').attr("href", languageData.bannerTopUrl);
     $('#bannerLeftLink').attr("href", languageData.bannerLeftUrl);
     $('#bannerRightLink').attr("href", languageData.bannerRightUrl);
     $('#verTwoText').html(languageData.versionTwoBody);
