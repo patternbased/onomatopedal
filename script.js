@@ -197,7 +197,7 @@ function is_IE() {
 //function to show alert if it's IE
 function ShowIEAlert(){
 if(is_IE()){
-alert("Unspported Browser!\n\nOnomatoPedal won't work great in Internet Explore. Use Microsoft Edge or Google Chrome for full experience.\n\nInternet Explore／インターネットエクスプローラーでは、このサイトは正しく動作しません。Microsoft EdgeかGoogle Chromeで再度お試しください。");
+alert("Unspported Browser!\nOnomatoPedal will not work in Internet Explorer. Use Microsoft Edge or Google Chrome for the full experience.\n\nInternet Explorerでは、このページは正しく動作しません。Microsoft EdgeかGoogle Chromeで再度お試しください。");
 }
 };
 

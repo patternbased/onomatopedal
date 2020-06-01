@@ -10,6 +10,14 @@
     gtag('js', new Date());
     gtag('config', 'UA-346260-9');
   </script>
+  <script>
+    function handleMerchLinkClicks(event) {
+      gtag('event', 'Clicks', {'event_category' : 'EQD Links', 'event_label' : 'Merch'});
+    }
+    function handleEQDLinkClicks(event) {
+      gtag('event', 'Clicks', {'event_category' : 'EQD Links', 'event_label' : 'EQDAbout'});
+    }
+  </script>
 
   <title>OnomatoPedal - EarthQuaker Devices Randomizer and Samplepacks by PatternBased</title>  
   <meta charset="UTF-8">
@@ -110,7 +118,7 @@
       <a id="bannerRightLink" href="" target="_blank"><div class="bannerNarrow" id="bannerRight"></div></a>
     </div>
     <div class="bannerContainer oneBanner">
-      <a id="bannerTopLink" href="" target="_blank"><div class="bannerWide" id="bannerTop"></div></a>
+      <a id="bannerTopLink" href="" target="_blank" onclick="handleOutboundLinkClicks()"><div class="bannerWide" id="bannerTop"></div></a>
     </div>
 
   </div>
