@@ -172,7 +172,11 @@ $('.jp').click(function(){
       });
       $('span', this).css({
         'display':'inline'
-      })
+      });
+      $('#actions').css({
+        'width': '450px',
+        'transition-duration': '50ms'
+      });
     });
     $('.actionBtn').on('mouseleave',function() {
       $('span', this).css('display','none'),
@@ -180,7 +184,11 @@ $('.jp').click(function(){
         'width': '50px',
         'background': '#ffffff',
         'transition-duration':'100ms'
-      })
+      });
+      $('#actions').css({
+        'width': '280px',
+        'transition-duration': '100ms'
+      });
     });
     }
 

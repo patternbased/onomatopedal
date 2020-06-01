@@ -890,10 +890,7 @@
 /***** Action Buttons *****/
 
 	#actions {
-		width: max-content ;
-		width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-		width: -moz-max-content;    /* Firefox/Gecko */
-		width: -webkit-max-content; /* Chrome */
+		width: 280px;
 		max-width: 500px;
 		height: 70px;
 		margin: 30px auto;
@@ -944,6 +941,7 @@
 
 	@media(max-width: 960px) {
 		#actions {
+			width: max-content ;
 			height: 140px;
 		}
 		#actions li {
