@@ -118,7 +118,7 @@ var pedalData = JSON.parse(pedalRequest.responseText);
     if($(this).hasClass('closeAccordion')) {
       if (($(window).width() < 600)) {
         $('#morePedals').css({
-          'height':'290px',
+          'height':'270px',
           'transition-duration':'300ms'
         });
       } else {
