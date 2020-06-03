@@ -394,23 +394,5 @@
     "sampleurl":"sounds/pyonpyon.zip",
     "eqdurl":"https://www.bunnysantachi.com/",
     "eqdurlJP":"https://www.bunnysantachi.com/"
-  },
-  {
-    "name":"Julie",
-    "nameid":"julie",
-    "hex":"#A678DD",
-    "onohiragana":"The Boss",
-    "onomoname":"Julie",
-    "onomoid":"julie",
-    "onomoDesc":"Life is tough and full of stuff but nevermind 'cause Julies magic.<br> Life, it stings. Its full of things but nevermind 'cause Julies magic.",
-    "onomoDescJP":"Life is tough and full of stuff but nevermind 'cause Julies magic.<br> Life, it stings. Its full of things but nevermind 'cause Julies magic.",
-    "beaturl":"sounds/tracks/julie.mp3",
-    "trackname":"feat. Bunny San Tachi",
-    "trackinfo":"S. Kitajima, J. Minadeo",
-    "pedalinfo":"Julianne Robbins",
-    "pedalinfoJP":"",
-    "sampleurl":"sounds/julie.zip",
-    "eqdurl":"https://www.earthquakerdevices.com/",
-    "eqdurlJP":""
   }
 ]
