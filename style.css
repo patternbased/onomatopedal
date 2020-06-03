@@ -628,11 +628,16 @@
 		transition-duration: 500ms;
 	}
 
-	.bannerWide {
+	.bannerWide, .bannerWideShort {
 		width: 100%;
-		height: 300px;
 		display: inline-block;
 		border-radius: 4px;
+	}
+	.bannerWide {
+		height: 300px;
+	}
+	.bannerWideShort {
+		height: 160px;
 	}
 	.bannerNarrow {
 		width: calc(50% - 20px);
@@ -640,7 +645,7 @@
 		display: inline-block;
 		border-radius: 4px;
 	}
-	.bannerWide p, .bannerNarrow p {
+	.bannerWide p, .bannerNarrow p, .bannerWideShort p {
 		font-size: 20px;
 		font-weight: bold;
 		position: relative;
@@ -648,7 +653,7 @@
 		padding: 20px;
 		line-height: 1.5em;
 	}
-	.bannerNarrow p {
+	.bannerNarrow p, .bannerWideShort p {
 		top: 50%;
 		transform: translateY(-50%);
 		color: #0e0e0e;
@@ -657,13 +662,13 @@
 		top: 0;
 		color: rgb(200,200,200);
 	}
-	.bannerWide p span, .bannerNarrow p span {
+	.bannerWide p span, .bannerNarrow p span, .bannerWideShort p span {
 		font-size: 14px;
 		letter-spacing: 0.2em;
 		position: relative;
 	}
 
-	.bannerWide p span:after, .bannerNarrow p span:after {
+	.bannerWide p span:after, .bannerNarrow p span:after, .bannerWideShort p span:after {
         position: absolute;
         content: '';
 		height: 2px;
