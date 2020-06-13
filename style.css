@@ -635,6 +635,7 @@
 	}
 	.bannerWide {
 		height: 300px;
+		position: relative;
 	}
 	.bannerWideShort {
 		height: 160px;
@@ -660,7 +661,7 @@
 	}
 	.bannerWide p {
 		top: 0;
-		color: rgb(200,200,200);
+		color: #eeeeee;
 	}
 	.bannerWide p span, .bannerNarrow p span, .bannerWideShort p span {
 		font-size: 14px;
@@ -684,7 +685,21 @@
 		background: #0e0e0e;
 	}
 	.bannerWide p span:after {
-		background: rgb(200,200,200);
+		background: #eeeeee;
+	}
+
+	.bannerWide .blacklivesmatter {
+		background-color: #2e2e2e;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		border-radius: 0 0 4px 4px;
+	}
+
+	.bannerWide .blacklivesmatter p, .bannerWide .blacklivesmatter h5 {
+		font-size: 16px;
+		color:  rgb(252, 226, 27);
+		margin: 0 auto;
 	}
 
 	@media(max-width: 960px) {
@@ -739,6 +754,9 @@
 		#bannerRight {
 			margin-top: 10px;
 			margin-bottom: 0;
+		}
+		.bannerWide .blacklivesmatter p, .bannerWide .blacklivesmatter h5 {
+			font-size: 14px;
 		}
 	}
 
