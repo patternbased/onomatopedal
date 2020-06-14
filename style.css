@@ -477,8 +477,8 @@
 	img.pedalList {
 		margin: 0;
 		display: inline-block;
-		padding: 30px;
-		width: 200px;
+		padding: 20px 10px;
+		width: 240px;
 		cursor: pointer;
 	}
 
@@ -490,7 +490,7 @@
 	}
 	@media(max-width: 1200px) {
 		img.pedalList {
-			padding: 10px;
+			width: 200px;
 		}
 	}
 
