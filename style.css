@@ -505,7 +505,7 @@
 		img.pedalList {
 			padding: 33px;
 			width: 240px;
-			max-width: 30%;
+			max-width: 35%;
 		}
 	}
 
@@ -515,6 +515,7 @@
 		}
 		img.pedalList {
 			padding: 20px;
+			padding: 10px;
 		}
 	}
 
