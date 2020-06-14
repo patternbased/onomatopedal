@@ -623,10 +623,10 @@
 		height: 160px;
 	}
 
-	.bannerContainer  div:hover {
+/*	.bannerContainer  div:hover {
 		opacity: 0.6;
 		transition-duration: 500ms;
-	}
+	}*/
 
 	.bannerWide, .bannerWideShort {
 		width: 100%;
@@ -691,8 +691,19 @@
 	.bannerWide .blacklivesmatter {
 		background-color: #2e2e2e;
 		position: absolute;
-		bottom: 0;
+		bottom: 8px;
 		width: 100%;
+		opacity: 0.9;
+	}
+
+	.bannerWide .blacklivesmatter::after {
+		content: "";
+		background-color: rgb(252, 226, 27);
+		height: 8px;
+		width: 100%;
+		position: absolute;
+		bottom: -8px;
+		left: 0;
 		border-radius: 0 0 4px 4px;
 	}
 
