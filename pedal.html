@@ -41,9 +41,30 @@
             };
             var pedalNumber = getUrlParameter('pedalid'); 
 
+            // GA Event Tracking // Click EQD Pedal Link
             function handleOutboundLinkClicks(event) {
                 gtag('event', 'Clicks', {'event_category' : 'EQD Links', 'event_label' : pedalNumber});
-            }
+            };
+            // GA Event Tracking // Click Download Desktop
+            function handleDownloadLinkClicks(event) {
+                gtag('event', 'Clicks', {'event_category' : 'Download', 'event_label' : pedalNumber});
+            };
+            // GA Event Tracking // Play Track Desktop + Play Mode Mobile
+            function handlePlayTrackClicks(event) {
+                gtag('event', 'Clicks', {'event_category' : 'Play Track', 'event_label' : pedalNumber});
+            };
+            // GA Event Tracking // Fullscreen Mode Desktop
+            function handleFullScreenClicks(event) {
+                gtag('event', 'Clicks', {'event_category' : 'Full Screen', 'event_label' : pedalNumber});
+            };
+            // GA Event Tracking // Click on EQD Logo
+                function handleEQDLogoClicks(event) {
+                gtag('event', 'Clicks', {'event_category' : 'EQD Links', 'event_label' : 'EQD Logo'});
+            };
+            // GA Event Tracking // Click on PB Logo
+                function handlePBLogoClicks(event) {
+                gtag('event', 'Clicks', {'event_category' : 'PB Links', 'event_label' : 'PB Logo'});
+            };
 
         // Connect to JSON
         var paperRequest = new XMLHttpRequest();
@@ -410,11 +431,11 @@
 
 			<!-- Circular Action Buttons -->
 			<ul id="actions">
-				<li class='actionBtn playAudio' id="listenBeat"><img src="images/playBeat.svg"><span>Play Track</span></li>
+				<li class='actionBtn playAudio' id="listenBeat" onclick="handlePlayTrackClicks()"><img src="images/playBeat.svg"><span>Play Track</span></li>
 				<li class='actionBtnMobile playAudio' id="playMode"><img src="images/playBeat.svg"><span>Play Mode</span></li>
-				<li class='actionBtn' id="download"><img src="images/downloadSample.svg"><span>Download Samples</span></li>
+				<li class='actionBtn' id="download" onclick="handleDownloadLinkClicks()"><img src="images/downloadSample.svg"><span>Download Samples</span></li>
 				<a id="aboutPedalBtn" href="" target="_blank" onclick="handleOutboundLinkClicks()"><li class='actionBtn' id="aboutPedal"><img src="images/seePedal.svg"><span>Check Out Pedal</span></li></a>
-				<li class='actionBtn' id='fullscreenMode'><img src="images/fullscreen.svg"><span>Full Browser Mode</span></li>
+				<li class='actionBtn' id='fullscreenMode' onclick="handleFullScreenClicks()"><img src="images/fullscreen.svg"><span>Full Browser Mode</span></li>
 			</ul>
 
             <!-- Onomonapia Description-->
@@ -471,8 +492,8 @@
 	</div>
 
     <footer>
-        <a class="footerLogoEQD" href="https://www.earthquakerdevices.com/" target="_blank"><img src="images/EarthQuaker-Devices-Logo.png" class="footerLogo"></a>
-        <a href="https://www.patternbased.com/" target="_blank"><img src="images/PatternBased_Logo_WHCL.png" class="footerLogo"></a>
+        <a class="footerLogoEQD" href="https://www.earthquakerdevices.com/" target="_blank" onclick="handleEQDLogoClicks()"><img src="images/EarthQuaker-Devices-Logo.png" class="footerLogo"></a>
+        <a href="https://www.patternbased.com/" target="_blank" onclick="handlePBLogoClicks()"><img src="images/PatternBased_Logo_WHCL.png" class="footerLogo"></a>
     </footer>
 
 	<script type="text/javascript" src="pedal-temp.js"></script>

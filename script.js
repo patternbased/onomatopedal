@@ -99,7 +99,7 @@ localStorage.setItem('language', lang);
 
 $(document).ready( function() {
   getLanguage();
-$('#sidepanelLogos').html("<a href='https://www.patternbased.com/' target='_blank'><img src='images/PatternBased_Logo_CL.png' class='sidepanelLogo'></a><a href='https://www.earthquakerdevices.com/' target='_blank'><img src='images/EarthQuaker-Devices-Logo_dark.png' class='sidepanelLogo'></a><p>© 2020 PatternBased and EarthQuaker Devices. All Rights Reserved.</p>");
+$('#sidepanelLogos').html("<a href='https://www.patternbased.com/' target='_blank' onclick='handlePBLogoClicks()'><img src='images/PatternBased_Logo_CL.png' class='sidepanelLogo'></a><a href='https://www.earthquakerdevices.com/' target='_blank' onclick='handleEQDLogoClicks()'><img src='images/EarthQuaker-Devices-Logo_dark.png' class='sidepanelLogo'></a><p>© 2020 PatternBased and EarthQuaker Devices. All Rights Reserved.</p>");
 });
 
 $('.info').click(function () {

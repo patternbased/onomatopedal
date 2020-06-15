@@ -11,12 +11,20 @@
     gtag('config', 'UA-346260-9');
   </script>
   <script>
-    function handleMerchLinkClicks(event) {
-      gtag('event', 'Clicks', {'event_category' : 'EQD Links', 'event_label' : 'Merch'});
-    }
-    function handleEQDLinkClicks(event) {
-      gtag('event', 'Clicks', {'event_category' : 'EQD Links', 'event_label' : 'EQDAbout'});
-    }
+            function handleMerchLinkClicks(event) {
+              gtag('event', 'Clicks', {'event_category' : 'EQD Links', 'event_label' : 'Merch'});
+            };
+            function handleEQDAboutClicks(event) {
+              gtag('event', 'Clicks', {'event_category' : 'EQD Links', 'event_label' : 'EQDAbout'});
+            };
+            // GA Event Tracking // Click on EQD Logo
+            function handleEQDLogoClicks(event) {
+                gtag('event', 'Clicks', {'event_category' : 'EQD Links', 'event_label' : 'EQD Logo'});
+            };
+            // GA Event Tracking // Click on PB Logo
+                function handlePBLogoClicks(event) {
+                gtag('event', 'Clicks', {'event_category' : 'PB Links', 'event_label' : 'PB Logo'});
+            };
   </script>
 
   <title>OnomatoPedal - EarthQuaker Devices Randomizer and Samplepacks by PatternBased</title>  
@@ -114,12 +122,12 @@
 
   <div class="bodyContent">
     <div class="bannerContainer oneBanner">
-      <a id="bannerTopLink" href="" target="_blank" onclick="handleOutboundLinkClicks()"><div class="bannerWide" id="bannerTop">
+      <a id="bannerTopLink" href="" target="_blank" onclick="handleMerchLinkClicks()"><div class="bannerWide" id="bannerTop">
       </div></a>
     </div>
     <div class="bannerContainer twoBanners">
       <a id="bannerLeftLink" href="version-two.html"><div class="bannerNarrow" id="bannerLeft"></div></a>
-      <a id="bannerRightLink" href="" target="_blank"><div class="bannerNarrow" id="bannerRight"></div></a>
+      <a id="bannerRightLink" href="" target="_blank" onclick="handleEQDAboutClicks()"><div class="bannerNarrow" id="bannerRight"></div></a>
     </div>
 
   </div>
@@ -127,8 +135,8 @@
 
 <!-- Footer -->
 <footer>
-  <a class="footerLogoEQD" href="https://www.earthquakerdevices.com/" target="_blank"><img src="images/EarthQuaker-Devices-Logo.png" class="footerLogo"></a>
-  <a href="https://www.patternbased.com/" target="_blank"><img src="images/PatternBased_Logo_WHCL.png" class="footerLogo"></a>
+  <a class="footerLogoEQD" href="https://www.earthquakerdevices.com/" target="_blank" onclick="handleEQDLogoClicks()"><img src="images/EarthQuaker-Devices-Logo.png" class="footerLogo"></a>
+  <a href="https://www.patternbased.com/" target="_blank" onclick="handlePBLogoClicks()"><img src="images/PatternBased_Logo_WHCL.png" class="footerLogo"></a>
 </footer>
 
 <script type="text/javascript" src="script.js"></script>
