@@ -843,7 +843,7 @@
 	}
 	@keyframes loadingSpinner {
 		0%, 100% { opacity: 1;}
-		50% { pacity: 0.5;}
+		50% { opacity: 0.5;}
 	}
 
 /** modal **/
