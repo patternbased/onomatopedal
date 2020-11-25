@@ -1,5 +1,6 @@
 [
   {
+    "id":0,
     "name":"Rainbow Machine",
     "nameid":"rainbowmachine",
     "hex":"#ef569f",
@@ -18,6 +19,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/rainbow-machine"
   },
   {
+    "id":1,
     "name":"Acapulco Gold",
     "nameid":"acapulcogold",
     "hex":"#dfc669",
@@ -36,6 +38,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/acapulco-gold"
   },
   {
+    "id":2,
     "name":"Avalanche Run",
     "nameid":"avalancherun",
     "hex":"#036c9b",
@@ -54,6 +57,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/avalanche-run"
   },
   {
+    "id":3,
     "name":"Arpanoid",
     "nameid":"arpanoid",
     "hex":"#08c792",
@@ -72,6 +76,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/arpanoid"
   },
   {
+    "id":4,
     "name":"Data Corrupter",
     "nameid":"datacorrupter",
     "hex":"#4f4f4f",
@@ -90,6 +95,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/data-corrupter"
   },
   {
+    "id":5,
     "name":"Disaster Transport Sr",
     "nameid":"disastertransportsr",
     "hex":"#a3a3a5",
@@ -108,6 +114,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/disaster-transport-sr"
   },
   {
+    "id":6,
     "name":"Dream Crusher",
     "nameid":"dreamcrusher",
     "hex":"#b21f25",
@@ -126,6 +133,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.com/dream-crusher"
   },
   {
+    "id":7,
     "name":"Hoof Reaper",
     "nameid":"hoofreaper",
     "hex":"#C89933",
@@ -144,6 +152,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/hoof-reaper"
   },
   {
+    "id":8,
     "name":"Hummingbird",
     "nameid":"hummingbird",
     "hex":"#55af2f",
@@ -162,6 +171,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/hummingbird"
   },
   {
+    "id":9,
     "name":"Levitation",
     "nameid":"levitation",
     "hex":"#838080",
@@ -180,6 +190,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/levitation"
   },
   {
+    "id":10,
     "name":"Organizer",
     "nameid":"organizer",
     "hex":"#2394a0",
@@ -198,6 +209,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/organizer"
   },
   {
+    "id":11,
     "name":"Palisades",
     "nameid":"palisades",
     "hex":"#d1d0d5",
@@ -216,6 +228,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/palisades"
   },
   {
+    "id":12,
     "name":"Spatial Delivery",
     "nameid":"spatialdelivery",
     "hex":"#e87e57",
@@ -234,6 +247,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/spatial-delivery"
   },
   {
+    "id":13,
     "name":"Afterneath",
     "nameid":"afterneath",
     "hex":"#cfd696",
@@ -252,6 +266,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/afterneath"
   },
   {
+    "id":14,
     "name":"Afterneath Module",
     "nameid":"afterneathmodule",
     "hex":"#8896ab",
@@ -270,6 +285,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/afterneath-eurorack-module"
   },
   {
+    "id":15,
     "name":"Hoof Fuzz",
     "nameid":"hooffuzz",
     "hex":"#ab8c4d",
@@ -288,6 +304,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/hoof"
   },
   {
+    "id":16,
     "name":"The Depths",
     "nameid":"thedepths",
     "hex":"#035b53",
@@ -306,6 +323,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/the-depths"
   },
   {
+    "id":17,
     "name":"Zap Machine",
     "nameid":"zapmachine",
     "hex":"#b5dcb5",
@@ -324,6 +342,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.com/zap-machine"
   },
   {
+    "id":18,
     "name":"Night Wire",
     "nameid":"nightwire",
     "hex":"#79367c",
@@ -342,6 +361,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/night-wire"
   },
   {
+    "id":19,
     "name":"Erupter",
     "nameid":"erupter",
     "hex":"#ed7f39",
@@ -360,6 +380,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/erupter"
   },
   {
+    "id":20,
     "name":"Pyramids",
     "nameid":"pyramids",
     "hex":"#25b2ac",
@@ -378,6 +399,7 @@
     "eqdurlJP":"https://www.earthquakerdevices.jp/pyramids"
   },
   {
+    "id":21,
     "name":"The Bunnies",
     "nameid":"thebunnies",
     "hex":"#8f0148",
@@ -394,5 +416,24 @@
     "sampleurl":"sounds/pyonpyon.zip",
     "eqdurl":"https://www.bunnysantachi.com/",
     "eqdurlJP":"https://www.bunnysantachi.com/"
+  },
+  {
+    "id":22,
+    "name":"Astral Destiny",
+    "nameid":"astral-destiny",
+    "hex":"#e24862",
+    "onohiragana":"ほわんほわん",
+    "onomoname":"ほわんほわん Howan Howan",
+    "onomoid":"howanhowan",
+    "onomoDesc":"1. lightly (floating, drifting, etc.); 2. soft; fluffy; spongy 3. unsteadily; flightily; fickly;",
+    "onomoDescJP":"ふんわり、フワフワと、やさしく軽やかで柔らかな様子。",
+    "beaturl":"sounds/tracks/howanhowan.mp3",
+    "trackname":"feat. <a href='https://catalog.patternbased.com/artist/jamie-stillman' target='_blank'>Jamie Stillman</a> and <a href='https://catalog.patternbased.com/artist/cory-juba' target='_blank'>Cory Juba</a>",
+    "trackinfo":"<a href='https://catalog.patternbased.com/artist/cory-juba' target='_blank'>C. Juba</a>, <a href='https://catalog.patternbased.com/artist/jamie-stillman' target='_blank'>J. Stillman</a>, <a href='https://catalog.patternbased.com/artist/joseph-minadeo' target='_blank'>J. Minadeo</a>",
+    "pedalinfo":"Placeholder Placeholder",
+    "pedalinfoJP":"ペダルのキャッチフレーズ",
+    "sampleurl":"sounds/howanhowan.zip",
+    "eqdurl":"https://www.earthquakerdevices.com/pyramids",
+    "eqdurlJP":"https://www.earthquakerdevices.jp/pyramids"
   }
 ]
