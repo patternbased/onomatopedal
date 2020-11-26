@@ -23,7 +23,7 @@ window.onload = function() {
 
 function randomize() {
   var allBanners = $('#pedalTable img');
-  shuffle(allBanners.hide()).slice(17).show();    
+  shuffle(allBanners.hide()).slice(18).show();    
 }
 
 $('#randomDiv').click(randomize);
