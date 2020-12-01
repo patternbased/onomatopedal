@@ -98,8 +98,9 @@
             var sampleCColor = paperData[pedalNumber].keyColorC;
             var sampleVString = paperData[pedalNumber].sampleV;
             var sampleVColor = paperData[pedalNumber].keyColorV;
-            var onoSvgPath1Data = paperData[pedalNumber].onoSvgPath1;
-            var onoSvgPath2Data = paperData[pedalNumber].onoSvgPath2;
+            var onoSvgPathOneData = paperData[pedalNumber].onoSvgPathOne;
+            var onoSvgPathTwoData = paperData[pedalNumber].onoSvgPathTwo;
+            var onoSvgPathThreeData = paperData[pedalNumber].onoSvgPathThree;
             // Coloring Mobile Drumpads
             var mobileKeyQ = $('#keyQ');
             var mobileKeyW = $('#keyW');
@@ -173,11 +174,20 @@
                 var randomPointHeight = canvasHeight * Math.random();
                 var randomePoint = new paper.Point(randomPointWidth, randomPointHeight);
                     if (key == 'q' || key == 'd') {
+                        if (pedalNumber == 22) {
+                            var onomatoSvg = new Path(onoSvgPathThreeData);
+                            onomatoSvg.strokeColor = keyData[key].color;
+                            onomatoSvg.strokeWidth = 6;
+                            onomatoSvg.position = randomePoint;
+                            keyData[key].sound.play();
+                            lineCircles.push(onomatoSvg);
+                        } else {
                         var newCircle = new paper.Path.Circle(randomePoint, 4);
                         newCircle.strokeColor = keyData[key].color;
                         newCircle.strokeWidth = 6;
                         keyData[key].sound.play();
                         lineCircles.push(newCircle);
+                        }
                     } else if (key == 'a' || key == 'v') {
                         var newCircle = new paper.Path.Circle(randomePoint, 500);
                         newCircle.fillColor = keyData[key].color;
@@ -191,14 +201,14 @@
                         keyData[key].sound.play();
                         thinLine.push(newRectangle);
                     } else if (key == 'r' || key == 's') {
-                        var onomatoSvg = new Path(onoSvgPath1Data);
+                        var onomatoSvg = new Path(onoSvgPathOneData);
                         onomatoSvg.strokeColor = keyData[key].color;
                         onomatoSvg.strokeWidth = 6;
                         onomatoSvg.position = randomePoint;
                         keyData[key].sound.play();
                         onoSvg.push(onomatoSvg);
                     } else if (key == 'w' || key == 'c') {
-                        var onomatoSvg = new Path(onoSvgPath2Data);
+                        var onomatoSvg = new Path(onoSvgPathTwoData);
                         onomatoSvg.strokeColor = keyData[key].color;
                         onomatoSvg.strokeWidth = 6;
                         onomatoSvg.position = randomePoint;
@@ -225,7 +235,7 @@
                             path.smooth({ type: 'continuous' });
                         keyData[key].sound.play();
                         waveBlock.push(path);
-                    }
+                        }
                     };
             function keyDownEvent(key) {
                 var key = (event.key);
@@ -233,11 +243,20 @@
                 var randomPointHeight = canvasHeight * Math.random();
                 var randomePoint = new paper.Point(randomPointWidth, randomPointHeight);
                     if (key == 'q' || key == 'd') {
+                        if (pedalNumber == 22) {
+                            var onomatoSvg = new Path(onoSvgPathThreeData);
+                            onomatoSvg.strokeColor = keyData[key].color;
+                            onomatoSvg.strokeWidth = 6;
+                            onomatoSvg.position = randomePoint;
+                            keyData[key].sound.play();
+                            lineCircles.push(onomatoSvg);
+                        } else {
                         var newCircle = new paper.Path.Circle(randomePoint, 4);
                         newCircle.strokeColor = keyData[key].color;
                         newCircle.strokeWidth = 6;
                         keyData[key].sound.play();
                         lineCircles.push(newCircle);
+                        }
                     } else if (key == 'a' || key == 'v') {
                         var newCircle = new paper.Path.Circle(randomePoint, 500);
                         newCircle.fillColor = keyData[key].color;
@@ -251,14 +270,14 @@
                         keyData[key].sound.play();
                         thinLine.push(newRectangle);
                     } else if (key == 'r' || key == 's') {
-                        var onomatoSvg = new Path(onoSvgPath1Data);
+                        var onomatoSvg = new Path(onoSvgPathOneData);
                         onomatoSvg.strokeColor = keyData[key].color;
                         onomatoSvg.strokeWidth = 6;
                         onomatoSvg.position = randomePoint;
                         keyData[key].sound.play();
                         onoSvg.push(onomatoSvg);
                     } else if (key == 'w' || key == 'c') {
-                        var onomatoSvg = new Path(onoSvgPath2Data);
+                        var onomatoSvg = new Path(onoSvgPathTwoData);
                         onomatoSvg.strokeColor = keyData[key].color;
                         onomatoSvg.strokeWidth = 6;
                         onomatoSvg.position = randomePoint;
@@ -471,7 +490,7 @@
                         <img class="morePedal" data-pedal-id="18" src="images/pedalsOnom/Night-Wire-bgtx_V2.png">
                         <img class="morePedal" data-pedal-id="19" src="images/pedalsOnom/Erupter-bgtx.png">
                         <img class="morePedal" data-pedal-id="20" src="images/pedalsOnom/Pyramids-bgtx.png">
-                        <img class="morePedal" data-pedal-id="22" src="images/pedalsOnom/astral-destiny-bgtx@2x.png">
+                        <img class="morePedal" data-pedal-id="22" src="images/pedalsOnom/astral-destiny-bgtx-v2@2x.png">
 					</div>
 				</div>
             </div>
