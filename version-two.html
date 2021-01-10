@@ -1,22 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-346260-9"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-346260-9');
-  </script>
-  <script>
-    function handleMerchLinkClicks(event) {
-      gtag('event', 'Clicks', {'event_category' : 'EQD Links', 'event_label' : 'Merch'});
-    };
-    function handleEQDAboutClicks(event) {
-      gtag('event', 'Clicks', {'event_category' : 'EQD Links', 'event_label' : 'EQDAbout'});
-    };
+        // Cookie Consent
+        const cookieName = 'cookieconsent';
+        const cookieValue = 'dismissed';
+        document.addEventListener("DOMContentLoaded", function() {
+        const checkCookie = getCookie("cookieconsent");
+        if (checkCookie != "dismissed") {
+          setTimeout(function(){ 
+          document.getElementById('ga-popup').style.bottom = 0;
+          }, 5000);
+        } 
+        });
+        
+        function getCookie(cname) {
+          var name = cname + "=";
+          var decodedCookie = decodeURIComponent(document.cookie);
+          var ca = decodedCookie.split(';');
+          for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+
+        function declineCookie() {
+          const date = new Date();
+            date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000));
+            document.cookie = `${cookieName}=${cookieValue};expires=${date.toUTCString()};path=/`;
+
+          document.getElementById('ga-popup').style.bottom = '-120%';
+        }
+        function acceptCookie() {
+          const date = new Date();
+            date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+            document.cookie = `${cookieName}=${cookieValue};expires=${date.toUTCString()};path=/`;
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-346260-9');
+          document.getElementById('ga-popup').style.bottom = '-120%';
+        }
+
+        ////GA Event trackings
+            function handleMerchLinkClicks(event) {
+              gtag('event', 'Clicks', {'event_category' : 'EQD Links', 'event_label' : 'Merch'});
+            };
+            function handleEQDAboutClicks(event) {
+              gtag('event', 'Clicks', {'event_category' : 'EQD Links', 'event_label' : 'EQDAbout'});
+            };
             // GA Event Tracking // Click on EQD Logo
             function handleEQDLogoClicks(event) {
                 gtag('event', 'Clicks', {'event_category' : 'EQD Links', 'event_label' : 'EQD Logo'});
@@ -25,10 +66,6 @@
                 function handlePBLogoClicks(event) {
                 gtag('event', 'Clicks', {'event_category' : 'PB Links', 'event_label' : 'PB Logo'});
             };
-            // GA Event Tracking // Click on PB Contact
-            function handlePBContactClicks(event) {
-                gtag('event', 'Clicks', {'event_category' : 'PB Links', 'event_label' : 'PB Contact'});
-            };    
   </script>
 
   <title>OnomatoPedal - Ver 2.0 In Progress</title>  
@@ -48,66 +85,37 @@
 </head>
 
 <body>
+  <!-- Cookie Consent -->
+  <div id="ga-popup">
+    <p id="cookie-text"></p>
+    <button id="accept" onclick="acceptCookie()"></button>
+    <button id="decline" onclick="declineCookie()"></button>
+    </div>
+  <div id="root"></div>
+    
 <div class="wrap">
 
   <!-- Header -->
-  <div class="header">
-    <div class="info"><span>?</span></div>
-    <div class="languages">
-      <div class="language languageActive en"><img src="images/language-en.svg"></div>
-      <div class="language jp"><img src="images/language-jp.svg"></div>
-    </div>
-    <div class="title"><a href="./"><img src="images/onomatoPedal-Logo_Light.svg"></a></div>
-  </div>
-  <div class='clear'></div>
+  <div class="headerContainer"></div>
 
   <div id="topPageHeader">AudioVisual Playground</div>
 
-<!-- Right Panel -->
-<div id="rightSPHeader">
-  <div class="close"><img src="images/closeIcon.svg"></div>
-      <div class="languages">
-          <div class="language languageActive en"><img src="images/language-en_dark.svg" height="30" height="30"></div>
-          <div class="language jp"><img src="images/language-jp_dark.svg" height="30" width="30"></div>
-      </div>
-      <div class="rightSPOPlogo"><a href="./"><img src="images/onomatoPedal-Logo_Dark.svg"></a></div>
-</div>
-<div class="rightSPWrapper">
-  <div class="pedalLineup"></div>
-  <div class="rightSPgrayBG" id="aboutOP"></div>
-  <div class="rightSPwhiteBG" id="howToPlay"></div>
-  <div class="rightSPgrayBG" id="freeSamplePack"></div>
-      <div class="rightSPwhiteBG" id="credit"></div>
-      <div id="bunnyYard">
-          <img src="images/orlando.png" id="orlandBunny">
-          <a href="pedal.html?pedalid=16"><img src="images/pyonpyon-bubble.png" id="pyonpyonBubble"></a>
-          <img src="images/Corabelle.png" id="corabelleBunny">
-      </div>
-      <div class="pedalLineup" id="bunniesPedals"></div>
-  <div class="rightSPgrayBG" id="sidepanelLogos"></div>
-</div>
 <div class="bodyText" id="verTwoText">
 </div>
 
   <div class="bodyContent postPageWidth">
- <!--      <div class="bannerContainer twoBanners">
-      <a id="bannerLeftLink" href="" target="_blank"><div class="bannerNarrow" id="bannerLeft"></div></a>
-      <a id="bannerRightLink" href="" target="_blank"><div class="bannerNarrow" id="bannerRight"></div>
-    </div></a>-->
     <div class="bannerContainer oneBanner">
       <a id="bannerTopLink" href="" target="_blank" onclick="handleMerchLinkClicks()"><div class="bannerWide" id="bannerTop"></div></a>
     </div>
- <div class="bannerContainer twoBanner">
-  <a id="bannerRightLink" href="" target="_blank"><div class="bannerWideShort" id="bannerRight" onclick="handleEQDAboutClicks()"><p><span>CHECKITOUT</span><br/>All About EarthQuaker Devices</p></div></a>
+    <div class="bannerContainer twoBanner">
+      <a id="bannerRightLink" href="" target="_blank"><div class="bannerWideShort" id="bannerRight" onclick="handleEQDAboutClicks()"><p><span>CHECKITOUT</span><br/>All About EarthQuaker Devices</p></div></a>
     </div>
   </div>
+
 </div>
 
 <!-- Footer -->
-<footer>
-  <a class="footerLogoEQD" href="https://www.earthquakerdevices.com/" target="_blank" onclick="handleEQDLogoClicks()"><img src="images/EarthQuaker-Devices-Logo.png" class="footerLogo"></a>
-  <a href="https://www.patternbased.com/" target="_blank" onclick="handlePBLogoClicks()"><img src="images/PatternBased_Logo_WHCL.png" class="footerLogo"></a>
-</footer>
+<div class="footerContainer"></div>
 
 <script type="text/javascript" src="script.js"></script>
 </body>

@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-346260-9"></script>
+  <script>
+    // Cookie Consent
+    const cookieName = 'cookieconsent';
+        const cookieValue = 'dismissed';
+        document.addEventListener("DOMContentLoaded", function() {
+        const checkCookie = getCookie("cookieconsent");
+        if (checkCookie != "dismissed") {
+          setTimeout(function(){ 
+          document.getElementById('ga-popup').style.bottom = 0;
+          }, 5000);
+        } 
+        });
+        
+        function getCookie(cname) {
+          var name = cname + "=";
+          var decodedCookie = decodeURIComponent(document.cookie);
+          var ca = decodedCookie.split(';');
+          for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-346260-9"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        function declineCookie() {
+          const date = new Date();
+            date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000));
+            document.cookie = `${cookieName}=${cookieValue};expires=${date.toUTCString()};path=/`;
 
-        gtag('config', 'UA-346260-9');
-    </script>
+          document.getElementById('ga-popup').style.bottom = '-120%';
+        }
+        function acceptCookie() {
+          const date = new Date();
+            date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+            document.cookie = `${cookieName}=${cookieValue};expires=${date.toUTCString()};path=/`;
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-346260-9');
+          document.getElementById('ga-popup').style.bottom = '-120%';
+        }
+  </script>
 
 	<title id="pedalPageTitle">OnomatoPedal - Acapulco Gold Sampler</title>
 	<meta charset="UTF-8">
@@ -71,7 +111,7 @@
         if (!paperRequest) {
             alert('Giving up :( Cannot create an XMLHTTP instance');
         }
-        paperRequest.open('GET','pedal-paperinfo.json', true);
+        paperRequest.open('GET','animation-sound.json', true);
         paperRequest.onload = function() {
             var paperData = JSON.parse(paperRequest.responseText);
             var sampleQString = paperData[pedalNumber].sampleQ;
@@ -368,11 +408,18 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" type="image/png" href="images/patternBased_Logo_icon.png" />
     <link rel="apple-touch-icon" sizes="128x128" href="images/patternBased_Logo_icon_128.png" />
-  <link rel="icon" sizes="192x192" href="images/patternBased_Logo_icon_192.png" />
+    <link rel="icon" sizes="192x192" href="images/patternBased_Logo_icon_192.png" />
 </head>
 
 <body>
-
+  <!-- Cookie Consent -->
+  <div id="ga-popup">
+    <p id="cookie-text"></p>
+    <button id="accept" onclick="acceptCookie()"></button>
+    <button id="decline" onclick="declineCookie()"></button>
+    </div>
+  <div id="root"></div>
+  
 <!-- Modal -->
 	<div id="modalBG">
 		<div class="loadingSpinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
@@ -382,30 +429,6 @@
 			<button class="modalButton" id="showStarter">OK</button>
 		</div>
 		<div class="modalContent" id="modalMobile"></div>
-	</div>
-
-<!-- Right Panel -->
-	<div id="rightSPHeader">
-		<div class="close"><img src="images/closeIcon.svg"></div>
-        <div class="languages">
-            <div class="language languageActive en"><img src="images/language-en_dark.svg" height="30" height="30"></div>
-            <div class="language jp"><img src="images/language-jp_dark.svg" height="30" width="30"></div>
-        </div>
-        <div class="rightSPOPlogo"><a href="./"><img src="images/onomatoPedal-Logo_Dark.svg"></a></div>
-	</div>
-	<div class="rightSPWrapper">
-		<div class="pedalLineup"></div>
-		<div class="rightSPgrayBG" id="aboutOP"></div>
-		<div class="rightSPwhiteBG" id="howToPlay"></div>
-		<div class="rightSPgrayBG" id="freeSamplePack"></div>
-        <div class="rightSPwhiteBG" id="credit"></div>
-        <div id="bunnyYard">
-            <img src="images/orlando.png" id="orlandBunny">
-            <a href="pedal.html?pedalid=21"><img src="images/pyonpyon-bubble.png" id="pyonpyonBubble"></a>
-            <img src="images/Corabelle.png" id="corabelleBunny">
-        </div>
-        <div class="pedalLineup" id="bunniesPedals"></div>
-		<div class="rightSPgrayBG" id="sidepanelLogos"></div>
 	</div>
 
 <!-- Tapping divs in Play mode mobile-->
@@ -426,24 +449,16 @@
 	
 <!-- ****** Body ****** -->
 	<div class="wrap pedalPageWrap">
-        <!-- Header -->
-                
-        <div class="header">
-            <div class="info"><span>?</span></div>
-            <div class="languages">
-                <div class="language languageActive en"><img src="images/language-en.svg"></div>
-                <div class="language jp"><img src="images/language-jp.svg"></div>
-            </div>
-            <div class="title"><a href="./"><img src="images/onomatoPedal-Logo_Light.svg"></a></div>
-        </div>
-        <div class='clear' width="0"></div>
+        <div class="headerContainer"></div>
 
         <div class="title-pedal" id="OnomoPedalHeader"></div>
+
         <div id="playModeHeader">
-				<div class="pedal-small"> <img id="pedalSmall"></div>
-				<div class="title-PlayMode"></div>
-				<div class='clear'></div>
-			</div>
+			<div class="pedal-small"> <img id="pedalSmall"></div>
+			<div class="title-PlayMode"></div>
+			<div class='clear'></div>
+        </div>
+            
 		<!-- Pedal -->
 		<div id="pedal">
 			<img id="thePedal">
@@ -466,39 +481,9 @@
 			<p id="pedalInfo"></p>
 
             <!-- More Pedals -->
-            <div id="morePedals">
-				<div id="pedalShelf">
-					<div id="allPedalsInShelf">
-                        <img class="morePedal" data-pedal-id="0" src="images/pedalsOnom/Rainbow-Machine-bgtx.png">
-                        <img class="morePedal" data-pedal-id="1" src="images/pedalsOnom/Acapulco-Gold-bgtx.png">
-                        <img class="morePedal" data-pedal-id="2" src="images/pedalsOnom/Avalanche-Run-bgtx.png">
-                        <img class="morePedal" data-pedal-id="3" src="images/pedalsOnom/Arpanoid-bgtx.png">
-						<img class="morePedal" data-pedal-id="4" src="images/pedalsOnom/Data-Corrupter-bgtx_V2.png">
-						<img class="morePedal" data-pedal-id="5" src="images/pedalsOnom/Disaster-Transport-SR-bgtx_V2.png">
-						<img class="morePedal" data-pedal-id="6" src="images/pedalsOnom/Dream-Crusher-bgtx.png">
-						<img class="morePedal" data-pedal-id="7" src="images/pedalsOnom/Hoof-Reaper-bgtx_V3.png">
-						<img class="morePedal" data-pedal-id="8" src="images/pedalsOnom/Hummingbird-bgtx_V2.png">
-                        <img class="morePedal" data-pedal-id="9" src="images/pedalsOnom/Levitation-bgtx.png">
-                        <img class="morePedal" data-pedal-id="10" src="images/pedalsOnom/Organizer-bgtx.png">
-						<img class="morePedal" data-pedal-id="11" src="images/pedalsOnom/Palisades-bgtx_V2.png">
-                        <img class="morePedal" data-pedal-id="12" src="images/pedalsOnom/Spatial-Delivery-bgtx_V2.png">
-                        <img class="morePedal" data-pedal-id="13" src="images/pedalsOnom/Afterneath-bgtx_V2.png">
-                        <img class="morePedal" data-pedal-id="14" src="images/pedalsOnom/Afterneath-Module-bgtx.png">
-						<img class="morePedal" data-pedal-id="15" src="images/pedalsOnom/Hoof-Fuzz-bgtx_V2.png">
-                        <img class="morePedal" data-pedal-id="16" src="images/pedalsOnom/The-Depths-bgtx.png">
-                        <img class="morePedal" data-pedal-id="17" src="images/pedalsOnom/Zap-Machine-bgtx.png">
-                        <img class="morePedal" data-pedal-id="18" src="images/pedalsOnom/Night-Wire-bgtx_V2.png">
-                        <img class="morePedal" data-pedal-id="19" src="images/pedalsOnom/Erupter-bgtx.png">
-                        <img class="morePedal" data-pedal-id="20" src="images/pedalsOnom/Pyramids-bgtx.png">
-                        <img class="morePedal" data-pedal-id="22" src="images/pedalsOnom/astral-destiny-bgtx-v2@2x.png">
-					</div>
-				</div>
-            </div>
-            <div id="pedalAccordionButton" class="openAccordion">
-                SEE MORE PEDALS
-            </div>
+            <div class="morePedalsContainer"></div>
 		</div>
-		<div class="clear"></div>
+		<!-- <div class="clear"></div> -->
 
 		<!-- 'Show-all' button in full browser mode-->
 		<div id="playModeIcons">
@@ -511,12 +496,9 @@
 		<canvas id="myCanvas" resize></canvas>
 	</div>
 
-    <footer>
-        <a class="footerLogoEQD" href="https://www.earthquakerdevices.com/" target="_blank" onclick="handleEQDLogoClicks()"><img src="images/EarthQuaker-Devices-Logo.png" class="footerLogo"></a>
-        <a href="https://www.patternbased.com/" target="_blank" onclick="handlePBLogoClicks()"><img src="images/PatternBased_Logo_WHCL.png" class="footerLogo"></a>
-    </footer>
+    <div class="footerContainer"></div>
 
-	<script type="text/javascript" src="pedal-temp.js"></script>
 	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="pedal-temp.js"></script>
 </body>
 </html>

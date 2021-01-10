@@ -57,7 +57,7 @@ var pedalData = JSON.parse(pedalRequest.responseText);
   var eqdPedalLinkString = pedalData[pedalNumber].eqdurl;
   var eqdPedalLinkStringJP = pedalData[pedalNumber].eqdurlJP;
   var beatUrlString = pedalData[pedalNumber].beaturl;
-  var samePedal = $('#allPedalsInShelf').find('[data-pedal-id="' + pedalNumber + '"]');
+
   var sampleDownloadString = pedalData[pedalNumber].sampleurl;
   var pedalPageTitleString = "OnomatoPedal - " + pedalNameString + " Sampler";
   var aboutBunniesString = "<img src='images/aboutBunnies.svg'><span>Check Out Bunnies</span>";
@@ -98,7 +98,7 @@ var pedalData = JSON.parse(pedalRequest.responseText);
     $(pedalName).html(pedalNameStringIcon).css("color", onomoColorString);
   }
 
-  $(samePedal).css("display", "none");
+  // More Pedal Accordion Button Color changes with hover over
 
   $('#pedalAccordionButton').on('mouseenter',function () {
     $(this).css({
@@ -106,34 +106,29 @@ var pedalData = JSON.parse(pedalRequest.responseText);
       'transition-duration':'300ms'
     });
   });
-
   $('#pedalAccordionButton').on('mouseleave',function() {
     $(this).css({
-      'background-color': '#838080',
-      'transition-duration':'300ms'
+      'background-color': '#838080'
     });
   });
-
   $('#pedalAccordionButton').on('click',function() {
     if($(this).hasClass('closeAccordion')) {
       if (($(window).width() < 600)) {
         $('#morePedals').css({
-          'height':'270px',
-          'transition-duration':'300ms'
+          'height':'270px'
         });
       } else {
         $('#morePedals').css({
-          'height':'160px',
-          'transition-duration':'300ms'
+          'height':'160px'
         });
       }
     $(this).html('SEE MORE PEDALS');
     $(this).removeClass('closeAccordion');
     $(this).addClass('openAccordion');
+
   } else {
     $('#morePedals').css({
-      'height':'auto',
-      'transition-duration':'300ms'
+      'height':'auto'
     });
     $(this).html('SEE LESS PEDALS');
     $(this).removeClass('openAccordion');
@@ -292,6 +287,18 @@ if(( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
   $('#playMode').css({
     'display': 'block'
   });
+}
+
+function shuffle(arra1) {
+  var ctr = arra1.length, temp, index;
+  while (ctr > 0) {
+      index = Math.floor(Math.random() * ctr);
+      ctr--;
+      temp = arra1[ctr];
+      arra1[ctr] = arra1[index];
+      arra1[index] = temp;
+  }
+  return arra1;
 }
 };
 pedalRequest.send();

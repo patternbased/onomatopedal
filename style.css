@@ -20,7 +20,7 @@
 		text-align: center;
 	}
 
-	a:hover, img.pedalList:hover, img.slide:hover {
+	a:hover:not(#aboutPedalBtn), img.pedalList:hover, img.morePedal:hover, img.playPronBtn:hover, .rightSPWrapper .sideBanner:hover, 	#orlandoTrigger:hover, #corabelleTrigger:hover {
 		opacity: 0.5;
 		transition-duration: 500ms;
 	}
@@ -313,6 +313,36 @@
 
 	.rightSPgrayBG p a, .rightSPwhiteBG p a {
 		color: #8f0148;
+		text-decoration: none;
+		position: relative;
+	}
+
+	/* .rightSPgrayBG p a:hover, .rightSPwhiteBG p a:hover {
+		transition-duration: 400ms;
+	} */
+
+	.rightSPgrayBG p a:before, .rightSPwhiteBG p a:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		bottom: 0;
+		left: 0;
+		background-color: #8f0148;
+		visibility: hidden;
+		-webkit-transform: scaleX(0);
+		transform: scaleX(0);
+		visibility: visible;
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+		-webkit-transition: all 0.3s ease-in-out 0s;
+		transition: all 0.3s ease-in-out 0s;
+	}
+
+	.rightSPgrayBG p a:hover:before, .rightSPwhiteBG p a:hover:before{
+		visibility: hidden;
+		-webkit-transform: scaleX(0);
+		transform: scaleX(0);
 	}
 
 	#credit {
@@ -384,8 +414,33 @@
 	#orlandoTrigger, #corabelleTrigger {
 		color: #8f0148;
 		cursor: pointer;
-		text-decoration: underline;
+		text-decoration: none;
 		display: inline-block;
+		position: relative;
+	}
+
+	#orlandoTrigger:before, #corabelleTrigger:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		bottom: 0;
+		left: 0;
+		background-color: #8f0148;
+		visibility: hidden;
+		-webkit-transform: scaleX(0);
+		transform: scaleX(0);
+		visibility: visible;
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+		-webkit-transition: all 0.3s ease-in-out 0s;
+		transition: all 0.3s ease-in-out 0s;
+	}
+
+	#orlandoTrigger:hover:before, #corabelleTrigger:hover:before{
+		visibility: hidden;
+		-webkit-transform: scaleX(0);
+		transform: scaleX(0);
 	}
 
 	.SPImages {
@@ -726,7 +781,7 @@
 
 	#bannerTop {
 		background: linear-gradient(180deg,rgba(112, 112, 112, 0.3),rgba(112, 112, 112, 0.1)),
-		url('images/bannerBG-4Merch.jpg') no-repeat center center;
+		url('images/bannerBG-4Merch_V2.jpg') no-repeat center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -1045,6 +1100,7 @@
 	.morePedal {
 		height: 120px;
 		margin: 20px;
+		cursor: pointer;
 	}
 	#pedalAccordionButton {
 		height: 40px;
@@ -1185,3 +1241,65 @@ div.tapKey:active {
 	width: 700px;
 	max-width: 90vw;
 }
+
+/****** Cookie consent banner Global *****/
+
+#ga-popup {
+	width: calc(100% - 40px);
+	height: 60px;
+	padding: 20px;
+	position: fixed;
+	left: 0;
+	bottom: -120%;
+	background: #222222;
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	transition-duration: 300ms;
+	border-top: #838080 1px solid;
+  }
+  #ga-popup p {
+	color: #e0e0e0;
+	line-height: 1.5em;
+	margin: 10px;
+	max-width: 500px;
+  }
+  #ga-popup p a {
+	color: #e0e0e0;
+	text-decoration: underline;
+  }
+  #ga-popup button {
+	width: 90px;
+	height: 40px;
+	margin: 10px;
+	border-radius: 4px;
+	font-weight: bold;
+	cursor: pointer;
+  }
+  button#accept {
+	background-color: #e0e0e0;
+	border: #e0e0e0 2px solid;
+	color: #222222;
+  }
+  button#decline {
+	background-color: unset;
+	border: #e0e0e0 2px solid;
+	color: #e0e0e0;
+  }
+  #ga-popup button:hover {
+	  opacity: 0.5;
+	  transition-duration: 300ms;
+  }
+
+  @media (max-width: 800px) {
+	#ga-popup {
+	  display: block;
+	  height: auto;
+	  text-align: center;
+	}
+	#ga-popup p {
+	  font-size: 0.8em;
+	  width: 100%;
+	  max-width: 100%;
+	}
+  }

@@ -8,7 +8,7 @@ window.onload = function() {
     if (localStorage.getItem("modal") === null) {
       $('.modalContent, #modalBG').css('display','block');
       }
-    }
+  }
 
     if (localStorage.getItem("language") == 'jp') {
       $('.jp').addClass('languageActive');
@@ -16,7 +16,10 @@ window.onload = function() {
       } else {
         $('.en').addClass('languageActive');
         $('.jp').removeClass('languageActive');
-        }
+      }
+        $('.morePedalsContainer').load('html/morePedals.html');
+        $('.headerContainer').load('html/header.html');
+        $('.footerContainer').load('html/footer.html');
   };
     
 // ===== Top page Pedal Shuffle =====
@@ -77,6 +80,9 @@ languageRequest.onload = function() {
     $('#bannerRightLink').attr("href", languageData.bannerRightUrl);
     $('#verTwoText').html(languageData.versionTwoBody);
     $('.footerLogoEQD').attr("href", languageData.footerEQDUrl);
+    $('#cookie-text').html(languageData.cookiText);
+    $('#accept').html(languageData.cookieAccept);
+    $('#decline').html(languageData.cookieDecline);
 
     if(localStorage.getItem('language') == 'jp') {
       $('.jp').addClass('languageActive');
@@ -99,7 +105,7 @@ localStorage.setItem('language', lang);
 
 $(document).ready( function() {
   getLanguage();
-$('#sidepanelLogos').html("<a href='https://www.patternbased.com/' target='_blank' onclick='handlePBLogoClicks()'><img src='images/PatternBased_Logo_CL.png' class='sidepanelLogo'></a><a href='https://www.earthquakerdevices.com/' target='_blank' onclick='handleEQDLogoClicks()'><img src='images/EarthQuaker-Devices-Logo_dark.png' class='sidepanelLogo'></a><p>© 2020 PatternBased and EarthQuaker Devices. All Rights Reserved.</p>");
+$('#sidepanelLogos').html("<a href='https://www.patternbased.com/' target='_blank' onclick='handlePBLogoClicks()'><img src='images/PatternBased_Logo_CL.png' class='sidepanelLogo'></a><a href='https://www.earthquakerdevices.com/' target='_blank' onclick='handleEQDLogoClicks()'><img src='images/EarthQuaker-Devices-Logo_dark.png' class='sidepanelLogo'></a><p>© 2020-2021 PatternBased and EarthQuaker Devices. All Rights Reserved.</p>");
 });
 
 $('.info').click(function () {
@@ -146,14 +152,9 @@ $(document).on('click', '#orlandoTrigger', function () {
 
 // ===== Link to Pedal with PedalID as URL Parameter =====
 
-var pedalBtn = $('.slide, .pedalList, .morePedal');
+var pedalBtn = $('.pedalList');
 
 $(pedalBtn).click(function() {
-// if (($(window).width() < 960) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
-// } else {
-// var modalCache = localStorage.getItem('modal');
-// localStorage.setItem('modal',modalCache);
-// }
 $('.loadingSpinner').css('display','inline-block');
 $('#modalBG').css('display','block');
 

@@ -16,7 +16,8 @@
     "pedalinfoJP":"ポリフォニックピッチシフター",
     "sampleurl":"sounds/ukiuki.zip",
     "eqdurl":"https://www.earthquakerdevices.com/rainbow-machine",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/rainbow-machine"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/rainbow-machine",
+    "morePedalImg":"Rainbow-Machine-bgtx.png"
   },
   {
     "id":1,
@@ -35,7 +36,8 @@
     "pedalinfoJP":"パワーアンプ ディストーション",
     "sampleurl":"sounds/zakuzaku.zip",
     "eqdurl":"https://www.earthquakerdevices.com/acapulco-gold",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/acapulco-gold"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/acapulco-gold",
+    "morePedalImg":"Acapulco-Gold-bgtx.png"
   },
   {
     "id":2,
@@ -54,7 +56,8 @@
     "pedalinfoJP":"ステレオディレイ＆リバーブ",
     "sampleurl":"sounds/kotsukotsu.zip",
     "eqdurl":"https://www.earthquakerdevices.com/avalanche-run",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/avalanche-run"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/avalanche-run",
+    "morePedalImg":"Avalanche-Run-bgtx.png"
   },
   {
     "id":3,
@@ -73,7 +76,8 @@
     "pedalinfoJP":"ポリフォニック ピッチ アルペジエータ",
     "sampleurl":"sounds/giragira.zip",
     "eqdurl":"https://www.earthquakerdevices.com/arpanoid",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/arpanoid"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/arpanoid",
+    "morePedalImg":"Arpanoid-bgtx.png"
   },
   {
     "id":4,
@@ -92,7 +96,8 @@
     "pedalinfoJP":"ハーモナイジングPLLシンセサイザー",
     "sampleurl":"sounds/garagara.zip",
     "eqdurl":"https://www.earthquakerdevices.com/data-corrupter",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/data-corrupter"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/data-corrupter",
+    "morePedalImg":"Data-Corrupter-bgtx_V2.png"
   },
   {
     "id":5,
@@ -111,7 +116,8 @@
     "pedalinfoJP":"モジュレーションディレイ&リバーブ",
     "sampleurl":"sounds/suyasuya.zip",
     "eqdurl":"https://www.earthquakerdevices.com/disaster-transport-sr",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/disaster-transport-sr"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/disaster-transport-sr",
+    "morePedalImg":"Disaster-Transport-SR-bgtx_V2.png"
   },
   {
     "id":6,
@@ -130,7 +136,8 @@
     "pedalinfoJP":"ゲルマニウムファズ（製造終了）",
     "sampleurl":"sounds/ujauja.zip",
     "eqdurl":"https://www.earthquakerdevices.com/dream-crusher",
-    "eqdurlJP":"https://www.earthquakerdevices.com/dream-crusher"
+    "eqdurlJP":"https://www.earthquakerdevices.com/dream-crusher",
+    "morePedalImg":"Dream-Crusher-bgtx.png"
   },
   {
     "id":7,
@@ -149,7 +156,8 @@
     "pedalinfoJP":"オクターブファズ",
     "sampleurl":"sounds/gyugyu.zip",
     "eqdurl":"https://www.earthquakerdevices.com/hoof-reaper",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/hoof-reaper"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/hoof-reaper",
+    "morePedalImg":"Hoof-Reaper-bgtx_V3.png"
   },
   {
     "id":8,
@@ -168,7 +176,8 @@
     "pedalinfoJP":"リピート パーカッション",
     "sampleurl":"sounds/bunbun.zip",
     "eqdurl":"https://www.earthquakerdevices.com/hummingbird",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/hummingbird"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/hummingbird",
+    "morePedalImg":"Hummingbird-bgtx_V2.png"
   },
   {
     "id":9,
@@ -187,7 +196,8 @@
     "pedalinfoJP":"サイケデリックリバーブ",
     "sampleurl":"sounds/potapota.zip",
     "eqdurl":"https://www.earthquakerdevices.com/levitation",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/levitation"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/levitation",
+    "morePedalImg":"Levitation-bgtx.png"
   },
   {
     "id":10,
@@ -206,7 +216,8 @@
     "pedalinfoJP":"ポリフォニック オルガン エミュレータ",
     "sampleurl":"sounds/tsurutsuru.zip",
     "eqdurl":"https://www.earthquakerdevices.com/organizer",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/organizer"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/organizer",
+    "morePedalImg":"Organizer-bgtx.png"
   },
   {
     "id":11,
@@ -225,7 +236,8 @@
     "pedalinfoJP":"オーバードライブ",
     "sampleurl":"sounds/dondon.zip",
     "eqdurl":"https://www.earthquakerdevices.com/palisades",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/palisades"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/palisades",
+    "morePedalImg":"Palisades-bgtx_V2.png"
   },
   {
     "id":12,
@@ -244,7 +256,8 @@
     "pedalinfoJP":"エンベロープフィルター",
     "sampleurl":"sounds/pikapika.zip",
     "eqdurl":"https://www.earthquakerdevices.com/spatial-delivery",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/spatial-delivery"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/spatial-delivery",
+    "morePedalImg":"Spatial-Delivery-bgtx_V2.png"
   },
   {
     "id":13,
@@ -263,7 +276,8 @@
     "pedalinfoJP":"ショートディレイリバーブ",
     "sampleurl":"sounds/utouto.zip",
     "eqdurl":"https://www.earthquakerdevices.com/afterneath",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/afterneath"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/afterneath",
+    "morePedalImg":"Afterneath-bgtx_V2.png"
   },
   {
     "id":14,
@@ -282,7 +296,8 @@
     "pedalinfoJP":"リバーブ",
     "sampleurl":"sounds/kosokoso.zip",
     "eqdurl":"https://www.earthquakerdevices.com/afterneath-eurorack-module",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/afterneath-eurorack-module"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/afterneath-eurorack-module",
+    "morePedalImg":"Afterneath-Module-bgtx.png"
   },
   {
     "id":15,
@@ -301,7 +316,8 @@
     "pedalinfoJP":"ハイブリッド ファズ",
     "sampleurl":"sounds/zarazara.zip",
     "eqdurl":"https://www.earthquakerdevices.com/hoof",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/hoof"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/hoof",
+    "morePedalImg":"Hoof-Fuzz-bgtx_V2.png"
   },
   {
     "id":16,
@@ -320,7 +336,8 @@
     "pedalinfoJP":"アナログ オプティカル バイブマシーン",
     "sampleurl":"sounds/bukubuku.zip",
     "eqdurl":"https://www.earthquakerdevices.com/the-depths",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/the-depths"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/the-depths",
+    "morePedalImg":"The-Depths-bgtx.png"
   },
   {
     "id":17,
@@ -339,7 +356,8 @@
     "pedalinfoJP":"ハイブリッドダートデバイス",
     "sampleurl":"sounds/biribiri.zip",
     "eqdurl":"https://www.earthquakerdevices.com/zap-machine",
-    "eqdurlJP":"https://www.earthquakerdevices.com/zap-machine"
+    "eqdurlJP":"https://www.earthquakerdevices.com/zap-machine",
+    "morePedalImg":"Zap-Machine-bgtx.png"
   },
   {
     "id":18,
@@ -358,7 +376,8 @@
     "pedalinfoJP":"ハーモニックトレモロ",
     "sampleurl":"sounds/pokapoka.zip",
     "eqdurl":"https://www.earthquakerdevices.com/night-wire",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/night-wire"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/night-wire",
+    "morePedalImg":"Night-Wire-bgtx_V2.png"
   },
   {
     "id":19,
@@ -377,7 +396,8 @@
     "pedalinfoJP":"究極のファズトーン",
     "sampleurl":"sounds/gorigori.zip",
     "eqdurl":"https://www.earthquakerdevices.com/erupter",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/erupter"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/erupter",
+    "morePedalImg":"Erupter-bgtx.png"
   },
   {
     "id":20,
@@ -396,7 +416,8 @@
     "pedalinfoJP":"ステレオ フランジャー",
     "sampleurl":"sounds/jirijiri.zip",
     "eqdurl":"https://www.earthquakerdevices.com/pyramids",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/pyramids"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/pyramids",
+    "morePedalImg":"Pyramids-bgtx.png"
   },
   {
     "id":21,
@@ -434,6 +455,7 @@
     "pedalinfoJP":"ペダルのキャッチフレーズ",
     "sampleurl":"sounds/howanhowan.zip",
     "eqdurl":"https://www.earthquakerdevices.com/pyramids",
-    "eqdurlJP":"https://www.earthquakerdevices.jp/pyramids"
+    "eqdurlJP":"https://www.earthquakerdevices.jp/pyramids",
+    "morePedalImg":"astral-destiny-bgtx-v2@2x.png"
   }
 ]
