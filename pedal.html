@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Google Analytics -->
+  <script>
+    // If GA Cookie exist
+    if (document.cookie.indexOf("_ga") >= 0){
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-346260-9', 'auto');
+          ga('send', 'pageview');
+    }
+    // Cookie Consent
+    const cookieName = 'cookieconsent';
+    const cookieValue = 'dismissed';
+    document.addEventListener("DOMContentLoaded", function() {
+    const checkCookie = getCookie("cookieconsent");
+    if (checkCookie != "dismissed") {
+      setTimeout(function(){ 
+      document.getElementById('ga-popup').style.bottom = 0;
+      }, 5000);
+    } 
+    });
+    
+    function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    function declineCookie() {
+      const date = new Date();
+        date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000));
+        document.cookie = `${cookieName}=${cookieValue};expires=${date.toUTCString()};path=/`;
+      document.getElementById('ga-popup').style.bottom = '-120%';
+    }
+    function acceptCookie() {
+      const date = new Date();
+        date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+        document.cookie = `${cookieName}=${cookieValue};expires=${date.toUTCString()};path=/`;
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');  
+      ga('create', 'UA-346260-9', 'auto');
+      ga('send', 'pageview');
+
+      document.getElementById('ga-popup').style.bottom = '-120%';
+    }
+    
+            // Get PedalID as URL Parameter
+            var pedalIDParam = new URLSearchParams(window.location.search);
+            var keys = pedalIDParam.keys();
+            for (key of keys);
+            var entries = pedalIDParam.entries();
+            for(pair of entries);
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            };
+            var pedalNumber = getUrlParameter('pedalid'); 
+
+            // GA Event Tracking // Click EQD Pedal Link
+            function handleOutboundLinkClicks(event) {
+                if (document.cookie.indexOf("_ga") >= 0){
+                ga('send','event', 'EQD Links', 'Clicks', 'Pedal No.' + pedalNumber);
+                }
+            };
+            // GA Event Tracking // Click Download Desktop
+            function handleDownloadLinkClicks(event) {
+                if (document.cookie.indexOf("_ga") >= 0){
+                ga('send','event', 'Download', 'Clicks', 'Pedal No.' + pedalNumber);
+                }
+            };
+            // GA Event Tracking // Play Track Desktop + Play Mode Mobile
+            function handlePlayTrackClicks(event) {
+                if (document.cookie.indexOf("_ga") >= 0){
+                ga('send','event', 'Play Track', 'Clicks', 'Pedal No.' + pedalNumber);
+                }
+            };
+            // GA Event Tracking // Fullscreen Mode Desktop
+            function handleFullScreenClicks(event) {
+                if (document.cookie.indexOf("_ga") >= 0){
+                ga('send','event', 'Full Screen', 'Clicks', 'Pedal No.' + pedalNumber);
+                }
+            };
+        // GA Event Tracking // Click on EQD Logo
+        function handleEQDLogoClicks(event) {
+            if (document.cookie.indexOf("_ga") >= 0){
+            ga('send','event', 'EQD Links', 'Clicks', 'EQD Logo');
+            }
+        };
+        // GA Event Tracking // Click on PB Logo
+            function handlePBLogoClicks(event) {
+                if (document.cookie.indexOf("_ga") >= 0){
+            ga('send','event', 'PB Links', 'Clicks', 'PB Logo');
+                }
+        };
+
+</script>
+
+    <title id="pedalPageTitle">OnomatoPedal - Sampler</title>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" value="notranslate">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:image" content="http://onomatopedal.com/images/OnomatoPedal_Cover_V2.jpg" />
+    <meta property="og:image:secure_url" content="https://onomatopedal.com/images/OnomatoPedal_Cover_V2.jpg" /> 
+    <meta property="og:image:type" content="image/jpeg" /> 
+
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/paper-full_0.12.3.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/howler.js"></script>
+    <script type="text/javascript">
+
+        // Get PedalID as URL Parameter
+            var pedalIDParam = new URLSearchParams(window.location.search);
+            var keys = pedalIDParam.keys();
+            for (key of keys);
+            var entries = pedalIDParam.entries();
+            for(pair of entries);
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            };
+            var pedalNumber = getUrlParameter('pedalid'); 
+
+        // Connect to JSON
+        var paperRequest = new XMLHttpRequest();
+        if (!paperRequest) {
+            alert('Giving up :( Cannot create an XMLHTTP instance');
+        }
+        paperRequest.open('GET','animation-sound.json', true);
+        paperRequest.onload = function() {
+            var paperData = JSON.parse(paperRequest.responseText);
+            var sampleQString = paperData[pedalNumber].sampleQ;
+            var sampleQColor = paperData[pedalNumber].keyColorQ;
+            var sampleWString = paperData[pedalNumber].sampleW;
+            var sampleWColor = paperData[pedalNumber].keyColorW;
+            var sampleEString = paperData[pedalNumber].sampleE;
+            var sampleEColor = paperData[pedalNumber].keyColorE;
+            var sampleRString = paperData[pedalNumber].sampleR;
+            var sampleRColor = paperData[pedalNumber].keyColorR;
+            var sampleAString = paperData[pedalNumber].sampleA;
+            var sampleAColor = paperData[pedalNumber].keyColorA;
+            var sampleSString = paperData[pedalNumber].sampleS;
+            var sampleSColor = paperData[pedalNumber].keyColorS;
+            var sampleDString = paperData[pedalNumber].sampleD;
+            var sampleDColor = paperData[pedalNumber].keyColorD;
+            var sampleFString = paperData[pedalNumber].sampleF;
+            var sampleFColor = paperData[pedalNumber].keyColorF;
+            var sampleZString = paperData[pedalNumber].sampleZ;
+            var sampleZColor = paperData[pedalNumber].keyColorZ;
+            var sampleXString = paperData[pedalNumber].sampleX;
+            var sampleXColor = paperData[pedalNumber].keyColorX;
+            var sampleCString = paperData[pedalNumber].sampleC;
+            var sampleCColor = paperData[pedalNumber].keyColorC;
+            var sampleVString = paperData[pedalNumber].sampleV;
+            var sampleVColor = paperData[pedalNumber].keyColorV;
+            var onoSvgPathOneData = paperData[pedalNumber].onoSvgPathOne;
+            var onoSvgPathTwoData = paperData[pedalNumber].onoSvgPathTwo;
+            var onoSvgPathThreeData = paperData[pedalNumber].onoSvgPathThree;
+            // var pedalNameSlug = paperData[pedalNumber].nameid;
+            // Coloring Mobile Drumpads
+            var mobileKeyQ = $('#keyQ');
+            var mobileKeyW = $('#keyW');
+            var mobileKeyE = $('#keyE');
+            var mobileKeyR = $('#keyR');
+            var mobileKeyA = $('#keyA');
+            var mobileKeyS = $('#keyS');
+            var mobileKeyD = $('#keyD');
+            var mobileKeyF = $('#keyF');
+            var mobileKeyZ = $('#keyZ');
+            var mobileKeyX = $('#keyX');
+            var mobileKeyC = $('#keyC');
+            var mobileKeyV = $('#keyV');
+            $(mobileKeyQ).css("background-color", sampleQColor);
+            $(mobileKeyW).css("background-color", sampleWColor);
+            $(mobileKeyE).css("background-color", sampleEColor);
+            $(mobileKeyR).css("background-color", sampleRColor);
+            $(mobileKeyA).css("background-color", sampleAColor);
+            $(mobileKeyS).css("background-color", sampleSColor);
+            $(mobileKeyD).css("background-color", sampleDColor);
+            $(mobileKeyF).css("background-color", sampleFColor);
+            $(mobileKeyZ).css("background-color", sampleZColor);
+            $(mobileKeyX).css("background-color", sampleXColor);
+            $(mobileKeyC).css("background-color", sampleCColor);
+            $(mobileKeyV).css("background-color", sampleVColor);
+
+            // Paper.js setup
+            paper.install(window);
+                $(document).ready( function() {
+                    paper.setup('myCanvas');
+
+                    // $('#ogImgHttp').attr('content', 'http://onomatopedal.com/images/meta/' + pedalNameSlug + '.jpg');
+                    // $('#ogImgHttps').attr('content', 'https://onomatopedal.com/images/meta/' + pedalNameSlug + '.jpg');
+
+                    
+            // Paper + Howler
+            var keyData = {
+                        q: {sound: new Howl({ src: sampleQString}),
+                            color: sampleQColor},
+                        w: {sound: new Howl({ src: sampleWString}),
+                            color: sampleWColor},
+                        e: {sound: new Howl({ src: sampleEString}),
+                            color: sampleEColor},
+                        r: {sound: new Howl({ src: sampleRString}),
+                            color: sampleRColor},
+                        a: {sound: new Howl({ src: sampleAString}),
+                            color: sampleAColor},
+                        s: {sound: new Howl({ src: sampleSString}),
+                            color: sampleSColor},
+                        d: {sound: new Howl({ src: sampleDString}),
+                            color: sampleDColor},
+                        f: {sound: new Howl({ src: sampleFString}),
+                            color: sampleFColor},
+                        z: {sound: new Howl({ src: sampleZString}),
+                            color: sampleZColor},
+                        x: {sound: new Howl({ src: sampleXString}),
+                            color: sampleXColor},
+                        c: {sound: new Howl({ src: sampleCString}),
+                            color: sampleCColor},
+                        v: {sound: new Howl({ src: sampleVString}),
+                            color: sampleVColor}               
+                        };
+
+        // Draw objects with Paper.js
+                    var lineCircles = [];
+                    var circles = [];
+                    var thinLine = [];
+                    var onoSvg = [];
+                    var waveBlock = [];
+                    var point, path;
+                    var canvasWidth = window.innerWidth;
+                    var canvasHeight = window.innerHeight;
+            function squareClickEvent(key) {
+                var randomPointWidth = canvasWidth * Math.random();
+                var randomPointHeight = canvasHeight * Math.random();
+                var randomePoint = new paper.Point(randomPointWidth, randomPointHeight);
+                    if (key == 'q' || key == 'd') {
+                        if (pedalNumber == 22) {
+                            var onomatoSvg = new Path(onoSvgPathThreeData);
+                            onomatoSvg.strokeColor = keyData[key].color;
+                            onomatoSvg.strokeWidth = 6;
+                            onomatoSvg.position = randomePoint;
+                            keyData[key].sound.play();
+                            lineCircles.push(onomatoSvg);
+                        } else {
+                        var newCircle = new paper.Path.Circle(randomePoint, 4);
+                        newCircle.strokeColor = keyData[key].color;
+                        newCircle.strokeWidth = 6;
+                        keyData[key].sound.play();
+                        lineCircles.push(newCircle);
+                        }
+                    } else if (key == 'a' || key == 'v') {
+                        var newCircle = new paper.Path.Circle(randomePoint, 500);
+                        newCircle.fillColor = keyData[key].color;
+                        keyData[key].sound.play();
+                        circles.push(newCircle);
+                    } else if (key == 'f' || key == 'x') {
+                        var topLeftPoint = new paper.Point(0, 0);
+                        var topRightPoint = new paper.Point(canvasWidth, 100)
+                        var newRectangle = new paper.Path.Rectangle(topLeftPoint, topRightPoint);
+                        newRectangle.fillColor = keyData[key].color;
+                        keyData[key].sound.play();
+                        thinLine.push(newRectangle);
+                    } else if (key == 'r' || key == 's') {
+                        var onomatoSvg = new Path(onoSvgPathOneData);
+                        onomatoSvg.strokeColor = keyData[key].color;
+                        onomatoSvg.strokeWidth = 6;
+                        onomatoSvg.position = randomePoint;
+                        keyData[key].sound.play();
+                        onoSvg.push(onomatoSvg);
+                    } else if (key == 'w' || key == 'c') {
+                        var onomatoSvg = new Path(onoSvgPathTwoData);
+                        onomatoSvg.strokeColor = keyData[key].color;
+                        onomatoSvg.strokeWidth = 6;
+                        onomatoSvg.position = randomePoint;
+                        keyData[key].sound.play();
+                        lineCircles.push(onomatoSvg);
+                    } else if (key == 'e' || key == 'z') {
+                        var width, height, center;
+                        var points = 12;
+                        var smooth = true;
+                        var path = new Path();
+                        var center = new paper.Point(canvasWidth / 2, canvasHeight / 2);
+                        var width = canvasWidth;
+                        var height = canvasHeight;
+                            path.strokeColor = keyData[key].color;
+                            path.strokeWidth = 4;
+                            path.position.y = center.y;
+                            path.segments = [];
+                            path.add(0, center.y);
+                            for (var i = 1; i < points; i++) {
+                                var point = new paper.Point(width / points * i, height * Math.random());
+                                path.add(point);
+                            }
+                            path.add(canvasWidth , center.y);
+                            path.smooth({ type: 'continuous' });
+                        keyData[key].sound.play();
+                        waveBlock.push(path);
+                        }
+                    };
+            function keyDownEvent(key) {
+                var key = (event.key);
+                var randomPointWidth = canvasWidth * Math.random();
+                var randomPointHeight = canvasHeight * Math.random();
+                var randomePoint = new paper.Point(randomPointWidth, randomPointHeight);
+                    if (key == 'q' || key == 'd') {
+                        if (pedalNumber == 22) {
+                            var onomatoSvg = new Path(onoSvgPathThreeData);
+                            onomatoSvg.strokeColor = keyData[key].color;
+                            onomatoSvg.strokeWidth = 6;
+                            onomatoSvg.position = randomePoint;
+                            keyData[key].sound.play();
+                            lineCircles.push(onomatoSvg);
+                        } else {
+                        var newCircle = new paper.Path.Circle(randomePoint, 4);
+                        newCircle.strokeColor = keyData[key].color;
+                        newCircle.strokeWidth = 6;
+                        keyData[key].sound.play();
+                        lineCircles.push(newCircle);
+                        }
+                    } else if (key == 'a' || key == 'v') {
+                        var newCircle = new paper.Path.Circle(randomePoint, 500);
+                        newCircle.fillColor = keyData[key].color;
+                        keyData[key].sound.play();
+                        circles.push(newCircle);
+                    } else if (key == 'f' || key == 'x') {
+                        var topLeftPoint = new paper.Point(0, 0);
+                        var topRightPoint = new paper.Point(canvasWidth, 100)
+                        var newRectangle = new paper.Path.Rectangle(topLeftPoint, topRightPoint);
+                        newRectangle.fillColor = keyData[key].color;
+                        keyData[key].sound.play();
+                        thinLine.push(newRectangle);
+                    } else if (key == 'r' || key == 's') {
+                        var onomatoSvg = new Path(onoSvgPathOneData);
+                        onomatoSvg.strokeColor = keyData[key].color;
+                        onomatoSvg.strokeWidth = 6;
+                        onomatoSvg.position = randomePoint;
+                        keyData[key].sound.play();
+                        onoSvg.push(onomatoSvg);
+                    } else if (key == 'w' || key == 'c') {
+                        var onomatoSvg = new Path(onoSvgPathTwoData);
+                        onomatoSvg.strokeColor = keyData[key].color;
+                        onomatoSvg.strokeWidth = 6;
+                        onomatoSvg.position = randomePoint;
+                        keyData[key].sound.play();
+                        lineCircles.push(onomatoSvg);
+                    } else if (key == 'e' || key == 'z') {
+                        var width, height, center;
+                        var points = 12;
+                        var smooth = true;
+                        var path = new Path();
+                        var center = new paper.Point(canvasWidth / 2, canvasHeight / 2);
+                        var width = canvasWidth;
+                        var height = canvasHeight;
+                            path.strokeColor = keyData[key].color;
+                            path.strokeWidth = 4;
+                            path.position.y = center.y;
+                            path.segments = [];
+                            path.add(0, center.y);
+                            for (var i = 1; i < points; i++) {
+                                var point = new paper.Point(width / points * i, height * Math.random());
+                                path.add(point);
+                            }
+                            path.add(canvasWidth , center.y);
+                            path.smooth({ type: 'continuous' });
+                        keyData[key].sound.play();
+                        waveBlock.push(path);
+                    }
+                };
+            // Draw when Keys are down
+            $(document).keydown(function()  {
+                keyDownEvent();
+            });
+            // Draw when square drum pads are tapped
+            var squareIDs = [	"keyQ", "keyW", "keyE", "keyR", "keyA", "keyS", "keyD", "keyF", "keyZ", "keyX", "keyC", "keyV"];
+            var squareToKey = [	"q", "w", "e", "r", "a", "s", "d", "f", "z", "x", "c", "v"];
+            var keyLength = squareToKey.length;
+            
+            for (i = 0; i < keyLength; i++) {
+                document.getElementById(squareIDs[i]).onclick =  
+                squareClickEvent.bind(this, squareToKey[i]);
+            }
+            // Animation for each object
+            view.onFrame = function(event) {
+                            for (var x = 0; x < lineCircles.length; x++) {
+                                lineCircles[x].strokeColor.hue += 1;
+                                lineCircles[x].scale(1.2);
+                                lineCircles[x].opacity -= 0.02;
+                                if (lineCircles[x].opacity < 0.1) {
+                                    lineCircles[x].remove();
+                                    lineCircles.splice(x, 1);
+                                }}
+                            for (var x = 0; x < circles.length; x++) {
+                                circles[x].fillColor.hue += 1;
+                                circles[x].scale(0.9);
+                                if (circles[x].area < 1) {
+                                    circles[x].remove();
+                                    circles.splice(x, 1);
+                                }}
+                            for (var x = 0; x < thinLine.length; x++) {
+                                thinLine[x].position.y += 30;
+                                thinLine[x].fillColor.hue -= 5;
+                                if (thinLine[x].position.y >= canvasHeight) {
+                                    thinLine[x].remove();
+                                    thinLine.splice(x, 1);
+                                }}
+                            for (var x = 0; x < onoSvg.length; x++) {
+                                onoSvg[x].scale(1.1);
+                                onoSvg[x].opacity -= 0.02;
+                                if (onoSvg[x].opacity < 0.1) {
+                                    onoSvg[x].remove();
+                                    onoSvg.splice(x, 1);
+                                }}
+                            for (var x = 0; x < waveBlock.length; x++) {
+                                waveBlock[x].scale(1, 0.9);
+                                waveBlock[x].opacity -= 0.01;
+                                waveBlock[x].strokeColor.hue += 1;
+                                if (waveBlock[x].opacity < 0.1) {
+                                    waveBlock[x].remove();
+                                    waveBlock.splice(x, 1);
+                                }
+                            }
+                };
+            });
+        };
+        paperRequest.send();
+    </script>
+
+    <link rel="icon" type="image/png" href="images/patternBased_Logo_icon.png" />
+    <link rel="apple-touch-icon" sizes="128x128" href="images/patternBased_Logo_icon_128.png" />
+    <link rel="icon" sizes="192x192" href="images/patternBased_Logo_icon_192.png" />
+</head>
+
+<body>
+  <!-- Cookie Consent -->
+  <div id="ga-popup">
+    <p id="cookie-text"></p>
+    <button id="accept" onclick="acceptCookie()"></button>
+    <button id="decline" onclick="declineCookie()"></button>
+    </div>
+  <div id="root"></div>
+  
+<!-- Modal -->
+	<div id="modalBG">
+		<div class="loadingSpinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+		<div class="modalContent" id="modalScreen">
+			<p id="modalMessage"></p>
+			<img src="images/keysOnBoard.svg">
+			<button class="modalButton" id="showStarter">OK</button>
+		</div>
+		<div class="modalContent" id="modalMobile"></div>
+	</div>
+
+<!-- Tapping divs in Play mode mobile-->
+	<div id="tapKeyWrap">
+		<div class="tapKey" id="keyR"></div>
+		<div class="tapKey" id="keyF"></div>
+		<div class="tapKey" id="keyV"></div>
+		<div class="tapKey" id="keyQ"></div>
+		<div class="tapKey" id="keyW"></div>
+		<div class="tapKey" id="keyE"></div>
+		<div class="tapKey" id="keyA"></div>
+		<div class="tapKey" id="keyS"></div>
+		<div class="tapKey" id="keyD"></div>
+		<div class="tapKey" id="keyZ"></div>
+		<div class="tapKey" id="keyX"></div>
+		<div class="tapKey" id="keyC"></div>
+	</div>
+	
+<!-- ****** Body ****** -->
+	<div class="wrap pedalPageWrap">
+        <div class="headerContainer"></div>
+
+        <div class="title-pedal" id="OnomoPedalHeader"></div>
+
+        <div id="playModeHeader">
+			<div class="pedal-small"> <img id="pedalSmall"></div>
+			<div class="title-PlayMode"></div>
+			<div class='clear'></div>
+        </div>
+            
+		<!-- Pedal -->
+		<div id="pedal">
+			<img id="thePedal">
+
+			<!-- Circular Action Buttons -->
+			<ul id="actions">
+				<li class='actionBtn playAudio' id="listenBeat" onclick="handlePlayTrackClicks()"><img src="images/playBeat.svg"><span>Play Track</span></li>
+				<li class='actionBtnMobile playAudio' id="playMode"><img src="images/playBeat.svg"><span>Play Mode</span></li>
+				<li class='actionBtn' id="download" onclick="handleDownloadLinkClicks()"><img src="images/downloadSample.svg"><span>Download Samples</span></li>
+				<a id="aboutPedalBtn" href="" target="_blank" onclick="handleOutboundLinkClicks()"><li class='actionBtn' id="aboutPedal"><img src="images/seePedal.svg"><span>Check Out Pedal</span></li></a>
+				<li class='actionBtn' id='fullscreenMode' onclick="handleFullScreenClicks()"><img src="images/fullscreen.svg"><span>Full Browser Mode</span></li>
+			</ul>
+
+            <!-- Onomonapia Description-->
+			<h3 id="onomoName"></h3>
+            <p id="onomoInfo"></p>
+            <h3 id="trackName"></h3>
+            <p id="trackInfo"></p>
+            <h3 id="pedalName"></h3>
+			<p id="pedalInfo"></p>
+
+		</div>
+        <!-- More Pedals -->
+        <div class="morePedalsContainer"></div>
+    
+        <!-- 'Show-all' button in full browser mode-->
+		<div id="playModeIcons">
+			<div id="showAll" class="actionBtn"><img src="images/showAll.svg"><span>Back to Pedal</span></div>
+			<div id="pauseMobile" class="actionBtn"><img src="images/pauseBeat.svg"><span>Pause</span></div>
+			<div id="mobileLogo"><img src="images/EQD-PB_logo@2x.png"></div>
+		</div>
+
+		<!-- BG Canvas for Paper.js -->
+		<canvas id="myCanvas" resize></canvas>
+	</div>
+
+    <div class="footerContainer"></div>
+
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="pedal-temp.js"></script>
+</body>
+</html>

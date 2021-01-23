@@ -1,0 +1,54 @@
+#draw-animation, canvas {
+  background: #2C363F;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+#drumpads {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 10;
+  /* display: block; */
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+  grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
+  visibility: hidden;
+}
+
+.pad {
+  /* display: inline-block;
+  position: absolute; */
+  width: 20vw;
+  height: 10vh;
+  margin: 0;
+  padding: 0;
+  background-color:#000000;
+  opacity: 0.35;
+}
+
+.pad:nth-of-type(7n+1) {opacity: 0.05;}
+.pad:nth-of-type(7n+2) {opacity: 0.2;}
+.pad:nth-of-type(7n+3) {opacity: 0.3;}
+.pad:nth-of-type(7n+4) {opacity: 0.1;}
+.pad:nth-of-type(7n+5) {opacity: 0.25;}
+.pad:nth-of-type(7n+6) {opacity: 0.15;}
+
+@media only screen and (max-width: 800px) {
+  #drumpads {
+    visibility: visible;
+  }
+}

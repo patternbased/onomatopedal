@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" value="notranslate">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>	
+      <div id="morePedals">
+				<div id="pedalShelf">
+				</div>
+      </div>
+      <div id="pedalAccordionButton" class="openAccordion" onclick="openCloseAccordion()" >
+          SEE MORE PEDALS
+      </div>
+		
+    <script id="morePedalTemplate" type="text/template">
+        <img class="morePedal" data-pedal-id="{{pedalId}}" src="images/pedalsOnom/{{pedalImage}}" alt="{{pedalName}}" onclick="openPedal({{pedalId}})"/>
+    </script>
+    <script>
+        var seeAllPedal = true;
+        var pedalNumber = getUrlParameter('pedalid');
+
+        function shuffle(arra1) {
+            var ctr = arra1.length, temp, index;
+            while (ctr > 0) {
+                index = Math.floor(Math.random() * ctr);
+                ctr--;
+                temp = arra1[ctr];
+                arra1[ctr] = arra1[index];
+                arra1[index] = temp;
+            }
+            return arra1;
+        }
+
+        // Connect to JSON
+        var morePedalRequest = new XMLHttpRequest();
+        if (!morePedalRequest) {
+        alert('Giving up :( Cannot create an XMLHTTP instance');
+        }
+        morePedalRequest.open('GET','pedalinfo.json', true);
+
+        morePedalRequest.onload = function() {
+        var morePedalData = JSON.parse(morePedalRequest.responseText);
+        morePedalData.splice(pedalNumber,1);
+        shuffle(morePedalData);
+
+        // Generate images for template
+        var morePedalTemplate = document.getElementById("morePedalTemplate");
+        var morePedalTemplateHtml = morePedalTemplate.innerHTML;
+        var listHtml = "";
+        
+        for (var key in morePedalData) {
+            if(morePedalData[key]["morePedalImg"]){
+            listHtml += morePedalTemplateHtml
+                .replace(/{{pedalId}}/g, morePedalData[key]["id"])
+                .replace(/{{pedalImage}}/g, morePedalData[key]["morePedalImg"])
+                .replace(/{{pedalName}}/g, morePedalData[key]["name"])
+            }
+        }
+        document.getElementById("pedalShelf").innerHTML = listHtml;
+    };
+    morePedalRequest.send();
+
+  //Open Pedal
+  function openPedal(pedalNum) {
+        window.location.replace('pedal.html?pedalid=' + pedalNum );
+  }
+
+  function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  };
+
+  function openCloseAccordion() {
+      if($('#pedalAccordionButton').hasClass('closeAccordion')) {
+        if (($(window).width() < 600)) {
+          $('#morePedals').css({
+            'height':'270px'
+          });
+        } else {
+          $('#morePedals').css({
+            'height':'160px'
+          });
+        }
+        $('#pedalAccordionButton').html('SEE MORE PEDALS');
+        $('#pedalAccordionButton').removeClass('closeAccordion');
+        $('#pedalAccordionButton').addClass('openAccordion');
+      } else {
+        $('#morePedals').css({
+          'height':'auto'
+        });
+        $('#pedalAccordionButton').html('SEE LESS PEDALS');
+        $('#pedalAccordionButton').removeClass('openAccordion');
+        $('#pedalAccordionButton').addClass('closeAccordion');
+        $('html, body').animate({
+          scrollTop: $('#pedalAccordionButton').offset().top
+        }, 1000);
+      }
+  }
+    </script>
+    	<script type="text/javascript" src="pedal-temp.js"></script>
+</body>
+</html>
